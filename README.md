@@ -1,1 +1,1 @@
-# OSIsoft-Adapter-BACnet
+# Edge Adapter BACnet Docs
