@@ -1,3 +1,15 @@
-- name: OSIsoft Adapter for BACnet
+- name: OSIsoft Adapter for BACnet overview
+  href: OSIsoft Adapter for BACnet overview/toc.yml
   topicHref: OSIsoft_Adapter_for_BACnet_overview.md
-  
+- name: Installation
+  href: main/V1/Installation/toc.yml
+  topicHref: main/V1/Installation/Installation.md
+- name: Administration
+  href: main/V1/Administration/toc.yml
+  topicHref: main/V1/Administration/Administration.md
+- name: Health and diagnostics
+  href: main/V1/Health/toc.yml
+  topicHref: main/V1/Health/Health and diagnostics.md
+- name: EdgeCmd utility
+  href: Edgecmd/V1/EdgeCmd utility/toc.yml
+  topicHref: Edgecmd/V1/EdgeCmd utility/EdgeCmd utility.md
