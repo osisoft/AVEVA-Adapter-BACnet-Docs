@@ -4,6 +4,9 @@
 - name: Installation
   href: main/V1/Installation/toc.yml
   topicHref: main/V1/Installation/Installation.md
+- name: Configuration
+  href: Configuration/toc.yml
+  topicHref: Configuration/Configuration.md
 - name: Administration
   href: main/V1/Administration/toc.yml
   topicHref: main/V1/Administration/Administration.md
