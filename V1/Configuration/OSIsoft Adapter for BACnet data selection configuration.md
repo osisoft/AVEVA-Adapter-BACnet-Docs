@@ -62,7 +62,7 @@ Complete the following procedure for this default data selection file to be gene
 
 ## BACnet device configuration
 
-During data source discovery, device information for all discovered devices is retrieved by the adapter, which is subsequently available through the following REST endpoint using any configuration tool that can execute a HTTP GET command: `http://localhost:5590/api/v1/configuration/<adapterId>/DeviceConfiguration/`.
+During data source discovery, device information for all discovered devices is retrieved by the adapter, which is subsequently available through the following REST endpoint using any configuration tool that can execute an HTTP GET command: `http://localhost:5590/api/v1/configuration/<adapterId>/DeviceConfiguration/`.
 
 **Note:** The device configuration is read only and only supports HTTP GET.
 
