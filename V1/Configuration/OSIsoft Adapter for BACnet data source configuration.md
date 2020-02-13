@@ -12,7 +12,7 @@ To use the BACnet adapter, you must configure the data source from which it will
 
 Complete the following procedure to configure the BACnet data source:
 
-1. Using any text editor, create a file that contains an OPC UA data source in JSON form.
+1. Using any text editor, create a file that contains an BACnet data source in JSON form.
     - For content structure, see [BACnet data source example](#opc-bacnet-data-source-example).
     - For a table of all available parameters, see [BACnet data source parameters](#opc-bacnet-data-source-parameters).
 2. Save the file, for example as _DataSource.config.json_.
