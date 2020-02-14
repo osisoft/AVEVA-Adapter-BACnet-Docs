@@ -40,7 +40,7 @@ The following parameters can be used to configure an BACnet data source:
 
 | Parameter | Required | Type | Nullable | Description |
 |-----------|----------|------|----------|-------------|
-| **IPAddress** | Required | `string` | Yes | IPv4 address of BACnet device or BACnet Router|
+| **IPAddress** | Required | `string` | Yes | IPv4 address of BACnet device or BACnet router|
 | **Port**|Optional | `number` | No | UDP port number for communication with BACnet devices. The value ranges from 0 to 65535. If not configured, the default port is 47808 (which is the default port for BACnet protocol).|
 | **MaxConcurrentNetworkRequests** | Optional | `number` | No | The maximum number of requests that can be sent concurrently on the network. This is not affected by the response time for the requests. A value of 0 indicates no limit. The default is 1.|
 | **DeviceRequestDelay** | Optional | `number` | No | The delay in milliseconds between sending requests to an individual device. The value ranges from 0 to 10000 milliseconds. The default is 0 ms.|
