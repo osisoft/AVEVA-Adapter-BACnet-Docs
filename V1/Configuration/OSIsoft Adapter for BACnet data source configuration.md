@@ -48,7 +48,7 @@ The following parameters can be used to configure an BACnet data source:
 | **DeviceReconnectInterval** | Optional | `number` | No | The amount of time in minutes to wait before attempting to send requests to a device after it has disconnected. The value must be greater than 0. The default is 60 minutes.|
 | **DeviceId** | Optional | `number` | yes | Device instance number. If specified, indicates IPAddress is for a BACnet device (not a BACnet router). If empty, indicates the IPAddress is for a BACnet router (not an individual BACnet device).|
 | **NetworkNumber** | Optional | `number` | Yes | Device network number for routed BACnet devices. This setting can only be specified when a DeviceId is specified. When this setting is specified, MACAddress must also be specified|
-| **MacAddress** | Optional | `string` | Yes | Device MAC address for routed BACnet devices. This setting can only be specified when a DeviceId is specified. When this setting is specified, NetworkNumber must also be specified. It must contain 1-6 byte strings in hexadecimal format, separated by a dash '-' or colon ':'. For example, 12:34:ef:cd |
+| **MacAddress** | Optional | `string` | Yes | Device MAC address for routed BACnet devices. This setting can only be specified when a DeviceId is specified. When this setting is specified, NetworkNumber must also be specified. It must contain 1-6 byte strings in hexadecimal format, separated by a dash '-' or colon ':'. For example, `12:34:ef:cd` |
 | **StreamPrefix** | Optional | `string` | Yes | Specifies what prefix is used for Stream IDs and names. **Note:** An empty string means no prefix will be added to the Stream IDs and names. Null value means ComponentID followed by dot character will be added to the stream IDs and names. |
 | **ApplyPrefixToStreamId** | Optional | `boolean` | No | Parameter applied to all data items collected from the data source that have custom stream ID configured. If configured, the adapter will apply the StreamIdPrefix property to all the streams with custom ID configured. The property does not affect any streams with default ID configured|
 
@@ -73,7 +73,6 @@ The following is an example of valid BACnet data source configuration:
 The following is an example of valid BACnet routed device data source configuration:
 
 ```json
-
 {
     "IPAddress": "192.168.1.1",
 	"Port": 47808,
