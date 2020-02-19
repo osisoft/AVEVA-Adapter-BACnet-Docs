@@ -1,8 +1,4 @@
-> A
-
-The first letter of the alphabet.
-
-> B
-
-The second letter of the alphabet.
-
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
