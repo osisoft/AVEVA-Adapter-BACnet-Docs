@@ -129,7 +129,7 @@ The following parameters can be used to configure BACnet data selection:
 | **Name**      | Optional | `string` | Yes |Friendly name for the item. By default, this will be a combination of DeviceIPAddress, DeviceId, ObjectType, and ObjectId in the format [DeviceIPAddress]_[DeviceId].[ObjectType][ObjectId] |
 | **StreamID** | Optional | `string` | Yes | Custom stream ID for the item. This allows users to use custom “tag names” for items that are being collected. By default, this will be a combination of DeviceIPAddress, DeviceId, ObjectType, and ObjectId in the format [DeviceIPAddress]_[DeviceId].[ObjectType][ObjectId] |
 | **DeviceIPAddress** | Required | `string` | Yes | Device IP Address |
-| **ObjectType** | Required | `enum` | No | Specifies the mode of data collection for the item. Options: Poll, COV (Change of Value). COV is only supported for BACnet devices that support the SubscribeCOV or SubscribeCOVProperty services. |
+| **ObjectType** | Required | `enum` | No | Specifies the mode of data collection for the item. Options: Poll |
 | **ObjectId** | Required | `int` | Yes | BACnet object instance number |
 | **DataCollectionMode** | Required | `enum` | No | Specifies the mode of data collection for the item. Default value is Poll |
 | **DataCollectionInterval** | Required | `int` | Yes | Specifies the interval (in seconds) at which data is collected for the item. Default value is 300 |
