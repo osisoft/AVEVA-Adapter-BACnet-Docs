@@ -12,52 +12,7 @@ You can either have the data selection configuration file generated for you or y
 
 ## Generate default BACnet data selection configuration file
 
-A default BACnet data selection file will be created if there is no BACnet data selection configuration, but a valid BACnet data source exists.
 
-**Note:** To avoid possibly expensive browse operations, OSIsoft recommends that you manually create a data selection file instead of generating the default data selection file. For more information, see [Configure BACnet data selection](#configure-bacnet-data-selection).
-
-Complete the following procedure for this default data selection file to be generated:
-
-1. Add an BACnet adapter with a unique ComponentId. For more information, see [System components configuration](xref:SystemComponentsConfiguration).
-
-  During the installation of Edge Data Store, enabling the BACnet adapter results in addition of a unique component that also satisfies this condition.
-  
-2. Configure a valid BACnet data source. For more information, see [OSIsoft Adapter for BACnet data source configuration](xref:OSIsoftAdapterforBACnetDataSourceConfiguration).
-
-  Once you complete these steps, a default BACnet data selection configuration file will be generated in the configuration directory for the corresponding platform.
-  
-  The following are example locations of the file created. In this example, it is assumed that the ComponentId of the BACnet component is the default BACnet1:
-
-  Windows: *%programdata%\OSIsoft\Adapters\BACnet\Configuration\BACnet1_DataSelection.json*
-   
-  Linux: */usr/share/OSIsoft/Adapters/BACnet/Configuration/BACnet1_DataSelection.json*
-
-3. Copy the file to a different directory.
-
-  The contents of the file will look something like:
-
-  ```json
-[
-    {
-      "Selected": true,
-      "Name": "Bacnet1",
-      "StreamId": "CustomStreamName",
-      "DeviceIPAddress": "10.12.112.38",
-      "DeviceId": 14,
-      "ObjectType": "AnalogInput",
-      "ObjectId": 90,
-      "DataCollectionMode": "Poll",
-      "DataCollectionInterval": 300
-    }
-]
-  ```
-
-4. In a text editor, edit the file and change the value of any Selected key from false to true in order to transfer the BACnet data to be stored in Edge Data Store. 
-5. In the same directory where you edited the file, run the following curl command:
-
-  ```bash
-  curl -i -d "@BACnet1_DataSelection.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration/BACnet1/Dataselection
-  ```
 
 ## BACnet device configuration
 
@@ -107,12 +62,6 @@ curl -v -d "@DataSelection.config.json" -H "Content-Type: application/json" "htt
 
 ## BACnet data selection schema
 
-The following table shows the basic behavior of the _BACnet_DataSelection_schema.json_ file.
-
-| Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties |
-| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- |
-| Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             |
-
 The full schema definition for the BACnet data selection configuration is in the _BACnet_DataSelection_schema.json_ here:
 
 Windows: *%Program Files%\OSIsoft\Adapters\BACnet\Schemas*
@@ -126,25 +75,25 @@ The following parameters can be used to configure BACnet data selection:
 | Parameter     | Required | Type | Nullable | Description |
 |---------------|----------|------|----------|-------------|
 | **Selected** | Optional | `boolean` | No | Use this field to select or clear a measurement. To select an item, set to true. To remove an item, leave the field empty or set to false.  If not configured, the default value is false.|
-| **Name**      | Optional | `string` | Yes |Friendly name for the item. By default, this will be a combination of DeviceIPAddress, DeviceId, ObjectType, and ObjectId in the format [DeviceIPAddress]_[DeviceId].[ObjectType][ObjectId] |
-| **StreamID** | Optional | `string` | Yes | Custom stream ID for the item. This allows users to use custom “tag names” for items that are being collected. By default, this will be a combination of DeviceIPAddress, DeviceId, ObjectType, and ObjectId in the format [DeviceIPAddress]_[DeviceId].[ObjectType][ObjectId] |
+| **Name**      | Optional | `string` | Yes |The optional friendly name of the data item collected from the data source. If not configured, the default value will be the stream id. |
+| **StreamID** | Optional | `string` | Yes | Custom stream ID for the item. This allows users to use custom “tag names” for items that are being collected. By default, this will be a combination of DeviceIPAddress, DeviceId, ObjectType, and ObjectId in the format [DeviceIPAddress]_[DeviceId].[ObjectType][ObjectId]. |
 | **DeviceIPAddress** | Required | `string` | Yes | Device IP Address |
-| **ObjectType** | Required | `enum` | No | Specifies the mode of data collection for the item. Options: Poll |
+| **ObjectType** | Required | `string` | No | Any of the supported object types  |
 | **ObjectId** | Required | `int` | Yes | BACnet object instance number |
-| **DataCollectionMode** | Required | `enum` | No | Specifies the mode of data collection for the item. Default value is Poll |
+| **DataCollectionMode** | Required | `string` | No | Specifies the mode of data collection for the item. Default value is Poll |
 | **DataCollectionInterval** | Required | `int` | Yes | Specifies the interval (in seconds) at which data is collected for the item. Default value is 300 |
-| **ObjectProperties** | Optional | `string[]` | Yes |  Specifies which properties to collect from the BACnet object. If left empty, Present_Value and Status_Flags are collected. Default is empty. |
+| **ObjectProperties** | Optional | `string[]` | Yes |  Specifies which properties to collect from the BACnet object. If left empty, PresentValue and StatusFlags are collected. Default is empty. |
 
 ## BACnet data selection example
 
-The following is an example of valid BACnet data selection configuration:
+The following is an example of valid BACnet data selection configuration. Since the second item has selected set to false, data will not be collected for it.
 
 ```json
 [
  {
     "Selected": true,
-    "Name": "Bacnet1",
-    "StreamId": "CustomStreamName",
+    "Name": "10.12.112.38_14.AnalogInput90",
+    "StreamId": "10.12.112.38_14.AnalogInput90",
     "DeviceIPAddress": "10.12.112.38",
     "DeviceId": 14,
     "ObjectType": "AnalogInput",
@@ -154,15 +103,15 @@ The following is an example of valid BACnet data selection configuration:
   },
   {
     "Selected": false,
-    "Name": "Bacnet2",
-    "StreamId": "CustomStreamName2",
+    "Name": "10.12.112.40_16.AnalogOutput70",
+    "StreamId": "10.12.112.40_16.AnalogOutput70",
     "DeviceIPAddress": "10.12.112.40",
     "DeviceId": 16,
     "ObjectType": "AnalogOutput",
     "ObjectId": 70,
     "DataCollectionMode": "Poll",
     "DataCollectionInterval": 200,
-    "ObjectProperties": ["AckRequired", "Present_Values"]
+    "ObjectProperties": ["PresentValues"]
   }
 ]
 ```
