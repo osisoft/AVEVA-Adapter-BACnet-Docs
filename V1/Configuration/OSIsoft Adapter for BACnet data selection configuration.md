@@ -6,13 +6,7 @@ uid: OSIsoftAdapterforBACnetDataSelectionConfiguration
 
 In addition to the data source configuration, you need to provide a data selection configuration to specify the data you want the BACnet adapter to collect from the data sources. 
 
-When you add a data source, the BACnet adapter browses the entire BACnet server address space and exports the available BACnet variables into a JSON file for data selection. Data is collected automatically based upon user demands. BACnet data from BACnet variables is read through subscriptions (unsolicited reads).
-
-You can either have the data selection configuration file generated for you or you can create it manually yourself.
-
-## Generate default BACnet data selection configuration file
-
-
+When you add a data source, the BACnet adapter will discover devices and objects specified in the configuration.
 
 ## BACnet device configuration
 
@@ -76,12 +70,12 @@ The following parameters can be used to configure BACnet data selection:
 |---------------|----------|------|----------|-------------|
 | **Selected** | Optional | `boolean` | No | Use this field to select or clear a measurement. To select an item, set to true. To remove an item, leave the field empty or set to false.  If not configured, the default value is false.|
 | **Name**      | Optional | `string` | Yes |The optional friendly name of the data item collected from the data source. If not configured, the default value will be the stream id. |
-| **StreamID** | Optional | `string` | Yes | Custom stream ID for the item. This allows users to use custom “tag names” for items that are being collected. By default, this will be a combination of DeviceIPAddress, DeviceId, ObjectType, and ObjectId in the format [DeviceIPAddress]_[DeviceId].[ObjectType][ObjectId]. |
+| **StreamID** | Optional | `string` | Yes | The custom stream ID used to create the streams. If not specified, the OPC UA adapter will generate a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters: / : ? # [ ] @ ! $ & ' ( ) \ * + , ; = % < > &#124;<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods. |
 | **DeviceIPAddress** | Required | `string` | Yes | Device IP Address |
 | **ObjectType** | Required | `string` | No | Any of the supported object types  |
-| **ObjectId** | Required | `int` | Yes | BACnet object instance number |
+| **ObjectId** | Required | `number` | Yes | BACnet object instance number |
 | **DataCollectionMode** | Required | `string` | No | Specifies the mode of data collection for the item. Default value is Poll |
-| **DataCollectionInterval** | Required | `int` | Yes | Specifies the interval (in seconds) at which data is collected for the item. Default value is 300 |
+| **DataCollectionInterval** | Required | `number` | Yes | Specifies the interval (in seconds) at which data is collected for the item. Default value is 300 |
 | **ObjectProperties** | Optional | `string[]` | Yes |  Specifies which properties to collect from the BACnet object. If left empty, PresentValue and StatusFlags are collected. Default is empty. |
 
 ## BACnet data selection example
@@ -111,7 +105,7 @@ The following is an example of valid BACnet data selection configuration. Since 
     "ObjectId": 70,
     "DataCollectionMode": "Poll",
     "DataCollectionInterval": 200,
-    "ObjectProperties": ["PresentValues"]
+    "ObjectProperties": ["PresentValue"]
   }
 ]
 ```
