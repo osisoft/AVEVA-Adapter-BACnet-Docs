@@ -25,7 +25,7 @@ There are a few differences in how these two systems treat the associated health
 
 PI Web API parses the information and sends it configured PI Systems for the OMF endpoint. The static data is used to create a hierarchy on a PI AF server similar to the following:
 
-![AdapterHealthAFHierarchy](main/V1/images/AdapterHealthAFHierarchy.PNG)
+![AdapterHealthAFHierarchy](../main/V1/images/AdapterHealthAFHierarchy.PNG)
 
 The dynamic health data is actually time-series data that is stored in PI points on a PI Data Archive and can be seen in the AF hierarchy as PI Point Data Reference attributes.
 
