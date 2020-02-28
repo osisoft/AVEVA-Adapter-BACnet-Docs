@@ -11,5 +11,5 @@
   href: main/V1/Administration/toc.yml
   topicHref: main/V1/Administration/Administration.md
 - name: Health and diagnostics
-  href: main/V1/Health/toc.yml
-  topicHref: main/V1/Health/Health and diagnostics.md
+  href: Health/toc.yml
+  topicHref: Health/Health and diagnostics for BACnet.md
