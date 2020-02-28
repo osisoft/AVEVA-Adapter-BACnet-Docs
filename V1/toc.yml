@@ -11,7 +11,7 @@
   href: main/V1/Administration/toc.yml
   topicHref: main/V1/Administration/Administration.md
 - name: Health and diagnostics
-  href: Health/toc.yml
+  href: main/V1/Health/toc.yml
   topicHref: main/V1/Health/Health and diagnostics.md
 - name: EdgeCmd utility
   href: Edgecmd/V1/EdgeCmd utility/toc.yml
