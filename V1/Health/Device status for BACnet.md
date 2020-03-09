@@ -4,7 +4,7 @@ uid: DeviceStatusForBACnet
 
 # Device status
 
-The device status indicates the health of this component and if it is currently communicating properly with the data source. This time-series data is stored within a PI point or OCS stream, depending on the endpoint type. During healthy steady-state operation, a value of "Good" is expected. 
+The device status indicates the health of this component and if it is currently communicating properly with the data source. This time-series data is stored within a PI point or OCS stream, depending on the endpoint type. The BACnet Adapter will send a status value of "Good" when all configured BACnet devices and routers are responding within the specified timeout. When a BACnet device fails to respond to more than AllowedConsecutiveFailedRequests (see [OSIsoft Adapter for BACnet data source configuration](xref:OSIsoftAdapterforBACnetDataSourceConfiguration)), it is considered disconnected and a "DeviceInError" status is sent. Upon any individual device transitioning from connected to disconnected or back, an appropriate status is sent depending on if there are one or more disconnected devices (DeviceInError) or all are connected (Good).
 
 | Property                          | Type                                 | Description                    |
 |-----------------------------------|--------------------------------------|--------------------------------|
