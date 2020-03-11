@@ -1,5 +1,5 @@
  <details><summary>
-See the code.
+Click to see the code.
   </summary>
  
 ```python
