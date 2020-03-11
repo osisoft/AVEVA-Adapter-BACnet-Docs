@@ -1,8 +1,9 @@
  <details><summary>
-  Markdown between html tags works when there's an empty line before it.
+See the code.
   </summary>
-  here ```it doesn't work```
-
-  here ```it works```
+ 
+```python
+print("hello world!")
+``` 
 
   </details>
