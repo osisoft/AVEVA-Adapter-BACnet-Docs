@@ -44,5 +44,3 @@ Stream ID is a unique identifier for each stream created by the adapter for a gi
 ```
 
 **Note:** The naming convention is affected by StreamPrefix and ApplyPrefixToStreamID settings in data source configuration. For more information, see [OSIsoft Adapter for BACnet data source configuration](xref:OSIsoftAdapterforBACnetDataSourceConfiguration).
-
-<ins>TEST Bob Ross Jan012020 10:05AM: I have a comment about this section. </ins>
