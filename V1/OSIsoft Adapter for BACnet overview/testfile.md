@@ -38,7 +38,7 @@ Change the system and adapter configuration by importing the JSON file using a R
 
     If the operation fails due to errors in the configuration, the count of the error and suitable error message(s) are returned in the result.
 
-## Example
+## Examples
 
 ### Sample configuration file
 
