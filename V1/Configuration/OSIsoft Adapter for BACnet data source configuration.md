@@ -90,6 +90,6 @@ The BACnet Adapter will be able to discover available BACnet devices and objects
 
 A successful discovery will result in populating [OSIsoft Adapter for BACnet data selection configuration](xref:OSIsoftAdapterforBACnetDataSourceConfiguration#bacnet-routed-device-data-source-example) and [DeviceConfiguration](xref:OSIsoftAdapterforBACnetDataSelectionConfiguration#BACnet-device-configuration).
 * DataSelection will be populated with *Selected* attribute for all items set to false. 
-* DeviceConfiguration is read-only and will provide more information such as segmentation and services that are supported. This will help make informed decisions during data selection.
+* DeviceConfiguration is read-only and will provide more information such as segmentation and services that are supported. This will help make informed decisions during data selection. 
 
 Note: Discovery will only be triggered when adding a new data source and DataSelection configuration is empty. Discovery will not be triggered if any DataSelection configuration exists.
