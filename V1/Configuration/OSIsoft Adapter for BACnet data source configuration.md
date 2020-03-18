@@ -91,3 +91,5 @@ The BACnet Adapter will be able to discover available BACnet devices and objects
 A successful discovery will result in updating JSON files – DeviceConfiguration.json and DataSelection.json. 
 * DataSelection.json will be updated with *Selected* attribute for all items set to false. 
 * DeviceConfiguration.json is read-only and will provide more information such as segmentation and services that are supported. This will help make informed decisions during data selection.
+
+Note: Discovery is only triggered upon adding a new data source.
