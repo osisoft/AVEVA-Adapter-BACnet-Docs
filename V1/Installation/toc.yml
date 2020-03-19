@@ -1,5 +1,6 @@
 - name: Install the adapter
-  href: Installation/toc.yml
-  topicHref: ../main/V1/Installation/Install the adapter.md
+  href: ../main/V1/Installation/Install the adapter.md
+- name: Install the adapter with Docker
+  href: ../main/V1/Installation/Install the adapter with Docker for BACnet.md
 - name: Uninstall the adapter
   href: ../main/V1/Installation/Uninstall the adapter.md
