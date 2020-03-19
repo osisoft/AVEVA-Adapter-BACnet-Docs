@@ -1,0 +1,5 @@
+- name: Install the adapter
+  href: Installation/toc.yml
+  topicHref: ../main/V1/Installation/Install the adapter.md
+- name: Uninstall the adapter
+  href: ../main/V1/Uninstall the adapter.md
