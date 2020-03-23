@@ -17,7 +17,7 @@ During data source discovery, device information for all discovered devices is r
 The device configuration may be used to choose an appropriate DataCollectionMode when configuring data selection. The following is an example of BACnet device configuration that contains one routed device:
 ```json
 {
-  419: {
+  "419": {
     "DeviceIP": "10.12.8.64",
     "DeviceId": 419,
     "NetworkNumber": 20,
