@@ -50,7 +50,7 @@ Stream ID is a unique identifier for each stream created by the adapter for a gi
 * Fruits
   * Mango
   * Orange
-    1. Orange 1
-    2. Orange 2
-      2.1 Orange 2.A
-      2.2 Orange 2.B
+    * Orange 1
+    * Orange 2
+      - Orange 2.A
+      - Orange 2.B
