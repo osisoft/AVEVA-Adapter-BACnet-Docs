@@ -94,10 +94,10 @@ A successful discovery will result in populating [DataSelection Configuration](x
 
 ### Sample Logs
 [15:17:49 INF] [Bacnet] Discovering BACnet router.  
-[15:18:19 INF] [Bacnet] Found 2 BACnet devices during discovery. 
-[15:18:19 INF] [Bacnet] Discovering BACnet device 1.
-[15:18:21 INF] [Bacnet] Discovery complete for BACnet device 1.
-[15:18:21 INF] [Bacnet] Discovering BACnet device 33.
-[15:18:53 INF] [Bacnet] Discovery complete for BACnet router.
+[15:18:19 INF] [Bacnet] Found 2 BACnet devices during discovery.   
+[15:18:19 INF] [Bacnet] Discovering BACnet device 1.  
+[15:18:21 INF] [Bacnet] Discovery complete for BACnet device 1.  
+[15:18:21 INF] [Bacnet] Discovering BACnet device 33.  
+[15:18:53 INF] [Bacnet] Discovery complete for BACnet router.  
 
 Note: Discovery will only be triggered when adding a new data source and DataSelection configuration is empty. Discovery will not be triggered if any DataSelection configuration exists.
