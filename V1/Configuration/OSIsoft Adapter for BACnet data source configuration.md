@@ -92,9 +92,9 @@ A successful discovery will result in populating [DataSelection Configuration](x
 * DataSelection will be populated with *Selected* attribute for all items set to false. 
 * DeviceConfiguration is read-only and will provide more information such as segmentation and services that are supported. This will help make informed decisions during data selection. 
 
-### Example Logs
+The adapter [log](xref:Logging-configuration) indicates when discovery has completed.
 
-The following log messages indicates when discovery has started and completed.
+### Example log
 
 [15:17:49 INF] [Bacnet] Discovering BACnet router.  
 [15:18:19 INF] [Bacnet] Found 2 BACnet devices during discovery.   
