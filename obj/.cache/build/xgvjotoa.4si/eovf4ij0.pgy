@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Egress endpoints configuration </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Egress endpoints configuration ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EgressEndpointsConfiguration">
+<h1 id="egress-endpoints-configuration" sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="5" sourceendlinenumber="5">Egress endpoints configuration</h1>
+
+<p sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="7" sourceendlinenumber="7">Adapters can egress dynamic data to destinations that you supply through OMF. Supported destinations are OSIsoft Cloud Services and PI servers through PI Web API.</p>
+<p sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="9" sourceendlinenumber="9">An egress endpoint represents a destination to which data will be sent. You can specify multiple endpoints. Every egress endpoint is executed independently of all other egress endpoints and is expected to accept OMF messages. An egress endpoint is comprised of the properties specified under <a href="#egress-endpoint-parameters" data-raw-source="[Egress endpoint parameters](#egress-endpoint-parameters)" sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="9" sourceendlinenumber="9">Egress endpoint parameters</a>.</p>
+<p sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="11" sourceendlinenumber="11"><strong>Note:</strong> Some types, and consequently containers and data, cannot be egressed.  For more information, see <a href="#egress-execution-details" data-raw-source="[Egress execution details](#egress-execution-details)" sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="11" sourceendlinenumber="11">Egress execution details</a>.</p>
+<h2 id="configure-egress-endpoints" sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="13" sourceendlinenumber="13">Configure egress endpoints</h2>
+<p sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="15" sourceendlinenumber="15"><strong>Note:</strong> You cannot add egress configurations manually because some parameters are encrypted when stored to disk. You must use the REST endpoints to add or edit egress configuration. For additional endpoints, see <a href="#rest-urls" data-raw-source="[REST URLs](#rest-urls)" sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="15" sourceendlinenumber="15">REST URLs</a>.</p>
+<p sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="17" sourceendlinenumber="17">Complete the following to create new egress endpoints:</p>
+<ol sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="19" sourceendlinenumber="49">
+<li sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="19" sourceendlinenumber="21">Using any text editor, create a file that contains one or more egress endpoints in JSON form.<ul sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="20" sourceendlinenumber="21">
+<li sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="20" sourceendlinenumber="20">For content structure, see <a href="#examples" data-raw-source="[Examples](#examples)" sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="20" sourceendlinenumber="20">Examples</a>.</li>
+<li sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="21" sourceendlinenumber="21">For a table of all available parameters, see <a href="#egress-endpoint-parameters" data-raw-source="[Egress endpoint parameters](#egress-endpoint-parameters)" sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="21" sourceendlinenumber="21">Egress endpoint parameters</a>.</li>
+</ul>
+</li>
+<li sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="22" sourceendlinenumber="22">Save the file, for example as <em>OmfEgress_DataEndpoints.config.json</em>.</li>
+<li sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="23" sourceendlinenumber="49"><p sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="23" sourceendlinenumber="23">Use any of the <a class="xref" href="Configuration%20tools.html" data-raw-source="[Configuration tools](xref:ConfigurationTools)" sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="23" sourceendlinenumber="23">Configuration tools</a> capable of making HTTP requests and execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/</code></p>
+<p sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="25" sourceendlinenumber="25"> <strong>Examples using curl:</strong></p>
+<ul sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="27" sourceendlinenumber="49">
+<li sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="27" sourceendlinenumber="34"><p sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="27" sourceendlinenumber="27">Add endpoints</p>
+<pre sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="28" sourceendlinenumber="30"><code class="lang-bash">curl -v -d &quot;@OmfEgress_DataEndpoints.config.json&quot; -H &quot;Content-Type: application/json&quot; -X POST    &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
+</code></pre><pre sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="32" sourceendlinenumber="34"><code class="lang-bash">curl -v -d &quot;@OmfEgress_DataEndpoints.config.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT   &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
+</code></pre></li>
+<li sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="36" sourceendlinenumber="39"><p sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="36" sourceendlinenumber="36">Delete an endpoint</p>
+<pre sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="37" sourceendlinenumber="39"><code class="lang-bash">curl -v -X DELETE &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}&quot;
+</code></pre></li>
+<li sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="41" sourceendlinenumber="44"><p sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="41" sourceendlinenumber="41">Update an endpoint</p>
+<pre sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="42" sourceendlinenumber="44"><code class="lang-bash">curl -v -d &quot;@OmfEgress_DataEndpoint.config.json&quot; -H &quot;Content-Type: application/json&quot; -X UPDATE     &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{id}&quot;
+</code></pre></li>
+<li sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="46" sourceendlinenumber="49"><p sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="46" sourceendlinenumber="46">View endpoints</p>
+<pre sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="47" sourceendlinenumber="49"><code class="lang-bash">curl -v -X GET &quot;http://localhost:5590/api/v1/configuration/OmfEgress/DataEndpoints&quot;
+</code></pre></li>
+</ul>
+</li>
+</ol>
+<h2 id="egress-endpoint-configuration-schema" sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="51" sourceendlinenumber="51">Egress endpoint configuration schema</h2>
+<p sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="53" sourceendlinenumber="53">The following table defines the basic behavior of the <em>OmfEgress_DataEndpoints_schema.json</em> file.</p>
+<table sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="55" sourceendlinenumber="57">
+<thead>
+<tr>
+<th>Abstract</th>
+<th>Extensible</th>
+<th>Status</th>
+<th>Identifiable</th>
+<th>Custom Properties</th>
+<th>Additional Properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Can be instantiated</td>
+<td>Yes</td>
+<td>Experimental</td>
+<td>No</td>
+<td>Forbidden</td>
+<td>Forbidden</td>
+</tr>
+</tbody>
+</table>
+<p sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="59" sourceendlinenumber="59">The full schema definition for the egress endpoint configuration is in the <em>OmfEgress_DataEndpoints_schema.json</em> here:</p>
+<p sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="61" sourceendlinenumber="61">Windows: <em>%Program Files%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
+<p sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="63" sourceendlinenumber="63">Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
+<h2 id="egress-endpoint-parameters" sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="66" sourceendlinenumber="66">Egress endpoint parameters</h2>
+<table sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="68" sourceendlinenumber="77">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Type</th>
+<th>Nullable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Id</strong></td>
+<td>Required</td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Unique identifier</td>
+</tr>
+<tr>
+<td><strong>Endpoint</strong></td>
+<td>Required</td>
+<td><code>string</code></td>
+<td>No</td>
+<td>Destination that accepts OMF v1.1 messages. Supported destinations include OCS and PI server.</td>
+</tr>
+<tr>
+<td><strong>ValidateEndpointCertificate</strong></td>
+<td>Optional</td>
+<td><code>boolean</code></td>
+<td>No</td>
+<td>Disables verification of destination certificate. Use for testing only with self-signed certificates. Defaults to true.</td>
+</tr>
+<tr>
+<td><strong>ClientId</strong></td>
+<td>Required for OCS endpoint</td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Authentication with the OCS OMF endpoint.</td>
+</tr>
+<tr>
+<td><strong>ClientSecret</strong></td>
+<td>Required for OCS endpoint</td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Authentication with the OCS OMF endpoint.</td>
+</tr>
+<tr>
+<td><strong>TokenEndpoint</strong></td>
+<td>Optional for OCS endpoint</td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Retrieves an OCS token from an alternative endpoint.</td>
+</tr>
+<tr>
+<td><strong>Username</strong></td>
+<td>Required for PI endpoint</td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Basic authentication to the PI Web API OMF endpoint.</td>
+</tr>
+<tr>
+<td><strong>Password</strong></td>
+<td>Required for PI endpoint</td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Basic authentication to the PI Web API OMF endpoint.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples" sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="80" sourceendlinenumber="80">Examples</h2>
+<p sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="82" sourceendlinenumber="82">The following examples are valid egress configurations.</p>
+<p sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="84" sourceendlinenumber="84"><strong>Egress data to OCS</strong></p>
+<pre sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="86" sourceendlinenumber="92"><code class="lang-json">[{
+     &quot;Endpoint&quot;: &quot;https://&lt;OCS OMF endpoint&gt;&quot;,
+     &quot;ClientId&quot;: &quot;&lt;clientid&gt;&quot;,
+     &quot;ClientSecret&quot;: &quot;&lt;clientsecret&gt;&quot;
+}]
+</code></pre><p sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="94" sourceendlinenumber="94"><strong>Egress data to PI Web API.</strong></p>
+<pre sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="96" sourceendlinenumber="103"><code class="lang-json">[{
+     &quot;Endpoint&quot;: &quot;https://&lt;pi web api server&gt;/piwebapi/omf/&quot;,
+     &quot;UserName&quot;: &quot;&lt;username&gt;&quot;,
+     &quot;Password&quot;: &quot;&lt;password&gt;&quot;
+
+}]
+</code></pre><h2 id="rest-urls" sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="105" sourceendlinenumber="105">REST URLs</h2>
+<table sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="107" sourceendlinenumber="116">
+<thead>
+<tr>
+<th>Relative URL</th>
+<th>HTTP verb</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>api/v1/configuration/omfegress/DataEndpoints</td>
+<td>GET</td>
+<td>Gets all configured egress endpoints</td>
+</tr>
+<tr>
+<td>api/v1/configuration/omfegress/DataEndpoints</td>
+<td>DELETE</td>
+<td>Deletes all configured egress endpoints</td>
+</tr>
+<tr>
+<td>api/v1/configuration/omfegress/DataEndpoints</td>
+<td>POST</td>
+<td>Adds an array of egress endpoints or a single endpoint. Fails if any endpoint already exists</td>
+</tr>
+<tr>
+<td>api/v1/configuration/omfegress/DataEndpoints</td>
+<td>PUT</td>
+<td>Replaces all egress endpoints</td>
+</tr>
+<tr>
+<td>api/v1/configuration/omfegress/DataEndpoints/{id}</td>
+<td>GET</td>
+<td>Gets configured endpoint by <em>id</em></td>
+</tr>
+<tr>
+<td>api/v1/configuration/omfegress/DataEndpoints/{id}</td>
+<td>DELETE</td>
+<td>Deletes configured endpoint by <em>id</em></td>
+</tr>
+<tr>
+<td>api/v1/configuration/omfegress/DataEndpoints/{id}</td>
+<td>PUT</td>
+<td>Replaces egress endpoint by <em>id</em>. Fails if endpoint doesn&#39;t exist</td>
+</tr>
+<tr>
+<td>api/v1/configuration/omfegress/DataEndpoints/{id}</td>
+<td>PATCH</td>
+<td>Allows partial updating of configured endpoint by <em>id</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="egress-execution-details" sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="118" sourceendlinenumber="118">Egress execution details</h2>
+<ul sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="120" sourceendlinenumber="122">
+<li sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="120" sourceendlinenumber="120">After you add configuration for an egress endpoint, egress will be executed immediately for that endpoint. Egress is handled individually per configured endpoint. On first execution, types and containers will be egressed. After that only new or changed types or containers will be egressed. Type creation must be successful in order to create containers. Container creation must be successful in order to egress data.</li>
+<li sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="121" sourceendlinenumber="121">If an egress endpoint is removed, data flow will immediately end for that endpoint. Any buffered data for the endpoint that has been deleted will be permanently lost.</li>
+<li sourcefile="V1/main/V1/Configuration/Egress endpoints configuration.md" sourcestartlinenumber="122" sourceendlinenumber="122">Type, container, and data items are batched into one or more OMF messages when egressing. As per the requirements defined in OMF, a single message payload will not exceed 192KB in size. Compression is automatically applied to outbound egress messages. On the destination, failure to add a single item will result in the message failing. Types, containers, and data will continue to be egressed as long as the destination continues to respond to HTTP requests - retrying previous failures as needed.</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/OSIsoft-Adapter/blob/a64efd17e342efea5f9c43302e497d5c6520782b/V1/Configuration/Egress endpoints configuration.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

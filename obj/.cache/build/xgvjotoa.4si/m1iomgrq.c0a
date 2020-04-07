@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Buffering configuration </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Buffering configuration ">
+    <meta name="generator" content="docfx 2.51.0.0">
+    
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="BufferingConfiguration">
+<h1 id="buffering-configuration" sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="5" sourceendlinenumber="5">Buffering configuration</h1>
+
+<p sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="7" sourceendlinenumber="7">You can configure buffering for data egressed from the adapter to endpoints through the buffering configuration parameters in the system configuration.</p>
+<p sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="9" sourceendlinenumber="9"><strong>Note:</strong> OSIsoft recommends that you do not modify the default buffering location unless necessary. The changes to the buffering configuration parameters take effect only during adapter service startup.</p>
+<h2 id="configure-buffering" sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="11" sourceendlinenumber="11">Configure buffering</h2>
+<ol sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="13" sourceendlinenumber="16">
+<li sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="13" sourceendlinenumber="14">Using any text editor, create a file that contains the buffering configuration in JSON form.<ul sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="14" sourceendlinenumber="14">
+<li sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="14" sourceendlinenumber="14">For content structure, see the sample output in <a href="#examples" data-raw-source="[Examples - Retrieve the buffering configuration](#examples)" sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="14" sourceendlinenumber="14">Examples - Retrieve the buffering configuration</a>.</li>
+</ul>
+</li>
+<li sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="15" sourceendlinenumber="15">Save the file.</li>
+<li sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="16" sourceendlinenumber="16">Use any of the <a class="xref" href="Configuration%20tools.html" data-raw-source="[Configuration tools](xref:ConfigurationTools)" sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="16" sourceendlinenumber="16">Configuration tools</a> capable of making HTTP requests and execute a PUT command with the contents of that file to the following endpoint: <code>http://localhost:&lt;port&gt;/api/v1/configuration/system/buffering</code></li>
+</ol>
+<h2 id="buffering-schema" sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="18" sourceendlinenumber="18">Buffering schema</h2>
+<p sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="20" sourceendlinenumber="20">The full schema definition for the system buffering is in the <em>System_Buffering_schema.json</em> here:</p>
+<p sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="22" sourceendlinenumber="22">Windows: <em>%Program Files%\OSIsoft\Adapters\AdapterName\Schemas</em></p>
+<p sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="24" sourceendlinenumber="24">Linux: <em>/opt/OSIsoft/Adapters/AdapterName/Schemas</em></p>
+<h2 id="buffering-parameters" sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="27" sourceendlinenumber="27">Buffering parameters:</h2>
+<table sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="29" sourceendlinenumber="33">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EnableBuffering</strong></td>
+<td>Optional</td>
+<td><code>boolean</code></td>
+<td>Enables or disables buffering. <br><br> Default: True</td>
+</tr>
+<tr>
+<td><strong>MaxBufferSizeMB</strong></td>
+<td>Optional</td>
+<td><code>Integer</code></td>
+<td>Defines the maximum size of the buffer file that will be persisted on disk. The unit is specified in MB (1 Mebibyte = 1048576 bytes). Take into account the capacity and type of the storage medium to determine a suitable value for this parameter. A value of -1 indicates that the buffer file size is restricted only by the available free disk space. <br><br> Allowed values: -1 or [1, 2147483647]. <br><br> Default: -1</td>
+</tr>
+<tr>
+<td><strong>BufferLocation</strong></td>
+<td>Optional</td>
+<td><code>string</code></td>
+<td>Defines the location of the buffer files. Absolute paths are required. Take into account access-control list (ACL) when setting this parameter <br><br> Allowed value: Valid path to a folder location in the file system. <br><br> Default: <br> <strong>Windows:</strong> <em>%ProgramData%\OSIsoft\Adapters\{AdapterType}\{AdapterInstance}\Data</em> <br> <strong>Linux:</strong> <em>/usr/share/OSIsoft/Adapters/{AdatpterType}/{AdapterInstance}/Data</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples" sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="35" sourceendlinenumber="35">Examples</h2>
+<p sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="37" sourceendlinenumber="37">The following examples are buffering configurations made through curl REST client.</p>
+<p sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="39" sourceendlinenumber="39"><strong>Configure buffering</strong></p>
+<pre sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="41" sourceendlinenumber="43"><code>curl -X PUT &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ &quot;MaxBufferSizeMB&quot;: 50, &quot;BufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/NewBuffers&quot;, &quot;EnableBuffering&quot;: true }&quot;
+</code></pre><p sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="45" sourceendlinenumber="45">   <code>204 No Content</code> response indicates success.</p>
+<p sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="47" sourceendlinenumber="47"><strong>Retrieve the buffering configuration</strong></p>
+<pre sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="49" sourceendlinenumber="51"><code>curl -X GET &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot;
+</code></pre><p sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="53" sourceendlinenumber="53">Sample output:</p>
+<pre sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="55" sourceendlinenumber="61"><code>{
+    &quot;bufferLocation&quot;: &quot;C:/ProgramData/OSIsoft/Adapters/Modbus/Modbus/Buffers&quot;,
+    &quot;maxBufferSizeMB&quot;: -1,
+    &quot;enableBuffering&quot;: true
+}
+</code></pre><p sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="63" sourceendlinenumber="63"><code>200 OK</code> response indicates success.</p>
+<p sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="65" sourceendlinenumber="65"><strong>Update MaxBuferSizeMb parameter</strong></p>
+<pre sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="67" sourceendlinenumber="69"><code>curl -X PATCH &quot;http://localhost:{port}/api/v1/configuration/system/buffering&quot; -H &quot;Content-Type: application/json&quot; -d &quot;{ &quot;MaxBufferSizeMB&quot;: 100 }&quot;
+</code></pre><p sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="71" sourceendlinenumber="71"><code>204 No Content</code> response indicates success.</p>
+<p sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="73" sourceendlinenumber="73"><strong>Note:</strong> In the previous examples, <em>port</em> refers to the configured port that the adapter runs on.</p>
+<h2 id="rest-uris" sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="75" sourceendlinenumber="75">REST URIs</h2>
+<p sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="77" sourceendlinenumber="77">The relative URI for all buffering configuration actions is <code>api/v1/configuration/system/buffering</code>.</p>
+<table sourcefile="V1/main/V1/Configuration/Buffering configuration.md" sourcestartlinenumber="79" sourceendlinenumber="83">
+<thead>
+<tr>
+<th>HTTP verb</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>Gets the buffering configuration</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>Replaces the existing buffering configuration</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>Update parameter, partial configuration</td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/OSIsoft-Adapter/blob/a64efd17e342efea5f9c43302e497d5c6520782b/V1/Configuration/Buffering configuration.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>
