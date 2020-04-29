@@ -1,8 +1,0 @@
-- name: Start and stop an adapter
-  href: Start and stop an adapter.md
-- name: Start and stop ingress component
-  href: Start and stop ingress component.md
-- name: Retrieve product version information
-  href: Retrieve product version information.md
-- name: Delete an adapter component
-  href: Delete an adapter component.md
