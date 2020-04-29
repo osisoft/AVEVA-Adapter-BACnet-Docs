@@ -1,5 +1,0 @@
----
-uid: SupportedFeatures
----
-
-# Supported features

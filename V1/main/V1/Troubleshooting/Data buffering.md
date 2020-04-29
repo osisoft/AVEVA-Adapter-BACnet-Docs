@@ -1,5 +1,0 @@
----
-uid: TroubleshootingDataBuffering
----
-
-# Data buffering
