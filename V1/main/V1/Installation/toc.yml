@@ -1,0 +1,4 @@
+- name: Install the adapter
+  href: Install the adapter.md
+- name: Uninstall the adapter
+  href: Uninstall the adapter.md
