@@ -16,8 +16,8 @@ During data source discovery, device information for all discovered devices is r
 
 The device configuration may be used to choose an appropriate DataCollectionMode when configuring data selection. The following is an example of BACnet device configuration that contains one routed device:
 ```json
-{
-  "419": {
+[
+  {
     "DeviceIP": "10.12.8.64",
     "DeviceId": 419,
     "NetworkNumber": 20,
@@ -31,7 +31,7 @@ The device configuration may be used to choose an appropriate DataCollectionMode
       "ReadPropertyMultiple"
     ]
   }
-}
+]
 ```
 
 ## Configure BACnet data selection
@@ -66,17 +66,17 @@ Linux: */opt/OSIsoft/Adapters/BACnet/Schemas*
 
 The following parameters can be used to configure BACnet data selection:
 
-| Parameter     | Required | Type | Nullable | Description |
-|---------------|----------|------|----------|-------------|
-| **Selected** | Optional | `boolean` | No | Use this field to select or clear a measurement. To select an item, set to true. To remove an item, leave the field empty or set to false.  If not configured, the default value is false.|
-| **Name**      | Optional | `string` | Yes |The optional friendly name of the data item collected from the data source. If not configured, the default value will be the stream id. |
-| **StreamID** | Optional | `string` | Yes | The custom stream ID used to create the streams. If not specified, the BACnet adapter will generate a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters: / : ? # [ ] @ ! $ & ' ( ) \ * + , ; = % < > &#124;<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods. |
-| **DeviceIPAddress** | Required | `string` | Yes | Device IP Address |
-| **ObjectType** | Required | `string` | No | Any of the supported object types  |
-| **ObjectId** | Required | `number` | Yes | BACnet object instance number |
-| **DataCollectionMode** | Required | `string` | No | Specifies the mode of data collection for the item. Default and only value is Poll |
-| **DataCollectionInterval** | Required | `number` | Yes | Specifies the interval (in seconds) at which data is collected for the item. Default value is 300 |
-| **ObjectProperties** | Optional | `string[]` | Yes |  Specifies which properties to collect from the BACnet object. If left empty, PresentValue and StatusFlags are collected. Default is empty. |
+| Parameter     | Required | Type | Description |
+|---------------|----------|------|-------------|
+| **Selected** | Optional | `boolean` | Use this field to select or clear a measurement. To select an item, set to true. To remove an item, leave the field empty or set to false.  If not configured, the default value is false.|
+| **Name**      | Optional | `string` | The optional friendly name of the data item collected from the data source. If not configured, the default value will be the stream id. |
+| **StreamID** | Optional | `string` | The custom stream ID used to create the streams. If not specified, the BACnet adapter will generate a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters: / : ? # [ ] @ ! $ & ' ( ) \ * + , ; = % < > &#124;<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods. |
+| **DeviceIPAddress** | Required | `string` | Device IP Address |
+| **ObjectType** | Required | `string` | Any of the supported object types  |
+| **ObjectId** | Required | `number` | BACnet object instance number |
+| **DataCollectionMode** | Optional | `string` | Specifies the mode of data collection for the item. Default and only value is Poll |
+| **DataCollectionInterval** | Optional | `number` | Specifies the interval (in seconds) at which data is collected for the item. Default value is 300 |
+| **PropertyIdentifier** | Optional | `string` | Specifies which property to collect from the BACnet object. If left empty, PresentValue is collected. |
 
 ## BACnet data selection example
 
@@ -105,7 +105,7 @@ The following is an example of valid BACnet data selection configuration. Since 
     "ObjectId": 70,
     "DataCollectionMode": "Poll",
     "DataCollectionInterval": 200,
-    "ObjectProperties": ["PresentValue"]
+    "PropertyIdentifier": "PresentValue"
   }
 ]
 ```
