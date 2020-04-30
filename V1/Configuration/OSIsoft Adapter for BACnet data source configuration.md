@@ -49,7 +49,7 @@ The following parameters can be used to configure an BACnet data source:
 | **DeviceId** | Optional | `number` | Device instance number. If specified, indicates IPAddress is for a BACnet device (not a BACnet router). If empty, indicates the IPAddress is for a BACnet router (not an individual BACnet device).|
 | **NetworkNumber** | Optional | `number` | Device network number for routed BACnet devices. This setting can only be specified when a DeviceId is specified. When this setting is specified, MACAddress must also be specified|
 | **MacAddress** | Optional | `string` | Device MAC address for routed BACnet devices. This setting can only be specified when a DeviceId is specified. When this setting is specified, NetworkNumber must also be specified. It must contain 1-6 byte strings in hexadecimal format, separated by a dash '-' or colon ':'. For example, `12:34:ef:cd` |
-| **StreamIdPrefix** | Optional | `string` | Specifies what prefix is used for Stream IDs. **Note:** An empty string means no prefix will be added to the Stream IDs. Null will result in ComponentID followed by dot character will be added to the Stream IDs. |
+| **StreamIdPrefix** | Optional | `string` | Specifies what prefix is used for Stream IDs. **Note:** An empty string means no prefix will be added to the Stream IDs. Specifying 'null' or omitting this parameter will result in the ComponentID followed by a dot character being used to prefix the Stream IDs. |
 | **DefaultStreamIdPattern** | Optional | `string` | Specifies the default Stream ID pattern to use. Possible parameters: {DeviceIPAddress}, {DeviceId}, {ObjectType}, {ObjectId}, and {PropertyIdentifier}. Null value will default to {DeviceId}.{ObjectType}{ObjectId}{PropertyIdentifier}.|
 
 
