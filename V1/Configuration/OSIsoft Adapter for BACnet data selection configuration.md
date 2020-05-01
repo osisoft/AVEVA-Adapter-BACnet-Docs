@@ -74,7 +74,7 @@ The following parameters can be used to configure BACnet data selection:
 | **DeviceIPAddress** | Required | `string` | Device IP Address |
 | **ObjectType** | Required | `string` | Any of the supported object types  |
 | **ObjectId** | Required | `number` | BACnet object instance number |
-| **DataCollectionMode** | Optional | `string` | Specifies the mode of data collection for the item. Default and only value is Poll. |
+| **DataCollectionMode** | Optional | `string` | Specifies the mode of data collection for the item. Default and only available value is Poll. |
 | **DataCollectionInterval** | Optional | `number` | Specifies the interval (in seconds) at which data is collected for the item. Default value is 300. |
 | **PropertyIdentifier** | Optional | `string` | Specifies which property to collect from the BACnet object. If left empty, PresentValue is collected. |
 
