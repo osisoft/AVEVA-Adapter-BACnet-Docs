@@ -84,8 +84,8 @@
 <p>During data source discovery, device information for all discovered devices is retrieved by the adapter, which is subsequently available through the following REST endpoint using any configuration tool that can execute an HTTP GET command: <code>http://localhost:5590/api/v1/configuration/&lt;adapterId&gt;/DeviceConfiguration/</code>.</p>
 <p><strong>Note:</strong> The device configuration is read only and only supports HTTP GET.</p>
 <p>The device configuration may be used to choose an appropriate DataCollectionMode when configuring data selection. The following is an example of BACnet device configuration that contains one routed device:</p>
-<pre><code class="lang-json">{
-  &quot;419&quot;: {
+<pre><code class="lang-json">[
+  {
     &quot;DeviceIP&quot;: &quot;10.12.8.64&quot;,
     &quot;DeviceId&quot;: 419,
     &quot;NetworkNumber&quot;: 20,
@@ -99,7 +99,7 @@
       &quot;ReadPropertyMultiple&quot;
     ]
   }
-}
+]
 </code></pre><h2 id="configure-bacnet-data-selection">Configure BACnet data selection</h2>
 <p><strong>Note:</strong> You cannot modify BACnet data selection configurations manually. You must use the REST endpoints to add or edit the configuration.</p>
 <p>Complete the following to configure the BACnet data selection:</p>
@@ -127,7 +127,6 @@
 <th>Parameter</th>
 <th>Required</th>
 <th>Type</th>
-<th>Nullable</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -136,64 +135,55 @@
 <td><strong>Selected</strong></td>
 <td>Optional</td>
 <td><code>boolean</code></td>
-<td>No</td>
 <td>Use this field to select or clear a measurement. To select an item, set to true. To remove an item, leave the field empty or set to false.  If not configured, the default value is false.</td>
 </tr>
 <tr>
 <td><strong>Name</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Yes</td>
 <td>The optional friendly name of the data item collected from the data source. If not configured, the default value will be the stream id.</td>
 </tr>
 <tr>
 <td><strong>StreamID</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Yes</td>
 <td>The custom stream ID used to create the streams. If not specified, the BACnet adapter will generate a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores (&quot;__&quot;).<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters: / : ? # [ ] @ ! $ &amp; &#39; ( ) \ * + , ; = % &lt; &gt; &#124;<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.</td>
 </tr>
 <tr>
 <td><strong>DeviceIPAddress</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>Yes</td>
 <td>Device IP Address</td>
 </tr>
 <tr>
 <td><strong>ObjectType</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>No</td>
 <td>Any of the supported object types</td>
 </tr>
 <tr>
 <td><strong>ObjectId</strong></td>
 <td>Required</td>
 <td><code>number</code></td>
-<td>Yes</td>
 <td>BACnet object instance number</td>
 </tr>
 <tr>
 <td><strong>DataCollectionMode</strong></td>
-<td>Required</td>
+<td>Optional</td>
 <td><code>string</code></td>
-<td>No</td>
-<td>Specifies the mode of data collection for the item. Default and only value is Poll</td>
+<td>Specifies the mode of data collection for the item. Default and only available value is Poll.</td>
 </tr>
 <tr>
 <td><strong>DataCollectionInterval</strong></td>
-<td>Required</td>
+<td>Optional</td>
 <td><code>number</code></td>
-<td>Yes</td>
-<td>Specifies the interval (in seconds) at which data is collected for the item. Default value is 300</td>
+<td>Specifies the interval (in seconds) at which data is collected for the item. Default value is 300.</td>
 </tr>
 <tr>
-<td><strong>ObjectProperties</strong></td>
+<td><strong>PropertyIdentifier</strong></td>
 <td>Optional</td>
-<td><code>string[]</code></td>
-<td>Yes</td>
-<td>Specifies which properties to collect from the BACnet object. If left empty, PresentValue and StatusFlags are collected. Default is empty.</td>
+<td><code>string</code></td>
+<td>Specifies which property to collect from the BACnet object. If left empty, PresentValue is collected.</td>
 </tr>
 </tbody>
 </table>
@@ -221,7 +211,7 @@
     &quot;ObjectId&quot;: 70,
     &quot;DataCollectionMode&quot;: &quot;Poll&quot;,
     &quot;DataCollectionInterval&quot;: 200,
-    &quot;ObjectProperties&quot;: [&quot;PresentValue&quot;]
+    &quot;PropertyIdentifier&quot;: &quot;PresentValue&quot;
   }
 ]
 </code></pre></article>

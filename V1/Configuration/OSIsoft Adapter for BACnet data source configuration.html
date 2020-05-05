@@ -106,7 +106,6 @@
 <th>Parameter</th>
 <th>Required</th>
 <th>Type</th>
-<th>Nullable</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -115,78 +114,67 @@
 <td><strong>IPAddress</strong></td>
 <td>Required</td>
 <td><code>string</code></td>
-<td>Yes</td>
 <td>IPv4 address of BACnet device or BACnet router</td>
 </tr>
 <tr>
 <td><strong>Port</strong></td>
 <td>Optional</td>
 <td><code>number</code></td>
-<td>No</td>
 <td>UDP port number for communication with BACnet devices. The value ranges from 0 to 65535. If not configured, the default port is 47808 (which is the default port for BACnet protocol).</td>
 </tr>
 <tr>
 <td><strong>MaxConcurrentNetworkRequests</strong></td>
 <td>Optional</td>
 <td><code>number</code></td>
-<td>No</td>
 <td>The maximum number of requests that can be sent concurrently on the network. This is not affected by the response time for the requests. A value of 0 indicates no limit. The default is 1.</td>
 </tr>
 <tr>
 <td><strong>DeviceRequestDelay</strong></td>
 <td>Optional</td>
 <td><code>number</code></td>
-<td>No</td>
-<td>The delay in milliseconds between sending requests to an individual device. The value ranges from 0 to 10000 milliseconds. The default is 0 ms.</td>
+<td>The delay in milliseconds between sending each request to an individual device. The value ranges from 0 to 10000 milliseconds. The default is 0 ms.</td>
 </tr>
 <tr>
 <td><strong>AllowedConsecutiveFailedRequests</strong></td>
 <td>Optional</td>
 <td><code>number</code></td>
-<td>No</td>
-<td>The number of consecutive failed requests to a device before setting the device status to disconnected and waiting DeviceReconnectInterval to try sending requests again. The value ranges from 3 to 1000. The default is 3.</td>
+<td>The number of consecutive failed requests to a device before waiting DeviceReconnectInterval to try sending requests again. The value ranges from 3 to 1000. The default is 3.</td>
 </tr>
 <tr>
 <td><strong>DeviceReconnectInterval</strong></td>
 <td>Optional</td>
 <td><code>number</code></td>
-<td>No</td>
 <td>The amount of time in minutes to wait before attempting to send requests to a device after it has disconnected. The value must be greater than 0. The default is 60 minutes.</td>
 </tr>
 <tr>
 <td><strong>DeviceId</strong></td>
 <td>Optional</td>
 <td><code>number</code></td>
-<td>yes</td>
-<td>Device instance number. If specified, indicates IPAddress is for a BACnet device (not a BACnet router). If empty, indicates the IPAddress is for a BACnet router (not an individual BACnet device).</td>
+<td>Device instance number. If specified, the IPAddress will be interpreted as for a BACnet device (not a BACnet router). If empty, the IPAddress will be interpreted as for a BACnet router (not an individual BACnet device).</td>
 </tr>
 <tr>
 <td><strong>NetworkNumber</strong></td>
 <td>Optional</td>
 <td><code>number</code></td>
-<td>Yes</td>
 <td>Device network number for routed BACnet devices. This setting can only be specified when a DeviceId is specified. When this setting is specified, MACAddress must also be specified</td>
 </tr>
 <tr>
 <td><strong>MacAddress</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Yes</td>
 <td>Device MAC address for routed BACnet devices. This setting can only be specified when a DeviceId is specified. When this setting is specified, NetworkNumber must also be specified. It must contain 1-6 byte strings in hexadecimal format, separated by a dash &#39;-&#39; or colon &#39;:&#39;. For example, <code>12:34:ef:cd</code></td>
 </tr>
 <tr>
-<td><strong>StreamPrefix</strong></td>
+<td><strong>StreamIdPrefix</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Yes</td>
-<td>Specifies what prefix is used for Stream IDs and names. <strong>Note:</strong> An empty string means no prefix will be added to the Stream IDs and names. Null value means ComponentID followed by dot character will be added to the stream IDs and names.</td>
+<td>Specifies what prefix is used for Stream IDs. <strong>Note:</strong> An empty string means no prefix will be added to the Stream IDs. Specifying &#39;null&#39; or omitting this parameter will result in the ComponentID followed by a dot character being used to prefix the Stream IDs.</td>
 </tr>
 <tr>
-<td><strong>ApplyPrefixToStreamId</strong></td>
+<td><strong>DefaultStreamIdPattern</strong></td>
 <td>Optional</td>
-<td><code>boolean</code></td>
-<td>No</td>
-<td>Parameter applied to all data items collected from the data source that have custom stream ID configured. If configured, the adapter will apply the StreamIdPrefix property to all the streams with custom ID configured. The property does not affect any streams with default ID configured</td>
+<td><code>string</code></td>
+<td>Specifies the default Stream ID pattern to use. Possible parameters: {DeviceIPAddress}, {DeviceId}, {ObjectType}, {ObjectId}, and {PropertyIdentifier}. An empty or &#39;null&#39; value will result in {DeviceId}.{ObjectType}{ObjectId}{PropertyIdentifier}.</td>
 </tr>
 </tbody>
 </table>
