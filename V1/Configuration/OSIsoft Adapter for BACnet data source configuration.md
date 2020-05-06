@@ -92,7 +92,7 @@ A successful discovery will result in populating [DeviceConfiguration](xref:OSIs
 * DataSelection will be populated with *Selected* attribute for all items set to false. 
 * DeviceConfiguration is read-only and will provide more information such as segmentation and services that are supported. This will help make informed decisions during data selection. 
 
-When the adapter starts or a new data source is configured, the adapter checks if DeviceConfiguration is populated. Discovery will be performed if and only if DeviceConfiguration is empty. DataSelection will be updated by discovery if and only if it is empty.
+When the adapter starts or a new data source is configured, the adapter checks if DeviceConfiguration is populated. Discovery will be performed only if DeviceConfiguration is empty. DataSelection will be updated by discovery only if it is empty.
 
 The adapter [log](xref:Logging-configuration) indicates when discovery has completed.
 
