@@ -50,7 +50,7 @@ The following parameters can be used to configure an BACnet data source:
 | **NetworkNumber** | Optional | `number` | Device network number for routed BACnet devices. This setting can only be specified when a DeviceId is specified. When this setting is specified, MACAddress must also be specified|
 | **MacAddress** | Optional | `string` | Device MAC address for routed BACnet devices. This setting can only be specified when a DeviceId is specified. When this setting is specified, NetworkNumber must also be specified. It must contain 1-6 byte strings in hexadecimal format, separated by a dash '-' or colon ':'. For example, `12:34:ef:cd` |
 | **StreamIdPrefix** | Optional | `string` | Specifies what prefix is used for Stream IDs. **Note:** An empty string means no prefix will be added to the Stream IDs. Specifying 'null' or omitting this parameter will result in the ComponentID followed by a dot character being used to prefix the Stream IDs. |
-| **DefaultStreamIdPattern** | Optional | `string` | Specifies the default Stream ID pattern to use. Possible parameters: {DeviceIPAddress}, {DeviceId}, {ObjectType}, {ObjectId}, and {PropertyIdentifier}. An empty or 'null' value will result in {DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}.|
+| **DefaultStreamIdPattern** | Optional | `string` | Specifies the default Stream ID pattern to use. Possible parameters: {DeviceIPAddress}, {DeviceId}, {ObjectType}, {ObjectId}, and {PropertyIdentifier}. An empty or 'null' value will result in '{DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}'.|
 
 
 ## BACnet router data source example
@@ -88,7 +88,7 @@ The following is an example of valid BACnet routed device data source configurat
 ## Discovery
 The BACnet Adapter will be able to discover available BACnet devices and objects defined by the data source configuration. In the case of discovery for a BACnet router, the adapter will send a *Who-Is* request and wait 30 seconds to receive *I-Am* responses from available devices. Upon receiving an *I-Am* response, the adapter will request the *Protocol Services Supported* and *Object List* properties from the available devices. In the case of discovering a single device, the adapter will not send a *Who-Is* request but will immediately move to requesting the properties. 
 
-A successful discovery will result in populating [DataSelection Configuration](xref:OSIsoftAdapterforBACnetDataSelectionConfiguration#Configure-BACnet-data-selection) and [DeviceConfiguration](xref:OSIsoftAdapterforBACnetDataSelectionConfiguration#BACnet-device-configuration).
+A successful discovery will result in populating [DeviceConfiguration](xref:OSIsoftAdapterforBACnetDataSelectionConfiguration#BACnet-device-configuration) and optionally [DataSelection Configuration](xref:OSIsoftAdapterforBACnetDataSelectionConfiguration#Configure-BACnet-data-selection).
 * DataSelection will be populated with *Selected* attribute for all items set to false. 
 * DeviceConfiguration is read-only and will provide more information such as segmentation and services that are supported. This will help make informed decisions during data selection. 
 
