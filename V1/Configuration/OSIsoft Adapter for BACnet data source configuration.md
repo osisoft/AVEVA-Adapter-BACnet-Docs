@@ -50,7 +50,7 @@ The following parameters can be used to configure an BACnet data source:
 | **NetworkNumber** | Optional | `number` | Device network number for routed BACnet devices. This setting can only be specified when a DeviceId is specified. When this setting is specified, MACAddress must also be specified|
 | **MacAddress** | Optional | `string` | Device MAC address for routed BACnet devices. This setting can only be specified when a DeviceId is specified. When this setting is specified, NetworkNumber must also be specified. It must contain 1-6 byte strings in hexadecimal format, separated by a dash '-' or colon ':'. For example, `12:34:ef:cd` |
 | **StreamIdPrefix** | Optional | `string` | Specifies what prefix is used for Stream IDs. **Note:** An empty string means no prefix will be added to the Stream IDs. Specifying 'null' or omitting this parameter will result in the ComponentID followed by a dot character being used to prefix the Stream IDs. |
-| **DefaultStreamIdPattern** | Optional | `string` | Specifies the default Stream ID pattern to use. Possible parameters: {DeviceIPAddress}, {DeviceId}, {ObjectType}, {ObjectId}, and {PropertyIdentifier}. An empty or 'null' value will result in {DeviceId}.{ObjectType}{ObjectId}{PropertyIdentifier}.|
+| **DefaultStreamIdPattern** | Optional | `string` | Specifies the default Stream ID pattern to use. Possible parameters: {DeviceIPAddress}, {DeviceId}, {ObjectType}, {ObjectId}, and {PropertyIdentifier}. An empty or 'null' value will result in {DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}.|
 
 
 ## BACnet router data source example
@@ -92,6 +92,8 @@ A successful discovery will result in populating [DataSelection Configuration](x
 * DataSelection will be populated with *Selected* attribute for all items set to false. 
 * DeviceConfiguration is read-only and will provide more information such as segmentation and services that are supported. This will help make informed decisions during data selection. 
 
+When the adapter starts or a new data source is configured, the adapter checks if DeviceConfiguration is populated. Discovery will be performed if and only if DeviceConfiguration is empty. DataSelection will be updated by discovery if and only if it is empty.
+
 The adapter [log](xref:Logging-configuration) indicates when discovery has completed.
 
 ### Example log
@@ -102,5 +104,3 @@ The adapter [log](xref:Logging-configuration) indicates when discovery has compl
 [15:18:21 INF] [Bacnet] Discovery complete for BACnet device 1.  
 [15:18:21 INF] [Bacnet] Discovering BACnet device 33.  
 [15:18:53 INF] [Bacnet] Discovery complete for BACnet router.  
-
-Note: Discovery will only be triggered when adding a new data source and DataSelection configuration is empty. Discovery will not be triggered if any DataSelection configuration exists.
