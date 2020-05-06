@@ -72,7 +72,7 @@ The following parameters can be used to configure BACnet data selection:
 | **Name**      | Optional | `string` | The optional friendly name of the data item collected from the data source. If not configured, the default value will be the stream id. |
 | **StreamID** | Optional | `string` | The custom stream ID used to create the streams. If not specified, the BACnet adapter will generate a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters: / : ? # [ ] @ ! $ & ' ( ) \ * + , ; = % < > &#124;<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods. |
 | **DeviceIPAddress** | Required | `string` | Device IP Address |
-| **ObjectType** | Required | `string` | Any of the supported object types  |
+| **ObjectType** | Required | `string` | Supported Bacnet object types include Accumulator, AnalogInput, AnalogOutput, AnalogValue, BinaryInput, BinaryOutput, BinaryValue, MultistateInput, MultistateOutput, MultistateValue.  |
 | **ObjectId** | Required | `number` | BACnet object instance number |
 | **DataCollectionMode** | Optional | `string` | Specifies the mode of data collection for the item. Default and only available value is Poll. |
 | **DataCollectionInterval** | Optional | `number` | Specifies the interval (in seconds) at which data is collected for the item. Default value is 300. |
