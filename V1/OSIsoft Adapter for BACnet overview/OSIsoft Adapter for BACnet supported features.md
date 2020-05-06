@@ -26,8 +26,21 @@ The following table lists BACnet variable types that the adapter supports data c
 | DateTime         | DateTime         |
 | String           | String           |
 
-## Export operation
+## Object Types
 
+The following BACnet object types are supported: 
+* Accumulator
+* AnalogInput
+* AnalogOutput
+* AnalogValue
+* BinaryInput
+* BinaryOutput
+* BinaryValue
+* MultistateInput
+* MultistateOutput
+* MultistateValue
+
+## Export operation
 
 The adapter is able to export available BACnet dynamic variables by browsing the BACnet hierarchies or sub-hierarchies.
 
