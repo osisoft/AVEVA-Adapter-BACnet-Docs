@@ -174,7 +174,7 @@
 <td><strong>DefaultStreamIdPattern</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies the default Stream ID pattern to use. Possible parameters: {DeviceIPAddress}, {DeviceId}, {ObjectType}, {ObjectId}, and {PropertyIdentifier}. An empty or &#39;null&#39; value will result in {DeviceId}.{ObjectType}{ObjectId}{PropertyIdentifier}.</td>
+<td>Specifies the default Stream ID pattern to use. Possible parameters: {DeviceIPAddress}, {DeviceId}, {ObjectType}, {ObjectId}, and {PropertyIdentifier}. An empty or &#39;null&#39; value will result in &#39;{DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}&#39;.</td>
 </tr>
 </tbody>
 </table>
@@ -203,15 +203,15 @@
 }
 </code></pre><h2 id="discovery">Discovery</h2>
 <p>The BACnet Adapter will be able to discover available BACnet devices and objects defined by the data source configuration. In the case of discovery for a BACnet router, the adapter will send a <em>Who-Is</em> request and wait 30 seconds to receive <em>I-Am</em> responses from available devices. Upon receiving an <em>I-Am</em> response, the adapter will request the <em>Protocol Services Supported</em> and <em>Object List</em> properties from the available devices. In the case of discovering a single device, the adapter will not send a <em>Who-Is</em> request but will immediately move to requesting the properties. </p>
-<p>A successful discovery will result in populating <a class="xref" href="OSIsoft%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#Configure-BACnet-data-selection">DataSelection Configuration</a> and <a class="xref" href="OSIsoft%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#BACnet-device-configuration">DeviceConfiguration</a>.</p>
+<p>A successful discovery will result in populating <a class="xref" href="OSIsoft%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#BACnet-device-configuration">DeviceConfiguration</a> and optionally <a class="xref" href="OSIsoft%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#Configure-BACnet-data-selection">DataSelection Configuration</a>.</p>
 <ul>
 <li>DataSelection will be populated with <em>Selected</em> attribute for all items set to false. </li>
 <li>DeviceConfiguration is read-only and will provide more information such as segmentation and services that are supported. This will help make informed decisions during data selection. </li>
 </ul>
+<p>When the adapter starts or a new data source is configured, the adapter checks if DeviceConfiguration is populated. Discovery will be performed only if DeviceConfiguration is empty. DataSelection will be updated by discovery only if it is empty.</p>
 <p>The adapter <a href="xref:Logging-configuration">log</a> indicates when discovery has completed.</p>
 <h3 id="example-log">Example log</h3>
 <p>[15:17:49 INF] [Bacnet] Discovering BACnet router.<br>[15:18:19 INF] [Bacnet] Found 2 BACnet devices during discovery.<br>[15:18:19 INF] [Bacnet] Discovering BACnet device 1.<br>[15:18:21 INF] [Bacnet] Discovery complete for BACnet device 1.<br>[15:18:21 INF] [Bacnet] Discovering BACnet device 33.<br>[15:18:53 INF] [Bacnet] Discovery complete for BACnet router.  </p>
-<p>Note: Discovery will only be triggered when adding a new data source and DataSelection configuration is empty. Discovery will not be triggered if any DataSelection configuration exists.</p>
 </article>
           </div>
           
