@@ -7,7 +7,9 @@ uid: OSIsoftAdapterforBACnetPrinciplesOfOperation
 This adapter's operations focus on data collection and streams creation. 
 
 Example #1: See the `Hello` window.
+
 Example #2: See the **Hello** window.
+
 Example #3: See the *Hello* window.
 
 ## Adapter configuration
