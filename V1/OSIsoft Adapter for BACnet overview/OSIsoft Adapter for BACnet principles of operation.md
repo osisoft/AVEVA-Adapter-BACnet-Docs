@@ -4,7 +4,9 @@ uid: OSIsoftAdapterforBACnetPrinciplesOfOperation
 
 # OSIsoft Adapter for BACnet principles of operation
 
-This adapter's operations focus on data collection and streams creation.
+This adapter's operations focus on data collection and streams creation. 
+
+Test see the `Hello` window
 
 ## Adapter configuration
 
