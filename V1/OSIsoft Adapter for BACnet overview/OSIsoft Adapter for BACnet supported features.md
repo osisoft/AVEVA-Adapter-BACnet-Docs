@@ -6,28 +6,21 @@ uid: OSIsoftAdapterforBACnetSupportedFeatures
 
 This adapter provides several features including data types and bitmaps.
 
-## Data types
+## Object Types
 
-The following table lists BACnet variable types that the adapter supports data collection from and types of streams that are going to be created.
-
-| BACnet data type | Stream data type |
-|------------------|------------------|
-| Boolean          | Boolean          |
-| Byte             | Int16            |
-| SByte            | Int16            |
-| Int16            | Int16            |
-| UInt16           | UInt16           |
-| Int32            | Int32            |
-| UInt32           | UInt32           |
-| Int64            | Int64            |
-| UInt64           | UInt64           |
-| Float            | Float32          |
-| Double           | Float64          |
-| DateTime         | DateTime         |
-| String           | String           |
+The following BACnet object types are supported: 
+* Accumulator
+* AnalogInput
+* AnalogOutput
+* AnalogValue
+* BinaryInput
+* BinaryOutput
+* BinaryValue
+* MultistateInput
+* MultistateOutput
+* MultistateValue
 
 ## Export operation
-
 
 The adapter is able to export available BACnet dynamic variables by browsing the BACnet hierarchies or sub-hierarchies.
 
