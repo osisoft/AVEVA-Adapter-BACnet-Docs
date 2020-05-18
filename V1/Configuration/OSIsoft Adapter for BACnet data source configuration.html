@@ -129,9 +129,9 @@
 <td>The maximum number of requests that can be sent concurrently on the network. This is not affected by the response time for the requests. A value of 0 indicates no limit. The default is 1.</td>
 </tr>
 <tr>
-<td><strong>DeviceRequestDelay</strong></td>
+<td><strong>RequestDelay</strong></td>
 <td>Optional</td>
-<td><code>number</code></td>
+<td><code>TimeSpan</code></td>
 <td>The delay in milliseconds between sending each request to an individual device. The value ranges from 0 to 10000 milliseconds. The default is 0 ms.</td>
 </tr>
 <tr>
@@ -141,9 +141,9 @@
 <td>The number of consecutive failed requests to a device before waiting DeviceReconnectInterval to try sending requests again. The value ranges from 3 to 1000. The default is 3.</td>
 </tr>
 <tr>
-<td><strong>DeviceReconnectInterval</strong></td>
+<td><strong>ReconnectInterval</strong></td>
 <td>Optional</td>
-<td><code>number</code></td>
+<td><code>TimeSpan</code></td>
 <td>The amount of time in minutes to wait before attempting to send requests to a device after it has disconnected. The value must be greater than 0. The default is 60 minutes.</td>
 </tr>
 <tr>
@@ -186,7 +186,7 @@
     &quot;MaxConcurrentNetworkRequests&quot; : 5,
     &quot;DeviceRequestDelay&quot;: 10,
     &quot;AllowedConsecutiveFailedRequests&quot;: 3,
-    &quot;DeviceReconnectInterval&quot;: 120
+    &quot;ReconnectInterval&quot;: 00:120:00
 }
 </code></pre><h2 id="bacnet-routed-device-data-source-example">BACnet routed device data source example</h2>
 <p>The following is an example of valid BACnet routed device data source configuration:</p>
@@ -196,7 +196,7 @@
     &quot;MaxConcurrentNetworkRequests&quot; : 5,
     &quot;DeviceRequestDelay&quot;: 10,
     &quot;AllowedConsecutiveFailedRequests&quot;: 3,
-    &quot;DeviceReconnectInterval&quot;: 120,
+    &quot;ReconnectInterval&quot;: 00:120:00,
     &quot;DeviceID&quot;: 1,
     &quot;NetworkNumber&quot;: 100,
     &quot;MacAddress&quot;: &quot;12&quot;
