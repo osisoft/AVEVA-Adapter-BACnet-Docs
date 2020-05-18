@@ -43,9 +43,9 @@ The following parameters can be used to configure an BACnet data source:
 | **IPAddress** | Required | `string` | IPv4 address of BACnet device or BACnet router|
 | **Port**|Optional | `number` | UDP port number for communication with BACnet devices. The value ranges from 0 to 65535. If not configured, the default port is 47808 (which is the default port for BACnet protocol).|
 | **MaxConcurrentNetworkRequests** | Optional | `number` | The maximum number of requests that can be sent concurrently on the network. This is not affected by the response time for the requests. A value of 0 indicates no limit. The default is 1.|
-| **RequestDelay** | Optional | `TimeSpan` | The delay in milliseconds between sending each request to an individual device. The value ranges from 0 to 10000 milliseconds. The default is 0 ms.|
+| **DeviceRequestDelay** | Optional | `number` | The delay in milliseconds between sending each request to an individual device. The value ranges from 0 to 10000 milliseconds. The default is 0 ms.|
 | **AllowedConsecutiveFailedRequests** | Optional | `number` | The number of consecutive failed requests to a device before waiting DeviceReconnectInterval to try sending requests again. The value ranges from 3 to 1000. The default is 3.|
-| **ReconnectInterval** | Optional | `TimeSpan` | The amount of time in minutes to wait before attempting to send requests to a device after it has disconnected. The value must be greater than 0. The default is 60 minutes.|
+| **DeviceReconnectInterval** | Optional | `number` | The amount of time in minutes to wait before attempting to send requests to a device after it has disconnected. The value must be greater than 0. The default is 60 minutes.|
 | **DeviceId** | Optional | `number` | Device instance number. If specified, the IPAddress will be interpreted as for a BACnet device (not a BACnet router). If empty, the IPAddress will be interpreted as for a BACnet router (not an individual BACnet device).|
 | **NetworkNumber** | Optional | `number` | Device network number for routed BACnet devices. This setting can only be specified when a DeviceId is specified. When this setting is specified, MACAddress must also be specified|
 | **MacAddress** | Optional | `string` | Device MAC address for routed BACnet devices. This setting can only be specified when a DeviceId is specified. When this setting is specified, NetworkNumber must also be specified. It must contain 1-6 byte strings in hexadecimal format, separated by a dash '-' or colon ':'. For example, `12:34:ef:cd` |
@@ -64,7 +64,7 @@ The following is an example of valid BACnet data source configuration:
 	"MaxConcurrentNetworkRequests" : 5,
 	"DeviceRequestDelay": 10,
 	"AllowedConsecutiveFailedRequests": 3,
-	"ReconnectInterval": 00:120:00
+	"DeviceReconnectInterval": 120
 }
 ```
 
@@ -79,7 +79,7 @@ The following is an example of valid BACnet routed device data source configurat
 	"MaxConcurrentNetworkRequests" : 5,
 	"DeviceRequestDelay": 10,
 	"AllowedConsecutiveFailedRequests": 3,
-	"ReconnectInterval": 00:120:00,
+	"DeviceReconnectInterval": 120,
 	"DeviceID": 1,
 	"NetworkNumber": 100,
 	"MacAddress": "12"
