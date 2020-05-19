@@ -64,7 +64,7 @@ The following is an example of valid BACnet data source configuration:
 	"MaxConcurrentNetworkRequests" : 5,
 	"DeviceRequestDelay": 10,
 	"AllowedConsecutiveFailedRequests": 3,
-	"ReconnectInterval": 120
+	"ReconnectInterval": 02:00:00
 }
 ```
 
@@ -79,7 +79,7 @@ The following is an example of valid BACnet routed device data source configurat
 	"MaxConcurrentNetworkRequests" : 5,
 	"DeviceRequestDelay": 10,
 	"AllowedConsecutiveFailedRequests": 3,
-	"ReconnectInterval": 120,
+	"ReconnectInterval": 02:00:00,
 	"DeviceID": 1,
 	"NetworkNumber": 100,
 	"MacAddress": "12"
