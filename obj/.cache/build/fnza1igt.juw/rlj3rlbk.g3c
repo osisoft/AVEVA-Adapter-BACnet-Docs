@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>OSIsoft Adapter for BACnet data source configuration </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="OSIsoft Adapter for BACnet data source configuration ">
+    <meta name="generator" content="docfx 2.53.1.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="OSIsoftAdapterforBACnetDataSourceConfiguration">
+<h1 id="osisoft-adapter-for-bacnet-data-source-configuration" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="5" sourceendlinenumber="5">OSIsoft Adapter for BACnet data source configuration</h1>
+
+<p sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="7" sourceendlinenumber="7">To use the BACnet adapter, you must configure the data source from which it will be receiving data.</p>
+<h2 id="configure-bacnet-data-source" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="9" sourceendlinenumber="9">Configure BACnet data source</h2>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="11" sourceendlinenumber="11"><strong>Note:</strong> You cannot modify BACnet data source configurations manually. You must use the REST endpoints to add or edit the configuration.</p>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="13" sourceendlinenumber="13">Complete the following procedure to configure the BACnet data source:</p>
+<ol sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="15" sourceendlinenumber="19">
+<li sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="15" sourceendlinenumber="17">Using any text editor, create a file that contains a BACnet data source in JSON form.<ul sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="16" sourceendlinenumber="17">
+<li sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="16" sourceendlinenumber="16">For content structure, see <a href="#BACnet-router-data-source-example" data-raw-source="[BACnet router data source example](#BACnet-router-data-source-example)" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="16" sourceendlinenumber="16">BACnet router data source example</a>.</li>
+<li sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="17" sourceendlinenumber="17">For a table of all available parameters, see <a href="#BACnet-data-source-schema" data-raw-source="[BACnet data source parameters](#BACnet-data-source-schema)" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="17" sourceendlinenumber="17">BACnet data source parameters</a>.</li>
+</ul>
+</li>
+<li sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="18" sourceendlinenumber="18">Save the file, for example as <em>DataSource.config.json</em>.</li>
+<li sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="19" sourceendlinenumber="19">Use any of the <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html" data-raw-source="[Configuration tools](xref:ConfigurationTools)" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="19" sourceendlinenumber="19">Configuration tools</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:&lt;Port&gt;/api/v1/configuration/&lt;adapterId&gt;/DataSource/</code>. </li>
+</ol>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="21" sourceendlinenumber="21"><strong>Note:</strong> The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see System components configuration. 5590 is the default port number. If you selected a different port number, replace it with that value.</p>
+<pre sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="23" sourceendlinenumber="25"><code class="lang-bash">curl -v -d &quot;@DataSource.config.json&quot; -H &quot;Content-Type: application/json&quot; &quot;http://localhost:5590/api/v1/configuration/BACnet1/DataSource&quot;
+</code></pre><p sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="27" sourceendlinenumber="27"><strong>Note:</strong> After you have completed data source configuration, the next step is to configure data selection. For more information, See <a class="xref" href="OSIsoft%20Adapter%20for%20BACnet%20data%20selection%20configuration.html" data-raw-source="[OSIsoft Adapter for BACnet data selection configuration](xref:OSIsoftAdapterforBACnetDataSelectionConfiguration)" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="27" sourceendlinenumber="27">OSIsoft Adapter for BACnet data selection configuration</a>.</p>
+<h2 id="bacnet-data-source-schema" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="29" sourceendlinenumber="29">BACnet data source schema</h2>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="31" sourceendlinenumber="31">The full schema definition for the BACnet data source configuration is in the <em>BACnet_DataSource_schema.json</em> here:</p>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="33" sourceendlinenumber="33">Windows: <em>%Program Files%\OSIsoft\Adapters\BACnet\Schemas</em></p>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="35" sourceendlinenumber="35">Linux: <em>/opt/OSIsoft/Adapters/BACnet/Schemas</em></p>
+<h2 id="bacnet-data-source-parameters" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="37" sourceendlinenumber="37">BACnet data source parameters</h2>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="39" sourceendlinenumber="39">The following parameters can be used to configure an BACnet data source:</p>
+<table sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="41" sourceendlinenumber="53">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IPAddress</strong></td>
+<td>Required</td>
+<td><code>string</code></td>
+<td>IPv4 address of BACnet device or BACnet router</td>
+</tr>
+<tr>
+<td><strong>Port</strong></td>
+<td>Optional</td>
+<td><code>number</code></td>
+<td>UDP port number for communication with BACnet devices. The value ranges from 0 to 65535. If not configured, the default port is 47808 (which is the default port for BACnet protocol).</td>
+</tr>
+<tr>
+<td><strong>MaxConcurrentNetworkRequests</strong></td>
+<td>Optional</td>
+<td><code>number</code></td>
+<td>The maximum number of requests that can be sent concurrently on the network. This is not affected by the response time for the requests. A value of 0 indicates no limit. The default is 1.</td>
+</tr>
+<tr>
+<td><strong>DeviceRequestDelay</strong></td>
+<td>Optional</td>
+<td><code>number</code></td>
+<td>The delay in milliseconds between sending each request to an individual device. The value ranges from 0 to 10000 milliseconds. The default is 0 ms.</td>
+</tr>
+<tr>
+<td><strong>AllowedConsecutiveFailedRequests</strong></td>
+<td>Optional</td>
+<td><code>number</code></td>
+<td>The number of consecutive failed requests to a device before waiting DeviceReconnectInterval to try sending requests again. The value ranges from 3 to 1000. The default is 3.</td>
+</tr>
+<tr>
+<td><strong>DeviceReconnectInterval</strong></td>
+<td>Optional</td>
+<td><code>number</code></td>
+<td>The amount of time in minutes to wait before attempting to send requests to a device after it has disconnected. The value must be greater than 0. The default is 60 minutes.</td>
+</tr>
+<tr>
+<td><strong>DeviceId</strong></td>
+<td>Optional</td>
+<td><code>number</code></td>
+<td>Device instance number. If specified, the IPAddress will be interpreted as for a BACnet device (not a BACnet router). If empty, the IPAddress will be interpreted as for a BACnet router (not an individual BACnet device).</td>
+</tr>
+<tr>
+<td><strong>NetworkNumber</strong></td>
+<td>Optional</td>
+<td><code>number</code></td>
+<td>Device network number for routed BACnet devices. This setting can only be specified when a DeviceId is specified. When this setting is specified, MACAddress must also be specified</td>
+</tr>
+<tr>
+<td><strong>MacAddress</strong></td>
+<td>Optional</td>
+<td><code>string</code></td>
+<td>Device MAC address for routed BACnet devices. This setting can only be specified when a DeviceId is specified. When this setting is specified, NetworkNumber must also be specified. It must contain 1-6 byte strings in hexadecimal format, separated by a dash &#39;-&#39; or colon &#39;:&#39;. For example, <code>12:34:ef:cd</code></td>
+</tr>
+<tr>
+<td><strong>StreamIdPrefix</strong></td>
+<td>Optional</td>
+<td><code>string</code></td>
+<td>Specifies what prefix is used for Stream IDs. <strong>Note:</strong> An empty string means no prefix will be added to the Stream IDs. Specifying &#39;null&#39; or omitting this parameter will result in the ComponentID followed by a dot character being used to prefix the Stream IDs.</td>
+</tr>
+<tr>
+<td><strong>DefaultStreamIdPattern</strong></td>
+<td>Optional</td>
+<td><code>string</code></td>
+<td>Specifies the default Stream ID pattern to use. Possible parameters: {DeviceIPAddress}, {DeviceId}, {ObjectType}, {ObjectId}, and {PropertyIdentifier}. An empty or &#39;null&#39; value will result in &#39;{DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}&#39;.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="bacnet-router-data-source-example" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="56" sourceendlinenumber="56">BACnet router data source example</h2>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="58" sourceendlinenumber="58">The following is an example of valid BACnet data source configuration:</p>
+<pre sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="60" sourceendlinenumber="69"><code class="lang-json">{
+    &quot;IPAddress&quot;: &quot;192.168.1.1&quot;,
+    &quot;Port&quot;: 47808,
+    &quot;MaxConcurrentNetworkRequests&quot; : 5,
+    &quot;DeviceRequestDelay&quot;: 10,
+    &quot;AllowedConsecutiveFailedRequests&quot;: 3,
+    &quot;DeviceReconnectInterval&quot;: 120
+}
+</code></pre><h2 id="bacnet-routed-device-data-source-example" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="71" sourceendlinenumber="71">BACnet routed device data source example</h2>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="73" sourceendlinenumber="73">The following is an example of valid BACnet routed device data source configuration:</p>
+<pre sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="75" sourceendlinenumber="87"><code class="lang-json">{
+    &quot;IPAddress&quot;: &quot;192.168.1.1&quot;,
+    &quot;Port&quot;: 47808,
+    &quot;MaxConcurrentNetworkRequests&quot; : 5,
+    &quot;DeviceRequestDelay&quot;: 10,
+    &quot;AllowedConsecutiveFailedRequests&quot;: 3,
+    &quot;DeviceReconnectInterval&quot;: 120,
+    &quot;DeviceID&quot;: 1,
+    &quot;NetworkNumber&quot;: 100,
+    &quot;MacAddress&quot;: &quot;12&quot;
+}
+</code></pre><h2 id="discovery" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="88" sourceendlinenumber="88">Discovery</h2>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="89" sourceendlinenumber="89">The BACnet Adapter will be able to discover available BACnet devices and objects defined by the data source configuration. In the case of discovery for a BACnet router, the adapter will send a <em>Who-Is</em> request and wait 30 seconds to receive <em>I-Am</em> responses from available devices. Upon receiving an <em>I-Am</em> response, the adapter will request the <em>Protocol Services Supported</em> and <em>Object List</em> properties from the available devices. In the case of discovering a single device, the adapter will not send a <em>Who-Is</em> request but will immediately move to requesting the properties. </p>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="91" sourceendlinenumber="91">A successful discovery will result in populating <a class="xref" href="OSIsoft%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#BACnet-device-configuration" data-raw-source="[DeviceConfiguration](xref:OSIsoftAdapterforBACnetDataSelectionConfiguration#BACnet-device-configuration)" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="91" sourceendlinenumber="91">DeviceConfiguration</a> and optionally <a class="xref" href="OSIsoft%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#Configure-BACnet-data-selection" data-raw-source="[DataSelection Configuration](xref:OSIsoftAdapterforBACnetDataSelectionConfiguration#Configure-BACnet-data-selection)" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="91" sourceendlinenumber="91">DataSelection Configuration</a>.</p>
+<ul sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="92" sourceendlinenumber="93">
+<li sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="92" sourceendlinenumber="92">DataSelection will be populated with <em>Selected</em> attribute for all items set to false. </li>
+<li sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="93" sourceendlinenumber="93">DeviceConfiguration is read-only and will provide more information such as segmentation and services that are supported. This will help make informed decisions during data selection. </li>
+</ul>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="95" sourceendlinenumber="95">When the adapter starts or a new data source is configured, the adapter checks if DeviceConfiguration is populated. Discovery will be performed only if DeviceConfiguration is empty. DataSelection will be updated by discovery only if it is empty.</p>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="97" sourceendlinenumber="97">The adapter <a href="xref:Logging-configuration" data-raw-source="[log](xref:Logging-configuration)" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="97" sourceendlinenumber="97">log</a> indicates when discovery has completed.</p>
+<h3 id="example-log" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="99" sourceendlinenumber="99">Example log</h3>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md" sourcestartlinenumber="101" sourceendlinenumber="106">[15:17:49 INF] [Bacnet] Discovering BACnet router.<br>[15:18:19 INF] [Bacnet] Found 2 BACnet devices during discovery.<br>[15:18:19 INF] [Bacnet] Discovering BACnet device 1.<br>[15:18:21 INF] [Bacnet] Discovery complete for BACnet device 1.<br>[15:18:21 INF] [Bacnet] Discovering BACnet device 33.<br>[15:18:53 INF] [Bacnet] Discovery complete for BACnet router.  </p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/OSIsoft-Adapter-BACnet-Docs/blob/master/V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
