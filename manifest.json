@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "IEcFjhL+/phQs19+IXps1w=="
+          "hash": "mxgGD9MuvwV/uy1Fbu+VpA=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/Configuration.html",
-          "hash": "3mw7EqyroOH9KqWUcNVIxg=="
+          "hash": "jZpKdaoC3iE9/voBYrMxjQ=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/OSIsoft Adapter for BACnet data selection configuration.html",
-          "hash": "OQDjUhVaUGsqNAe8jpkrVQ=="
+          "hash": "bEn7+FRsUMJF1JRDlFpzZQ=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/OSIsoft Adapter for BACnet data source configuration.html",
-          "hash": "TkDY6HBbkWQ33HSzCSXnAQ=="
+          "hash": "eytfzk4qSaE8pBBZUJDo8Q=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/OSIsoft Adapter for BACnet security configuration.html",
-          "hash": "F2fRyIYg6Tx7Gse4IuNZVQ=="
+          "hash": "0QivO9cBFvCblsRSCJhG6Q=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Health/Adapter health for BACnet.html",
-          "hash": "DdxQrFfJO2TKLhglQyqqVA=="
+          "hash": "BDGVfJf4mdNDJOMpbdJJqQ=="
         }
       },
       "is_incremental": false,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Health/Device status for BACnet.html",
-          "hash": "j8/A5Fmjl3GJvHf0vMPgPw=="
+          "hash": "C8S2h7K5UHs360SD/EguIA=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Health/Health and diagnostics for BACnet.html",
-          "hash": "2U4aJQjixxyciLtBAES0Hg=="
+          "hash": "mQbMm5vLz1SjoiItgJYVCA=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Health/Next health message expected for BACnet.html",
-          "hash": "bwGI2iAe9Mwft9+anqWhYg=="
+          "hash": "OGvqD6czq0cA/D8j5REtxQ=="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Installation/Install the adapter with Docker for BACnet.html",
-          "hash": "JcC0IwovdehW8K05pOarrA=="
+          "hash": "0vJXOQvkH2x3mO/GK8Pluw=="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/OSIsoft Adapter for BACnet overview/OSIsoft Adapter for BACnet principles of operation.html",
-          "hash": "+uzwp3CNX6UOzwnyP8rqIw=="
+          "hash": "0NVf/0dIj1VXvIxWJ413SQ=="
         }
       },
       "is_incremental": false,
@@ -153,22 +153,19 @@
       "output": {
         ".html": {
           "relative_path": "V1/OSIsoft Adapter for BACnet overview/OSIsoft Adapter for BACnet supported features.html",
-          "hash": "h9BoLJkOm0fjA81ME0D0Fw=="
+          "hash": "S64Pzn3a72epUHl7rhT50A=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/OSIsoft Adapter for BACnet overview/testfile.md",
       "output": {
         ".html": {
           "relative_path": "V1/OSIsoft Adapter for BACnet overview/testfile.html",
-          "hash": "Qfi5J7oMFvrUYKVv+xrfBg=="
+          "hash": "CqV65bgsHRhsrGR0I4X+OQ=="
         }
       },
       "is_incremental": false,
@@ -180,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/OSIsoft_Adapter_for_BACnet_overview.html",
-          "hash": "m/wN3ztpSOK+L9zcd9AFFg=="
+          "hash": "Lkw2NWSbhhl5N/vnI/aGuQ=="
         }
       },
       "is_incremental": false,
@@ -203,7 +200,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "xgechPKuL4iGrVbWdQtxsw=="
+          "hash": "vYy/oH8ZR3FY/bJ2vAv7/g=="
         }
       },
       "is_incremental": false,
@@ -215,7 +212,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/README.html",
-          "hash": "EAz5q348QpnxemST8JZ2Ug=="
+          "hash": "l9Agp1cfL5IWahcPkXFwQw=="
         }
       },
       "is_incremental": false,
@@ -227,7 +224,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/ARCHIVE/Adapter diagnostics_old.html",
-          "hash": "UWHlLwqNkTar0xIFr0O9Yw=="
+          "hash": "JxGOFmmjjAdy5e+ogm5Zag=="
         }
       },
       "is_incremental": false,
@@ -242,7 +239,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/ARCHIVE/Egress_DataEndpoints_schema.html",
-          "hash": "nM4i3tJDRBVqbZN05eODMQ=="
+          "hash": "KwX7qREY2mJ0s3hM5xFpOg=="
         }
       },
       "is_incremental": false,
@@ -254,7 +251,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Administration/Administration.html",
-          "hash": "ZE3etPno5gOzVfXDRe1FQw=="
+          "hash": "BrHOoHMpiu6IU+Cu0KzzFA=="
         }
       },
       "is_incremental": false,
@@ -266,7 +263,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Administration/Delete an adapter component.html",
-          "hash": "LVZy2dajjFaLPchCe41udg=="
+          "hash": "8FRI4DrG/38DH4uQlTvOVw=="
         }
       },
       "is_incremental": false,
@@ -278,7 +275,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Administration/Retrieve product version information.html",
-          "hash": "5ojcRihpUEtZjdn6eCIkWA=="
+          "hash": "Rz0zBics5DbGFGLuDJMClA=="
         }
       },
       "is_incremental": false,
@@ -290,7 +287,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Administration/Start and stop an adapter.html",
-          "hash": "0WqYUgnh4ZwH3KAxbndsAw=="
+          "hash": "IFbAn+ll3yqHBP4TdkJs3w=="
         }
       },
       "is_incremental": false,
@@ -302,7 +299,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Administration/Start and stop ingress component.html",
-          "hash": "uSfvm7WfpNKzPF9k8qFakw=="
+          "hash": "Sgt63ts621dbd4IzAPun9A=="
         }
       },
       "is_incremental": false,
@@ -314,7 +311,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/Buffering configuration.html",
-          "hash": "A9y8C70BL5s79eiO1WJvlw=="
+          "hash": "5Od+mc3OpWSOVvE23pbPPw=="
         }
       },
       "is_incremental": false,
@@ -326,7 +323,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/Configuration tools.html",
-          "hash": "PyUvAVQE40+jB5trkOsD2A=="
+          "hash": "8q0mBPWixFgBpy+Xq7qcxw=="
         }
       },
       "is_incremental": false,
@@ -338,7 +335,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/Data filters configuration.html",
-          "hash": "bhXEAendoQajoGpr8vdrBA=="
+          "hash": "JKKOkFeXz2s/rr8SPm2JsQ=="
         }
       },
       "is_incremental": false,
@@ -350,7 +347,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/Diagnostics configuration.html",
-          "hash": "kN7OSo+9D1JUw8usHWyn9A=="
+          "hash": "zrfXdOfnKVL9OnSCa0n3+Q=="
         }
       },
       "is_incremental": false,
@@ -362,7 +359,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/Egress endpoints configuration.html",
-          "hash": "tw19KnENI9POa6Cqj4exBA=="
+          "hash": "dgIawE09RGYd4+B1rxRnag=="
         }
       },
       "is_incremental": false,
@@ -374,7 +371,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/Health endpoint configuration.html",
-          "hash": "8IZqxF1bPt9BCXOl669aJA=="
+          "hash": "VZ9kTAKAGDI4OhfY7SeDHw=="
         }
       },
       "is_incremental": false,
@@ -386,7 +383,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/Logging configuration.html",
-          "hash": "E4LiG3c5gxkctzIhEy2R9g=="
+          "hash": "EpXCNijrAHs/QAMVzTR8Ag=="
         }
       },
       "is_incremental": false,
@@ -398,19 +395,22 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/Schedules configuration.html",
-          "hash": "4IOAe7NplleWYSZLSXbRNg=="
+          "hash": "gvf1QoDi3gLeo3t0VPamlw=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Configuration/System and adapter configuration.md",
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/System and adapter configuration.html",
-          "hash": "pGxzUBThFuOksCYFk0u/HA=="
+          "hash": "J4ZGAa927knMOyn7IsFOjQ=="
         }
       },
       "is_incremental": false,
@@ -422,7 +422,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/System components configuration.html",
-          "hash": "YGaH++GieEOTfhCI9xuiCg=="
+          "hash": "llGWjgYat7/EXIePUgRVsA=="
         }
       },
       "is_incremental": false,
@@ -434,7 +434,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Diagnostics/Adapter diagnostics.html",
-          "hash": "X8qrUMsiRdUZMJy3bSmXpg=="
+          "hash": "2UiIc0QhjpC04+O9wblmlA=="
         }
       },
       "is_incremental": false,
@@ -446,7 +446,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Diagnostics/Egress diagnostics.html",
-          "hash": "7+wicScbfHWX5TUPhhT0WA=="
+          "hash": "AiH+CoJHsu9WRiOEjmMq+g=="
         }
       },
       "is_incremental": false,
@@ -458,7 +458,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Diagnostics/Error rate.html",
-          "hash": "4SlXc3wYKTfbp1YJCqp+iA=="
+          "hash": "WUCWXwPlM3yCfuw7d9z9/A=="
         }
       },
       "is_incremental": false,
@@ -470,7 +470,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Diagnostics/IO rate.html",
-          "hash": "pCxS5DiL5tKJesvbuy1TJQ=="
+          "hash": "e7lLTuHIt4gx5lTQcywpNQ=="
         }
       },
       "is_incremental": false,
@@ -482,7 +482,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Diagnostics/Stream count.html",
-          "hash": "1buzNwveW1nLDDwnq61Nvw=="
+          "hash": "qx3TMn9W7z/uZm5IsR0xMg=="
         }
       },
       "is_incremental": false,
@@ -494,7 +494,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Diagnostics/System.html",
-          "hash": "UlhB3UDVBpQ0b9IQBr4zzg=="
+          "hash": "lbXy/9xzi6BK+8dyz4Vppw=="
         }
       },
       "is_incremental": false,
@@ -506,7 +506,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Health/Adapter health.html",
-          "hash": "bMT5G/quLhmzHI+BASKe4w=="
+          "hash": "K+r62zVTjiuLAkutKd39vg=="
         }
       },
       "is_incremental": false,
@@ -518,7 +518,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Health/Device status.html",
-          "hash": "AvNZ+aaZ/DT8i/SWN/37iA=="
+          "hash": "tf3YH6ylrPCt08xur1Anog=="
         }
       },
       "is_incremental": false,
@@ -530,7 +530,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Health/Health and diagnostics.html",
-          "hash": "3mZiJIqsc1t9hV2WLKDDuA=="
+          "hash": "5cg0liFVFpLcn+RV3oZ7Mw=="
         }
       },
       "is_incremental": false,
@@ -542,7 +542,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Health/Next health message expected.html",
-          "hash": "CNjabbdzagh0S9cHBAKR2w=="
+          "hash": "VY6jdWdxO2yoxKciCLbjxg=="
         }
       },
       "is_incremental": false,
@@ -566,7 +566,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Installation/Install the adapter.html",
-          "hash": "9oyWgbMt5w8lbLKuZuvHIw=="
+          "hash": "j3HtwOoQZn7er5OpGaa+5w=="
         }
       },
       "is_incremental": false,
@@ -578,7 +578,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Installation/Installation.html",
-          "hash": "p9zsDXDSFl/S8hn0s7+Lsg=="
+          "hash": "X7orkcHMR5/66+nE0N7A5A=="
         }
       },
       "is_incremental": false,
@@ -590,7 +590,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Installation/Uninstall the adapter.html",
-          "hash": "LOkIiyqAKypoBEwafJAQZw=="
+          "hash": "2XkeVwGzGfJjytoEc6286A=="
         }
       },
       "is_incremental": false,
@@ -602,7 +602,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Technical support and feedback.html",
-          "hash": "UPowYyDE/Kdg4WLUofMheg=="
+          "hash": "+/9c+UTJMHRiUQiHp2nSoA=="
         }
       },
       "is_incremental": false,
@@ -614,7 +614,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Troubleshooting/Troubleshooting.html",
-          "hash": "jaWlyJqREiIYpYtIVp3PEw=="
+          "hash": "7lVV+YCvnvP+Cn8mLWFSog=="
         }
       },
       "is_incremental": false,
@@ -718,7 +718,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/readme.html",
-          "hash": "YqjvRxx1rtbyhQJKCRi7yw=="
+          "hash": "J2O4/rLl+34k8h+E30TAvA=="
         }
       },
       "is_incremental": false,
@@ -730,7 +730,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/test.html",
-          "hash": "08Fs235btrcOit+PWg82cg=="
+          "hash": "SFY1h9n1AO5606XRHQyQMQ=="
         }
       },
       "is_incremental": false,
