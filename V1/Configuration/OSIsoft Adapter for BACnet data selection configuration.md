@@ -76,7 +76,6 @@ The following parameters can be used to configure BACnet data selection:
 | **ObjectType** | Required | `string` | Any of the [supported object types](xref:OSIsoftAdapterforBACnetSupportedFeatures#Object-Types)  |
 | **ObjectId** | Required | `number` | BACnet object instance number |
 | **DataCollectionMode** | Optional | `string` | Specifies the mode of data collection for the item. Default and only available value is Poll. |
-| **DataCollectionInterval** | Optional | `number` | Specifies the interval (in seconds) at which data is collected for the item. Default value is 300. |
 | **PropertyIdentifier** | Optional | `string` | Specifies which property to collect from the BACnet object. If left empty, PresentValue is collected. |
 
 ## BACnet data selection example
@@ -94,7 +93,6 @@ The following is an example of valid BACnet data selection configuration. Since 
     "ObjectType": "AnalogInput",
     "ObjectId": 90,
     "DataCollectionMode": "Poll",
-    "DataCollectionInterval": 300
   },
   {
     "Selected": false,
@@ -105,7 +103,6 @@ The following is an example of valid BACnet data selection configuration. Since 
     "ObjectType": "AnalogOutput",
     "ObjectId": 70,
     "DataCollectionMode": "Poll",
-    "DataCollectionInterval": 200,
     "PropertyIdentifier": "PresentValue"
   }
 ]
