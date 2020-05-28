@@ -39,7 +39,7 @@ references:
   href: V1/Health/Device%20status%20for%20BACnet.html
 - uid: DiagnosticsConfiguration
   name: Diagnostics configuration
-  href: V1/main/V1/Configuration/Diagnostics%20configuration.html
+  href: V1/main/V1/ARCHIVE/Diagnostics%20configuration.html
 - uid: Egress_DataEndpoints_schema
   name: Egress endpoint configuration schema
   href: V1/main/V1/ARCHIVE/Egress_DataEndpoints_schema.html

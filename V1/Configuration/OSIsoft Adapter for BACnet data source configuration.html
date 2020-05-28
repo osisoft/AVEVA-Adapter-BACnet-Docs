@@ -168,7 +168,7 @@
 <td><strong>StreamIdPrefix</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies what prefix is used for Stream IDs. <strong>Note:</strong> An empty string means no prefix will be added to the Stream IDs. Specifying &#39;null&#39; or omitting this parameter will result in the ComponentID followed by a dot character being used to prefix the Stream IDs.</td>
+<td>Specifies what prefix is used for Stream IDs. The naming convention is StreamIdPrefix.StreamId. An empty string means no prefix will be added to the Stream IDs and names. Null value defaults to ComponentID followed by a dot, for example, <em>OpcUa1</em>.NamespaceIndex.Identifier.<br><br><strong>Note:</strong> Every time you change the StreamIdPrefix of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated.</td>
 </tr>
 <tr>
 <td><strong>DefaultStreamIdPattern</strong></td>
