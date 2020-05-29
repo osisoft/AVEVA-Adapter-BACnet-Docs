@@ -77,7 +77,7 @@ The following parameters can be used to configure BACnet data selection:
 | **ObjectId** | Required | `number` | BACnet object instance number |
 | **DataCollectionMode** | Optional | `string` | Specifies the mode of data collection for the item. Default and only available value is Poll. |
 | **PropertyIdentifier** | Optional | `string` | Specifies which property to collect from the BACnet object. If left empty, PresentValue is collected. |
-| **ScheduleId** | Optional | `string` | Specifies a [schedule ID](xref:SchedulesConfiguration) to which to link the data selection item. This data item will be collected on the scheduled interval if Selected is set to true. |
+| **ScheduleId** | Optional | `string` | Specifies a [schedule ID](xref:SchedulesConfiguration) to which the data selection item is linked. This data item will be collected on the scheduled interval if Selected is set to true. |
 
 ## BACnet data selection example
 
