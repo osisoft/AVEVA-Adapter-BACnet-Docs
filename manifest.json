@@ -160,6 +160,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/OSIsoft Adapter for BACnet overview/testfile.md",
       "output": {
@@ -367,6 +370,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Configuration/General configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Configuration/General configuration.html",
+          "hash": "j+XRjEN/APaqScWqEAwLRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Configuration/Health endpoint configuration.md",
       "output": {
         ".html": {
@@ -402,9 +417,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Configuration/System and adapter configuration.md",
       "output": {
@@ -598,6 +610,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "V1/main/V1/Metadata/Adapter Metadata.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Metadata/Adapter Metadata.html",
+          "hash": "oYy6D+fz8O7sHkRiTfO8xQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Technical support and feedback.md",
       "output": {
         ".html": {
@@ -674,6 +698,17 @@
       "output": {
         "resource": {
           "relative_path": "V1/main/V1/images/LogsFolder.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1/images/Metadata.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1/images/Metadata.png"
         }
       },
       "is_incremental": false,
@@ -775,7 +810,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 50,
+          "total_file_count": 52,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
