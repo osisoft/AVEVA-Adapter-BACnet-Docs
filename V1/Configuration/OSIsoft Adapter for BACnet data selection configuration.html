@@ -135,7 +135,7 @@
 <td><strong>Selected</strong></td>
 <td>Optional</td>
 <td><code>boolean</code></td>
-<td>Use this field to select or clear a measurement. To select an item, set to true. To remove an item, leave the field empty or set to false.  If not configured, the default value is false.</td>
+<td>Use this field to select or clear a measurement. To select an item, set to true and specify a ScheduleId. To remove an item, leave the field empty or set to false.  If not configured, the default value is false.</td>
 </tr>
 <tr>
 <td><strong>Name</strong></td>
@@ -185,6 +185,12 @@
 <td><code>string</code></td>
 <td>Specifies which property to collect from the BACnet object. If left empty, PresentValue is collected.</td>
 </tr>
+<tr>
+<td><strong>ScheduleId</strong></td>
+<td>Optional</td>
+<td><code>string</code></td>
+<td>Specifies a <a class="xref" href="../main/V1/Configuration/Schedules%20configuration.html">schedule ID</a> to which the data selection item is linked. This data item will be collected on the scheduled interval if Selected is set to true.</td>
+</tr>
 </tbody>
 </table>
 <h2 id="bacnet-data-selection-example">BACnet data selection example</h2>
@@ -199,6 +205,7 @@
     &quot;ObjectType&quot;: &quot;AnalogInput&quot;,
     &quot;ObjectId&quot;: 90,
     &quot;DataCollectionMode&quot;: &quot;Poll&quot;,
+    &quot;ScheduleId&quot;: &quot;Schedule1&quot;
   },
   {
     &quot;Selected&quot;: false,
