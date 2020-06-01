@@ -46,13 +46,15 @@ Complete the following to configure the BACnet data selection:
 2. Save the file, for example as _DataSelection.config.json_.
 3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<adapterId>/DataSelection/`
 
-Example using curl (run this command from the same directory where the file is located):
+    Example using curl (run this command from the same directory where the file is located):
 
-**Note:** During installation, you can add a single BACnet adapter named BACnet1. The following example uses this component name.
+    **Note:** During installation, you can add a single BACnet adapter named BACnet1. The following example uses this component name.
 
-```bash
-curl -v -d "@DataSelection.config.json" -H "Content-Type: application/json" "http://localhost:5590/api/v1/configuration/BACnet1/DataSelection"
-```
+    ```bash
+    curl -v -d "@DataSelection.config.json" -H "Content-Type: application/json"     "http://localhost:5590/api/v1/configuration/BACnet1/DataSelection"
+    ```
+    
+4. (Optional) Configure data selection for polled data or Change Of Value (COV) subscription data, see [Polled data stream configuration](xref:BACnetPolledDataStreamConfiguration) or [Change Of Value (COV) configuration](xref:BACnetCOVConfiguration) respectively for instructions.
 
 ## BACnet data selection schema
 
