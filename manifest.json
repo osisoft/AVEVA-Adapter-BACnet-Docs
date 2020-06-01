@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/Data selection configuration/Change Of Value configuration.html",
-          "hash": "VTA96gjD1foC37k0/0txPQ=="
+          "hash": "3jwlLZFsEic1gMI8P4JA4w=="
         }
       },
       "is_incremental": false,
@@ -54,19 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/Data selection configuration/Polled data stream configuration.html",
-          "hash": "GkFIwn7klePvVfsztCgXjg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "V1/Configuration/Data selection configuration/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "V1/Configuration/Data selection configuration/toc.html",
-          "hash": "rTQFgLbasSITPtjYx8se8g=="
+          "hash": "xtbmC9gzbWJ1ZDmipg/rmw=="
         }
       },
       "is_incremental": false,
@@ -196,9 +184,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/OSIsoft Adapter for BACnet overview/testfile.md",
       "output": {
@@ -453,6 +438,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Configuration/System and adapter configuration.md",
       "output": {
@@ -813,7 +801,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "1z4JVoQcZTO0AMZA5/BxHg=="
+          "hash": "aSn3ahRQHqBIqIpliltGlQ=="
         }
       },
       "is_incremental": false,
