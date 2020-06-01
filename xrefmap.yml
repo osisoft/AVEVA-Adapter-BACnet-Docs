@@ -22,6 +22,12 @@ references:
 - uid: BACnetConfiguration
   name: Configuration
   href: V1/Configuration/Configuration.html
+- uid: BACnetCOVConfiguration
+  name: Change Of Value (COV) configuration
+  href: V1/Configuration/Data%20selection%20configuration/Change%20Of%20Value%20configuration.html
+- uid: BACnetPolledDataStreamConfiguration
+  name: Polled data stream configuration
+  href: V1/Configuration/Data%20selection%20configuration/Polled%20data%20stream%20configuration.html
 - uid: BufferingConfiguration
   name: Buffering configuration
   href: V1/main/V1/Configuration/Buffering%20configuration.html

@@ -38,6 +38,42 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "V1/Configuration/Data selection configuration/Change Of Value configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configuration/Data selection configuration/Change Of Value configuration.html",
+          "hash": "VTA96gjD1foC37k0/0txPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1/Configuration/Data selection configuration/Polled data stream configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configuration/Data selection configuration/Polled data stream configuration.html",
+          "hash": "GkFIwn7klePvVfsztCgXjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "V1/Configuration/Data selection configuration/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "V1/Configuration/Data selection configuration/toc.html",
+          "hash": "rTQFgLbasSITPtjYx8se8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "V1/Configuration/OSIsoft Adapter for BACnet data selection configuration.md",
       "output": {
         ".html": {
@@ -160,6 +196,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/OSIsoft Adapter for BACnet overview/testfile.md",
       "output": {
@@ -414,9 +453,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Configuration/System and adapter configuration.md",
       "output": {
@@ -810,7 +846,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 52,
+          "total_file_count": 54,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
