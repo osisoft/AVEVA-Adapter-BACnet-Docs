@@ -68,7 +68,7 @@ The following parameters can be used to configure BACnet data selection:
 
 | Parameter     | Required | Type | Description |
 |---------------|----------|------|-------------|
-| **Selected** | Optional | `boolean` | Use this field to select or clear a measurement. To select an item, set to true. To remove an item, leave the field empty or set to false.  If not configured, the default value is false.|
+| **Selected** | Optional | `boolean` | Use this field to select or clear a measurement. To select an item, set to true and specify a ScheduleId. To remove an item, leave the field empty or set to false.  If not configured, the default value is false. |
 | **Name**      | Optional | `string` | The optional friendly name of the data item collected from the data source. If not configured, the default value will be the stream id. |
 | **StreamID** | Optional | `string` | The custom stream ID used to create the streams. If not specified, the BACnet adapter will generate a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters: / : ? # [ ] @ ! $ & ' ( ) \ * + , ; = % < > &#124;<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods. |
 | **DataFilterId** | Optional | `string` | The ID of the data filter. If not specified, no data filtering will occur. |
@@ -77,6 +77,7 @@ The following parameters can be used to configure BACnet data selection:
 | **ObjectId** | Required | `number` | BACnet object instance number |
 | **DataCollectionMode** | Optional | `string` | Specifies the mode of data collection for the item. Default and only available value is Poll. |
 | **PropertyIdentifier** | Optional | `string` | Specifies which property to collect from the BACnet object. If left empty, PresentValue is collected. |
+| **ScheduleId** | Optional | `string` | Specifies a [schedule ID](xref:SchedulesConfiguration) to which the data selection item is linked. This data item will be collected on the scheduled interval if Selected is set to true. |
 
 ## BACnet data selection example
 
@@ -93,6 +94,7 @@ The following is an example of valid BACnet data selection configuration. Since 
     "ObjectType": "AnalogInput",
     "ObjectId": 90,
     "DataCollectionMode": "Poll",
+    "ScheduleId": "Schedule1"
   },
   {
     "Selected": false,
