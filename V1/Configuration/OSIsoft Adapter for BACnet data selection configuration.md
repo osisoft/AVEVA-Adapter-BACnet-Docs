@@ -77,9 +77,9 @@ The following parameters can be used to configure BACnet data selection:
 | **DeviceIPAddress** | Required | `string` | Device IP Address |
 | **ObjectType** | Required | `string` | Any of the [supported object types](xref:OSIsoftAdapterforBACnetSupportedFeatures#Object-Types)  |
 | **ObjectId** | Required | `number` | BACnet object instance number |
-| **DataCollectionMode** | Optional | `string` | Specifies the mode of data collection for the item. Must be one of "Poll", "SubscribeCoV", or "SubscribeCoVProperty". See [Change Of Value (COV) configuration](xref:BACnetCOVConfiguration) and [Polled data stream configuration](xref:BACnetPolledDataStreamConfiguration) for more information. Default value is Poll. |
+| **DataCollectionMode** | Optional | `string` | Specifies the mode of data collection for the item. Must be one of **Poll**, **SubscribeCoV**, or **SubscribeCoVProperty**. See [Change Of Value (COV) configuration](xref:BACnetCOVConfiguration) and [Polled data stream configuration](xref:BACnetPolledDataStreamConfiguration) for more information. Default value is **Poll**. |
 | **PropertyIdentifier** | Optional | `string` | Specifies which property to collect from the BACnet object. If left empty, PresentValue is collected. |
-| **ScheduleId** | Optional | `string` | Specifies a [schedule ID](xref:SchedulesConfiguration) to which the data selection item is linked. This data item will be collected on the scheduled interval if Selected is set to true.<br>For DataCollectionMode=Poll, this is the interval at which this property will be requested from the device.<br>For DataCollectionMode=SubscribeCoV or SubscriveCoVProperty, this is the interval at which a re-subscription request will be sent.|
+| **ScheduleId** | Optional | `string` | Specifies a [schedule ID](xref:SchedulesConfiguration) to which the data selection item is linked. This data item will be collected on the scheduled interval if Selected is set to true.<br>For DataCollectionMode=**Poll**, this is the interval at which this property will be requested from the device.<br>For DataCollectionMode=**SubscribeCoV** or **SubscribeCoVProperty**, this is the interval at which a re-subscription request will be sent.|
 
 ## BACnet data selection example
 
