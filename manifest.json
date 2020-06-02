@@ -638,7 +638,19 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Metadata/Adapter Metadata.html",
-          "hash": "oYy6D+fz8O7sHkRiTfO8xQ=="
+          "hash": "bPbu46iXM7rHtTZb5PxM3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "V1/main/V1/Metadata/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "V1/main/V1/Metadata/toc.html",
+          "hash": "771rjTyIY5G1OdJDofa0nw=="
         }
       },
       "is_incremental": false,
