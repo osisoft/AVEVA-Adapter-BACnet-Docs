@@ -77,9 +77,10 @@ The following parameters can be used to configure BACnet data selection:
 | **DeviceIPAddress** | Required | `string` | Device IP Address |
 | **ObjectType** | Required | `string` | Any of the [supported object types](xref:OSIsoftAdapterforBACnetSupportedFeatures#Object-Types)  |
 | **ObjectId** | Required | `number` | BACnet object instance number |
-| **DataCollectionMode** | Optional | `string` | Specifies the mode of data collection for the item. Default and only available value is Poll. |
+| **DataCollectionMode** | Optional | `string` | Specifies the mode of data collection for the item. Must be one of **Poll**, **SubscribeCoV**, or **SubscribeCoVProperty**. See [Change Of Value (COV) configuration](xref:BACnetCOVConfiguration) and [Polled data stream configuration](xref:BACnetPolledDataStreamConfiguration) for more information. Default value is **Poll**. |
+| **CoVIncrement** | Optional | `number` | Used only with **SubscribeCoV** or **SubscribeCoVProperty** DataCollectionMode. Specifies the amount that the configured property must change in order for a new value to be sent by the device. If empty or ommitted, any change in value will result in a new data value being sent(?)|
 | **PropertyIdentifier** | Optional | `string` | Specifies which property to collect from the BACnet object. If left empty, PresentValue is collected. |
-| **ScheduleId** | Optional | `string` | Specifies a [schedule ID](xref:SchedulesConfiguration) to which the data selection item is linked. This data item will be collected on the scheduled interval if Selected is set to true. |
+| **ScheduleId** | Optional | `string` | Specifies a [schedule ID](xref:SchedulesConfiguration) to which the data selection item is linked. This data item will be collected on the scheduled interval if Selected is set to true.<br>For DataCollectionMode=**Poll**, this is the interval at which this property will be requested from the device.<br>For DataCollectionMode=**SubscribeCoV** or **SubscribeCoVProperty**, this is the interval at which a re-subscription request will be sent.|
 
 ## BACnet data selection example
 
