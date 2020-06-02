@@ -78,6 +78,10 @@
             <article class="content wrap" id="_content" data-uid="BACnetCOVConfiguration">
 <h1 id="change-of-value-cov-configuration">Change Of Value (COV) configuration</h1>
 
+<h2 id="overview">Overview</h2>
+<p>CoV or Change of Value is one of two available data collection modes for the adapter. For supported BACnet devices (i.e. for devices whose Device Configuration&#39;s ServicesSupported includes SubscribeCoV and/or SubscribeCoVProperty) users can choose to enable CoV collection. CoV is a subscription-based data collection mode, where the device will &quot;push&quot; new data when the value changes. CoV is generally preferred when available, as it tends to improve performance and decrease network usage.</p>
+<h2 id="usage">Usage</h2>
+<p>To enable CoV for a specified data selection item, change the DataCollectionMode to SubscribeCoV or SubscribeCoVProperty. Optionally, a CoVIncrement can also be specified on the data selection item to specify a minimum amount that the value must change in order to prompt the new value to be sent.</p>
 </article>
           </div>
           

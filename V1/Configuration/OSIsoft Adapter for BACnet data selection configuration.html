@@ -180,7 +180,13 @@
 <td><strong>DataCollectionMode</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies the mode of data collection for the item. Default and only available value is Poll.</td>
+<td>Specifies the mode of data collection for the item. Must be one of <strong>Poll</strong>, <strong>SubscribeCoV</strong>, or <strong>SubscribeCoVProperty</strong>. See <a class="xref" href="Data%20selection%20configuration/Change%20Of%20Value%20configuration.html">Change Of Value (COV) configuration</a> and <a class="xref" href="Data%20selection%20configuration/Polled%20data%20stream%20configuration.html">Polled data stream configuration</a> for more information. Default value is <strong>Poll</strong>.</td>
+</tr>
+<tr>
+<td><strong>CoVIncrement</strong></td>
+<td>Optional</td>
+<td><code>number</code></td>
+<td>Used only with <strong>SubscribeCoV</strong> or <strong>SubscribeCoVProperty</strong> DataCollectionMode. Specifies the amount that the configured property must change in order for a new value to be sent by the device. If empty or ommitted, any change in value will result in a new data value being sent(?)</td>
 </tr>
 <tr>
 <td><strong>PropertyIdentifier</strong></td>
@@ -192,7 +198,7 @@
 <td><strong>ScheduleId</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies a <a class="xref" href="../main/V1/Configuration/Schedules%20configuration.html">schedule ID</a> to which the data selection item is linked. This data item will be collected on the scheduled interval if Selected is set to true.</td>
+<td>Specifies a <a class="xref" href="../main/V1/Configuration/Schedules%20configuration.html">schedule ID</a> to which the data selection item is linked. This data item will be collected on the scheduled interval if Selected is set to true.<br>For DataCollectionMode=<strong>Poll</strong>, this is the interval at which this property will be requested from the device.<br>For DataCollectionMode=<strong>SubscribeCoV</strong> or <strong>SubscribeCoVProperty</strong>, this is the interval at which a re-subscription request will be sent.</td>
 </tr>
 </tbody>
 </table>

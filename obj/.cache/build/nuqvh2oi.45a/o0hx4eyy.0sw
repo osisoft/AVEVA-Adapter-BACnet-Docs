@@ -124,7 +124,7 @@
 <p sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data selection configuration.md" sourcestartlinenumber="65" sourceendlinenumber="65">Linux: <em>/opt/OSIsoft/Adapters/BACnet/Schemas</em></p>
 <h2 id="bacnet-data-selection-parameters" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data selection configuration.md" sourcestartlinenumber="67" sourceendlinenumber="67">BACnet data selection parameters</h2>
 <p sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data selection configuration.md" sourcestartlinenumber="69" sourceendlinenumber="69">The following parameters can be used to configure BACnet data selection:</p>
-<table sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data selection configuration.md" sourcestartlinenumber="71" sourceendlinenumber="82">
+<table sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data selection configuration.md" sourcestartlinenumber="71" sourceendlinenumber="83">
 <thead>
 <tr>
 <th>Parameter</th>
@@ -180,7 +180,13 @@
 <td><strong>DataCollectionMode</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies the mode of data collection for the item. Default and only available value is Poll.</td>
+<td>Specifies the mode of data collection for the item. Must be one of <strong>Poll</strong>, <strong>SubscribeCoV</strong>, or <strong>SubscribeCoVProperty</strong>. See <a class="xref" href="Data%20selection%20configuration/Change%20Of%20Value%20configuration.html" data-raw-source="[Change Of Value (COV) configuration](xref:BACnetCOVConfiguration)" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data selection configuration.md" sourcestartlinenumber="80" sourceendlinenumber="80">Change Of Value (COV) configuration</a> and <a class="xref" href="Data%20selection%20configuration/Polled%20data%20stream%20configuration.html" data-raw-source="[Polled data stream configuration](xref:BACnetPolledDataStreamConfiguration)" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data selection configuration.md" sourcestartlinenumber="80" sourceendlinenumber="80">Polled data stream configuration</a> for more information. Default value is <strong>Poll</strong>.</td>
+</tr>
+<tr>
+<td><strong>CoVIncrement</strong></td>
+<td>Optional</td>
+<td><code>number</code></td>
+<td>Used only with <strong>SubscribeCoV</strong> or <strong>SubscribeCoVProperty</strong> DataCollectionMode. Specifies the amount that the configured property must change in order for a new value to be sent by the device. If empty or ommitted, any change in value will result in a new data value being sent(?)</td>
 </tr>
 <tr>
 <td><strong>PropertyIdentifier</strong></td>
@@ -192,13 +198,13 @@
 <td><strong>ScheduleId</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies a <a class="xref" href="../main/V1/Configuration/Schedules%20configuration.html" data-raw-source="[schedule ID](xref:SchedulesConfiguration)" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data selection configuration.md" sourcestartlinenumber="82" sourceendlinenumber="82">schedule ID</a> to which the data selection item is linked. This data item will be collected on the scheduled interval if Selected is set to true.</td>
+<td>Specifies a <a class="xref" href="../main/V1/Configuration/Schedules%20configuration.html" data-raw-source="[schedule ID](xref:SchedulesConfiguration)" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data selection configuration.md" sourcestartlinenumber="83" sourceendlinenumber="83">schedule ID</a> to which the data selection item is linked. This data item will be collected on the scheduled interval if Selected is set to true.<br>For DataCollectionMode=<strong>Poll</strong>, this is the interval at which this property will be requested from the device.<br>For DataCollectionMode=<strong>SubscribeCoV</strong> or <strong>SubscribeCoVProperty</strong>, this is the interval at which a re-subscription request will be sent.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="bacnet-data-selection-example" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data selection configuration.md" sourcestartlinenumber="84" sourceendlinenumber="84">BACnet data selection example</h2>
-<p sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data selection configuration.md" sourcestartlinenumber="86" sourceendlinenumber="86">The following is an example of valid BACnet data selection configuration. Since the second item has selected set to false, data will not be collected for it.</p>
-<pre sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data selection configuration.md" sourcestartlinenumber="88" sourceendlinenumber="113"><code class="lang-json">[
+<h2 id="bacnet-data-selection-example" sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data selection configuration.md" sourcestartlinenumber="85" sourceendlinenumber="85">BACnet data selection example</h2>
+<p sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data selection configuration.md" sourcestartlinenumber="87" sourceendlinenumber="87">The following is an example of valid BACnet data selection configuration. Since the second item has selected set to false, data will not be collected for it.</p>
+<pre sourcefile="V1/Configuration/OSIsoft Adapter for BACnet data selection configuration.md" sourcestartlinenumber="89" sourceendlinenumber="114"><code class="lang-json">[
  {
     &quot;Selected&quot;: true,
     &quot;Name&quot;: &quot;10.12.112.40_14.AnalogInput90&quot;,
