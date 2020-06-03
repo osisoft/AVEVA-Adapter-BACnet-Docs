@@ -76,12 +76,12 @@ references:
 - uid: index
   name: OSIsoft Adapter for BACnet overview
   href: V1/index.html
-- uid: InstallAdapterWIthDockerForBACnet
-  name: Install OSIsoft Adapter for BACnet using Docker
-  href: V1/Installation/Install%20the%20adapter%20with%20Docker%20for%20BACnet.html
 - uid: Installation
   name: Installation
   href: V1/main/V1/Installation/Installation.html
+- uid: InstallOSIsoftAdapterForBACnetUsingDocker
+  name: Install OSIsoft Adapter for BACnet using Docker
+  href: V1/Installation/Install%20the%20adapter%20with%20Docker%20for%20BACnet.html
 - uid: InstallTheAdapter
   name: Install the adapter
   href: V1/main/V1/Installation/Install%20the%20adapter.html
@@ -139,6 +139,9 @@ references:
 - uid: SystemComponentsConfiguration
   name: System components configuration
   href: V1/main/V1/Configuration/System%20components%20configuration.html
+- uid: SystemRequirements
+  name: System requirements
+  href: V1/Installation/System%20requirements.html
 - uid: TechnicalSupportAndFeedback
   name: Technical support and feedback
   href: V1/main/V1/Technical%20support%20and%20feedback.html
