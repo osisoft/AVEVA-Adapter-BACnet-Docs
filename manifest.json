@@ -196,9 +196,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/OSIsoft Adapter for BACnet overview/testfile.md",
       "output": {
@@ -224,6 +221,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "V1/images/OSIsoft_Adapter_for_BACnet_architecture_diagram.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/images/OSIsoft_Adapter_for_BACnet_architecture_diagram.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "V1/images/atlas_icon.png",
       "output": {
         "resource": {
@@ -239,7 +247,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "r+QP+7yWod/hwBuHQpC9Lw=="
+          "hash": "zxZqvkk3TselOpYNAu/E3g=="
         }
       },
       "is_incremental": false,
@@ -453,6 +461,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/V1/Configuration/System and adapter configuration.md",
       "output": {
