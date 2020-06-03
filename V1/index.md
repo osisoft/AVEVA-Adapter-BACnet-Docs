@@ -6,6 +6,8 @@ uid: index
 
 The OSIsoft Adapter for BACnet (Building Automation and Control Networks) is a data-collection component that transfers time-series data from source devices to OMF endpoints in OSIsoft Cloud Services or PI Servers. BACnet is a communication protocol that is developed and maintained by ASHRAE. The adapter adheres to ANSI/ASHRAE Standard 135-2016 and communicates with any device using BACnet/IP, and devices that conform to other BACnet protocols using a BACnet gateway or router.
 
+![OSIsoft Adapter for BACnet architecture](images/OSIsoft_Adapter_for_BACnet_architecture_diagram.png)
+
 The adapter is installed with a download kit obtained from the OSIsoft Customer Portal and works on devices running either Windows or Linux operating systems.
 
 All functions of the adapter are configured using REST API. The configurations are stored in JSON files. For data ingress, an adapter component must be defined in the system components configuration for each device to which the adapter will connect. Each adapter component is then configured with the connection information for the device and the data to collect. For data egress, configuration is needed to specify destinations for the data, including security for the outgoing connection. Additional configurations are available to egress health and diagnostics data, add buffering configuration to protect against data loss, and record logging information for troubleshooting purposes.
@@ -24,7 +26,7 @@ The EdgeCmd utility is an OSIsoft proprietary command line tool that is used to 
   - [OSIsoft Adapter for BACnet principles of operation](xref:OSIsoftAdapterforBACnetPrinciplesOfOperation)
 - [Installation](xref:Installation)
   - [Install the adapter](xref:InstallTheAdapter)
-  - [Install OSIsoft Adapter for BACnet using Docker](xref:InstallAdapterWIthDockerForBACnet)
+  - [Install OSIsoft Adapter for BACnet using Docker](xref:InstallOSIsoftAdapterForBACnetUsingDocker)
   - [Uninstall the adapter](xref:UninstallTheAdapter)
 - [Configuration](xref:BACnetConfiguration)
   - [Configuration tools](xref:ConfigurationTools)
