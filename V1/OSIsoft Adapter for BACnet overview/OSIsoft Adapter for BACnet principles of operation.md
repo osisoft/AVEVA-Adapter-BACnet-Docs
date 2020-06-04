@@ -22,11 +22,11 @@ The BACnet adapter uses the binary bacnet.tcp protocol to communicate with the B
 
 ## Stream creation
 
-The BACnet adapter creates types upon receiving the value update for a stream. One stream is created for every selected BACnet item in the data selection configuration.
+The BACnet adapter creates types upon receiving the value update for a stream. One stream is created for every selected BACnet item in data selection configuration.
 
 ## Data collection
 
-The BACnet adapter collects time-series data from selected BACnet dynamic variables through BACnet subscriptions (unsolicited reads). The adapter supports the Data Access (DA) part of BACnet specification.
+The BACnet adapter collects time-series data from selected BACnet dynamic variables through BACnet subscriptions (unsolicited reads). The adapter supports Data Access (DA) as part of the BACnet specification.
 
 ## Streams by BACnet adapter
 
@@ -34,13 +34,18 @@ The BACnet adapter creates a stream with two properties per selected BACnet item
 
 | Property name | Data type | Description |
 |---------------|-----------|-------------|
-| Timestamp     | DateTime  | Timestamp of the given BACnet item value update. |
-| Value         | Based on type of incoming BACnet value | Value of the given BACnet item update. |
+| `Timestamp`     | DateTime  | Timestamp of the given BACnet item value update. |
+| `Value`         | Specified on the type of incoming BACnet value | Value of the given BACnet item update. |
 
-Stream ID is a unique identifier for each stream created by the adapter for a given BACnet item. If the Custom Stream ID is specified for the BACnet item in data selection configuration, the BACnet adapter uses that as a stream ID for the stream. Otherwise, the adapter constructs the stream ID using the following format constructed from the BACnet item node ID:
+Certain metadata are sent with each stream created. Metadata common for every adapter type are
+
+- **ComponentId**: Specifies the type of adapter, for example _BACnet_
+- **ComponentType**: Specifies the data source, for example _BACnet1_
+
+Each stream created for a given BACnet item has a unique identifier or "Stream ID." If you specify a custom stream ID for the BACnet item in data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID with the following format constructed from the BACnet item node ID:
 
 ```
 <Adapter Component ID>.<Namespace>.<Identifier>
 ```
 
-**Note:** The naming convention is affected by StreamPrefix and ApplyPrefixToStreamID settings in data source configuration. For more information, see [OSIsoft Adapter for BACnet data source configuration](xref:OSIsoftAdapterforBACnetDataSourceConfiguration).
+**Note:** The naming convention is affected by `StreamPrefix` and `ApplyPrefixToStreamID` settings in data source configuration. For more information, see [OSIsoft Adapter for BACnet data source configuration](xref:OSIsoftAdapterforBACnetDataSourceConfiguration).
