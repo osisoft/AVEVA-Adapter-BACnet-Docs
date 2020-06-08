@@ -113,7 +113,7 @@ cat &gt; ${portConfigFile} &lt;&lt; EOF
 {
 &quot;ApplicationSettings&quot;: {
         &quot;Port&quot;: ${portnum},
-        &quot;ApplicationDataDirectory&quot;: &quot;/usr/share/OSIsoft/Adapters/BACnet/BACnet&quot;
+        &quot;ApplicationDataDirectory&quot;: &quot;/usr/share/OSIsoft/Adapters/BACnet&quot;
         }
 }
 EOF
@@ -146,7 +146,7 @@ cat &gt; ${portConfigFile} &lt;&lt; EOF
 {
 &quot;ApplicationSettings&quot;: {
         &quot;Port&quot;: ${portnum},
-        &quot;ApplicationDataDirectory&quot;: &quot;/usr/share/OSIsoft/Adapters/BACnet/BACnet&quot;
+        &quot;ApplicationDataDirectory&quot;: &quot;/usr/share/OSIsoft/Adapters/BACnet&quot;
         }
 }
 EOF
@@ -179,7 +179,7 @@ cat &gt; ${portConfigFile} &lt;&lt; EOF
 {
 &quot;ApplicationSettings&quot;: {
         &quot;Port&quot;: ${portnum},
-        &quot;ApplicationDataDirectory&quot;: &quot;/usr/share/OSIsoft/Adapters/BACnet/BACnet&quot;
+        &quot;ApplicationDataDirectory&quot;: &quot;/usr/share/OSIsoft/Adapters/BACnet&quot;
         }
 }
 EOF
@@ -217,9 +217,9 @@ RUN chmod +x /bacnetdockerstart.sh
 ADD ./BACnet_linux-x64.tar.gz .
 ENTRYPOINT [&quot;/bacnetdockerstart.sh&quot;]
 </code></pre></li>
-<li sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="174" sourceendlinenumber="174"><p sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="174" sourceendlinenumber="174">Copy the appropriate <code>BACnet_linux-\&lt;platform&gt;.tar.gz</code> file to the same directory as the <code>Dockerfile</code>.</p>
+<li sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="174" sourceendlinenumber="174"><p sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="174" sourceendlinenumber="174">Copy the <code>BACnet_linux-\&lt;platform&gt;.tar.gz</code> file to the same directory as the <code>Dockerfile</code>.</p>
 </li>
-<li sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="175" sourceendlinenumber="175">Copy the <code>bacnetdockerstart.sh</code> script to the same directory.</li>
+<li sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="175" sourceendlinenumber="175">Copy the <code>bacnetdockerstart.sh</code> script to the same directory as the <code>Dockerfile</code>.</li>
 <li sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="176" sourceendlinenumber="180"><p sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="176" sourceendlinenumber="176">Run the following command line in the same directory (<code>sudo</code> may be necessary):</p>
 <pre sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="178" sourceendlinenumber="180"><code class="lang-bash">docker build -t bacnetadapter .
 </code></pre></li>
@@ -228,7 +228,7 @@ ENTRYPOINT [&quot;/bacnetdockerstart.sh&quot;]
 <h3 id="rest-access-from-the-local-host-to-the-docker-container" sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="184" sourceendlinenumber="184">REST access from the local host to the Docker container</h3>
 <p sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="186" sourceendlinenumber="186">Complete the following to run the container:</p>
 <ol sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="188" sourceendlinenumber="193">
-<li sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="188" sourceendlinenumber="188">Open the docker container <code>bacnetadapter</code> created previously.</li>
+<li sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="188" sourceendlinenumber="188">Open the docker container <code>bacnetadapter</code> previously created.</li>
 <li sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="189" sourceendlinenumber="193"><p sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="189" sourceendlinenumber="189">Type the following in the command line (<code>sudo</code> may be necessary):</p>
 <pre sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="191" sourceendlinenumber="193"><code class="lang-bash">docker run -d --network host bacnetadapter
 </code></pre></li>
@@ -237,15 +237,15 @@ ENTRYPOINT [&quot;/bacnetdockerstart.sh&quot;]
 <h3 id="persistent-storage-on-the-local-file-system-from-docker" sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="197" sourceendlinenumber="197">Persistent storage on the local file system from Docker</h3>
 <p sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="199" sourceendlinenumber="199">Complete the following to run the container:</p>
 <ol sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="201" sourceendlinenumber="206">
-<li sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="201" sourceendlinenumber="201">Use the docker container image <code>bacnetadapter</code> created previously.</li>
+<li sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="201" sourceendlinenumber="201">Use the docker container image <code>bacnetadapter</code> previously created.</li>
 <li sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="202" sourceendlinenumber="206"><p sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="202" sourceendlinenumber="202">Type the following in the command line (<code>sudo</code> may be necessary):</p>
 <pre sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="204" sourceendlinenumber="206"><code class="lang-bash">docker run -d --network host -v /bacnet:/usr/share/OSIsoft/ bacnetadapter
 </code></pre></li>
 </ol>
-<p sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="208" sourceendlinenumber="208">Port <code>5590</code> is accessible from the host and you can make REST calls to BACnet Adapter from applications on the local host computer. In this example, all data that would be written to the container is instead written to the host directory. In this example the host directory is a directory on the local machine, /bacnet. You can specify any directory.</p>
+<p sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="208" sourceendlinenumber="208">Port <code>5590</code> is accessible from the host and you can make REST calls to the BACnet Adapter from applications on the local host computer. In this example, all data that would be written to the container is instead written to the host directory and the host directory is a directory on the local machine, /bacnet. You can specify any directory.</p>
 <h3 id="port-number-change" sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="210" sourceendlinenumber="210">Port number change</h3>
 <p sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="212" sourceendlinenumber="213">To use a different port other than <code>5590</code> you can specify a <code>portnum</code> variable on the <code>docker run</code> command line. For example, to 
-start up the adapter using port <code>6000</code> instead of <code>5590</code>, you would use the command line:</p>
+start the adapter using port <code>6000</code> instead of <code>5590</code>, use the command line:</p>
 <pre sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="215" sourceendlinenumber="217"><code class="lang-bash">docker run -d -e portnum=6000 --network host bacnetadapter
 </code></pre><p sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="219" sourceendlinenumber="219">This command accesses the REST API with port <code>6000</code> instead of port <code>5590</code>. The following <code>curl</code> command returns the configuration for the container.</p>
 <pre sourcefile="V1/Installation/Install the adapter with Docker for BACnet.md" sourcestartlinenumber="221" sourceendlinenumber="223"><code class="lang-bash">curl http://localhost:6000/api/v1/configuration
