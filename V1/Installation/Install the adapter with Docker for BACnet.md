@@ -46,7 +46,7 @@ This topic provides examples of how to create a Docker container with the BACnet
 	{
 	"ApplicationSettings": {
 			"Port": ${portnum},
-			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/BACnet/BACnet"
+			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/BACnet"
 			}
 	}
 	EOF
@@ -83,7 +83,7 @@ This topic provides examples of how to create a Docker container with the BACnet
 	{
 	"ApplicationSettings": {
 			"Port": ${portnum},
-			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/BACnet/BACnet"
+			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/BACnet"
 			}
 	}
 	EOF
@@ -120,7 +120,7 @@ This topic provides examples of how to create a Docker container with the BACnet
 	{
 	"ApplicationSettings": {
 			"Port": ${portnum},
-			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/BACnet/BACnet"
+			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/BACnet"
 			}
 	}
 	EOF
@@ -171,8 +171,8 @@ This topic provides examples of how to create a Docker container with the BACnet
 	ENTRYPOINT ["/bacnetdockerstart.sh"]
 	```
 
-2. Copy the appropriate `BACnet_linux-\<platform>.tar.gz` file to the same directory as the `Dockerfile`.
-3. Copy the `bacnetdockerstart.sh` script to the same directory.
+2. Copy the `BACnet_linux-\<platform>.tar.gz` file to the same directory as the `Dockerfile`.
+3. Copy the `bacnetdockerstart.sh` script to the same directory as the `Dockerfile`.
 4. Run the following command line in the same directory (`sudo` may be necessary):
 
 	```bash
@@ -185,7 +185,7 @@ This topic provides examples of how to create a Docker container with the BACnet
 
 Complete the following to run the container:
 
-1. Open the docker container `bacnetadapter` created previously.
+1. Open the docker container `bacnetadapter` previously created.
 2. Type the following in the command line (`sudo` may be necessary):
 
 	```bash
@@ -198,19 +198,19 @@ Port `5590` is accessible from the host and you can make REST calls to BACnet Ad
 
 Complete the following to run the container:
 
-1. Use the docker container image `bacnetadapter` created previously.
+1. Use the docker container image `bacnetadapter` previously created.
 2. Type the following in the command line (`sudo` may be necessary):
 
 	```bash
 	docker run -d --network host -v /bacnet:/usr/share/OSIsoft/ bacnetadapter
 	```
 
-Port `5590` is accessible from the host and you can make REST calls to BACnet Adapter from applications on the local host computer. In this example, all data that would be written to the container is instead written to the host directory. In this example the host directory is a directory on the local machine, /bacnet. You can specify any directory.
+Port `5590` is accessible from the host and you can make REST calls to the BACnet Adapter from applications on the local host computer. In this example, all data that would be written to the container is instead written to the host directory and the host directory is a directory on the local machine, /bacnet. You can specify any directory.
 
 ### Port number change
 
 To use a different port other than `5590` you can specify a `portnum` variable on the `docker run` command line. For example, to 
-start up the adapter using port `6000` instead of `5590`, you would use the command line:
+start the adapter using port `6000` instead of `5590`, use the command line:
 
 ```bash
 docker run -d -e portnum=6000 --network host bacnetadapter
