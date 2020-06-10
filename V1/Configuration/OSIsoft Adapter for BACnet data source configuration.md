@@ -91,7 +91,7 @@ The following is an example of valid BACnet routed device data source configurat
 }
 ```
 ## Discovery
-The BACnet Adapter will be able to discover available BACnet devices and objects defined by the data source configuration. In the case of discovery for a BACnet router, the adapter will send a *Who-Is* request and wait 30 seconds to receive *I-Am* responses from available devices. Upon receiving an *I-Am* response, the adapter will request the *Protocol Services Supported*, *Maximum APDU Length*, *Segementation* and *Object List* properties from the available devices. In the case of discovering a single device, the adapter will not send a *Who-Is* request but will immediately move to requesting the properties. 
+The BACnet Adapter will be able to discover available BACnet devices and objects defined by the data source configuration. In the case of discovery for a BACnet router, the adapter will send a *Who-Is* request and wait 30 seconds to receive *I-Am* responses from available devices. Upon receiving an *I-Am* response, the adapter will request the *Protocol Services Supported*, *Maximum APDU Length*, *Segmentation* and *Object List* properties from the available devices. In the case of discovering a single device, the adapter will not send a *Who-Is* request but will immediately move to requesting the properties. 
 
 A successful discovery will result in populating [DeviceConfiguration](xref:OSIsoftAdapterforBACnetDataSelectionConfiguration#BACnet-device-configuration) and optionally [DataSelection Configuration](xref:OSIsoftAdapterforBACnetDataSelectionConfiguration#Configure-BACnet-data-selection).
 * DataSelection will be populated with *Selected* attribute for all items set to false. 
