@@ -57,6 +57,7 @@ jobs:
 
           echo "Copy DocFX output into branch"
           Xcopy /E /I $(Build.ArtifactStagingDirectory)\_site\* .
+          rmdir obj /s /q
 
           echo "Stage changes"
           git add .        
