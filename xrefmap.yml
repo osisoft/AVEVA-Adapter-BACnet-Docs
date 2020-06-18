@@ -99,19 +99,19 @@ references:
   href: V1/Health/Next%20health%20message%20expected%20for%20BACnet.html
 - uid: PIAdapterforBACnetDataSelectionConfiguration
   name: PI Adapter for BACnet data selection configuration
-  href: V1/Configuration/OSIsoft%20Adapter%20for%20BACnet%20data%20selection%20configuration.html
+  href: V1/Configuration/PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html
 - uid: PIAdapterforBACnetDataSourceConfiguration
   name: PI Adapter for BACnet data source configuration
-  href: V1/Configuration/OSIsoft%20Adapter%20for%20BACnet%20data%20source%20configuration.html
+  href: V1/Configuration/PI%20Adapter%20for%20BACnet%20data%20source%20configuration.html
 - uid: PIAdapterforBACnetOverview
   name: PI Adapter for BACnet overview
-  href: V1/OSIsoft_Adapter_for_BACnet_overview.html
+  href: V1/PI_Adapter_for_BACnet_overview.html
 - uid: PIAdapterforBACnetPrinciplesOfOperation
   name: PI Adapter for BACnet principles of operation
   href: V1/OSIsoft%20Adapter%20for%20BACnet%20overview/OSIsoft%20Adapter%20for%20BACnet%20principles%20of%20operation.html
 - uid: PIAdapterforBACnetSecurityConfiguration
   name: PI Adapter for BACnet security configuration
-  href: V1/Configuration/OSIsoft%20Adapter%20for%20BACnet%20security%20configuration.html
+  href: V1/Configuration/PI%20Adapter%20for%20BACnet%20security%20configuration.html
 - uid: PIAdapterforBACnetSupportedFeatures
   name: PI Adapter for BACnet supported features
   href: V1/OSIsoft%20Adapter%20for%20BACnet%20overview/OSIsoft%20Adapter%20for%20BACnet%20supported%20features.html

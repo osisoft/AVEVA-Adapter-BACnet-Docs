@@ -5,19 +5,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Administration </title>
+    <title>PI Adapter for BACnet overview </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Administration ">
+    <meta name="title" content="PI Adapter for BACnet overview ">
     <meta name="generator" content="docfx 2.55.0.0">
     
-    <link rel="shortcut icon" href="../../../../favicon.ico">
-    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../../../styles/docfx.css">
-    <link rel="stylesheet" href="../../../../styles/main.css">
-    <meta property="docfx:navrel" content="../../../../toc.html">
-    <meta property="docfx:tocrel" content="../../../toc.html">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
-    <meta property="docfx:rel" content="../../../../">
+    <meta property="docfx:rel" content="../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -33,8 +33,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../../../../V1/index.html" width="46">
-                <img id="logo" src="../../../../V1/main/V1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              <a class="navbar-brand" href="../V1/index.html" width="46">
+                <img id="logo" src="../V1/main/V1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -75,12 +75,13 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Administration">
-<h1 id="administration">Administration</h1>
+            <article class="content wrap" id="_content" data-uid="PIAdapterforBACnetOverview">
+<h1 id="pi-adapter-for-bacnet-overview">PI Adapter for BACnet overview</h1>
 
-<p>With the PI adapter administration level functions, you can start and stop an adapter service and the individual adapter ingress components. You can also retrieve product version information and delete an adapter.</p>
-<p>The examples in the administration topics use <code>curl</code>, a commonly available tool on both Windows and Linux. You can use the same operations with any programming language or tool that supports making REST calls. You can also configure PI adapters with the EdgeCmd utility. For more information, see the <a href="https://osisoft.github.io/Edgecmd-Docs/V1.1/EdgeCmd_utility_1-1.html">EdgeCmd utility documentation (https://osisoft.github.io/Edgecmd-Docs/V1.1/EdgeCmd_utility_1-1.html)</a>. To validate successful configurations, you can accomplish data retrieval steps (<code>GET</code> commands) using a browser, if available on your device.</p>
-<p>For more information on PI adapter configuration tools, see <a href="https://osisoft.github.io/PI-Adapter-Modbus-Docs/V1/main/V1/Configuration/Configuration%20tools.html">Configuration tools</a>.</p>
+<p>OPC UA is an open standard, which ensures interoperability, security, and reliability of industrial automation devices and systems. OPC UA is recognized as one of the key communication and data modeling technologies of Industry 4.0, due to the fact that it works with many software platforms, and is completely scalable and flexible.</p>
+<p>The OPC UA adapter transfers time-series data from OPC UA devices to an endpoint on a device.</p>
+<p>You can add a single OPC UA adapter during installation. For more information, see <a class="xref" href="main/V1/Installation/Installation.html">Installation</a>.</p>
+<p>As with other adapters, the OPC UA adapter is configured with data source and data selection JSON files. The data source configurations are identical with other adapters, but OPC UA supports an option to generate a data selection file template that you can manually edit and use for subsequent configuration. For details, see <a class="xref" href="Configuration/PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html">PI Adapter for BACnet data selection configuration</a>. Once you create a template file, you can reuse it on both Linux and Windows without changes.</p>
 </article>
           </div>
           
@@ -89,7 +90,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/OSIsoft-Adapter/blob/master/V1/Administration/Administration.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/OSIsoft-Adapter-BACnet-Docs/blob/master/V1/PI_Adapter_for_BACnet_overview.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -115,8 +116,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../../../styles/main.js"></script>
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
   </body>
 </html>

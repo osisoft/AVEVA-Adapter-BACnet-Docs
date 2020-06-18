@@ -97,7 +97,7 @@
 </code></pre><p> <strong>Note:</strong> Run this command from the same directory where the file is located.</p>
 </li>
 </ol>
-<p><strong>Note:</strong> After you have completed data source configuration, the next step is to configure data selection. For more information, See <a class="xref" href="OSIsoft%20Adapter%20for%20BACnet%20data%20selection%20configuration.html">PI Adapter for BACnet data selection configuration</a>.</p>
+<p><strong>Note:</strong> After you have completed data source configuration, the next step is to configure data selection. For more information, See <a class="xref" href="PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html">PI Adapter for BACnet data selection configuration</a>.</p>
 <h2 id="bacnet-data-source-schema">BACnet data source schema</h2>
 <p>The full schema definition for the BACnet data source configuration is in the <em>BACnet_DataSource_schema.json</em> here:</p>
 <p>Windows: <em>%Program Files%\OSIsoft\Adapters\BACnet\Schemas</em></p>
@@ -207,7 +207,7 @@
 }
 </code></pre><h2 id="discovery">Discovery</h2>
 <p>The BACnet Adapter will be able to discover available BACnet devices and objects defined by the data source configuration. In the case of discovery for a BACnet router, the adapter will send a <em>Who-Is</em> request and wait 30 seconds to receive <em>I-Am</em> responses from available devices. Upon receiving an <em>I-Am</em> response, the adapter will request the <em>Protocol Services Supported</em>, <em>Maximum APDU Length</em>, <em>Segmentation</em> and <em>Object List</em> properties from the available devices. In the case of discovering a single device, the adapter will not send a <em>Who-Is</em> request but will instead request properties. </p>
-<p>A successful discovery will result in populating <a class="xref" href="OSIsoft%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#BACnet-device-configuration">DeviceConfiguration</a> and optionally <a class="xref" href="OSIsoft%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#Configure-BACnet-data-selection">DataSelection Configuration</a>.</p>
+<p>A successful discovery will result in populating <a class="xref" href="PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#BACnet-device-configuration">DeviceConfiguration</a> and optionally <a class="xref" href="PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#Configure-BACnet-data-selection">DataSelection Configuration</a>.</p>
 <ul>
 <li>DataSelection will be populated with <em>Selected</em> attribute for all items set to false. </li>
 <li>DeviceConfiguration is read-only and will provide more information such as segmentation and services that are supported. This will help make informed decisions during data selection. </li>
@@ -224,7 +224,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/OSIsoft-Adapter-BACnet-Docs/blob/master/V1/Configuration/OSIsoft Adapter for BACnet data source configuration.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/OSIsoft-Adapter-BACnet-Docs/blob/master/V1/Configuration/PI Adapter for BACnet data source configuration.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
