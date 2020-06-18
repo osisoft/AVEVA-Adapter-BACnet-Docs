@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>OSIsoft Adapter for BACnet security configuration </title>
+    <title>PI Adapter for BACnet security configuration </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="OSIsoft Adapter for BACnet security configuration ">
-    <meta name="generator" content="docfx 2.54.0.0">
+    <meta name="title" content="PI Adapter for BACnet security configuration ">
+    <meta name="generator" content="docfx 2.55.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -75,15 +75,15 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="OSIsoftAdapterforBACnetSecurityConfiguration">
-<h1 id="osisoft-adapter-for-bacnet-security-configuration">OSIsoft Adapter for BACnet security configuration</h1>
+            <article class="content wrap" id="_content" data-uid="PIAdapterforBACnetSecurityConfiguration">
+<h1 id="pi-adapter-for-bacnet-security-configuration">PI Adapter for BACnet security configuration</h1>
 
-<p>The BACnet security standard is concerned with the authentication of client and server applications, the authentication of users and confidentiality of their communication. As the security model relies heavily on Transport Level Security (TLS) to establish a secure communication link with an BACnet server, each client, including the OSIsoft adapter, must have a digital certificate deployed and configured. Certificates uniquely identify client applications and machines on servers, and allow for creation of a secure communication link when trusted on both sides.</p>
+<p>The BACnet security standard is concerned with the authentication of client and server applications, the authentication of users and confidentiality of their communication. As the security model relies heavily on Transport Level Security (TLS) to establish a secure communication link with an BACnet server, each client, including the PI Adapter, must have a digital certificate deployed and configured. Certificates uniquely identify client applications and machines on servers, and allow for creation of a secure communication link when trusted on both sides.</p>
 <p>BACnet adapter generates a self-signed certificate when the first secure connection attempt is made. Each BACnet adapter instance creates a certificate store where its own certificates, as well as those of the server, will be persisted.</p>
 <h2 id="configure-bacnet-adapter-security">Configure BACnet adapter security</h2>
 <p>Complete the following procedure to configure BACnet adapter security:</p>
 <ol>
-<li><p>In your data source configuration, set <code>UseSecureConnection</code> to <strong>true</strong>. For more information, see <a class="xref" href="OSIsoft%20Adapter%20for%20BACnet%20data%20source%20configuration.html">OSIsoft Adapter for BACnet data source configuration</a>.</p>
+<li><p>In your data source configuration, set <code>UseSecureConnection</code> to <strong>true</strong>. For more information, see <a class="xref" href="OSIsoft%20Adapter%20for%20BACnet%20data%20source%20configuration.html">PI Adapter for BACnet data source configuration</a>.</p>
 <p>The adapter verifies whether the server certificate is present in the <a href="#adapter-trusted-certificates">adapter trusted certificates</a> folder and is therefore trusted. In case the certificates were not exchanged before the first attemped connection, the adapter persists the server certificate within the <a href="#adapter-rejected-certificates">adapter rejected certificates</a> folder and the following warning message about the rejected server certificate will be printed:</p>
 <pre><code class="lang-bash">~~2019-09-08 11:45:48.093 +01:00~~ [Warning] Rejected Certificate: &quot;DC=MyServer.MyDomain.int, O=Prosys BACnet, CN=Simulation
 </code></pre></li>

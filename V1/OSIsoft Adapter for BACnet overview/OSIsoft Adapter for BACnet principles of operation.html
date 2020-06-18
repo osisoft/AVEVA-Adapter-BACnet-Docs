@@ -5,17 +5,17 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>OSIsoft Adapter for BACnet principles of operation </title>
+    <title>PI Adapter for BACnet principles of operation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="OSIsoft Adapter for BACnet principles of operation ">
-    <meta name="generator" content="docfx 2.54.0.0">
+    <meta name="title" content="PI Adapter for BACnet principles of operation ">
+    <meta name="generator" content="docfx 2.55.0.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
     <link rel="stylesheet" href="../../styles/docfx.css">
     <link rel="stylesheet" href="../../styles/main.css">
     <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     <meta property="docfx:rel" content="../../">
     
@@ -75,8 +75,8 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="OSIsoftAdapterforBACnetPrinciplesOfOperation">
-<h1 id="osisoft-adapter-for-bacnet-principles-of-operation">OSIsoft Adapter for BACnet principles of operation</h1>
+            <article class="content wrap" id="_content" data-uid="PIAdapterforBACnetPrinciplesOfOperation">
+<h1 id="pi-adapter-for-bacnet-principles-of-operation">PI Adapter for BACnet principles of operation</h1>
 
 <p>This adapter&#39;s operations focus on data collection and streams creation. </p>
 <h2 id="adapter-configuration">Adapter configuration</h2>
@@ -86,7 +86,7 @@
 <li>Data selection: Perform selection of BACnet items to which the adapter should subscribe for data.</li>
 <li>Logging: Set up the logging attributes to manage the adapter logging behavior.</li>
 </ul>
-<p>For more information, see <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20BACnet%20data%20source%20configuration.html">OSIsoft Adapter for BACnet data source configuration</a> and <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20BACnet%20data%20selection%20configuration.html">OSIsoft Adapter for BACnet data selection configuration</a>. </p>
+<p>For more information, see <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20BACnet%20data%20source%20configuration.html">PI Adapter for BACnet data source configuration</a> and <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20BACnet%20data%20selection%20configuration.html">PI Adapter for BACnet data selection configuration</a>. </p>
 <h2 id="connection">Connection</h2>
 <p>The BACnet adapter uses the binary bacnet.tcp protocol to communicate with the BACnet servers. When a secured connection is enabled, the X.509-type client and server certificates are exchanged and verified and the connection between the BACnet adapter and the configured BACnet server is established.</p>
 <h2 id="stream-creation">Stream creation</h2>
@@ -123,7 +123,7 @@
 </ul>
 <p>Each stream created for a given BACnet item has a unique identifier or &quot;Stream ID.&quot; If you specify a custom stream ID for the BACnet item in data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID with the following format constructed from the BACnet item node ID:</p>
 <pre><code>&lt;Adapter Component ID&gt;.&lt;Namespace&gt;.&lt;Identifier&gt;
-</code></pre><p><strong>Note:</strong> The naming convention is affected by <code>StreamPrefix</code> and <code>ApplyPrefixToStreamID</code> settings in data source configuration. For more information, see <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20BACnet%20data%20source%20configuration.html">OSIsoft Adapter for BACnet data source configuration</a>.</p>
+</code></pre><p><strong>Note:</strong> The naming convention is affected by <code>StreamPrefix</code> and <code>ApplyPrefixToStreamID</code> settings in data source configuration. For more information, see <a class="xref" href="../Configuration/OSIsoft%20Adapter%20for%20BACnet%20data%20source%20configuration.html">PI Adapter for BACnet data source configuration</a>.</p>
 </article>
           </div>
           
