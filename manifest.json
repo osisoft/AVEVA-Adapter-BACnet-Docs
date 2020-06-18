@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/PI Adapter for BACnet data selection configuration.html",
-          "hash": "VECztpgWNbwE71ihj5he8g=="
+          "hash": "3192mq24vnACL8fExvCPxg=="
         }
       },
       "is_incremental": false,
@@ -166,66 +166,6 @@
         ".html": {
           "relative_path": "V1/Installation/System requirements.html",
           "hash": "GHsMAfZBo4+yGVw4O2L4Ag=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "V1/OSIsoft Adapter for BACnet overview/OSIsoft Adapter for BACnet principles of operation.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/OSIsoft Adapter for BACnet overview/OSIsoft Adapter for BACnet principles of operation.html",
-          "hash": "MuF8S+By/vnrTFgWUCyeGA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "V1/OSIsoft Adapter for BACnet overview/OSIsoft Adapter for BACnet supported features.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/OSIsoft Adapter for BACnet overview/OSIsoft Adapter for BACnet supported features.html",
-          "hash": "8hzjdr3p/aKfs/z4Wc5Alg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "V1/OSIsoft Adapter for BACnet overview/testfile.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/OSIsoft Adapter for BACnet overview/testfile.html",
-          "hash": "0+XsL/xJqZJzB1aComc2pw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Toc",
-      "source_relative_path": "V1/OSIsoft Adapter for BACnet overview/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "V1/OSIsoft Adapter for BACnet overview/toc.html",
-          "hash": "DLlCibw83RUttTzG07oXBA=="
         }
       },
       "is_incremental": false,
@@ -917,7 +857,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 57,
+          "total_file_count": 54,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
