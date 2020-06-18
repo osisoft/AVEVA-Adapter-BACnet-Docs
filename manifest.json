@@ -828,15 +828,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "hg5MDBGAaMTaUk7x+CVKiw=="
+          "hash": "S6x6eoZYlDhYPrUY4eju2A=="
         }
       },
       "is_incremental": false,
