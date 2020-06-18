@@ -1,8 +1,8 @@
 ---
-uid: OSIsoftAdapterforBACnetDataSelectionConfiguration
+uid: PIAdapterforBACnetDataSelectionConfiguration
 ---
 
-# OSIsoft Adapter for BACnet data selection configuration
+# PI Adapter for BACnet data selection configuration
 
 In addition to the data source configuration, you need to provide a data selection configuration to specify the data you want the BACnet adapter to collect from the data sources. 
 
@@ -75,7 +75,7 @@ The following parameters can be used to configure BACnet data selection:
 | **StreamID** | Optional | `string` | The custom stream ID used to create the streams. If not specified, the BACnet adapter will generate a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters: / : ? # [ ] @ ! $ & ' ( ) \ * + , ; = % < > &#124;<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods. |
 | **DataFilterId** | Optional | `string` | The ID of the data filter. If not specified, no data filtering will occur. |
 | **DeviceIPAddress** | Required | `string` | Device IP Address |
-| **ObjectType** | Required | `string` | Any of the [supported object types](xref:OSIsoftAdapterforBACnetSupportedFeatures#Object-Types)  |
+| **ObjectType** | Required | `string` | Any of the [supported object types](xref:PIAdapterforBACnetSupportedFeatures#Object-Types)  |
 | **ObjectId** | Required | `number` | BACnet object instance number |
 | **DataCollectionMode** | Optional | `string` | Specifies the mode of data collection for the item. Must be one of **Poll**, **SubscribeCoV**, or **SubscribeCoVProperty**. See [Change Of Value (COV) configuration](xref:BACnetCOVConfiguration) and [Polled data stream configuration](xref:BACnetPolledDataStreamConfiguration) for more information. Default value is **Poll**. |
 | **CoVIncrement** | Optional | `number` | Used only with **SubscribeCoV** or **SubscribeCoVProperty** DataCollectionMode. Specifies the amount that the configured property must change in order for a new value to be sent by the device. If empty or ommitted, any change in value will result in a new data value being sent(?)|

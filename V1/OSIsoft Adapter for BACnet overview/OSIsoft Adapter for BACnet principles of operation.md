@@ -1,8 +1,8 @@
 ---
-uid: OSIsoftAdapterforBACnetPrinciplesOfOperation
+uid: PIAdapterforBACnetPrinciplesOfOperation
 ---
 
-# OSIsoft Adapter for BACnet principles of operation
+# PI Adapter for BACnet principles of operation
 
 This adapter's operations focus on data collection and streams creation. 
 
@@ -14,7 +14,7 @@ In order for the BACnet adapter to start data collection, you need to configure 
 - Data selection: Perform selection of BACnet items to which the adapter should subscribe for data.
 - Logging: Set up the logging attributes to manage the adapter logging behavior.
 
-For more information, see [OSIsoft Adapter for BACnet data source configuration](xref:OSIsoftAdapterforBACnetDataSourceConfiguration) and [OSIsoft Adapter for BACnet data selection configuration](xref:OSIsoftAdapterforBACnetDataSelectionConfiguration). 
+For more information, see [PI Adapter for BACnet data source configuration](xref:PIAdapterforBACnetDataSourceConfiguration) and [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration). 
 
 ## Connection
 
@@ -48,4 +48,4 @@ Each stream created for a given BACnet item has a unique identifier or "Stream I
 <Adapter Component ID>.<Namespace>.<Identifier>
 ```
 
-**Note:** The naming convention is affected by `StreamPrefix` and `ApplyPrefixToStreamID` settings in data source configuration. For more information, see [OSIsoft Adapter for BACnet data source configuration](xref:OSIsoftAdapterforBACnetDataSourceConfiguration).
+**Note:** The naming convention is affected by `StreamPrefix` and `ApplyPrefixToStreamID` settings in data source configuration. For more information, see [PI Adapter for BACnet data source configuration](xref:PIAdapterforBACnetDataSourceConfiguration).

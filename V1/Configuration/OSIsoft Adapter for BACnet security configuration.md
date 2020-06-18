@@ -1,10 +1,10 @@
 ---
-uid: OSIsoftAdapterforBACnetSecurityConfiguration
+uid: PIAdapterforBACnetSecurityConfiguration
 ---
 
-# OSIsoft Adapter for BACnet security configuration
+# PI Adapter for BACnet security configuration
 
-The BACnet security standard is concerned with the authentication of client and server applications, the authentication of users and confidentiality of their communication. As the security model relies heavily on Transport Level Security (TLS) to establish a secure communication link with an BACnet server, each client, including the OSIsoft adapter, must have a digital certificate deployed and configured. Certificates uniquely identify client applications and machines on servers, and allow for creation of a secure communication link when trusted on both sides.
+The BACnet security standard is concerned with the authentication of client and server applications, the authentication of users and confidentiality of their communication. As the security model relies heavily on Transport Level Security (TLS) to establish a secure communication link with an BACnet server, each client, including the PI Adapter, must have a digital certificate deployed and configured. Certificates uniquely identify client applications and machines on servers, and allow for creation of a secure communication link when trusted on both sides.
 
 BACnet adapter generates a self-signed certificate when the first secure connection attempt is made. Each BACnet adapter instance creates a certificate store where its own certificates, as well as those of the server, will be persisted.
 
@@ -12,7 +12,7 @@ BACnet adapter generates a self-signed certificate when the first secure connect
 
 Complete the following procedure to configure BACnet adapter security:
 
-1. In your data source configuration, set `UseSecureConnection` to **true**. For more information, see [OSIsoft Adapter for BACnet data source configuration](xref:OSIsoftAdapterforBACnetDataSourceConfiguration).
+1. In your data source configuration, set `UseSecureConnection` to **true**. For more information, see [PI Adapter for BACnet data source configuration](xref:PIAdapterforBACnetDataSourceConfiguration).
 
    The adapter verifies whether the server certificate is present in the [adapter trusted certificates](#adapter-trusted-certificates) folder and is therefore trusted. In case the certificates were not exchanged before the first attemped connection, the adapter persists the server certificate within the [adapter rejected certificates](#adapter-rejected-certificates) folder and the following warning message about the rejected server certificate will be printed:
 

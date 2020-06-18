@@ -2,11 +2,11 @@
 uid: index
 ---
 
-# OSIsoft Adapter for BACnet overview
+# PI Adapter for BACnet overview
 
-The OSIsoft Adapter for BACnet (Building Automation and Control Networks) is a data-collection component that transfers time-series data from source devices to OMF endpoints in OSIsoft Cloud Services or PI Servers. BACnet is a communication protocol that is developed and maintained by ASHRAE. The adapter adheres to ANSI/ASHRAE Standard 135-2016 and communicates with any device using BACnet/IP, and devices that conform to other BACnet protocols using a BACnet gateway or router.
+The PI Adapter for BACnet (Building Automation and Control Networks) is a data-collection component that transfers time-series data from source devices to OMF endpoints in OSIsoft Cloud Services or PI Servers. BACnet is a communication protocol that is developed and maintained by ASHRAE. The adapter adheres to ANSI/ASHRAE Standard 135-2016 and communicates with any device using BACnet/IP, and devices that conform to other BACnet protocols using a BACnet gateway or router.
 
-![OSIsoft Adapter for BACnet architecture](images/OSIsoft_Adapter_for_BACnet_architecture_diagram.png)
+![PI Adapter for BACnet architecture](images/OSIsoft_Adapter_for_BACnet_architecture_diagram.png)
 
 The adapter is installed with a download kit obtained from the OSIsoft Customer Portal and works on devices running either Windows or Linux operating systems.
 
@@ -17,23 +17,23 @@ Once the adapter is configured and sending data, administration functions are us
 The EdgeCmd utility is an OSIsoft proprietary command line tool that is used to configure and administer an adapter on both Linux and Windows operating systems. It is installed separately from the adapter.
 
 <!--
-# OSIsoft Adapter for BACnet
+# PI Adapter for BACnet
 
 =======
 
-- [OSIsoft Adapter for BACnet overview](xref:OSIsoftAdapterforBACnetOverview)
-  - [OSIsoft Adapter for BACnet supported features](xref:OSIsoftAdapterforBACnetSupportedFeatures)
-  - [OSIsoft Adapter for BACnet principles of operation](xref:OSIsoftAdapterforBACnetPrinciplesOfOperation)
+- [PI Adapter for BACnet overview](xref:PIAdapterforBACnetOverview)
+  - [PI Adapter for BACnet supported features](xref:PIAdapterforBACnetSupportedFeatures)
+  - [PI Adapter for BACnet principles of operation](xref:PIAdapterforBACnetPrinciplesOfOperation)
 - [Installation](xref:Installation)
   - [Install the adapter](xref:InstallTheAdapter)
-  - [Install OSIsoft Adapter for BACnet using Docker](xref:InstallOSIsoftAdapterForBACnetUsingDocker)
+  - [Install PI Adapter for BACnet using Docker](xref:InstallPIAdapterForBACnetUsingDocker)
   - [Uninstall the adapter](xref:UninstallTheAdapter)
 - [Configuration](xref:BACnetConfiguration)
   - [Configuration tools](xref:ConfigurationTools)
   - [System components configuration](xref:SystemComponentsConfiguration)
-  - [OSIsoft Adapter for BACnet data source configuration](xref:OSIsoftAdapterforBACnetDataSourceConfiguration)
-  - [OSIsoft Adapter for BACnet data selection configuration](xref:OSIsoftAdapterforBACnetDataSelectionConfiguration)
-  - [OSIsoft Adapter for BACnet security configuration](xref:OSIsoftAdapterforBACnetSecurityConfiguration)
+  - [PI Adapter for BACnet data source configuration](xref:PIAdapterforBACnetDataSourceConfiguration)
+  - [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration)
+  - [PI Adapter for BACnet security configuration](xref:PIAdapterforBACnetSecurityConfiguration)
   - [Egress endpoints configuration](xref:EgressEndpointsConfiguration)
   - [Health endpoint configuration](xref:HealthEndpointConfiguration)
   - [Diagnostics configuration](xref:DiagnosticsConfiguration)

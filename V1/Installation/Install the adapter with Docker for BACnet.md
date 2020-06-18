@@ -1,8 +1,8 @@
 ---
-uid: InstallOSIsoftAdapterForBACnetUsingDocker
+uid: InstallPIAdapterForBACnetUsingDocker
 ---
 
-# Install OSIsoft Adapter for BACnet using Docker
+# Install PI Adapter for BACnet using Docker
 
 Docker is a set of tools that can be used on Linux to manage application deployments. 
 

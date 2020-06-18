@@ -2,15 +2,15 @@
   href: ../main/V1/Configuration/Configuration tools.md
 - name: System components configuration
   href: ../main/V1/Configuration/System components configuration.md
-- name: OSIsoft Adapter for BACnet data source configuration 
-  href: OSIsoft Adapter for BACnet data source configuration.md
-- name: OSIsoft Adapter for BACnet data selection configuration
+- name: PI Adapter for BACnet data source configuration 
+  href: PI Adapter for BACnet data source configuration.md
+- name: PI Adapter for BACnet data selection configuration
   href: Data selection configuration/toc.yml
-  topicHref: OSIsoft Adapter for BACnet data selection configuration.md
+  topicHref: PI Adapter for BACnet data selection configuration.md
 - name: Data filters configuration
   href: ../main/V1/Configuration/Data filters configuration.md
-- name: OSIsoft Adapter for BACnet security configuration
-  href: OSIsoft Adapter for BACnet security configuration.md
+- name: PI Adapter for BACnet security configuration
+  href: PI Adapter for BACnet security configuration.md
 - name: Egress endpoints configuration
   href: ../main/V1/Configuration/Egress endpoints configuration.md
 - name: Health endpoint configuration

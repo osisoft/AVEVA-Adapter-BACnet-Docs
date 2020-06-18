@@ -1,5 +1,5 @@
-- name: OSIsoft Adapter for BACnet overview
-  href: OSIsoft Adapter for BACnet overview/toc.yml
+- name: PI Adapter for BACnet overview
+  href: PI Adapter for BACnet overview/toc.yml
   topicHref: index.md
   homepage: index.md
 - name: Installation

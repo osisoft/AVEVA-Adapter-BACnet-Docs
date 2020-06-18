@@ -1,8 +1,8 @@
 ---
-uid: OSIsoftAdapterforBACnetSupportedFeatures
+uid: PIAdapterforBACnetSupportedFeatures
 ---
 
-# OSIsoft Adapter for BACnet supported features
+# PI Adapter for BACnet supported features
 
 This adapter provides several features including data types and bitmaps.
 

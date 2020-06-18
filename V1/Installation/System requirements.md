@@ -4,7 +4,7 @@ uid: SystemRequirements
 
 # System requirements
 
-OSIsoft Adapter for BACnet is supported on a variety of platforms and processors. Install kits are available for the following platforms:
+PI Adapter for BACnet is supported on a variety of platforms and processors. Install kits are available for the following platforms:
 
 | Operating System | Installation Kit | Processor(s) |
 |-------------------|----------------------------------|-------------|
@@ -13,4 +13,4 @@ OSIsoft Adapter for BACnet is supported on a variety of platforms and processors
 | Debian 9 or later arm32 | `BACnet_linux-arm.deb`  | Arm 32-bit processors |
 | Debian 9 or later arm64 | `BACnet_linux-arm64.deb`  | Arm 64-bit processors |
 
-Alternatively, you can use tar.gz files with binaries to build your own custom installers or containers for Linux. For more information on installation of the OSIsoft Adapter for BACnet with a Docker container, see [Install OSIsoft Adapter for BACnet using Docker](xref:InstallOSIsoftAdapterForBACnetUsingDocker).
+Alternatively, you can use tar.gz files with binaries to build your own custom installers or containers for Linux. For more information on installation of the PI Adapter for BACnet with a Docker container, see [Install PI Adapter for BACnet using Docker](xref:InstallPIAdapterForBACnetUsingDocker).
