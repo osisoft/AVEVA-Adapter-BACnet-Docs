@@ -4,21 +4,22 @@ uid: PIAdapterforBACnetSupportedFeatures
 
 # PI Adapter for BACnet supported features
 
-This adapter provides several features including data types and bitmaps.
+This adapter provides several features including data types and exporting operation.
 
-## Object Types
-
-The following BACnet object types are supported: 
-* Accumulator
-* AnalogInput
-* AnalogOutput
-* AnalogValue
-* BinaryInput
-* BinaryOutput
-* BinaryValue
-* MultistateInput
-* MultistateOutput
-* MultistateValue
+## Object Types and Data types
+The following table lists BACnet object types that the adapter supports for data collection and types of streams that will be created.
+| BACnet object type | Stream data type |
+|------------------|------------------|
+| Accumulator       | UInt32      |
+| AnalogInput       | Float32     |
+| AnalogOutput      | Float32     |
+| AnalogValue       | Float32     |
+| BinaryInput       | Boolean     |
+| BinaryOutput      | Boolean     |
+| BinaryValue       | Boolean     |
+| MultistateInput   | UInt32      |
+| MultistateOutput  | UInt32      |
+| MultistateValue   | UInt32      |
 
 ## Export operation
 
