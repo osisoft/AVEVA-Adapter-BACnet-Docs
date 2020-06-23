@@ -11,9 +11,9 @@ The following table lists BACnet object types that the adapter supports for data
 | BACnet object type | Stream data type | PI point type | 
 |------------------|------------------|------------------|
 | Accumulator       | UInt32      | Float64  |
-| AnalogInput       | Float32     | Float32  |
-| AnalogOutput      | Float32     | Float32  |
-| AnalogValue       | Float32     | Float32  |
+| AnalogInput       | Single     | Float32  |
+| AnalogOutput      | Single     | Float32  |
+| AnalogValue       | Single     | Float32  |
 | BinaryInput       | Boolean     | Int16  |
 | BinaryOutput      | Boolean     | Int16  |
 | BinaryValue       | Boolean     | Int16  |
