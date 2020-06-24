@@ -78,21 +78,70 @@
             <article class="content wrap" id="_content" data-uid="PIAdapterforBACnetSupportedFeatures">
 <h1 id="pi-adapter-for-bacnet-supported-features">PI Adapter for BACnet supported features</h1>
 
-<p>This adapter provides several features including data types and bitmaps.</p>
-<h2 id="object-types">Object Types</h2>
-<p>The following BACnet object types are supported: </p>
-<ul>
-<li>Accumulator</li>
-<li>AnalogInput</li>
-<li>AnalogOutput</li>
-<li>AnalogValue</li>
-<li>BinaryInput</li>
-<li>BinaryOutput</li>
-<li>BinaryValue</li>
-<li>MultistateInput</li>
-<li>MultistateOutput</li>
-<li>MultistateValue</li>
-</ul>
+<p>This adapter provides several features including data types and exporting operation.</p>
+<h2 id="object-types-and-data-types">Object Types and Data types</h2>
+<p>The following table lists BACnet object types that the adapter supports for data collection, stream data types and PI point types that will be created.</p>
+<table>
+<thead>
+<tr>
+<th>BACnet object type</th>
+<th>Stream data type</th>
+<th>PI point type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accumulator</td>
+<td>UInt32</td>
+<td>Float64</td>
+</tr>
+<tr>
+<td>AnalogInput</td>
+<td>Single</td>
+<td>Float32</td>
+</tr>
+<tr>
+<td>AnalogOutput</td>
+<td>Single</td>
+<td>Float32</td>
+</tr>
+<tr>
+<td>AnalogValue</td>
+<td>Single</td>
+<td>Float32</td>
+</tr>
+<tr>
+<td>BinaryInput</td>
+<td>Boolean</td>
+<td>Int16</td>
+</tr>
+<tr>
+<td>BinaryOutput</td>
+<td>Boolean</td>
+<td>Int16</td>
+</tr>
+<tr>
+<td>BinaryValue</td>
+<td>Boolean</td>
+<td>Int16</td>
+</tr>
+<tr>
+<td>MultistateInput</td>
+<td>UInt32</td>
+<td>Float64</td>
+</tr>
+<tr>
+<td>MultistateOutput</td>
+<td>UInt32</td>
+<td>Float64</td>
+</tr>
+<tr>
+<td>MultistateValue</td>
+<td>UInt32</td>
+<td>Float64</td>
+</tr>
+</tbody>
+</table>
 <h2 id="export-operation">Export operation</h2>
 <p>The adapter is able to export available BACnet dynamic variables by browsing the BACnet hierarchies or sub-hierarchies.</p>
 <h3 id="export-operation-actions">Export operation actions</h3>
