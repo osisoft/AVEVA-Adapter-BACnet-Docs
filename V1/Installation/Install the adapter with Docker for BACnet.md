@@ -4,15 +4,13 @@ uid: InstallPIAdapterForBACnetUsingDocker
 
 # Install PI Adapter for BACnet using Docker
 
-Docker is a set of tools that can be used on Linux to manage application deployments. 
+Docker is a set of tools that you can use on Linux to manage application deployments. This topic provides examples of how to create a Docker container with the BACnet adapter. 
 
-**Note:** If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the BACnet Adapter. Docker is not a requirement to use adapter.
-
-This topic provides examples of how to create a Docker container with the BACnet Adapter. 
+**Note:** If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the BACnet adapter. Docker is not a requirement to use adapter.
 
 ## Create a startup script for the Adapter
 
-1. Using the text editor, create a script similar to the following.
+1. Using the text editor, create a script similar to one of the following examples:
 
 	**Note:** The script varies slightly by processor.
 
@@ -20,116 +18,38 @@ This topic provides examples of how to create a Docker container with the BACnet
 
 	```bash
 	#!/bin/sh
-	#local variables
-	defaultPort=5590
-	#regexp to only accept numerals
-	re='^[0-9]+$'
-	
-	portConfigFile="/BACnet_linux-arm/appsettings.json"
-
-	#validate the port number input
 	if [ -z $portnum ] ; then
-			portnum=${defaultPort} 
-			echo "Default value selected." ;
+		exec /BACnet_linux-arm/OSIsoft.Data.System.Host
 	else
-			echo $portnum | grep -q -E $re
-			isNum=$?
-			if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
-					echo "Invalid input. Setting default value ${defaultPort} instead..."
-					portnum=${defaultPort} ;
-			fi
+		exec /BACnet_linux-arm/OSIsoft.Data.System.Host --port:$portnum
 	fi
-
-	echo "configuring port ${portnum}"
-	#write out the port config file
-	cat > ${portConfigFile} << EOF
-	{
-	"ApplicationSettings": {
-			"Port": ${portnum},
-			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/BACnet"
-			}
-	}
-	EOF
-	exec /BACnet_linux-arm/OSIsoft.Data.System.Host
 	```
 
 	**ARM64**
 
 	```bash
 	#!/bin/sh
-	#local variables
-	defaultPort=5590
-	#regexp to only accept numerals
-	re='^[0-9]+$'
-	
-	portConfigFile="/BACnet_linux-arm64/appsettings.json"
-
-	#validate the port number input
 	if [ -z $portnum ] ; then
-			portnum=${defaultPort} 
-			echo "Default value selected." ;
+		exec /BACnet_linux-arm64/OSIsoft.Data.System.Host
 	else
-			echo $portnum | grep -q -E $re
-			isNum=$?
-			if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
-				echo "Invalid input. Setting default value ${defaultPort} instead..."
-				portnum=${defaultPort} ;
-			fi
+		exec /BACnet_linux-arm64/OSIsoft.Data.System.Host --port:$portnum
 	fi
-
-	echo "configuring port ${portnum}"
-	#write out the port config file
-	cat > ${portConfigFile} << EOF
-	{
-	"ApplicationSettings": {
-			"Port": ${portnum},
-			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/BACnet"
-			}
-	}
-	EOF
-	exec /BACnet_linux-arm64/OSIsoft.Data.System.Host
 	```
 
 	**AMD64**
 
 	```bash
 	#!/bin/sh
-	#local variables
-	defaultPort=5590
-	#regexp to only accept numerals
-	re='^[0-9]+$'
-	
-	portConfigFile="/BACnet_linux-x64/appsettings.json"
-
-	#validate the port number input
 	if [ -z $portnum ] ; then
-			portnum=${defaultPort} 
-			echo "Default value selected." ;
+		exec /BACnet_linux-x64/OSIsoft.Data.System.Host
 	else
-			echo $portnum | grep -q -E $re
-			isNum=$?
-			if [ $isNum -ne 0 ] || [ $portnum -le 1023 ] || [ $portnum -gt 49151 ] ; then
-					echo "Invalid input. Setting default value ${defaultPort} instead..."
-					portnum=${defaultPort} ;
-			fi
+		exec /BACnet_linux-x64/OSIsoft.Data.System.Host --port:$portnum
 	fi
-
-	echo "configuring port ${portnum}"
-	#write out the port config file
-	cat > ${portConfigFile} << EOF
-	{
-	"ApplicationSettings": {
-			"Port": ${portnum},
-			"ApplicationDataDirectory": "/usr/share/OSIsoft/Adapters/BACnet"
-			}
-	}
-	EOF
-	exec /BACnet_linux-x64/OSIsoft.Data.System.Host
 	```
 	
 2. Name the script *bacnetdockerstart.sh* and save it to the directory where you plan to create the container.
 
-## Create a Docker container containing the BACnet Adapter
+## Create a Docker container containing the BACnet adapter
 
 1. Create the following `Dockerfile` in the directory where you want to create and run the container.
 
@@ -140,7 +60,7 @@ This topic provides examples of how to create a Docker container with the BACnet
 	```bash
 	FROM ubuntu
 	WORKDIR /
-	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.0.0
+	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
 	COPY bacnetdockerstart.sh /
 	RUN chmod +x /bacnetdockerstart.sh
 	ADD ./BACnet_linux-arm.tar.gz .
@@ -152,7 +72,7 @@ This topic provides examples of how to create a Docker container with the BACnet
 	```bash
 	FROM ubuntu
 	WORKDIR /
-	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.0.0
+	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
 	COPY bacnetdockerstart.sh /
 	RUN chmod +x /bacnetdockerstart.sh
 	ADD ./BACnet_linux-arm64.tar.gz .
@@ -164,7 +84,7 @@ This topic provides examples of how to create a Docker container with the BACnet
 	```bash
 	FROM ubuntu
 	WORKDIR /
-	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libicu60 libssl1.0.0
+	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
 	COPY bacnetdockerstart.sh /
 	RUN chmod +x /bacnetdockerstart.sh
 	ADD ./BACnet_linux-x64.tar.gz .
@@ -172,7 +92,9 @@ This topic provides examples of how to create a Docker container with the BACnet
 	```
 
 2. Copy the `BACnet_linux-\<platform>.tar.gz` file to the same directory as the `Dockerfile`.
+   
 3. Copy the `bacnetdockerstart.sh` script to the same directory as the `Dockerfile`.
+   
 4. Run the following command line in the same directory (`sudo` may be necessary):
 
 	```bash
@@ -185,16 +107,16 @@ This topic provides examples of how to create a Docker container with the BACnet
 
 Complete the following to run the container:
 
-1. Open the docker container `bacnetadapter` previously created.
+1. Use the docker container `bacnetadapter` previously created.
 2. Type the following in the command line (`sudo` may be necessary):
 
 	```bash
 	docker run -d --network host bacnetadapter
 	```
 
-Port `5590` is accessible from the host and you can make REST calls to BACnet Adapter from applications on the local host computer. In this example, all data stored by the BACnet Adapter is stored in the container itself. When the container is deleted, the data stored is also deleted.
+Port `5590` is accessible from the host and you can make REST calls to BACnet adapter from applications on the local host computer. In this example, all data stored by the BACnet adapter is stored in the container itself. When the container is deleted, the data stored is also deleted.
 
-### Persistent storage on the local file system from Docker
+### Provide persistent storage for the Docker container
 
 Complete the following to run the container:
 
@@ -205,7 +127,7 @@ Complete the following to run the container:
 	docker run -d --network host -v /bacnet:/usr/share/OSIsoft/ bacnetadapter
 	```
 
-Port `5590` is accessible from the host and you can make REST calls to the BACnet Adapter from applications on the local host computer. In this example, all data that would be written to the container is instead written to the host directory and the host directory is a directory on the local machine, /bacnet. You can specify any directory.
+Port `5590` is accessible from the host and you can make REST calls to the BACnet adapter from applications on the local host computer. In this example, all data that would be written to the container is instead written to the host directory and the host directory is a directory on the local machine, `/bacnet`. You can specify any directory.
 
 ### Port number change
 
@@ -224,4 +146,4 @@ curl http://localhost:6000/api/v1/configuration
 
 ### Remove REST access to the Docker container
 
-If you remove the `--network host` option from the docker run command, REST access is not possible from outside the container. This may be valuable when you want to host an application in the same container as BACnet Adapter, but do not want to have external REST access enabled.
+If you remove the `--network host` option from the docker run command, REST access is not possible from outside the container. This may be valuable when you want to host an application in the same container as the BACnet adapter, but do not want to have external REST access enabled.
