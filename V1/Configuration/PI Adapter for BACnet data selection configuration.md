@@ -84,7 +84,7 @@ The following parameters can be used to configure BACnet data selection:
 
 ## BACnet data selection example
 
-The following is an example of valid BACnet data selection configuration. Since the second item has selected set to false, data will not be collected for it.
+The following is an example of valid BACnet data selection configuration with different data collection modes. Since the last item has selected set to false, data will not be collected for it.
 
 ```json
 [
@@ -109,6 +109,7 @@ The following is an example of valid BACnet data selection configuration. Since 
     "ObjectId": 95,
     "DataCollectionMode": "SubscribeCoVProperty",
     "PropertyIdentifier": "PresentValue",
+    "CoVIncrement": 0.5,
     "ScheduleId": "Schedule1"
   },
   {
