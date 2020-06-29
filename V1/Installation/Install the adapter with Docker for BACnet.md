@@ -6,7 +6,7 @@ uid: InstallPIAdapterForBACnetUsingDocker
 
 Docker is a set of tools that you can use on Linux to manage application deployments. This topic provides examples of how to create a Docker container with the BACnet adapter. 
 
-**Note:** If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the BACnet adapter. Docker is not a requirement to use adapter.
+**Note:** If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the BACnet adapter. Docker is not a requirement to use the adapter.
 
 ## Create a startup script for the Adapter
 
@@ -47,7 +47,7 @@ Docker is a set of tools that you can use on Linux to manage application deploym
 	fi
 	```
 	
-2. Name the script *bacnetdockerstart.sh* and save it to the directory where you plan to create the container.
+2. Name the script `bacnetdockerstart.sh` and save it to the directory where you plan to create the container.
 
 ## Create a Docker container containing the BACnet adapter
 
@@ -127,7 +127,7 @@ Complete the following to run the container:
 	docker run -d --network host -v /bacnet:/usr/share/OSIsoft/ bacnetadapter
 	```
 
-Port `5590` is accessible from the host and you can make REST calls to the BACnet adapter from applications on the local host computer. In this example, all data that would be written to the container is instead written to the host directory and the host directory is a directory on the local machine, `/bacnet`. You can specify any directory.
+Port `5590` is accessible from the host and you can make REST calls to the BACnet adapter from applications on the local host computer. In this example, the data is written to a host directory on the local machine, `/bacnet`rather than the container. You can specify any directory.
 
 ### Port number change
 
