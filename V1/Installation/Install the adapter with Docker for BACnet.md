@@ -8,7 +8,7 @@ Docker is a set of tools that you can use on Linux to manage application deploym
 
 **Note:** If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the BACnet adapter. Docker is not a requirement to use the adapter.
 
-## Create a startup script for the Adapter
+## Create a startup script for the adapter
 
 1. Using the text editor, create a script similar to one of the following examples:
 
@@ -49,7 +49,7 @@ Docker is a set of tools that you can use on Linux to manage application deploym
 	
 2. Name the script `bacnetdockerstart.sh` and save it to the directory where you plan to create the container.
 
-## Create a Docker container containing the BACnet adapter
+## Create a Docker container containing the adapter
 
 1. Create the following `Dockerfile` in the directory where you want to create and run the container.
 
@@ -101,7 +101,7 @@ Docker is a set of tools that you can use on Linux to manage application deploym
 	docker build -t bacnetadapter .
 	```
 
-## Run the BACnet Adapter Docker container
+## Run the adapter Docker container
 
 ### REST access from the local host to the Docker container
 
