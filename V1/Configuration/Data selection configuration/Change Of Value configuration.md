@@ -10,4 +10,4 @@ CoV or Change of Value is one of two available data collection modes for the ada
 
 ## Usage 
 
-To enable CoV for a specified data selection item, change the DataCollectionMode to SubscribeCov or SubscribeCovProperty. In SubscribeCovProperty mode, an optional CoVIncrement can also be specified on the data selection item to specify a minimum amount that the value must change in order to prompt the new value to be sent. While CoV mode is enabled, it is advised that at least one data selection item be configured in polled data collection mode per device in order to maintain an accurate device status.
+To enable CoV for a specified data selection item, change the DataCollectionMode to SubscribeCov or SubscribeCovProperty. In SubscribeCovProperty mode, an optional CovIncrement can also be specified on the data selection item to specify a minimum amount that the value must change in order to prompt the new value to be sent. While CoV mode is enabled, it is advised that at least one data selection item be configured in polled data collection mode per device in order to maintain an accurate device status.
