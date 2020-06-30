@@ -26,7 +26,7 @@ The BACnet adapter creates types upon receiving the value update for a stream. O
 
 ## Data collection
 
-The BACnet adapter collects time-series data from selected objects on BACnet devices. The adapter supports both polling and Change of Value (COV) unsolicited subscription data collection modes as defined by the BACnet specification.
+The BACnet adapter collects time-series data from selected objects on BACnet devices. The adapter supports both polling and COV(Change of Value, unsolicited subscription) data collection modes as defined by the BACnet specification.
 
 ## Streams by BACnet adapter
 
