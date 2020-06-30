@@ -562,7 +562,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Health/Adapter health.html",
-          "hash": "IQHHnMxmNoPx8KSaQD738w=="
+          "hash": "DqUq+3bhnYwE8S2W4MAyLQ=="
         }
       },
       "is_incremental": false,
@@ -586,7 +586,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Health/Health and diagnostics.html",
-          "hash": "PxEZTmFp7upPQGqBFVZDqQ=="
+          "hash": "Y7qIrxQ5yvexg/+46hEVUw=="
         }
       },
       "is_incremental": false,
@@ -731,6 +731,17 @@
       "output": {
         "resource": {
           "relative_path": "V1/main/V1/images/Diagnostics.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/main/V1/images/HealthData.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "V1/main/V1/images/HealthData.PNG"
         }
       },
       "is_incremental": false,
