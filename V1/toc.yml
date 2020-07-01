@@ -14,3 +14,7 @@
 - name: Health and diagnostics
   href: Health/toc.yml
   topicHref: Health/Health and diagnostics for BACnet.md
+- name: Release notes
+  href: Release notes/Release notes.md
+- name: Technical support and feedback
+  href: main/V1/Technical support and feedback.md
