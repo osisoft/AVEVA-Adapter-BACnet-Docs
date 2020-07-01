@@ -77,14 +77,14 @@ The following parameters can be used to configure BACnet data selection:
 | **DeviceIPAddress** | Required | `string` | Device IP Address |
 | **ObjectType** | Required | `string` | Any of the [supported object types](xref:PIAdapterforBACnetSupportedFeatures#Object-Types)  |
 | **ObjectId** | Required | `number` | BACnet object instance number |
-| **DataCollectionMode** | Optional | `string` | Specifies the mode of data collection for the item. Must be one of **Poll**, **SubscribeCoV**, or **SubscribeCoVProperty**. See [Change Of Value (COV) configuration](xref:BACnetCOVConfiguration) and [Polled data stream configuration](xref:BACnetPolledDataStreamConfiguration) for more information. Default value is **Poll**. |
-| **CoVIncrement** | Optional | `number` | Used only with **SubscribeCoV** or **SubscribeCoVProperty** DataCollectionMode. Specifies the amount that the configured property must change in order for a new value to be sent by the device. If empty or ommitted, any change in value will result in a new data value being sent(?)|
+| **DataCollectionMode** | Optional | `string` | Specifies the mode of data collection for the item. Must be one of **Poll**, **SubscribeCov**, or **SubscribeCovProperty**. See [Change Of Value (COV) configuration](xref:BACnetCOVConfiguration) and [Polled data stream configuration](xref:BACnetPolledDataStreamConfiguration) for more information. Default value is **Poll**. |
+| **CovIncrement** | Optional | `number` | Used only with **SubscribeCovProperty** DataCollectionMode. Specifies the amount that the configured property must change in order for a new value to be sent by the device. If empty or ommitted, the COV increment to use will be determined by the device. If set to 0, any change in value will result in a new data value being sent.|
 | **PropertyIdentifier** | Optional | `string` | Specifies which property to collect from the BACnet object. If left empty, PresentValue is collected. |
-| **ScheduleId** | Optional | `string` | Specifies a [schedule ID](xref:SchedulesConfiguration) to which the data selection item is linked. This data item will be collected on the scheduled interval if Selected is set to true.<br>For DataCollectionMode=**Poll**, this is the interval at which this property will be requested from the device.<br>For DataCollectionMode=**SubscribeCoV** or **SubscribeCoVProperty**, this is the interval at which a re-subscription request will be sent.|
+| **ScheduleId** | Optional | `string` | Specifies a [schedule ID](xref:SchedulesConfiguration) to which the data selection item is linked. This data item will be collected on the scheduled interval if Selected is set to true.<br>For DataCollectionMode=**Poll**, this is the interval at which this property will be requested from the device.<br>For DataCollectionMode=**SubscribeCov** or **SubscribeCovProperty**, this is the interval at which a re-subscription request will be sent.|
 
 ## BACnet data selection example
 
-The following is an example of valid BACnet data selection configuration. Since the second item has selected set to false, data will not be collected for it.
+The following is an example of valid BACnet data selection configuration with different data collection modes. Since the last item has selected set to false, data will not be collected for it.
 
 ```json
 [
@@ -100,6 +100,19 @@ The following is an example of valid BACnet data selection configuration. Since 
     "ScheduleId": "Schedule1"
   },
   {
+    "Selected": true,
+    "Name": "10.12.112.40_14.AnalogInput95",
+    "StreamId": "10.12.112.40_14.AnalogInput95",
+    "DeviceIPAddress": "10.12.112.40",
+    "DeviceId": 14,
+    "ObjectType": "AnalogInput",
+    "ObjectId": 95,
+    "DataCollectionMode": "SubscribeCovProperty",
+    "PropertyIdentifier": "PresentValue",
+    "CovIncrement": 0.5,
+    "ScheduleId": "Schedule1"
+  },
+  {
     "Selected": false,
     "Name": "10.12.112.40_16.AnalogOutput70",
     "StreamId": "10.12.112.40_16.AnalogOutput70",
@@ -107,8 +120,8 @@ The following is an example of valid BACnet data selection configuration. Since 
     "DeviceId": 16,
     "ObjectType": "AnalogOutput",
     "ObjectId": 70,
-    "DataCollectionMode": "Poll",
-    "PropertyIdentifier": "PresentValue"
+    "DataCollectionMode": "SubscribeCov",
+    "ScheduleId": "Schedule2"
   }
 ]
 ```
