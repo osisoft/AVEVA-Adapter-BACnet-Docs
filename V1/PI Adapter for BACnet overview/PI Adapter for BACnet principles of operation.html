@@ -92,7 +92,7 @@
 <h2 id="stream-creation">Stream creation</h2>
 <p>The BACnet adapter creates types upon receiving the value update for a stream. One stream is created for every selected BACnet item in data selection configuration.</p>
 <h2 id="data-collection">Data collection</h2>
-<p>The BACnet adapter collects time-series data from selected BACnet dynamic variables through BACnet subscriptions (unsolicited reads). The adapter supports Data Access (DA) as part of the BACnet specification.</p>
+<p>The BACnet adapter collects time-series data from selected objects on BACnet devices. The adapter supports both polling and COV(Change of Value, unsolicited subscription) data collection modes as defined by the BACnet specification.</p>
 <h2 id="streams-by-bacnet-adapter">Streams by BACnet adapter</h2>
 <p>The BACnet adapter creates a stream with two properties per selected BACnet item. The properties are described in the following table:</p>
 <table>
