@@ -2,12 +2,25 @@
 uid: HealthAndDiagnosticsForBACnet
 ---
 
-# Health and Diagnostics
+# Health and diagnostics
 
-PI Adapters produce various types of health data. You can use health data to ensure that your adapters are running properly and data is flowing to the configured OSIsoft OMF endpoints. For more information, see [Adapter health](xref:AdapterHealthForBACnet). TEST
+PI Adapters produce various types of health data. You can use health data to ensure that your adapters are running properly and that data flows to the configured OMF endpoints. For more information, see [Adapter health](xref:AdapterHealthForBACnet).
 
-PI Adapters also produce diagnostic data. You can use diagnostic data to find more information about a particular adapter instance. Diagnostic data lives alongside the health data and you can egress it using a Health Endpoint and setting EnableDiagnostics = true. For more information, see [Adapter diagnostics](xref:AdapterDiagnostics).
+PI Adapters also produce diagnostic data. You can use diagnostic data to find more information about a particular adapter instance. Diagnostic data lives alongside the health data and you can egress it using a health endpoint and setting `EnableDiagnostics`to `true`. You can configure `EnableDiagnostics` in the system's [General configuration](xref:GeneralConfiguration). For more information on available diagnostics, see [Adapter diagnostics](xref:AdapterDiagnostics).
 
-The examples in the configuration topics use curl, a commonly available tool on both Windows and Linux. The adapter can be configured with any programming language or tool that supports making REST calls, or with the EdgeCmd utility. For more information, see the [EdgeCmd utility documentation (https://osisoft.github.io/Edgecmd-Docs/V1/EdgeCmd_utility.html)](https://osisoft.github.io/Edgecmd-Docs/V1/EdgeCmd_utility.html). To validate successful configurations, you can perform data retrieval (GET commands) using a browser, if available on your device.
+## Health endpoint differences
 
-For more information on PI Adapter configuration tools, see [Configuration tools](xref:ConfigurationTools).
+Two OMF endpoints are currently supported for adapter health data:
+
+- PI Web API
+- OSIsoft Cloud Services
+
+There are a few differences in how these two systems treat the associated health and diagnostics data.
+
+- PI Web API parses the information and sends it to configured PI servers for the OMF endpoint. The static data is used to create a hierarchy on a PI AF server similar to the following example:
+
+  ![AdapterHealthAFHierarchy](../images/AdapterHealthAFHierarchy.PNG)
+
+  The dynamic health data is time-series data that is stored in PI points on a PI Data Archive. You can see it in the AF hierarchy as PI point data reference attributes.
+
+- OSIsoft Cloud Services does not currently provide a way to store the static metadata. For OCS-based adapter health endpoints, only the dynamic data is stored. Each value is its own stream with the timestamp property as the single index.
