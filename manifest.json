@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Health/Adapter health for BACnet.html",
-          "hash": "C/wUnrNBUT9s+RhgduYung=="
+          "hash": "53+lHMTYPnWxP2P7DB1sSg=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Health/Device status for BACnet.html",
-          "hash": "S8GNUv8HhkVeAnbgLpdeww=="
+          "hash": "rTfjbD1N8t8vHTBjetuUyQ=="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Health/Health and diagnostics for BACnet.html",
-          "hash": "R/w1+wFhOdN+dLLRI2uagA=="
+          "hash": "a/oFP6TgvOssieqSpuraYg=="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Health/Next health message expected for BACnet.html",
-          "hash": "zWeCYVZVa56cGXi2CkDnhA=="
+          "hash": "lN3mDVT8po2bxFSTe5fIwQ=="
         }
       },
       "is_incremental": false,
@@ -214,6 +214,28 @@
         ".html": {
           "relative_path": "V1/Release Notes/Release Notes.html",
           "hash": "FDP4tJmZ9KIrBjjNu5nsHw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/images/AdapterHealthAFHierarchy.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/images/AdapterHealthAFHierarchy.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "V1/images/HealthData.png",
+      "output": {
+        "resource": {
+          "relative_path": "V1/images/HealthData.png"
         }
       },
       "is_incremental": false,

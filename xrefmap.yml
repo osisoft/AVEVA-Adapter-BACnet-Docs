@@ -68,7 +68,7 @@ references:
   name: Health and Diagnostics
   href: V1/main/V1/Health/Health%20and%20diagnostics.html
 - uid: HealthAndDiagnosticsForBACnet
-  name: Health and Diagnostics
+  name: Health and diagnostics
   href: V1/Health/Health%20and%20diagnostics%20for%20BACnet.html
 - uid: HealthEndpointConfiguration
   name: Health endpoint configuration
