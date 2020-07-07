@@ -1,5 +1,5 @@
 ---
-uid: index
+uid: PIAdapterforBACnetOverview
 ---
 
 # PI Adapter for BACnet overview
