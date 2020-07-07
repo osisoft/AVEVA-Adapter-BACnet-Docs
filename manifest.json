@@ -197,26 +197,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/PI_Adapter_for_BACnet_overview.md",
-      "output": {
-        ".html": {
-          "relative_path": "V1/PI_Adapter_for_BACnet_overview.html",
-          "hash": "Mq8Csv7SL4+JxOtkGK3Vvg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids"
-      ],
-      "type": "Conceptual",
       "source_relative_path": "V1/Release Notes/Release Notes.md",
       "output": {
         ".html": {
           "relative_path": "V1/Release Notes/Release Notes.html",
-          "hash": "OB7jqvuvcdJpRCtgapL8HQ=="
+          "hash": "SHQvVmtrBYOPA8YmrZN1oQ=="
         }
       },
       "is_incremental": false,
@@ -272,7 +257,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "9+XwmGrW643gJJ2bXWJ3mQ=="
+          "hash": "Bc3q/xGQ9hEdqrWgFe77nw=="
         }
       },
       "is_incremental": false,
@@ -291,6 +276,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/Templates/Release Notes Template.md",
       "output": {
@@ -876,12 +864,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "S6x6eoZYlDhYPrUY4eju2A=="
+          "hash": "U+tuszQquEgTxGS0SslzPQ=="
         }
       },
       "is_incremental": false,
@@ -902,7 +893,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 56,
+          "total_file_count": 55,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

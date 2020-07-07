@@ -73,9 +73,6 @@ references:
 - uid: HealthEndpointConfiguration
   name: Health endpoint configuration
   href: V1/main/V1/Configuration/Health%20endpoint%20configuration.html
-- uid: index
-  name: PI Adapter for BACnet overview
-  href: V1/index.html
 - uid: Installation
   name: Installation
   href: V1/main/V1/Installation/Installation.html
@@ -105,7 +102,7 @@ references:
   href: V1/Configuration/PI%20Adapter%20for%20BACnet%20data%20source%20configuration.html
 - uid: PIAdapterforBACnetOverview
   name: PI Adapter for BACnet overview
-  href: V1/PI_Adapter_for_BACnet_overview.html
+  href: V1/index.html
 - uid: PIAdapterforBACnetPrinciplesOfOperation
   name: PI Adapter for BACnet principles of operation
   href: V1/PI%20Adapter%20for%20BACnet%20overview/PI%20Adapter%20for%20BACnet%20principles%20of%20operation.html
