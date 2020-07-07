@@ -118,9 +118,6 @@ references:
 - uid: releaseNotes
   name: Release Notes
   href: V1/main/Templates/Release%20Notes%20Template.html
-- uid: ReleaseNotes
-  name: Release notes
-  href: V1/Release%20Notes/Release%20Notes.html
 - uid: RetrieveProductVersionInformation
   name: Retrieve product version information
   href: V1/main/V1/Administration/Retrieve%20product%20version%20information.html
