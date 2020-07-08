@@ -42,6 +42,19 @@ Certain metadata are sent with each stream created. Metadata common for every ad
 - **ComponentId**: Specifies the type of adapter, for example _BACnet_
 - **ComponentType**: Specifies the data source, for example _BACnet1_
 
+Metadata specific to the BACnet adapter are
+
+- **Device**: The Device ID of the BACnet device
+- **SourceId**: SourceId is constructed using the following pattern: {DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier} 
+- **LocalName**: The BACnet ObjectName as provided by the BACnet object
+
+**Note:** The metadata level is set in [General configuration](xref:GeneralConfiguration). For the BAcnet adapter, the following metadata is sent for the individual level:
+
+- `None`: No metadata
+- `Low`: AdapterType (ComponentType) and DataSource (ComponentId)
+- `Medium`: AdapterType (ComponentType), DataSource (ComponentId), and Schedule (ScheduleId)
+- `High`: AdapterType (ComponentType), DataSource (ComponentId), Schedule (ScheduleId), Device, SourceId and LocalName
+
 Each stream created for a given BACnet item has a unique identifier or "Stream ID." If you specify a custom stream ID for the BACnet item in data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID with the following format constructed from the BACnet item node ID:
 
 ```
