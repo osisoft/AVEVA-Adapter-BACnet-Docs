@@ -16,7 +16,7 @@ Complete the following procedure to configure the BACnet data source:
     - For content structure, see [BACnet router data source example](#BACnet-router-data-source-example).
     - For a table of all available parameters, see [BACnet data source parameters](#BACnet-data-source-schema).
 2. Save the file, for example as _DataSource.config.json_.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:<Port>/api/v1/configuration/<adapterId>/DataSource/`. 
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:<Port>/api/v1/configuration/<componentId>/DataSource/`. 
 
 	**Note:** The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see System components configuration. 
 
