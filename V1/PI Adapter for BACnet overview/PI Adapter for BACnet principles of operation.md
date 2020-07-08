@@ -8,29 +8,41 @@ This adapter's operations focus on data collection and streams creation.
 
 ## Adapter configuration
 
-In order for the BACnet adapter to start data collection, you need to configure the adapter by defining the following:
+In order for the adapter to start data collection, you need to configure the adapter by defining the following:
 
 - Data source: Provide the data source from which the adapter should collect data.
-- Data selection: Perform selection of BACnet items to which the adapter should subscribe for data.
+- Data selection: Perform selection of BACnet items to which the adapter should request data or subscribe for data.
 - Logging: Set up the logging attributes to manage the adapter logging behavior.
 
 For more information, see [PI Adapter for BACnet data source configuration](xref:PIAdapterforBACnetDataSourceConfiguration) and [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration). 
 
-## Connection
-
-The BACnet adapter uses the binary bacnet.tcp protocol to communicate with the BACnet servers. When a secured connection is enabled, the X.509-type client and server certificates are exchanged and verified and the connection between the BACnet adapter and the configured BACnet server is established.
-
 ## Stream creation
 
-The BACnet adapter creates types upon receiving the value update for a stream. One stream is created for every selected BACnet item in data selection configuration.
+The adapter creates types for each supported BACnet object type. One stream is created for every selected BACnet item in data selection configuration.
 
 ## Data collection
 
-The BACnet adapter collects time-series data from selected objects on BACnet devices. The adapter supports both polling and COV(Change of Value, unsolicited subscription) data collection modes as defined by the BACnet specification.
+The adapter collects time-series data from selected objects on BACnet devices. The adapter supports both polling and COV (Change of Value, unsolicited subscription) data collection modes as defined by the BACnet specification.
+
+### Object Types and Data types
+The following table lists BACnet object types that the adapter supports for data collection and types of streams that will be created.
+
+| BACnet object type | Stream data type |
+|------------------|------------------|
+| Accumulator       | UInt32  |
+| AnalogInput       | Single  |
+| AnalogOutput      | Single  |
+| AnalogValue       | Single  |
+| BinaryInput       | Boolean |
+| BinaryOutput      | Boolean |
+| BinaryValue       | Boolean |
+| MultistateInput   | UInt32  |
+| MultistateOutput  | UInt32  |
+| MultistateValue   | UInt32  |
 
 ## Streams by BACnet adapter
 
-The BACnet adapter creates a stream with two properties per selected BACnet item. The properties are described in the following table:
+The adapter creates a stream with two properties per selected BACnet item. The properties are described in the following table:
 
 | Property name | Data type | Description |
 |---------------|-----------|-------------|
@@ -58,7 +70,7 @@ Metadata specific to the BACnet adapter are
 Each stream created for a given BACnet item has a unique identifier or "Stream ID." If you specify a custom stream ID for the BACnet item in data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID with the following format constructed from the BACnet item node ID:
 
 ```
-<Adapter Component ID>.<Namespace>.<Identifier>
+<Adapter Component ID>.<Device ID>.<Object Type><Object ID>.<Property Identifier>
 ```
 
-**Note:** The naming convention is affected by `StreamPrefix` and `ApplyPrefixToStreamID` settings in data source configuration. For more information, see [PI Adapter for BACnet data source configuration](xref:PIAdapterforBACnetDataSourceConfiguration).
+**Note:** The naming convention is affected by `StreamIdPrefix` and `DefaultStreamIdPattern` settings in data source configuration. For more information, see [PI Adapter for BACnet data source configuration](xref:PIAdapterforBACnetDataSourceConfiguration).

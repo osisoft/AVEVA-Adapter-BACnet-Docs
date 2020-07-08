@@ -33,6 +33,12 @@ The device configuration may be used to choose an appropriate DataCollectionMode
   }
 ]
 ```
+## REST URLs
+
+| Relative URL | HTTP verb | Action |
+| ------------ | --------- | ------ |
+| api/v1/configuration/_ComponentId_/DeviceConfiguration  | `GET` | Retrieves the BACnet device configuration |
+| api/v1/configuration/_ComponentId_/DeviceConfiguration | `DELETE` | Deletes the BACnet device configuration |
 
 ## Configure BACnet data selection
 
@@ -51,10 +57,8 @@ Complete the following to configure the BACnet data selection:
     **Note:** During installation, you can add a single BACnet adapter named BACnet1. The following example uses this component name.
 
     ```bash
-    curl -v -d "@DataSelection.config.json" -H "Content-Type: application/json"     "http://localhost:5590/api/v1/configuration/BACnet1/DataSelection"
+    curl -d "@DataSelection.config.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSelection"
     ```
-    
-4. (Optional) Configure data selection for polled data or Change Of Value (COV) subscription data, see [Polled data stream configuration](xref:BACnetPolledDataStreamConfiguration) or [Change Of Value (COV) configuration](xref:BACnetCOVConfiguration) respectively for instructions.
 
 ## BACnet data selection schema
 
@@ -125,3 +129,13 @@ The following is an example of valid BACnet data selection configuration with di
   }
 ]
 ```
+## REST URLs
+
+| Relative URL | HTTP verb | Action |
+| ------------ | --------- | ------ |
+| api/v1/configuration/_ComponentId_/DataSelection  | `GET` | Retrieves the BACnet data selection configuration |
+| api/v1/configuration/_ComponentId_/DataSelection  | `PUT` | Configures or updates the BACnet data selection configuration |
+| api/v1/configuration/_ComponentId_/DataSelection | `DELETE` | Deletes the BACnet data selection configuration |
+| api/v1/configuration/_ComponentId_/DataSelection | `PATCH` | Allows partial updating of configured data selection items. <br>**Note:** The request must be an array containing one or more data selection items. Each data selection item in the array must include its `StreamId` |
+| api/v1/configuration/_ComponentId_/DataSelection/_StreamId_ | `PUT` | Updates or creates a new data selection with the specified *StreamId* |
+| api/v1/configuration/_ComponentId_/DataSelection/_StreamId_ | `DELETE` | Deletes a specific data selection item of the BACnet data selection configuration |

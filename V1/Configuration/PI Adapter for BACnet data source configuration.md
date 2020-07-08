@@ -66,8 +66,8 @@ The following is an example of valid BACnet data source configuration:
 {
 	"IPAddress": "192.168.1.1",
 	"Port": 47808,
-	"MaxConcurrentNetworkRequests" : 5,
-	"RequestDelay": "00:00:10",
+	"MaxConcurrentNetworkRequests" : 0,
+	"RequestDelay": "00:00:00",
 	"AllowedConsecutiveFailedRequests": 3,
 	"ReconnectInterval": "02:00:00"
 }
@@ -81,8 +81,8 @@ The following is an example of valid BACnet routed device data source configurat
 {
     "IPAddress": "192.168.1.1",
 	"Port": 47808,
-	"MaxConcurrentNetworkRequests" : 5,
-	"RequestDelay": "00:00:10",
+	"MaxConcurrentNetworkRequests" : 1,
+	"RequestDelay": "00:00:00",
 	"AllowedConsecutiveFailedRequests": 3,
 	"ReconnectInterval": "02:00:00",
 	"DeviceID": 1,
@@ -90,6 +90,17 @@ The following is an example of valid BACnet routed device data source configurat
 	"MacAddress": "12"
 }
 ```
+## REST URLs
+
+| Relative URL | HTTP verb | Action |
+| ------------ | --------- | ------ |
+| api/v1/configuration/_ComponentId_/DataSource | `GET` | Retrieves the BACnet data source configuration |
+| api/v1/configuration/_ComponentId_/DataSource  | `POST` | Creates the BACnet data source configuration |
+| api/v1/configuration/_ComponentId_/DataSource | `PUT` | Configures or updates the BACnet data source configuration |
+| api/v1/configuration/_ComponentId_/DataSource | `DELETE` | Deletes the BACnet data source configuration |
+
+**Note:** Replace `ComponentId` with the Id of your BACnet component. For example, `BACnet1`.
+
 ## Discovery
 The BACnet Adapter will be able to discover available BACnet devices and objects defined by the data source configuration. In the case of discovery for a BACnet router, the adapter will send a *Who-Is* request and wait 30 seconds to receive *I-Am* responses from available devices. Upon receiving an *I-Am* response, the adapter will request the *Protocol Services Supported*, *Maximum APDU Length*, *Segmentation* and *Object List* properties from the available devices. In the case of discovering a single device, the adapter will not send a *Who-Is* request but will instead request properties. 
 

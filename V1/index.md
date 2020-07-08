@@ -4,13 +4,13 @@ uid: PIAdapterforBACnetOverview
 
 # PI Adapter for BACnet overview
 
-The PI Adapter for BACnet (Building Automation and Control Networks) is a data-collection component that transfers time-series data from source devices to OMF endpoints in OSIsoft Cloud Services or PI Servers. BACnet is a communication protocol that is developed and maintained by ASHRAE. The adapter adheres to ANSI/ASHRAE Standard 135-2016 and communicates with any device using BACnet/IP, and devices that conform to other BACnet protocols using a BACnet gateway or router.
+The PI Adapter for BACnet (Building Automation and Control Networks) is a data-collection component that transfers time-series data from source devices to OMF endpoints in OSIsoft Cloud Services or PI Servers. BACnet is a communication protocol that is developed and maintained by ASHRAE. The adapter adheres to ANSI/ASHRAE Standard 135-2012 and communicates with any device using BACnet/IP, and devices that conform to other BACnet protocols using a BACnet gateway or router.
 
 ![PI Adapter for BACnet architecture](images/OSIsoft_Adapter_for_BACnet_architecture_diagram.png)
 
 The adapter is installed with a download kit obtained from the OSIsoft Customer Portal and works on devices running either Windows or Linux operating systems.
 
-All functions of the adapter are configured using REST API. The configurations are stored in JSON files. For data ingress, an adapter component must be defined in the system components configuration for each device to which the adapter will connect. Each adapter component is then configured with the connection information for the device and the data to collect. For data egress, configuration is needed to specify destinations for the data, including security for the outgoing connection. Additional configurations are available to egress health and diagnostics data, add buffering configuration to protect against data loss, and record logging information for troubleshooting purposes.
+All functions of the adapter are configured using REST API. The configurations are stored in JSON files. For data ingress, an adapter component must be defined in the system components configuration for each data source to which the adapter will connect. Each adapter component is then configured with the connection information for the data source and the data to collect. For data egress, configuration is needed to specify destinations for the data, including security for the outgoing connection. Additional configurations are available to egress health and diagnostics data, add buffering configuration to protect against data loss, and record logging information for troubleshooting purposes.
 
 Once the adapter is configured and sending data, administration functions are used to manage the adapter or individual ingress components of the adapter. Health and diagnostics functions monitor the status of connected devices, adapter system functions, the number of active data streams, the rate of data ingress, the rate of errors, and the rate of data egress.
 
