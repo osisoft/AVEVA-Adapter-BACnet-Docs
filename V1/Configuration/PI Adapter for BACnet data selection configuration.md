@@ -79,12 +79,15 @@ The following parameters can be used to configure BACnet data selection:
 | **StreamID** | Optional | `string` | The custom stream ID used to create the streams. If not specified, the BACnet adapter will generate a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters: / : ? # [ ] @ ! $ & ' ( ) \ * + , ; = % < > &#124;<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods. |
 | **DataFilterId** | Optional | `string` | The ID of the data filter. If not specified, no data filtering will occur. |
 | **DeviceIPAddress** | Required | `string` | Device IP Address |
+| **DeviceId** | Required | `number` | BACnet device instance number |
 | **ObjectType** | Required | `string` | Any of the [supported object types](xref:PIAdapterforBACnetSupportedFeatures#Object-Types)  |
 | **ObjectId** | Required | `number` | BACnet object instance number |
 | **DataCollectionMode** | Optional | `string` | Specifies the mode of data collection for the item. Must be one of **Poll**, **SubscribeCov**, or **SubscribeCovProperty**. See [Change Of Value (COV) configuration](xref:BACnetCOVConfiguration) and [Polled data stream configuration](xref:BACnetPolledDataStreamConfiguration) for more information. Default value is **Poll**. |
 | **CovIncrement** | Optional | `number` | Used only with **SubscribeCovProperty** DataCollectionMode. Specifies the amount that the configured property must change in order for a new value to be sent by the device. If empty or ommitted, the COV increment to use will be determined by the device. If set to 0, any change in value will result in a new data value being sent.|
 | **PropertyIdentifier** | Optional | `string` | Specifies which property to collect from the BACnet object. If left empty, PresentValue is collected. |
 | **ScheduleId** | Optional | `string` | Specifies a [schedule ID](xref:SchedulesConfiguration) to which the data selection item is linked. This data item will be collected on the scheduled interval if Selected is set to true.<br>For DataCollectionMode=**Poll**, this is the interval at which this property will be requested from the device.<br>For DataCollectionMode=**SubscribeCov** or **SubscribeCovProperty**, this is the interval at which a re-subscription request will be sent.|
+
+**Note:** Specifying the same combination of DeviceId, ObjectType, ObjectId, and PropertyIdentifier for multiple data selection items may result in data not being written to one or more streams. Therefore, it is recommended that the combination of those properties be unique for each data selection item.
 
 ## BACnet data selection example
 
