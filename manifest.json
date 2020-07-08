@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/PI Adapter for BACnet overview/PI Adapter for BACnet principles of operation.html",
-          "hash": "4Ev/jd6hFUiav3rZ6cvAVw=="
+          "hash": "1p4kZZ1an7vToesVgdbB5w=="
         }
       },
       "is_incremental": false,
@@ -196,6 +196,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Release Notes/Release Notes.md",
       "output": {
@@ -276,9 +279,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/Templates/Release Notes Template.md",
       "output": {
