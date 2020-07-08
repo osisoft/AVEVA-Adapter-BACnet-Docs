@@ -44,9 +44,9 @@ Certain metadata are sent with each stream created. Metadata common for every ad
 
 Metadata specific to the BACnet adapter are
 
-- **LocalName**: The BACnet ObjectName as provided by the BACnet object
 - **Device**: The Device ID of the BACnet device
 - **SourceId**: SourceId is constructed using the following pattern: {DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier} 
+- **LocalName**: The BACnet ObjectName as provided by the BACnet object
 
 **Note:** The metadata level is set in [General configuration](xref:GeneralConfiguration). For the BAcnet adapter, the following metadata is sent for the individual level:
 
