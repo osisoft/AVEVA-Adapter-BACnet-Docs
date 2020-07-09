@@ -89,7 +89,7 @@
 </ul>
 </li>
 <li>Save the file, for example as <em>DataSource.config.json</em>.</li>
-<li><p>Use any of the <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:&lt;Port&gt;/api/v1/configuration/&lt;adapterId&gt;/DataSource/</code>. </p>
+<li><p>Use any of the <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:&lt;Port&gt;/api/v1/configuration/&lt;componentId&gt;/DataSource/</code>. </p>
 <p> <strong>Note:</strong> The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see System components configuration. </p>
 <p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p> Example using <code>curl</code>:</p>
@@ -187,8 +187,8 @@
 <pre><code class="lang-json">{
     &quot;IPAddress&quot;: &quot;192.168.1.1&quot;,
     &quot;Port&quot;: 47808,
-    &quot;MaxConcurrentNetworkRequests&quot; : 5,
-    &quot;RequestDelay&quot;: &quot;00:00:10&quot;,
+    &quot;MaxConcurrentNetworkRequests&quot; : 0,
+    &quot;RequestDelay&quot;: &quot;00:00:00&quot;,
     &quot;AllowedConsecutiveFailedRequests&quot;: 3,
     &quot;ReconnectInterval&quot;: &quot;02:00:00&quot;
 }
@@ -197,15 +197,48 @@
 <pre><code class="lang-json">{
     &quot;IPAddress&quot;: &quot;192.168.1.1&quot;,
     &quot;Port&quot;: 47808,
-    &quot;MaxConcurrentNetworkRequests&quot; : 5,
-    &quot;RequestDelay&quot;: &quot;00:00:10&quot;,
+    &quot;MaxConcurrentNetworkRequests&quot; : 1,
+    &quot;RequestDelay&quot;: &quot;00:00:00&quot;,
     &quot;AllowedConsecutiveFailedRequests&quot;: 3,
     &quot;ReconnectInterval&quot;: &quot;02:00:00&quot;,
     &quot;DeviceID&quot;: 1,
     &quot;NetworkNumber&quot;: 100,
     &quot;MacAddress&quot;: &quot;12&quot;
 }
-</code></pre><h2 id="discovery">Discovery</h2>
+</code></pre><h2 id="rest-urls">REST URLs</h2>
+<table>
+<thead>
+<tr>
+<th>Relative URL</th>
+<th>HTTP verb</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>api/v1/configuration/<em>ComponentId</em>/DataSource</td>
+<td><code>GET</code></td>
+<td>Retrieves the BACnet data source configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/<em>ComponentId</em>/DataSource</td>
+<td><code>POST</code></td>
+<td>Creates the BACnet data source configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/<em>ComponentId</em>/DataSource</td>
+<td><code>PUT</code></td>
+<td>Configures or updates the BACnet data source configuration</td>
+</tr>
+<tr>
+<td>api/v1/configuration/<em>ComponentId</em>/DataSource</td>
+<td><code>DELETE</code></td>
+<td>Deletes the BACnet data source configuration</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> Replace <code>ComponentId</code> with the Id of your BACnet component. For example, <code>BACnet1</code>.</p>
+<h2 id="discovery">Discovery</h2>
 <p>The BACnet Adapter will be able to discover available BACnet devices and objects defined by the data source configuration. In the case of discovery for a BACnet router, the adapter will send a <em>Who-Is</em> request and wait 30 seconds to receive <em>I-Am</em> responses from available devices. Upon receiving an <em>I-Am</em> response, the adapter will request the <em>Protocol Services Supported</em>, <em>Maximum APDU Length</em>, <em>Segmentation</em> and <em>Object List</em> properties from the available devices. In the case of discovering a single device, the adapter will not send a <em>Who-Is</em> request but will instead request properties. </p>
 <p>A successful discovery will result in populating <a class="xref" href="PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#BACnet-device-configuration">DeviceConfiguration</a> and optionally <a class="xref" href="PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#Configure-BACnet-data-selection">DataSelection Configuration</a>.</p>
 <ul>

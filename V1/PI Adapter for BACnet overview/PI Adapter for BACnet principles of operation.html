@@ -80,21 +80,71 @@
 
 <p>This adapter&#39;s operations focus on data collection and streams creation. </p>
 <h2 id="adapter-configuration">Adapter configuration</h2>
-<p>In order for the BACnet adapter to start data collection, you need to configure the adapter by defining the following:</p>
+<p>In order for the adapter to start data collection, you need to configure the adapter by defining the following:</p>
 <ul>
 <li>Data source: Provide the data source from which the adapter should collect data.</li>
-<li>Data selection: Perform selection of BACnet items to which the adapter should subscribe for data.</li>
+<li>Data selection: Perform selection of BACnet items to which the adapter should request data or subscribe for data.</li>
 <li>Logging: Set up the logging attributes to manage the adapter logging behavior.</li>
 </ul>
 <p>For more information, see <a class="xref" href="../Configuration/PI%20Adapter%20for%20BACnet%20data%20source%20configuration.html">PI Adapter for BACnet data source configuration</a> and <a class="xref" href="../Configuration/PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html">PI Adapter for BACnet data selection configuration</a>. </p>
-<h2 id="connection">Connection</h2>
-<p>The BACnet adapter uses the binary bacnet.tcp protocol to communicate with the BACnet servers. When a secured connection is enabled, the X.509-type client and server certificates are exchanged and verified and the connection between the BACnet adapter and the configured BACnet server is established.</p>
 <h2 id="stream-creation">Stream creation</h2>
-<p>The BACnet adapter creates types upon receiving the value update for a stream. One stream is created for every selected BACnet item in data selection configuration.</p>
+<p>The adapter creates types for each supported BACnet object type. One stream is created for every selected BACnet item in data selection configuration.</p>
 <h2 id="data-collection">Data collection</h2>
-<p>The BACnet adapter collects time-series data from selected objects on BACnet devices. The adapter supports both polling and COV(Change of Value, unsolicited subscription) data collection modes as defined by the BACnet specification.</p>
+<p>The adapter collects time-series data from selected objects on BACnet devices. The adapter supports both polling and COV (Change of Value, unsolicited subscription) data collection modes as defined by the BACnet specification.</p>
+<h3 id="object-types-and-data-types">Object Types and Data types</h3>
+<p>The following table lists BACnet object types that the adapter supports for data collection and types of streams that will be created.</p>
+<table>
+<thead>
+<tr>
+<th>BACnet object type</th>
+<th>Stream data type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accumulator</td>
+<td>UInt32</td>
+</tr>
+<tr>
+<td>AnalogInput</td>
+<td>Single</td>
+</tr>
+<tr>
+<td>AnalogOutput</td>
+<td>Single</td>
+</tr>
+<tr>
+<td>AnalogValue</td>
+<td>Single</td>
+</tr>
+<tr>
+<td>BinaryInput</td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td>BinaryOutput</td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td>BinaryValue</td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td>MultistateInput</td>
+<td>UInt32</td>
+</tr>
+<tr>
+<td>MultistateOutput</td>
+<td>UInt32</td>
+</tr>
+<tr>
+<td>MultistateValue</td>
+<td>UInt32</td>
+</tr>
+</tbody>
+</table>
 <h2 id="streams-by-bacnet-adapter">Streams by BACnet adapter</h2>
-<p>The BACnet adapter creates a stream with two properties per selected BACnet item. The properties are described in the following table:</p>
+<p>The adapter creates a stream with two properties per selected BACnet item. The properties are described in the following table:</p>
 <table>
 <thead>
 <tr>
@@ -135,8 +185,8 @@
 <li><code>High</code>: AdapterType (ComponentType), DataSource (ComponentId), Schedule (ScheduleId), Device, SourceId and LocalName</li>
 </ul>
 <p>Each stream created for a given BACnet item has a unique identifier or &quot;Stream ID.&quot; If you specify a custom stream ID for the BACnet item in data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID with the following format constructed from the BACnet item node ID:</p>
-<pre><code>&lt;Adapter Component ID&gt;.&lt;Namespace&gt;.&lt;Identifier&gt;
-</code></pre><p><strong>Note:</strong> The naming convention is affected by <code>StreamPrefix</code> and <code>ApplyPrefixToStreamID</code> settings in data source configuration. For more information, see <a class="xref" href="../Configuration/PI%20Adapter%20for%20BACnet%20data%20source%20configuration.html">PI Adapter for BACnet data source configuration</a>.</p>
+<pre><code>&lt;Adapter Component ID&gt;.&lt;Device ID&gt;.&lt;Object Type&gt;&lt;Object ID&gt;.&lt;Property Identifier&gt;
+</code></pre><p><strong>Note:</strong> The naming convention is affected by <code>StreamIdPrefix</code> and <code>DefaultStreamIdPattern</code> settings in data source configuration. For more information, see <a class="xref" href="../Configuration/PI%20Adapter%20for%20BACnet%20data%20source%20configuration.html">PI Adapter for BACnet data source configuration</a>.</p>
 </article>
           </div>
           

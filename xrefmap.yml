@@ -106,12 +106,6 @@ references:
 - uid: PIAdapterforBACnetPrinciplesOfOperation
   name: PI Adapter for BACnet principles of operation
   href: V1/PI%20Adapter%20for%20BACnet%20overview/PI%20Adapter%20for%20BACnet%20principles%20of%20operation.html
-- uid: PIAdapterforBACnetSecurityConfiguration
-  name: PI Adapter for BACnet security configuration
-  href: V1/Configuration/PI%20Adapter%20for%20BACnet%20security%20configuration.html
-- uid: PIAdapterforBACnetSupportedFeatures
-  name: PI Adapter for BACnet supported features
-  href: V1/PI%20Adapter%20for%20BACnet%20overview/PI%20Adapter%20for%20BACnet%20supported%20features.html
 - uid: releaseNotes
   name: Release Notes
   href: V1/main/Templates/Release%20Notes%20Template.html
