@@ -9,8 +9,6 @@
   topicHref: PI Adapter for BACnet data selection configuration.md
 - name: Data filters configuration
   href: ../main/V1/Configuration/Data filters configuration.md
-- name: PI Adapter for BACnet security configuration
-  href: PI Adapter for BACnet security configuration.md
 - name: Egress endpoints configuration
   href: ../main/V1/Configuration/Egress endpoints configuration.md
 - name: Health endpoint configuration

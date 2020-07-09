@@ -10,7 +10,7 @@ COV(Change of Value) is a subscription-based data collection method. For COV-com
 
 ## Usage 
 
-To enable COV for a specified data selection item, change the DataCollectionMode to SubscribeCov or SubscribeCovProperty in DataSelection configuration.
+To enable COV for a specified data selection item, change the DataCollectionMode to SubscribeCov or SubscribeCovProperty in DataSelection configuration. The configured schedule will determine how often the adapter attempts to resubscribe the item for COV notifications. If no schedule is configured, then the item will not be subscribed.
 
 In SubscribeCov mode, the adapter subscribes to a BACnet object on the device, and the device reports values on change for properties enabled for COV reporting based on object type, typically including PresentValue and StatusFlags. In the data selection item, PropertyIdentifier, if specified, must match one of these properties, otherwise COV notifications for this item will not be written to the data stream. If PropertyIdentifier is ommitted, PresentValue will be used for the stream.
 
