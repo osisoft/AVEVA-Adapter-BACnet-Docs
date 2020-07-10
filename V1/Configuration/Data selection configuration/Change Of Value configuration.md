@@ -6,7 +6,7 @@ uid: BACnetCOVConfiguration
 
 ## Overview
 
-COV (Change of Value) is a subscription-based data collection method. For COV-compatible BACnet devices (for example, devices whose device configuration's **ServicesSupported** includes `SubscribeCov` and/or `SubscribeCovProperty`), users can choose to enable either `SubscribeCov` or `SubscribeCovProperty` data collection mode for the adapter, where the device will "push" new data when the value changes by more than the subscription's designated amount. COV is generally preferred when available, as it tends to improve performance and decrease network usage.
+COV (Change of Value) is a subscription-based data collection method. For COV-compatible BACnet devices (for example, devices whose DeviceConfiguration **ServicesSupported** includes `SubscribeCov` and/or `SubscribeCovProperty`), users can choose to enable either `SubscribeCov` or `SubscribeCovProperty` data collection mode for the adapter, where the device will "push" new data when the value changes by more than the subscription's designated amount. COV is generally preferred when available, as it tends to improve performance and decrease network usage.
 
 ## Usage 
 

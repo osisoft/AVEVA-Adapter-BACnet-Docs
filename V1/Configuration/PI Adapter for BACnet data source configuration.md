@@ -55,13 +55,13 @@ The following parameters are available to configure a BACnet data source:
 | **DeviceId** | Optional | `number` | Device instance number. If specified, the **IPAddress** is interpreted as for a BACnet device (not a BACnet router). If empty, the **IPAddress** is interpreted as for a BACnet router (not an individual BACnet device).|
 | **NetworkNumber** | Optional | `number` | Device network number for routed BACnet devices. This setting can only be specified when a **DeviceId** is specified. If specified, the **MACAddress** must also be specified.|
 | **MacAddress** | Optional | `string` | Device MAC address for routed BACnet devices. This setting can only be specified when a **DeviceId** is specified. If specified, the **NetworkNumber** must also be specified. It must contain 1-6 byte strings in hexadecimal format, separated by a dash `-` or colon `:` (for example, `12:34:ef:cd`). |
-| **StreamIdPrefix** | Optional | `string` | Specifies what prefix is used for stream IDs. The naming convention is `StreamIdPrefix.StreamId`. An empty string means no prefix will be added to the stream IDs and names. A `null` value defaults to _ComponentID_ followed by a period (for example, `BACnet1.NamespaceIndex.Identifier.`).<br><br>**Note:** If you change the **StreamIdPrefix** of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to apply. New streams are created on adapter restart and pre-existing streams no longer update. |
-| **DefaultStreamIdPattern** | Optional | `string` | Specifies the default stream ID pattern to use. Possible parameters: {**DeviceIPAddress**}, {**DeviceId**}, {**ObjectType**}, {**ObjectId**}, and {**PropertyIdentifier**}. An empty or `null` value will result in {**DeviceId**}.{**ObjectType**}{**ObjectId**}.{**PropertyIdentifier**}`.|
+| **StreamIdPrefix** | Optional | `string` | Specifies what prefix is used for stream IDs. The naming convention is `StreamIdPrefix.StreamId`. An empty string means no prefix will be added to the stream IDs and names. A `null` value defaults to _ComponentID_ followed by a period (for example, `BACnet1.NamespaceIndex.Identifier.`).<br><br>**Note:** If you change the **StreamIdPrefix** of a configured adapter (for example, when you delete and add a data source), you need to restart the adapter for the changes to apply. New streams are created on adapter restart and pre-existing streams no longer update. |
+| **DefaultStreamIdPattern** | Optional | `string` | Specifies the default stream ID pattern to use. Possible parameters: {DeviceIPAddress}, {DeviceId}, {ObjectType}, {ObjectId}, and {PropertyIdentifier}. An empty or `null` value will result in {DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}.|
 
 
 ## BACnet router data source example
 
-The following is an example of valid BACnet data source configuration:
+The following is an example of a valid BACnet data source configuration:
 
 ```json
 {
@@ -76,7 +76,7 @@ The following is an example of valid BACnet data source configuration:
 
 ## BACnet routed device data source example
 
-The following is an example of valid BACnet routed device data source configuration:
+The following is an example of a valid BACnet routed device data source configuration:
 
 ```json
 {
@@ -103,15 +103,15 @@ The following is an example of valid BACnet routed device data source configurat
 **Note:** Replace _ComponentId_ with the Id of your BACnet component. For example, `BACnet1`.
 
 ## Discovery
-The BACnet adapter is able to discover available BACnet devices and objects defined by the data source configuration. In the case of discovery for a BACnet router, the adapter sends a *Who-Is* request and waits 30 seconds to receive *I-Am* responses from available devices. Upon receiving an *I-Am* response, the adapter requests the *Protocol Services Supported*, *Maximum APDU Length*, *Segmentation* and *Object List* properties from the available devices. In the case of discovering a single device, the adapter will not send a *Who-Is* request but instead request properties. 
+The BACnet adapter is able to discover available BACnet devices and objects defined by the data source configuration. For discovery of a BACnet router, the adapter sends a *Who-Is* request and waits 30 seconds to receive *I-Am* responses from available devices. Upon receiving an *I-Am* response, the adapter requests the *Protocol Services Supported*, *Maximum APDU Length*, *Segmentation* and *Object List* properties from the available devices. For discovery of a single device, the adapter will not send a *Who-Is* request but instead request properties. 
 
-A successful discovery results in populating [DeviceConfiguration](xref:PIAdapterforBACnetDataSelectionConfiguration#BACnet-device-configuration) and optionally, [DataSelection Configuration](xref:PIAdapterforBACnetDataSelectionConfiguration#Configure-BACnet-data-selection).
+A successful discovery results in populating the [DeviceConfiguration](xref:PIAdapterforBACnetDataSelectionConfiguration#BACnet-device-configuration) and optionally, [DataSelection Configuration](xref:PIAdapterforBACnetDataSelectionConfiguration#Configure-BACnet-data-selection).
 * DataSelection will be populated with *Selected* attribute for all items set to `false`. 
-* DeviceConfiguration is read-only and provides more information such as segmentation and services that are supported. This cam help make informed decisions in data selection. 
+* DeviceConfiguration is read-only and provides more information such as segmentation and services that are supported. This can help make informed decisions in data selection. 
 
 When the adapter starts or a new data source is configured, the adapter checks if DeviceConfiguration is populated. Discovery is performed only if DeviceConfiguration is empty. DataSelection will update by discovery only if it is empty.
 
-The adapter [log](xref:Logging-configuration) indicates when discovery is complete.
+The adapter [log](xref:Logging-configuration) indicates when discovery is complete. 
 
 ### Example log
 
