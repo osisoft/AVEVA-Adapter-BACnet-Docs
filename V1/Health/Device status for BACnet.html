@@ -78,13 +78,13 @@
             <article class="content wrap" id="_content" data-uid="DeviceStatusForBACnet">
 <h1 id="device-status">Device status</h1>
 
-<p>The device status indicates the health of this component and if it is currently communicating properly with the data source. This time-series data is stored within a PI point or OCS stream, depending on the endpoint type. The BACnet Adapter sends a status value of <code>Good</code> when all configured BACnet devices and routers are respond within the specified timeout. When a BACnet device fails to respond to more than one <strong>AllowedConsecutiveFailedRequests</strong> (see <a class="xref" href="../Configuration/PI%20Adapter%20for%20BACnet%20data%20source%20configuration.html">PI Adapter for BACnet data source configuration</a>, it is considered disconnected and a <code>DeviceInError</code> status is sent. For any individual device that transitions from connected to disconnected and vice versa, an appropriate status is sent depending on if there are one or more disconnected devices, <code>DeviceInError</code> or all are connected, <code>Good</code>.</p>
+<p>The device status indicates the health of the component and if it is currently communicating properly with the data source. This time-series data is stored within a PI point or OCS stream, depending on the endpoint type. The BACnet adapter sends a status value of <code>Good</code> when all configured BACnet devices and routers respond within the specified timeout. When a BACnet device fails to respond to more than one <strong>AllowedConsecutiveFailedRequests</strong> (see <a class="xref" href="../Configuration/PI%20Adapter%20for%20BACnet%20data%20source%20configuration.html">PI Adapter for BACnet data source configuration</a>, it is considered disconnected and a <code>DeviceInError</code> status is sent. For any individual device that transitions from connected to disconnected and vice versa, an appropriate status is sent depending on if there are one or more disconnected devices, <code>DeviceInError</code> or all are connected, <code>Good</code>.</p>
 <table>
 <thead>
 <tr>
 <th>Property</th>
 <th>Type</th>
-<th>Description</th>
+<th>description</th>
 </tr>
 </thead>
 <tbody>
@@ -100,7 +100,7 @@
 </tr>
 </tbody>
 </table>
-<p>The possible statuses are:</p>
+<p>The possible statuses:</p>
 <table>
 <thead>
 <tr>
@@ -110,7 +110,7 @@
 </thead>
 <tbody>
 <tr>
-<td>`Good**</td>
+<td><code>Good</code></td>
 <td>The component is connected to the data source and it is collecting data.</td>
 </tr>
 <tr>

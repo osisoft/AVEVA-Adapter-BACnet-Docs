@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/Data selection configuration/Change Of Value configuration.html",
-          "hash": "eZJX+7Nq6hoCTmmgYO5xjw=="
+          "hash": "3+m0VSd8wyqO6OJ72F6/lQ=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/PI Adapter for BACnet data selection configuration.html",
-          "hash": "kA+IYN+Ilnynrs3l+i+CSQ=="
+          "hash": "0TadFHUANnw04ECrfdgFrw=="
         }
       },
       "is_incremental": false,
@@ -84,7 +84,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/PI Adapter for BACnet data source configuration.html",
-          "hash": "51rLTDXufYWQtpWU0xCd0w=="
+          "hash": "IFF/u/s+kaoF6/7sfdvSjw=="
         }
       },
       "is_incremental": false,
@@ -108,7 +108,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Health/Device status for BACnet.html",
-          "hash": "lduXetWGTqs0iX0tq0mfAg=="
+          "hash": "DJcBa3mTbPzuPzVrK7JR9Q=="
         }
       },
       "is_incremental": false,
@@ -168,7 +168,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/PI Adapter for BACnet overview/PI Adapter for BACnet principles of operation.html",
-          "hash": "yNUtrLTbiQBXxPzcFGltFw=="
+          "hash": "991+rddauwJOjQhUUlOyAw=="
         }
       },
       "is_incremental": false,
@@ -180,7 +180,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Release Notes/Release Notes.html",
-          "hash": "13YAa9EH4YWa+2qf9gJsxg=="
+          "hash": "q66gje+xqOSp1GuoWJt1RQ=="
         }
       },
       "is_incremental": false,
@@ -236,7 +236,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "wbXwvRgZ++lXb4UVJxiAIQ=="
+          "hash": "LphpGrf5Oa9BmcknLmA9qg=="
         }
       },
       "is_incremental": false,
@@ -255,9 +255,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/main/Templates/Release Notes Template.md",
       "output": {
@@ -674,7 +671,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Technical support and feedback.html",
-          "hash": "fidJglvpyKUcMUqSt3egbg=="
+          "hash": "5Fgy85xzjHVOXED90i4ccw=="
         }
       },
       "is_incremental": false,
@@ -836,7 +833,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/toc.html",
-          "hash": "CdfALw1zipYJecs+jvKr+Q=="
+          "hash": "mb9N0gfRW9BLMXfPJa8EkQ=="
         }
       },
       "is_incremental": false,
