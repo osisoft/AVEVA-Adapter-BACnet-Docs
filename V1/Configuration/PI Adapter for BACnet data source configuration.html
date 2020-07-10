@@ -172,18 +172,18 @@
 <td><strong>StreamIdPrefix</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies what prefix is used for stream IDs. The naming convention is <code>StreamIdPrefix.StreamId</code>. An empty string means no prefix will be added to the stream IDs and names. A <code>null</code> value defaults to <em>ComponentID</em> followed by a period (for example, <code>BACnet1.NamespaceIndex.Identifier.</code>).<br><br><strong>Note:</strong> If you change the <strong>StreamIdPrefix</strong> of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to apply. New streams are created on adapter restart and pre-existing streams no longer update.</td>
+<td>Specifies what prefix is used for stream IDs. The naming convention is <code>StreamIdPrefix.StreamId</code>. An empty string means no prefix will be added to the stream IDs and names. A <code>null</code> value defaults to <em>ComponentID</em> followed by a period (for example, <code>BACnet1.NamespaceIndex.Identifier.</code>).<br><br><strong>Note:</strong> If you change the <strong>StreamIdPrefix</strong> of a configured adapter (for example, when you delete and add a data source), you need to restart the adapter for the changes to apply. New streams are created on adapter restart and pre-existing streams no longer update.</td>
 </tr>
 <tr>
 <td><strong>DefaultStreamIdPattern</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies the default stream ID pattern to use. Possible parameters: {<strong>DeviceIPAddress</strong>}, {<strong>DeviceId</strong>}, {<strong>ObjectType</strong>}, {<strong>ObjectId</strong>}, and {<strong>PropertyIdentifier</strong>}. An empty or <code>null</code> value will result in {<strong>DeviceId</strong>}.{<strong>ObjectType</strong>}{<strong>ObjectId</strong>}.{<strong>PropertyIdentifier</strong>}`.</td>
+<td>Specifies the default stream ID pattern to use. Possible parameters: {DeviceIPAddress}, {DeviceId}, {ObjectType}, {ObjectId}, and {PropertyIdentifier}. An empty or <code>null</code> value will result in {DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="bacnet-router-data-source-example">BACnet router data source example</h2>
-<p>The following is an example of valid BACnet data source configuration:</p>
+<p>The following is an example of a valid BACnet data source configuration:</p>
 <pre><code class="lang-json">{
     &quot;IPAddress&quot;: &quot;192.168.1.1&quot;,
     &quot;Port&quot;: 47808,
@@ -193,7 +193,7 @@
     &quot;ReconnectInterval&quot;: &quot;02:00:00&quot;
 }
 </code></pre><h2 id="bacnet-routed-device-data-source-example">BACnet routed device data source example</h2>
-<p>The following is an example of valid BACnet routed device data source configuration:</p>
+<p>The following is an example of a valid BACnet routed device data source configuration:</p>
 <pre><code class="lang-json">{
     &quot;IPAddress&quot;: &quot;192.168.1.1&quot;,
     &quot;Port&quot;: 47808,
@@ -239,14 +239,14 @@
 </table>
 <p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your BACnet component. For example, <code>BACnet1</code>.</p>
 <h2 id="discovery">Discovery</h2>
-<p>The BACnet adapter is able to discover available BACnet devices and objects defined by the data source configuration. In the case of discovery for a BACnet router, the adapter sends a <em>Who-Is</em> request and waits 30 seconds to receive <em>I-Am</em> responses from available devices. Upon receiving an <em>I-Am</em> response, the adapter requests the <em>Protocol Services Supported</em>, <em>Maximum APDU Length</em>, <em>Segmentation</em> and <em>Object List</em> properties from the available devices. In the case of discovering a single device, the adapter will not send a <em>Who-Is</em> request but instead request properties. </p>
-<p>A successful discovery results in populating <a class="xref" href="PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#BACnet-device-configuration">DeviceConfiguration</a> and optionally, <a class="xref" href="PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#Configure-BACnet-data-selection">DataSelection Configuration</a>.</p>
+<p>The BACnet adapter is able to discover available BACnet devices and objects defined by the data source configuration. For discovery of a BACnet router, the adapter sends a <em>Who-Is</em> request and waits 30 seconds to receive <em>I-Am</em> responses from available devices. Upon receiving an <em>I-Am</em> response, the adapter requests the <em>Protocol Services Supported</em>, <em>Maximum APDU Length</em>, <em>Segmentation</em> and <em>Object List</em> properties from the available devices. For discovery of a single device, the adapter will not send a <em>Who-Is</em> request but instead request properties. </p>
+<p>A successful discovery results in populating the <a class="xref" href="PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#BACnet-device-configuration">DeviceConfiguration</a> and optionally, <a class="xref" href="PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#Configure-BACnet-data-selection">DataSelection Configuration</a>.</p>
 <ul>
 <li>DataSelection will be populated with <em>Selected</em> attribute for all items set to <code>false</code>. </li>
-<li>DeviceConfiguration is read-only and provides more information such as segmentation and services that are supported. This cam help make informed decisions in data selection. </li>
+<li>DeviceConfiguration is read-only and provides more information such as segmentation and services that are supported. This can help make informed decisions in data selection. </li>
 </ul>
 <p>When the adapter starts or a new data source is configured, the adapter checks if DeviceConfiguration is populated. Discovery is performed only if DeviceConfiguration is empty. DataSelection will update by discovery only if it is empty.</p>
-<p>The adapter <a href="xref:Logging-configuration">log</a> indicates when discovery is complete.</p>
+<p>The adapter <a href="xref:Logging-configuration">log</a> indicates when discovery is complete. </p>
 <h3 id="example-log">Example log</h3>
 <p>[15:17:49 INF] [Bacnet] Discovering BACnet router.<br>[15:18:19 INF] [Bacnet] Found 2 BACnet devices during discovery.<br>[15:18:19 INF] [Bacnet] Discovering BACnet device 1.<br>[15:18:21 INF] [Bacnet] Discovery complete for BACnet device 1.<br>[15:18:21 INF] [Bacnet] Discovering BACnet device 33.<br>[15:18:53 INF] [Bacnet] Discovery complete for BACnet router.  </p>
 </article>
