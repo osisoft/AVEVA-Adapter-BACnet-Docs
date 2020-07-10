@@ -1,5 +1,5 @@
 ---
-uid: releaseNotes
+uid: ReleaseNotes
 ---
 
 # Release Notes
@@ -11,7 +11,7 @@ PI Adapter for BACnet
 
 This represents the initial standalone release for PI Adapter for BACnet. This product collects time-series data from source devices to  OMF endpoints in OSIsoft Cloud Services or PI Servers. PI Adapter for BACnet can also collect health and diagnostics information. It supports buffering, static and event data collection, automatic discovery of available data items on a data source, and various Windows and Linux-based operating systems as well as containerization.
 
-For more information see [PI Adapter for BACnet overview](xref:PIAdapterforBACnetOverview).
+For more information, see the [PI Adapter for BACnet overview](xref:PIAdapterforBACnetOverview).
 
 ## Known Issues
 
