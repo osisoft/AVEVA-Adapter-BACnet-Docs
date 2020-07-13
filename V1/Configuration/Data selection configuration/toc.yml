@@ -1,4 +1,4 @@
 - name: Polled data stream configuration
   href: ./Polled data stream configuration.md
-- name: Change Of Value (COV) configuration
+- name:  COV (Change Of Value) configuration
   href: ./Change Of Value configuration.md
