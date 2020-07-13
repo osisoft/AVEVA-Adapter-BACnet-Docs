@@ -4,7 +4,7 @@ uid: ReleaseNotes
 
 # Release Notes
 
-PI Adapter for BACnet
+PI Adapter for BACnet 1.0<br>
 © 2020 OSIsoft, LLC. All rights reserved.
 
 ## Overview
