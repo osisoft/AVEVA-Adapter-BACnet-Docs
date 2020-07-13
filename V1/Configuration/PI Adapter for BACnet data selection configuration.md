@@ -44,17 +44,21 @@ The device configuration may be used to choose an appropriate **DataCollectionMo
 
 **Note:** You cannot modify BACnet data selection configurations manually. You must use the REST endpoints to add or edit the configuration.
 
-Complete the following to configure the BACnet data selection:
+Complete the following steps to configure the BACnet data selection:
 
-1. Using any text editor, create a file that contains a BACnet data selection in JSON form.
+1. Use a text editor to create a file that contains a BACnet data selection in JSON format.
     - For content structure, see [BACnet data selection example](#bacnet-data-selection-example).
     - For a table of all available parameters, see [BACnet data selection](#bacnet-data-selection-parameters).
 2. Save the file, for example as `DataSelection.config.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a `POST` command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSelection/`
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a `POST` command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSelection/`.
 
-    Example using `curl` (run this command from the same directory where the file is located):
+   **Note:** The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
 
-    **Note:** During installation, you can add a single BACnet adapter named `BACnet1`. The following example uses this component name.
+    `5590` is the default port number. If you selected a different port number, replace it with that value.
+
+    Example using `curl`:
+    
+    **Note:** Run this command from the same directory where the file is located)
 
     ```bash
     curl -d "@DataSelection.config.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSelection"
@@ -64,9 +68,9 @@ Complete the following to configure the BACnet data selection:
 
 The full schema definition for the BACnet data selection configuration is in the `BACnet_DataSelection_schema.json` file located in one of the following folders:
 
-Windows: *%Program Files%\OSIsoft\Adapters\BACnet\Schemas*
+Windows: `%Program Files%\OSIsoft\Adapters\BACnet\Schemas`
 
-Linux: */opt/OSIsoft/Adapters/BACnet/Schemas*
+Linux: `/opt/OSIsoft/Adapters/BACnet/Schemas`
 
 ## BACnet data selection parameters
 
@@ -91,7 +95,7 @@ The following parameters are available to configure BACnet data selection:
 
 ## BACnet data selection example
 
-The following is an example of a valid BACnet data selection configuration with different data collection modes. Since the last item has selected set to `false`, data will not be collected for it.
+The following is an example of a valid BACnet data selection configuration with different data collection modes. Since the last item has **Selected** set to `false`, data will not be collected for it.
 
 ```json
 [

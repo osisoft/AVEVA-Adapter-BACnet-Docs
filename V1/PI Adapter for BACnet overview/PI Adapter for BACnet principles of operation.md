@@ -14,15 +14,15 @@ For the BACnet adapter to start data collection, you need to configure the adapt
 - Data selection: Select BACnet items to which the adapter should request data or subscribe for data.
 - Logging: Set up the logging attributes to manage the adapter logging behavior.
 
-For more information, see [PI Adapter for BACnet data source configuration](xref:PIAdapterforBACnetDataSourceConfiguration) and [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration). 
+For more information, see [PI Adapter for BACnet data source configuration](xref:PIAdapterforBACnetDataSourceConfiguration), [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration), and [Logging configuration](xref:LoggingConfiguration).
 
 ## Stream creation
 
-The BACnet adapter creates types for each supported BACnet object type. One stream is created for every selected BACnet item in data selection configuration.
+The BACnet adapter creates types for each supported BACnet object type. One stream is created for each selected BACnet item in data selection configuration.
 
 ## Data collection
 
-The BACnet adapter collects time-series data from selected objects on BACnet devices. The adapter supports both polling and COV (Change of Value, unsolicited subscription) data collection modes as defined by the BACnet specification.
+The BACnet adapter collects time-series data from selected objects on BACnet devices. The adapter supports both polling and COV (Change of Value, unsolicited subscription) data collection modes, as defined by the BACnet specification.
 
 ### Object types and data types
 The following table lists BACnet object types that the BACnet adapter supports for data collection and types of streams that will be created.

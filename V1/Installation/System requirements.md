@@ -6,7 +6,7 @@ uid: SystemRequirements
 
 PI Adapter for BACnet is supported on a variety of platforms and processors. Install kits are available for the following platforms:
 
-| Operating System | Installation Kit | Processor(s) |
+| Operating System | Installation Kit | Processor |
 |-------------------|----------------------------------|-------------|
 | Windows 10 x64 (any version)  | `BACnet_win10-x64.msi`     | Intel/AMD 64-bit processors |
 | Debian 9 or later x64 | `BACnet_linux-x64.deb`     | Intel/AMD 64-bit processors |

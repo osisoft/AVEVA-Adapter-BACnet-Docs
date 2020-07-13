@@ -10,15 +10,15 @@ To use the BACnet adapter, you must configure the data source to receive data.
 
 **Note:** You cannot modify BACnet data source configurations manually. You must use the REST endpoints to add or edit the configuration.
 
-Complete the following procedure to configure the BACnet data source:
+Complete the following steps to configure the BACnet data source:
 
-1. Using any text editor to create a file that contains a BACnet data source in JSON form.
-    - For content structure, see [BACnet router data source example](#BACnet-router-data-source-example).
-    - For a table of all available parameters, see [BACnet data source parameters](#BACnet-data-source-schema).
+1. Use a text editor to create a file that contains a BACnet data source in JSON format.
+    - For content structure, see [BACnet router data source example](#bacnet-router-data-source-example).
+    - For a table of all available parameters, see [BACnet data source parameters](#bacnet-data-source-parameters).
 2. Save the file, for example as `DataSource.config.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:<Port>/api/v1/configuration/<ComponentId>/DataSource/`. 
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a `POST` command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSource/`. 
 
-	**Note:** The following example uses `BACnet1` as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration). 
+	**Note:** The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration). 
 
 	`5590` is the default port number. If you selected a different port number, replace it with that value.
 
@@ -105,9 +105,9 @@ The following is an example of a valid BACnet routed device data source configur
 ## Discovery
 The BACnet adapter is able to discover available BACnet devices and objects defined by the data source configuration. For discovery of a BACnet router, the adapter sends a *Who-Is* request and waits 30 seconds to receive *I-Am* responses from available devices. Upon receiving an *I-Am* response, the adapter requests the *Protocol Services Supported*, *Maximum APDU Length*, *Segmentation* and *Object List* properties from the available devices. For discovery of a single device, the adapter will not send a *Who-Is* request but instead request properties. 
 
-A successful discovery results in populating the [DeviceConfiguration](xref:PIAdapterforBACnetDataSelectionConfiguration#BACnet-device-configuration) and optionally, [DataSelection Configuration](xref:PIAdapterforBACnetDataSelectionConfiguration#Configure-BACnet-data-selection).
+A successful discovery results in populating the [DeviceConfiguration](xref:PIAdapterforBACnetDataSelectionConfiguration#bacnet-device-configuration) and optionally, [DataSelection Configuration](xref:PIAdapterforBACnetDataSelectionConfiguration#configure-bacnet-data-selection).
 * DataSelection will be populated with *Selected* attribute for all items set to `false`. 
-* DeviceConfiguration is read-only and provides more information such as segmentation and services that are supported. This can help make informed decisions in data selection. 
+* DeviceConfiguration is read-only and provides more information such as segmentation and services that are supported. This can help you make informed decisions in data selection. 
 
 When the adapter starts or a new data source is configured, the adapter checks if DeviceConfiguration is populated. Discovery is performed only if DeviceConfiguration is empty. DataSelection will update by discovery only if it is empty.
 
