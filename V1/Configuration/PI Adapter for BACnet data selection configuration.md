@@ -58,7 +58,7 @@ Complete the following steps to configure the BACnet data selection:
 
     Example using `curl`:
     
-    **Note:** Run this command from the same directory where the file is located)
+    **Note:** Run this command from the same directory where the file is located.
 
     ```bash
     curl -d "@DataSelection.config.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSelection"
