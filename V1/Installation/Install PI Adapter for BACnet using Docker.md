@@ -131,8 +131,7 @@ The default port `5590` is accessible from the host and you can make REST calls 
 
 ### Port number change
 
-To use a different port other than the default `5590`, you can specify a `portnum` variable on the `docker run` command line. For example, to 
-start the adapter using port `6000` instead of `5590`, use the command line:
+To use a different port other than the default `5590`, you can specify a `portnum` variable on the `docker run` command line. For example, to start the BACnet adapter using port `6000` instead of `5590`, use the following command line:
 
 ```bash
 docker run -d -e portnum=6000 --network host bacnetadapter
