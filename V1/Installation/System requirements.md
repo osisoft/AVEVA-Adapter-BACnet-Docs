@@ -4,7 +4,7 @@ uid: SystemRequirements
 
 # System requirements
 
-PI Adapter for BACnet is supported on a variety of platforms and processors. Install kits are available for the following platforms:
+PI Adapter for BACnet is supported on a variety of platforms and processors. Installation kits are available for the following platforms:
 
 | Operating System | Installation Kit | Processor |
 |-------------------|----------------------------------|-------------|
