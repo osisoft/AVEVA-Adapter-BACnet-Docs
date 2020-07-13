@@ -89,7 +89,7 @@
 </ul>
 </li>
 <li>Save the file, for example as <code>DataSource.config.json</code>.</li>
-<li><p>Use any of the <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a <code>POST</code> command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataSource/</code>. </p>
+<li><p>Use any of the <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a <code>POST</code> command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataSource/</code>. </p>
 <p> <strong>Note:</strong> The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1/Configuration/System%20components%20configuration.html">System components configuration</a>. </p>
 <p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p> Example using <code>curl</code>:</p>
@@ -237,7 +237,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your BACnet component. For example, <code>BACnet1</code>.</p>
+<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your BACnet component. For example, <em>BACnet1</em>.</p>
 <h2 id="discovery">Discovery</h2>
 <p>The BACnet adapter is able to discover available BACnet devices and objects defined by the data source configuration. For discovery of a BACnet router, the adapter sends a <em>Who-Is</em> request and waits 30 seconds to receive <em>I-Am</em> responses from available devices. Upon receiving an <em>I-Am</em> response, the adapter requests the <em>Protocol Services Supported</em>, <em>Maximum APDU Length</em>, <em>Segmentation</em> and <em>Object List</em> properties from the available devices. For discovery of a single device, the adapter will not send a <em>Who-Is</em> request but instead request properties. </p>
 <p>A successful discovery results in populating the <a class="xref" href="PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#bacnet-device-configuration">DeviceConfiguration</a> and optionally, <a class="xref" href="PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#configure-bacnet-data-selection">DataSelection Configuration</a>.</p>
