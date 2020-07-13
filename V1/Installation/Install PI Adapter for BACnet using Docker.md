@@ -10,7 +10,7 @@ Docker is a set of tools that you can use on Linux to manage application deploym
 
 ## Create a startup script for the adapter
 
-1. Using a text editor, create a script similar to one of the following examples:
+1. Use a text editor to create a script similar to one of the following examples:
 
 	**Note:** The script varies slightly by processor.
 
