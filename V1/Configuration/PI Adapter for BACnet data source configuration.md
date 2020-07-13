@@ -16,7 +16,7 @@ Complete the following steps to configure the BACnet data source:
     - For content structure, see [BACnet router data source example](#bacnet-router-data-source-example).
     - For a table of all available parameters, see [BACnet data source parameters](#bacnet-data-source-parameters).
 2. Save the file, for example as `DataSource.config.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a `POST` command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSource/`. 
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a `POST` command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSource/`. 
 
 	**Note:** The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration). 
 
@@ -100,7 +100,7 @@ The following is an example of a valid BACnet routed device data source configur
 | api/v1/configuration/_ComponentId_/DataSource | `PUT` | Configures or updates the BACnet data source configuration |
 | api/v1/configuration/_ComponentId_/DataSource | `DELETE` | Deletes the BACnet data source configuration |
 
-**Note:** Replace _ComponentId_ with the Id of your BACnet component. For example, `BACnet1`.
+**Note:** Replace _ComponentId_ with the Id of your BACnet component. For example, _BACnet1_.
 
 ## Discovery
 The BACnet adapter is able to discover available BACnet devices and objects defined by the data source configuration. For discovery of a BACnet router, the adapter sends a *Who-Is* request and waits 30 seconds to receive *I-Am* responses from available devices. Upon receiving an *I-Am* response, the adapter requests the *Protocol Services Supported*, *Maximum APDU Length*, *Segmentation* and *Object List* properties from the available devices. For discovery of a single device, the adapter will not send a *Who-Is* request but instead request properties. 
