@@ -82,7 +82,7 @@
 <p><strong>Note:</strong> If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the BACnet adapter. Docker is not a requirement to use the adapter.</p>
 <h2 id="create-a-startup-script-for-the-adapter">Create a startup script for the adapter</h2>
 <ol>
-<li><p>Using the text editor, create a script similar to one of the following examples:</p>
+<li><p>Using a text editor, create a script similar to one of the following examples:</p>
 <p> <strong>Note:</strong> The script varies slightly by processor.</p>
 <p> <strong>ARM32</strong></p>
 <pre><code class="lang-bash">#!/bin/sh
@@ -142,7 +142,7 @@ ENTRYPOINT [&quot;/bacnetdockerstart.sh&quot;]
 </li>
 <li><p>Copy the <code>bacnetdockerstart.sh</code> script to the same directory as the <code>Dockerfile</code>.</p>
 </li>
-<li><p>Run the following command line in the same directory (<code>sudo</code> may be necessary):</p>
+<li><p>Run the following command line in the same directory (you may need to use the <code>sudo</code> command):</p>
 <pre><code class="lang-bash">docker build -t bacnetadapter .
 </code></pre></li>
 </ol>
@@ -150,23 +150,23 @@ ENTRYPOINT [&quot;/bacnetdockerstart.sh&quot;]
 <h3 id="rest-access-from-the-local-host-to-the-docker-container">REST access from the local host to the Docker container</h3>
 <p>Complete the following to run the container:</p>
 <ol>
-<li>Use the docker container <code>bacnetadapter</code> previously created.</li>
-<li><p>Type the following in the command line (<code>sudo</code> may be necessary):</p>
+<li>Use the docker container <code>bacnetadapter</code> that you previously created.</li>
+<li><p>Type the following in the command line (you may need to use the <code>sudo</code> command):</p>
 <pre><code class="lang-bash">docker run -d --network host bacnetadapter
 </code></pre></li>
 </ol>
-<p>Port <code>5590</code> is accessible from the host and you can make REST calls to BACnet adapter from applications on the local host computer. In this example, all data stored by the BACnet adapter is stored in the container itself. When the container is deleted, the data stored is also deleted.</p>
+<p>The default port <code>5590</code> is accessible from the host and you can make REST calls to BACnet adapter from applications on the local host computer. In this example, all data stored by the BACnet adapter is stored in the container itself. When the container is deleted, the data stored is also deleted.</p>
 <h3 id="provide-persistent-storage-for-the-docker-container">Provide persistent storage for the Docker container</h3>
 <p>Complete the following to run the container:</p>
 <ol>
 <li>Use the docker container image <code>bacnetadapter</code> previously created.</li>
-<li><p>Type the following in the command line (<code>sudo</code> may be necessary):</p>
+<li><p>Type the following in the command line (you may need to use the <code>sudo</code> command):</p>
 <pre><code class="lang-bash">docker run -d --network host -v /bacnet:/usr/share/OSIsoft/ bacnetadapter
 </code></pre></li>
 </ol>
-<p>Port <code>5590</code> is accessible from the host and you can make REST calls to the BACnet adapter from applications on the local host computer. In this example, the data is written to a host directory on the local machine, <code>/bacnet</code>rather than the container. You can specify any directory.</p>
+<p>The default port <code>5590</code> is accessible from the host and you can make REST calls to the BACnet adapter from applications on the local host computer. In this example, the data is written to a host directory on the local machine, <code>/bacnet</code>rather than the container. You can specify any directory.</p>
 <h3 id="port-number-change">Port number change</h3>
-<p>To use a different port other than <code>5590</code> you can specify a <code>portnum</code> variable on the <code>docker run</code> command line. For example, to 
+<p>To use a different port other than the default <code>5590</code>, you can specify a <code>portnum</code> variable on the <code>docker run</code> command line. For example, to 
 start the adapter using port <code>6000</code> instead of <code>5590</code>, use the command line:</p>
 <pre><code class="lang-bash">docker run -d -e portnum=6000 --network host bacnetadapter
 </code></pre><p>This command accesses the REST API with port <code>6000</code> instead of port <code>5590</code>. The following <code>curl</code> command returns the configuration for the container.</p>
@@ -181,7 +181,7 @@ start the adapter using port <code>6000</code> instead of <code>5590</code>, use
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter-BACnet-Docs/blob/master/V1/Installation/Install the adapter with Docker for BACnet.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-BACnet-Docs/blob/master/V1/Installation/Install PI Adapter for BACnet using Docker.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

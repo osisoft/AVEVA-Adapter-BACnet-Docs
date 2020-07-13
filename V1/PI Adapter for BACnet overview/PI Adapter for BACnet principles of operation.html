@@ -86,11 +86,11 @@
 <li>Data selection: Select BACnet items to which the adapter should request data or subscribe for data.</li>
 <li>Logging: Set up the logging attributes to manage the adapter logging behavior.</li>
 </ul>
-<p>For more information, see <a class="xref" href="../Configuration/PI%20Adapter%20for%20BACnet%20data%20source%20configuration.html">PI Adapter for BACnet data source configuration</a> and <a class="xref" href="../Configuration/PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html">PI Adapter for BACnet data selection configuration</a>. </p>
+<p>For more information, see <a class="xref" href="../Configuration/PI%20Adapter%20for%20BACnet%20data%20source%20configuration.html">PI Adapter for BACnet data source configuration</a>, <a class="xref" href="../Configuration/PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html">PI Adapter for BACnet data selection configuration</a>, and <a class="xref" href="../main/V1/Configuration/Logging%20configuration.html">Logging configuration</a>.</p>
 <h2 id="stream-creation">Stream creation</h2>
-<p>The BACnet adapter creates types for each supported BACnet object type. One stream is created for every selected BACnet item in data selection configuration.</p>
+<p>The BACnet adapter creates types for each supported BACnet object type. One stream is created for each selected BACnet item in data selection configuration.</p>
 <h2 id="data-collection">Data collection</h2>
-<p>The BACnet adapter collects time-series data from selected objects on BACnet devices. The adapter supports both polling and COV (Change of Value, unsolicited subscription) data collection modes as defined by the BACnet specification.</p>
+<p>The BACnet adapter collects time-series data from selected objects on BACnet devices. The adapter supports both polling and COV (Change of Value, unsolicited subscription) data collection modes, as defined by the BACnet specification.</p>
 <h3 id="object-types-and-data-types">Object types and data types</h3>
 <p>The following table lists BACnet object types that the BACnet adapter supports for data collection and types of streams that will be created.</p>
 <table>

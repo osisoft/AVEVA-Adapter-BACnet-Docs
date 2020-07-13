@@ -124,24 +124,26 @@
 </table>
 <h2 id="configure-bacnet-data-selection">Configure BACnet data selection</h2>
 <p><strong>Note:</strong> You cannot modify BACnet data selection configurations manually. You must use the REST endpoints to add or edit the configuration.</p>
-<p>Complete the following to configure the BACnet data selection:</p>
+<p>Complete the following steps to configure the BACnet data selection:</p>
 <ol>
-<li>Using any text editor, create a file that contains a BACnet data selection in JSON form.<ul>
+<li>Use a text editor to create a file that contains a BACnet data selection in JSON format.<ul>
 <li>For content structure, see <a href="#bacnet-data-selection-example">BACnet data selection example</a>.</li>
 <li>For a table of all available parameters, see <a href="#bacnet-data-selection-parameters">BACnet data selection</a>.</li>
 </ul>
 </li>
 <li>Save the file, for example as <code>DataSelection.config.json</code>.</li>
-<li><p>Use any of the <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a <code>POST</code> command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataSelection/</code></p>
-<p> Example using <code>curl</code> (run this command from the same directory where the file is located):</p>
-<p> <strong>Note:</strong> During installation, you can add a single BACnet adapter named <code>BACnet1</code>. The following example uses this component name.</p>
+<li><p>Use any of the <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to run a <code>POST</code> command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataSelection/</code>.</p>
+<p><strong>Note:</strong> The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1/Configuration/System%20components%20configuration.html">System components configuration</a>.</p>
+<p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
+<p> Example using <code>curl</code>:</p>
+<p> <strong>Note:</strong> Run this command from the same directory where the file is located)</p>
 <pre><code class="lang-bash">curl -d &quot;@DataSelection.config.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/BACnet1/DataSelection&quot;
 </code></pre></li>
 </ol>
 <h2 id="bacnet-data-selection-schema">BACnet data selection schema</h2>
 <p>The full schema definition for the BACnet data selection configuration is in the <code>BACnet_DataSelection_schema.json</code> file located in one of the following folders:</p>
-<p>Windows: <em>%Program Files%\OSIsoft\Adapters\BACnet\Schemas</em></p>
-<p>Linux: <em>/opt/OSIsoft/Adapters/BACnet/Schemas</em></p>
+<p>Windows: <code>%Program Files%\OSIsoft\Adapters\BACnet\Schemas</code></p>
+<p>Linux: <code>/opt/OSIsoft/Adapters/BACnet/Schemas</code></p>
 <h2 id="bacnet-data-selection-parameters">BACnet data selection parameters</h2>
 <p>The following parameters are available to configure BACnet data selection:</p>
 <table>
@@ -230,7 +232,7 @@
 </table>
 <p><strong>Note:</strong> Specifying the same combination of <strong>DeviceId</strong>, <strong>ObjectType</strong>, <strong>ObjectId</strong>, and <strong>PropertyIdentifier</strong> for multiple data selection items may result in data not being written to one or more streams. Therefore, it is recommended that the combination of those properties be unique for each data selection item.</p>
 <h2 id="bacnet-data-selection-example">BACnet data selection example</h2>
-<p>The following is an example of a valid BACnet data selection configuration with different data collection modes. Since the last item has selected set to <code>false</code>, data will not be collected for it.</p>
+<p>The following is an example of a valid BACnet data selection configuration with different data collection modes. Since the last item has <strong>Selected</strong> set to <code>false</code>, data will not be collected for it.</p>
 <pre><code class="lang-json">[
  {
     &quot;Selected&quot;: true,
