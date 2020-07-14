@@ -88,7 +88,7 @@ The following parameters are available to configure BACnet data selection:
 | **DataFilterId** | Optional | `string` | The ID of the data filter. If not specified, no data filtering occurs. |
 | **DeviceIPAddress** | Required | `string` | Device IP address |
 | **DeviceId** | Required | `number` | BACnet device instance number |
-| **ObjectType** | Required | `string` | Any of the [supported object types](xref:PIAdapterforBACnetPrinciplesOfOperation#Object-types-and-data-types)  |
+| **ObjectType** | Required | `string` | Any of the [supported object types](xref:PIAdapterforBACnetPrinciplesOfOperation#object-types-and-data-types)  |
 | **ObjectId** | Required | `number` | BACnet object instance number |
 | **DataCollectionMode** | Optional | `string` | Specifies the mode of data collection for the item. Must be one of `Poll`, `SubscribeCov`, or `SubscribeCovProperty`. Default value is `Poll`.<br><br>For more information, see [COV (Change Of Value) configuration](xref:BACnetCOVConfiguration) and [Polled data stream configuration](xref:BACnetPolledDataStreamConfiguration).|
 | **CovIncrement** | Optional | `number` | For use only with `SubscribeCovProperty` in **DataCollectionMode**. Specifies the amount that the configured property must change in order for a new value to be sent by the device. If the value is empty, the COV increment to use is determined by the device. If set to `0`, any change in value will result in a new data value being sent.|
