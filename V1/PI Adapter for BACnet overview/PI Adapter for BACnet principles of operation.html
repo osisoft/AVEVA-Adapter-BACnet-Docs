@@ -78,7 +78,7 @@
             <article class="content wrap" id="_content" data-uid="PIAdapterforBACnetPrinciplesOfOperation">
 <h1 id="pi-adapter-for-bacnet-principles-of-operation">PI Adapter for BACnet principles of operation</h1>
 
-<p>The BACnet adapter&#39;s operations focus on data collection and streams creation. </p>
+<p>The BACnet adapter&#39;s operations focus on data collection and streams creation.</p>
 <h2 id="adapter-configuration">Adapter configuration</h2>
 <p>For the BACnet adapter to start data collection, you need to configure the adapter by defining the following:</p>
 <ul>
@@ -87,8 +87,6 @@
 <li>Logging: Set up the logging attributes to manage the adapter logging behavior.</li>
 </ul>
 <p>For more information, see <a class="xref" href="../Configuration/PI%20Adapter%20for%20BACnet%20data%20source%20configuration.html">PI Adapter for BACnet data source configuration</a>, <a class="xref" href="../Configuration/PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html">PI Adapter for BACnet data selection configuration</a>, and <a class="xref" href="../main/V1/Configuration/Logging%20configuration.html">Logging configuration</a>.</p>
-<h2 id="stream-creation">Stream creation</h2>
-<p>The BACnet adapter creates types for each supported BACnet object type. One stream is created for each selected BACnet item in data selection configuration.</p>
 <h2 id="data-collection">Data collection</h2>
 <p>The BACnet adapter collects time-series data from selected objects on BACnet devices. The adapter supports both polling and COV (Change of Value, unsolicited subscription) data collection modes, as defined by the BACnet specification.</p>
 <h3 id="object-types-and-data-types">Object types and data types</h3>
@@ -143,7 +141,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="stream-creation-1">Stream creation</h2>
+<h2 id="stream-creation">Stream creation</h2>
 <p>The BACnet adapter creates a stream with two properties for a selected BACnet item. The properties are described in the following table:</p>
 <table>
 <thead>
@@ -169,8 +167,8 @@
 <p>Certain metadata are sent with each stream created.
 The following metadata are common for every adapter type:</p>
 <ul>
-<li><strong>ComponentId</strong>: Specifies the type of adapter, for example, <em>BACnet</em></li>
-<li><strong>ComponentType</strong>: Specifies the data source, for example, <em>BACnet1</em></li>
+<li><strong>ComponentId</strong>: Specifies the data source, for example, <em>BACnet1</em> </li>
+<li><strong>ComponentType</strong>: Specifies the type of adapter, for example, <em>BACnet</em></li>
 </ul>
 <p>Metadata specific to the BACnet adapter:</p>
 <ul>

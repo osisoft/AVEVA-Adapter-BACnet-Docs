@@ -88,13 +88,13 @@
 <li>For a table of all available parameters, see <a href="#bacnet-data-source-parameters">BACnet data source parameters</a>.</li>
 </ul>
 </li>
-<li>Save the file, for example as <code>DataSource.config.json</code>.</li>
-<li><p>Use any of the <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a <code>POST</code> command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataSource/</code>. </p>
-<p> <strong>Note:</strong> The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1/Configuration/System%20components%20configuration.html">System components configuration</a>. </p>
+<li>Save the file, for example as <code>DataSource.json</code>.</li>
+<li><p>Use any of the <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to execute a <code>POST</code> command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataSource/</code>.</p>
+<p> <strong>Note:</strong> The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../main/V1/Configuration/System%20components%20configuration.html">System components configuration</a>.</p>
 <p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p> Example using <code>curl</code>:</p>
 <p> <strong>Note:</strong> Run this command from the same directory where the file is located:</p>
-<pre><code class="lang-bash">curl -d &quot;@DataSource.config.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/BACnet1/DataSource&quot;
+<pre><code class="lang-bash">curl -d &quot;@DataSource.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/BACnet1/DataSource&quot;
 </code></pre></li>
 </ol>
 <p>After you complete data source configuration, the next step is to configure data selection. For more information, See <a class="xref" href="PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html">PI Adapter for BACnet data selection configuration</a>.</p>
@@ -166,13 +166,13 @@
 <td><strong>MacAddress</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Device MAC address for routed BACnet devices. This setting can only be specified when a <strong>DeviceId</strong> is specified. If specified, the <strong>NetworkNumber</strong> must also be specified. It must contain 1-6 byte strings in hexadecimal format, separated by a dash <code>-</code> or colon <code>:</code> (for example, <code>12:34:ef:cd</code>).</td>
+<td>Device MAC address for routed BACnet devices. This setting can only be specified when a <strong>DeviceId</strong> is specified. If specified, the <strong>NetworkNumber</strong> must also be specified. It must contain 1-6 byte strings in hexadecimal format, separated by a dash <code>-</code> or colon <code>:</code> Example: <code>12:34:ef:cd</code>).</td>
 </tr>
 <tr>
 <td><strong>StreamIdPrefix</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies what prefix is used for stream IDs. The naming convention is <code>StreamIdPrefix.StreamId</code>. An empty string means no prefix will be added to the stream IDs and names. A <code>null</code> value defaults to <em>ComponentID</em> followed by a period (for example, <code>BACnet1.NamespaceIndex.Identifier.</code>).<br><br><strong>Note:</strong> If you change the <strong>StreamIdPrefix</strong> of a configured adapter (for example, when you delete and add a data source), you need to restart the adapter for the changes to apply. New streams are created on adapter restart and pre-existing streams no longer update.</td>
+<td>Specifies what prefix is used for stream IDs. The naming convention is <code>StreamIdPrefix.StreamId</code>. An empty string means no prefix will be added to the stream IDs and names. A <code>null</code> value defaults to <em>ComponentID</em> followed by a period. Example: <code>BACnet1.NamespaceIndex.Identifier.</code>).<br><br><strong>Note:</strong> If you change the <strong>StreamIdPrefix</strong> of a configured adapter (for example, when you delete and add a data source), you need to restart the adapter for the changes to apply. New streams are created on adapter restart and pre-existing streams no longer update.</td>
 </tr>
 <tr>
 <td><strong>DefaultStreamIdPattern</strong></td>
@@ -239,17 +239,22 @@
 </table>
 <p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your BACnet component. For example, <em>BACnet1</em>.</p>
 <h2 id="discovery">Discovery</h2>
-<p>The BACnet adapter is able to discover available BACnet devices and objects defined by the data source configuration. For discovery of a BACnet router, the adapter sends a <em>Who-Is</em> request and waits 30 seconds to receive <em>I-Am</em> responses from available devices. Upon receiving an <em>I-Am</em> response, the adapter requests the <em>Protocol Services Supported</em>, <em>Maximum APDU Length</em>, <em>Segmentation</em> and <em>Object List</em> properties from the available devices. For discovery of a single device, the adapter will not send a <em>Who-Is</em> request but instead request properties. </p>
+<p>The BACnet adapter is able to discover available BACnet devices and objects defined by the data source configuration. For discovery of a BACnet router, the adapter sends a <em>Who-Is</em> request and waits 30 seconds to receive <em>I-Am</em> responses from available devices. Upon receiving an <em>I-Am</em> response, the adapter requests the <em>Protocol Services Supported</em>, <em>Maximum APDU Length</em>, <em>Segmentation</em> and <em>Object List</em> properties from the available devices. For discovery of a single device, the adapter does not send a <em>Who-Is</em> request but instead request properties.</p>
 <p>A successful discovery results in populating the <a class="xref" href="PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#bacnet-device-configuration">DeviceConfiguration</a> and optionally, <a class="xref" href="PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#configure-bacnet-data-selection">DataSelection Configuration</a>.</p>
 <ul>
-<li>DataSelection will be populated with <em>Selected</em> attribute for all items set to <code>false</code>. </li>
-<li>DeviceConfiguration is read-only and provides more information such as segmentation and services that are supported. This can help you make informed decisions in data selection. </li>
+<li>DataSelection is populated with <em>Selected</em> attribute for all items set to <code>false</code>.</li>
+<li>DeviceConfiguration is read-only and provides more information such as segmentation and services that are supported. This can help you make informed decisions in data selection.</li>
 </ul>
 <p>When the adapter starts or a new data source is configured, the adapter checks if DeviceConfiguration is populated. Discovery is performed only if DeviceConfiguration is empty. DataSelection will update by discovery only if it is empty.</p>
-<p>The adapter <a href="xref:Logging-configuration">log</a> indicates when discovery is complete. </p>
+<p>The adapter <a href="xref:Logging-configuration">log</a> indicates when discovery is complete.</p>
 <h3 id="example-log">Example log</h3>
-<p>[15:17:49 INF] [Bacnet] Discovering BACnet router.<br>[15:18:19 INF] [Bacnet] Found 2 BACnet devices during discovery.<br>[15:18:19 INF] [Bacnet] Discovering BACnet device 1.<br>[15:18:21 INF] [Bacnet] Discovery complete for BACnet device 1.<br>[15:18:21 INF] [Bacnet] Discovering BACnet device 33.<br>[15:18:53 INF] [Bacnet] Discovery complete for BACnet router.  </p>
-</article>
+<pre><code class="lang-log">[15:17:49 INF] [Bacnet] Discovering BACnet router.  
+[15:18:19 INF] [Bacnet] Found 2 BACnet devices during discovery.
+[15:18:19 INF] [Bacnet] Discovering BACnet device 1.  
+[15:18:21 INF] [Bacnet] Discovery complete for BACnet device 1.  
+[15:18:21 INF] [Bacnet] Discovering BACnet device 33.  
+[15:18:53 INF] [Bacnet] Discovery complete for BACnet router.  
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
