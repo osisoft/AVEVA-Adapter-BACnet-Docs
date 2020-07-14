@@ -253,11 +253,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "V1/main/Templates/Release Notes Template.md",
+      "source_relative_path": "V1/main/Templates/Markdown Release Notes template-V1.md",
       "output": {
         ".html": {
-          "relative_path": "V1/main/Templates/Release Notes Template.html",
-          "hash": "MG5ybvdF8/M7YB5KA9hpzA=="
+          "relative_path": "V1/main/Templates/Markdown Release Notes template-V1.html",
+          "hash": "areE7C0waEnFbAijFrkRGQ=="
         }
       },
       "is_incremental": false,
