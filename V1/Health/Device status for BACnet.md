@@ -4,7 +4,9 @@ uid: DeviceStatusForBACnet
 
 # Device status
 
-The device status indicates the health of the component and whether it is currently communicating properly with the data source. This time-series data is stored within a PI point or OCS stream, depending on the endpoint type. The BACnet adapter sends a status value of `Good` when all configured BACnet devices and routers respond within the specified timeout. When a BACnet device fails to respond to more than one **AllowedConsecutiveFailedRequests**,  it is considered disconnected and a `DeviceInError` status is sent (for more information, see [PI Adapter for BACnet data source configuration](xref:PIAdapterforBACnetDataSourceConfiguration)). For any individual device that transitions from connected to disconnected and vice versa, an appropriate status is sent: If there are one or more disconnected devices, `DeviceInError` is sent; if all devicess are connected, `Good` is sent.
+The device status indicates the health of the component and whether it is currently communicating properly with the data source. This time-series data is stored within a PI point or OCS stream, depending on the endpoint type.
+
+The BACnet adapter sends a status value of `Good` when all configured BACnet devices and routers respond within the specified timeout. When a BACnet device fails to respond to more than one **AllowedConsecutiveFailedRequests**,  it is considered disconnected and a `DeviceInError` status is sent. For more information, see [PI Adapter for BACnet data source configuration](xref:PIAdapterforBACnetDataSourceConfiguration). For any individual device that transitions from connected to disconnected and vice versa, an appropriate status is sent. If there are one or more disconnected devices, `DeviceInError` is sent; if all devices are connected, `Good` is sent.
 
 | Property                          | Type                                 | description                    |
 |-----------------------------------|--------------------------------------|--------------------------------|

@@ -11,6 +11,7 @@ PI Adapters produce different kinds of health data that can be egressed to diffe
 Dynamic data is sent every minute to configured health endpoints.
 
 The following health data are available:
+
 - [Device status](xref:DeviceStatusForBACnet)
 - [Next Health Message Expected](xref:NextHealthMessageExpectedForBACnet)
 

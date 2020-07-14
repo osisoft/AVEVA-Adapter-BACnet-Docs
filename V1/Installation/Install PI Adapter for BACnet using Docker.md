@@ -4,7 +4,7 @@ uid: InstallPIAdapterForBACnetUsingDocker
 
 # Install PI Adapter for BACnet using Docker
 
-Docker is a set of tools that you can use on Linux to manage application deployments. This topic provides examples of how to create a Docker container with the BACnet adapter. 
+Docker is a set of tools that you can use on Linux to manage application deployments. This topic provides examples of how to create a Docker container with the BACnet adapter.
 
 **Note:** If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the BACnet adapter. Docker is not a requirement to use the adapter.
 
@@ -92,9 +92,7 @@ Docker is a set of tools that you can use on Linux to manage application deploym
 	```
 
 2. Copy the `BACnet_linux-\<platform>.tar.gz` file to the same directory as the `Dockerfile`.
-   
 3. Copy the `bacnetdockerstart.sh` script to the same directory as the `Dockerfile`.
-   
 4. Run the following command line in the same directory (you may need to use the `sudo` command):
 
 	```bash

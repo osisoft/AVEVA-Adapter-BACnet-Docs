@@ -10,7 +10,7 @@ PI Adapter for BACnet 1.0
 
 This represents the initial standalone release for PI Adapter for BACnet. This product collects time-series data from source devices to  OMF endpoints in OSIsoft Cloud Services or PI Servers. PI Adapter for BACnet can also collect health and diagnostics information. It supports buffering, static and event data collection, automatic discovery of available data items on a data source, and various Windows and Linux-based operating systems as well as containerization.
 
-For more information, see the [PI Adapter for BACnet overview](xref:PIAdapterforBACnetOverview).
+For more information, see [PI Adapter for BACnet overview](xref:PIAdapterforBACnetOverview).
 
 ## Known Issues
 
@@ -18,15 +18,15 @@ There are no known issues at this time.
 
 ### Operating Systems and Distribution Kit Files
 
-Refer to the [System Requirements](xref:SystemRequirements).
+Refer to [System Requirements](xref:SystemRequirements).
 
 ### Installation
 
-Refer to the [Install the adapter](xref:InstallTheAdapter) instructions.
+Refer to [Install the adapter](xref:InstallTheAdapter).
 
 ### Uninstallation
 
-Refer to the [Uninstall the adapter](xref:UninstallTheAdapter) instructions.
+Refer to the [Uninstall the adapter](xref:UninstallTheAdapter).
 
 ## Security Information and Guidance
 
