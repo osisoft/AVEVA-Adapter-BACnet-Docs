@@ -50,10 +50,10 @@ The BACnet adapter creates a stream with two properties for a selected BACnet it
 | `Value`         | Specified on the type of incoming BACnet value | Value of the BACnet item update. |
 
 Certain metadata are sent with each stream created.
-Metadata common for every adapter type:
+The following metadata are common for every adapter type:
 
-- **ComponentId**: Specifies the type of adapter, for example _BACnet_
-- **ComponentType**: Specifies the data source, for example _BACnet1_
+- **ComponentId**: Specifies the type of adapter, for example, _BACnet_
+- **ComponentType**: Specifies the data source, for example, _BACnet1_
 
 Metadata specific to the BACnet adapter:
 

@@ -105,10 +105,10 @@ Docker is a set of tools that you can use on Linux to manage application deploym
 
 ### REST access from the local host to the Docker container
 
-Complete the following to run the container:
+Complete the following steps to run the container:
 
-1. Use the docker container `bacnetadapter` that you previously created.
-2. Type the following in the command line (you may need to use the `sudo` command):
+1. Use the docker container `bacnetadapter` that you created previously.
+2. Type the following command line (you may need to use the `sudo` command):
 
 	```bash
 	docker run -d --network host bacnetadapter
@@ -120,14 +120,14 @@ The default port `5590` is accessible from the host and you can make REST calls 
 
 Complete the following to run the container:
 
-1. Use the docker container image `bacnetadapter` previously created.
-2. Type the following in the command line (you may need to use the `sudo` command):
+1. Use the docker container image `bacnetadapter` created previously.
+2. Type the following command line (you may need to use the `sudo` command):
 
 	```bash
 	docker run -d --network host -v /bacnet:/usr/share/OSIsoft/ bacnetadapter
 	```
 
-The default port `5590` is accessible from the host and you can make REST calls to the BACnet adapter from applications on the local host computer. In this example, the data is written to a host directory on the local machine, `/bacnet`rather than the container. You can specify any directory.
+The default port `5590` is accessible from the host and you can make REST calls to the BACnet adapter from applications on the local host computer. In this example, the data is written to a host directory on the local machine `/bacnet` rather than the container. You can specify any directory.
 
 ### Port number change
 
@@ -145,4 +145,4 @@ curl http://localhost:6000/api/v1/configuration
 
 ### Remove REST access to the Docker container
 
-If you remove the `--network host` option from the docker run command, REST access is not possible from outside the container. This may be valuable when you want to host an application in the same container as the BACnet adapter, but do not want to have external REST access enabled.
+If you remove the `--network host` option from the docker run command, REST access is not possible from outside the container. This can be valuable when you want to host an application in the same container as the BACnet adapter but do not want to have external REST access enabled.
