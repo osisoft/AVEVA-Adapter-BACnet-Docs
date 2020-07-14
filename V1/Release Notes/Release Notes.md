@@ -8,7 +8,7 @@ PI Adapter for BACnet 1.0
 
 ## Overview
 
-This represents the initial standalone release for PI Adapter for BACnet. This product collects time-series data from source devices to  OMF endpoints in OSIsoft Cloud Services or PI Servers. PI Adapter for BACnet can also collect health and diagnostics information. It supports buffering, static and event data collection, automatic discovery of available data items on a data source, and various Windows and Linux-based operating systems as well as containerization.
+This represents the initial release for PI Adapter for BACnet. This product collects time-series data from source devices to OMF endpoints in OSIsoft Cloud Services or PI Servers. PI Adapter for BACnet can also collect health and diagnostics information. It supports buffering, polled and unsolicited data collection, automatic discovery of available data items on a data source, and various Windows and Linux-based operating systems as well as containerization.
 
 For more information, see the [PI Adapter for BACnet overview](xref:PIAdapterforBACnetOverview).
 
@@ -44,7 +44,7 @@ To report a security vulnerability, refer to [OSIsoft's Report a Security Vulner
 
 ### Vulnerability Scoring
 
-OSIsoft has selected the Common Vulnerability Scoring System (CVSS) to quantify the severity of security vulnerabilities for disclosure. To calculate the CVSS scores, OSIsoft uses the National Vulnerability Database (NVD) calculator maintained by the National Institute of Standards and Technology (NIST).  OSIsoft uses High, Medium and Low categories to aggregate the CVSS Base scores. This removes some of the opinion related errors of CVSS scoring.  As noted in the CVSS specification, Base score range from 0 for the lowest severity to 10 for the highest severity.
+OSIsoft has selected the Common Vulnerability Scoring System (CVSS) to quantify the severity of security vulnerabilities for disclosure. To calculate the CVSS scores, OSIsoft uses the National Vulnerability Database (NVD) calculator maintained by the National Institute of Standards and Technology (NIST).  OSIsoft uses Critical, High, Medium, and Low categories to aggregate the CVSS Base scores. This removes some of the opinion related errors of CVSS scoring.  As noted in the CVSS specification, Base score range from 0 for the lowest severity to 10 for the highest severity.
 
 ### Overview of New Vulnerabilities Found or Fixed
 
