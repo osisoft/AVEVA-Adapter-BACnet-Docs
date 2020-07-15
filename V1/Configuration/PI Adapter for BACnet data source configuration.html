@@ -124,31 +124,31 @@
 <td><strong>Port</strong></td>
 <td>Optional</td>
 <td><code>number</code></td>
-<td>UDP port number for communication with BACnet devices. The value ranges from <code>0</code>to <code>65535</code>. The default port value is <code>47808</code> (the default port for the BACnet protocol).</td>
+<td>UDP port number for communication with BACnet devices.<br><br>Value range: <code>0</code> to <code>65535</code><br>Default value: <code>47808</code> (the default port for the BACnet protocol)</td>
 </tr>
 <tr>
 <td><strong>MaxConcurrentNetworkRequests</strong></td>
 <td>Optional</td>
 <td><code>number</code></td>
-<td>The maximum number of requests that can be sent concurrently on the network. This is not affected by the response time for the requests. A value of <code>0</code> indicates no limit. The default is <code>1</code>.</td>
+<td>The maximum number of requests that can be sent concurrently on the network. This is not affected by the response time for the requests. A value of <code>0</code> indicates no limit.<br><br>Default value: <code>1</code></td>
 </tr>
 <tr>
 <td><strong>RequestDelay</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The delay between sent requests to an individual device. The value ranges from <code>0</code> to <code>10</code> seconds represented in <code>hh:mm:ss.fff</code> format. The default is <code>0</code>.</td>
+<td>The delay between sent requests to an individual device represented in <code>hh:mm:ss.fff</code> format.<br><br>Minimum value: <code>00:00:00.000</code> for <code>0</code> seconds<br>Maximum value: <code>00:00:10.000</code> for <code>10</code> seconds<br> Default value: <code>00:00:00.000</code></td>
 </tr>
 <tr>
 <td><strong>AllowedConsecutiveFailedRequests</strong></td>
 <td>Optional</td>
 <td><code>number</code></td>
-<td>The number of consecutive failed requests to a device before waiting <strong>ReconnectInterval</strong> to retry sending requests. The value ranges from <code>3</code> to <code>1000</code>. The default is <code>3</code>.</td>
+<td>The number of consecutive failed requests to a device before waiting <strong>ReconnectInterval</strong> to retry sending requests.<br><br>Minimum value: <code>3</code><br>Maximum value: <code>1000</code><br>Default value: <code>3</code></td>
 </tr>
 <tr>
 <td><strong>ReconnectInterval</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The amount of time to wait before attempting to send requests to a device after disconnection. The value must be greater than <code>0</code> represented in <code>hh:mm:ss</code> format. The default is <code>1</code> hour or <code>01:00:00</code>.</td>
+<td>The amount of time to wait before attempting to send requests to a device after disconnection represented in <code>hh:mm:ss</code> format.<br><br>Allowed value: Must be greater than <code>0</code><br>Default value: <code>01:00:00</code> for <code>1</code> hour</td>
 </tr>
 <tr>
 <td><strong>DeviceId</strong></td>
@@ -166,13 +166,13 @@
 <td><strong>MacAddress</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Device MAC address for routed BACnet devices. This setting can only be specified when a <strong>DeviceId</strong> is specified. If specified, the <strong>NetworkNumber</strong> must also be specified. It must contain 1-6 byte strings in hexadecimal format, separated by a dash <code>-</code> or colon <code>:</code> Example: <code>12:34:ef:cd</code>).</td>
+<td>Device MAC address for routed BACnet devices. This setting can only be specified when a <strong>DeviceId</strong> is specified. If specified, the <strong>NetworkNumber</strong> must also be specified. It must contain 1-6 byte strings in hexadecimal format, separated by a dash <code>-</code> or colon <code>:</code><br><br>Example: <code>12:34:ef:cd</code></td>
 </tr>
 <tr>
 <td><strong>StreamIdPrefix</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies what prefix is used for stream IDs. The naming convention is <code>StreamIdPrefix.StreamId</code>. An empty string means no prefix will be added to the stream IDs and names. A <code>null</code> value defaults to <em>ComponentID</em> followed by a period. Example: <code>BACnet1.NamespaceIndex.Identifier.</code>).<br><br><strong>Note:</strong> If you change the <strong>StreamIdPrefix</strong> of a configured adapter (for example, when you delete and add a data source), you need to restart the adapter for the changes to apply. New streams are created on adapter restart and pre-existing streams no longer update.</td>
+<td>Specifies what prefix is used for stream IDs. The naming convention is <code>StreamIdPrefix.StreamId</code>. An empty string means no prefix will be added to the stream IDs and names. A <code>null</code> value defaults to <em>ComponentID</em> followed by a period.<br><br>Example: <code>BACnet1.NamespaceIndex.Identifier.</code><br><br><strong>Note:</strong> If you change the <strong>StreamIdPrefix</strong> of a configured adapter (for example, when you delete and add a data source), you need to restart the adapter for the changes to apply. New streams are created on adapter restart and pre-existing streams no longer update.</td>
 </tr>
 <tr>
 <td><strong>DefaultStreamIdPattern</strong></td>

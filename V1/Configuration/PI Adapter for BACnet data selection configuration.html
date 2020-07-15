@@ -173,7 +173,7 @@
 <td><strong>StreamId</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The custom stream ID to create the streams. If not specified, the BACnet adapter will generate a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores (&quot;__&quot;).<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters: <code>/</code> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>&#39;</code> <code>(</code> <code>)</code> <code>\</code> <code>*</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> <code>%</code> <code>&lt;</code> <code>&gt;</code> or the vertical bar.<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.</td>
+<td>The custom stream ID to create the streams. If not specified, the BACnet adapter will generate a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores (&quot;__&quot;).<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters:<br><code>/</code> <code>:</code> <code>?</code> <code>#</code> <code>[</code> <code>]</code> <code>@</code> <code>!</code> <code>$</code> <code>&amp;</code> <code>&#39;</code> <code>(</code> <code>)</code> <code>\</code> <code>*</code> <code>+</code> <code>,</code> <code>;</code> <code>=</code> <code>%</code> <code>&lt;</code> <code>&gt;</code> `</td>
 </tr>
 <tr>
 <td><strong>DataFilterId</strong></td>
@@ -227,7 +227,7 @@
 <td><strong>ScheduleId</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies a schedule ID to which the data selection item is linked. This data item is collected on the scheduled interval if Selected is set to <code>true</code>.<br>For <strong>DataCollectionMode</strong>=<code>Poll</code>, this is the interval at which this property is requested from the device.<br>For <strong>DataCollectionMode</strong>=<code>SubscribeCov</code> or <code>SubscribeCovProperty</code>, this is the interval at which a re-subscription request is sent.<br><br> For more information on schedules, see <a class="xref" href="../main/V1/Configuration/Schedules%20configuration.html">Schedules configuration</a>.</td>
+<td>Specifies a schedule ID to which the data selection item is linked. This data item is collected on the scheduled interval if Selected is set to <code>true</code>.<br><br>For <strong>DataCollectionMode</strong>=<code>Poll</code>, this is the interval at which this property is requested from the device.<br><br>For <strong>DataCollectionMode</strong>=<code>SubscribeCov</code> or <code>SubscribeCovProperty</code>, this is the interval at which a re-subscription request is sent.<br><br>For more information on schedules, see <a class="xref" href="../main/V1/Configuration/Schedules%20configuration.html">Schedules configuration</a>.</td>
 </tr>
 </tbody>
 </table>
