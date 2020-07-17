@@ -104,14 +104,14 @@ The following is an example of a valid BACnet routed device data source configur
 
 ## Discovery
 
-The BACnet adapter is able to discover available BACnet devices and objects defined by the data source configuration. For discovery of a BACnet router, the adapter sends a *Who-Is* request and waits 30 seconds to receive *I-Am* responses from available devices. Upon receiving an *I-Am* response, the adapter requests the *Protocol Services Supported*, *Maximum APDU Length*, *Segmentation* and *Object List* properties from the available devices. For discovery of a single device, the adapter does not send a *Who-Is* request but instead request properties.
+The BACnet adapter is able to discover available BACnet devices and objects defined by the data source configuration. For discovery of a BACnet router, the adapter sends a *Who-Is* request and waits 30 seconds to receive *I-Am* responses from available devices. Upon receiving an *I-Am* response, the adapter requests the *Protocol Services Supported*, *Maximum APDU Length*, *Segmentation* and *Object List* properties from the available devices. For discovery of a single device, the adapter does not send a *Who-Is* request but proceeds to request its properties.
 
 A successful discovery results in populating the [DeviceConfiguration](xref:PIAdapterforBACnetDataSelectionConfiguration#bacnet-device-configuration) and optionally, [DataSelection Configuration](xref:PIAdapterforBACnetDataSelectionConfiguration#configure-bacnet-data-selection).
 
 * DataSelection is populated with *Selected* attribute for all items set to `false`.
 * DeviceConfiguration is read-only and provides more information such as segmentation and services that are supported. This can help you make informed decisions in data selection.
 
-When the adapter starts or a new data source is configured, the adapter checks if DeviceConfiguration is populated. Discovery is performed only if DeviceConfiguration is empty. DataSelection will update by discovery only if it is empty.
+When the adapter starts or a new data source is configured, the adapter checks if DeviceConfiguration is populated. Discovery is performed only if DeviceConfiguration is empty. DataSelection is updated by discovery only if it is empty.
 
 The adapter [log](xref:Logging-configuration) indicates when discovery is complete.
 
