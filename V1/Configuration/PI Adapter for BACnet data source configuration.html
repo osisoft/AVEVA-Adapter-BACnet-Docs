@@ -239,13 +239,13 @@
 </table>
 <p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your BACnet component. For example, <em>BACnet1</em>.</p>
 <h2 id="discovery">Discovery</h2>
-<p>The BACnet adapter is able to discover available BACnet devices and objects defined by the data source configuration. For discovery of a BACnet router, the adapter sends a <em>Who-Is</em> request and waits 30 seconds to receive <em>I-Am</em> responses from available devices. Upon receiving an <em>I-Am</em> response, the adapter requests the <em>Protocol Services Supported</em>, <em>Maximum APDU Length</em>, <em>Segmentation</em> and <em>Object List</em> properties from the available devices. For discovery of a single device, the adapter does not send a <em>Who-Is</em> request but instead request properties.</p>
+<p>The BACnet adapter is able to discover available BACnet devices and objects defined by the data source configuration. For discovery of a BACnet router, the adapter sends a <em>Who-Is</em> request and waits 30 seconds to receive <em>I-Am</em> responses from available devices. Upon receiving an <em>I-Am</em> response, the adapter requests the <em>Protocol Services Supported</em>, <em>Maximum APDU Length</em>, <em>Segmentation</em> and <em>Object List</em> properties from the available devices. For discovery of a single device, the adapter does not send a <em>Who-Is</em> request but proceeds to request its properties.</p>
 <p>A successful discovery results in populating the <a class="xref" href="PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#bacnet-device-configuration">DeviceConfiguration</a> and optionally, <a class="xref" href="PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html#configure-bacnet-data-selection">DataSelection Configuration</a>.</p>
 <ul>
 <li>DataSelection is populated with <em>Selected</em> attribute for all items set to <code>false</code>.</li>
 <li>DeviceConfiguration is read-only and provides more information such as segmentation and services that are supported. This can help you make informed decisions in data selection.</li>
 </ul>
-<p>When the adapter starts or a new data source is configured, the adapter checks if DeviceConfiguration is populated. Discovery is performed only if DeviceConfiguration is empty. DataSelection will update by discovery only if it is empty.</p>
+<p>When the adapter starts or a new data source is configured, the adapter checks if DeviceConfiguration is populated. Discovery is performed only if DeviceConfiguration is empty. DataSelection is updated by discovery only if it is empty.</p>
 <p>The adapter <a href="xref:Logging-configuration">log</a> indicates when discovery is complete.</p>
 <h3 id="example-log">Example log</h3>
 <pre><code class="lang-log">[15:17:49 INF] [Bacnet] Discovering BACnet router.  
