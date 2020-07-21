@@ -46,6 +46,8 @@ The BACnet adapter creates a stream with two properties for a selected BACnet it
 | `Timestamp`     | DateTime  | Timestamp of the given BACnet item value update. |
 | `Value`         | Specified on the type of incoming BACnet value | Value of the BACnet item update. |
 
+**Note:** If streams are deleted from an endpoint while the adapter is running, the adapter process must be restarted in order for the streams to be recreated.
+
 Certain metadata are sent with each stream created.
 The following metadata are common for every adapter type:
 
@@ -58,12 +60,14 @@ Metadata specific to the BACnet adapter:
 - **SourceId**: SourceId is constructed using the following pattern: {DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}
 - **LocalName**: The BACnet ObjectName as provided by the BACnet object
 
-**Note:** The metadata level is set in [General configuration](xref:GeneralConfiguration). For the BAcnet adapter, the following metadata is sent for the individual level:
+The metadata level is set in [General configuration](xref:GeneralConfiguration). For the BAcnet adapter, the following metadata is sent for the individual level:
 
 - `None`: No metadata
 - `Low`: AdapterType (_ComponentType_) and DataSource (_ComponentId_)
 - `Medium`: AdapterType (_ComponentType_), DataSource (_ComponentId_), and Schedule (ScheduleId)
 - `High`: AdapterType (ComponentType), DataSource (ComponentId), Schedule (ScheduleId), Device, SourceId and LocalName
+
+**Note:** If a `ScheduleId` is not specified when configuring data selection items (see [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration)), metadata will not be sent for the associated streams until the `ScheduleId` is specified and the adapter process is restarted.
 
 Each stream created for a given BACnet item has a unique identifier (stream ID). If you specify a custom stream ID for the BACnet item in data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID with the following format constructed from the BACnet item node ID:
 
