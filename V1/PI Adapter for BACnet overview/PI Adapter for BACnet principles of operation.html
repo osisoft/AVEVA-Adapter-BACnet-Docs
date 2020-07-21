@@ -164,6 +164,7 @@
 </tr>
 </tbody>
 </table>
+<p><strong>Note:</strong> If streams are deleted from an endpoint while the adapter is running, the adapter process must be restarted in order for the streams to be recreated.</p>
 <p>Certain metadata are sent with each stream created.
 The following metadata are common for every adapter type:</p>
 <ul>
@@ -176,13 +177,14 @@ The following metadata are common for every adapter type:</p>
 <li><strong>SourceId</strong>: SourceId is constructed using the following pattern: {DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}</li>
 <li><strong>LocalName</strong>: The BACnet ObjectName as provided by the BACnet object</li>
 </ul>
-<p><strong>Note:</strong> The metadata level is set in <a class="xref" href="../main/V1/Configuration/General%20configuration.html">General configuration</a>. For the BAcnet adapter, the following metadata is sent for the individual level:</p>
+<p>The metadata level is set in <a class="xref" href="../main/V1/Configuration/General%20configuration.html">General configuration</a>. For the BAcnet adapter, the following metadata is sent for the individual level:</p>
 <ul>
 <li><code>None</code>: No metadata</li>
 <li><code>Low</code>: AdapterType (<em>ComponentType</em>) and DataSource (<em>ComponentId</em>)</li>
 <li><code>Medium</code>: AdapterType (<em>ComponentType</em>), DataSource (<em>ComponentId</em>), and Schedule (ScheduleId)</li>
 <li><code>High</code>: AdapterType (ComponentType), DataSource (ComponentId), Schedule (ScheduleId), Device, SourceId and LocalName</li>
 </ul>
+<p><strong>Note:</strong> If a <code>ScheduleId</code> is not specified when configuring data selection items (see <a class="xref" href="../Configuration/PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html">PI Adapter for BACnet data selection configuration</a>), metadata will not be sent for the associated streams until the <code>ScheduleId</code> is specified and the adapter process is restarted.</p>
 <p>Each stream created for a given BACnet item has a unique identifier (stream ID). If you specify a custom stream ID for the BACnet item in data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID with the following format constructed from the BACnet item node ID:</p>
 <pre><code class="lang-code">&lt;Adapter Component ID&gt;.&lt;Device ID&gt;.&lt;Object Type&gt;&lt;Object ID&gt;.&lt;Property Identifier&gt;
 </code></pre><p><strong>Note:</strong> The naming convention is affected by <code>StreamIdPrefix</code> and <code>DefaultStreamIdPattern</code> settings in data source configuration. For more information, see <a class="xref" href="../Configuration/PI%20Adapter%20for%20BACnet%20data%20source%20configuration.html">PI Adapter for BACnet data source configuration</a>.</p>
