@@ -13,6 +13,9 @@ references:
 - uid: AdapterHealthForBACnet
   name: Adapter health
   href: V1/Health/Adapter%20health%20for%20BACnet.html
+- uid: AdapterHealthForBACnet1-1
+  name: Adapter health
+  href: V1.1/Health/Adapter%20health%20for%20BACnet1-1.html
 - uid: AdapterMetadata
   name: Adapter metadata
   href: V1/main/V1/Metadata/Adapter%20Metadata.html
@@ -22,12 +25,21 @@ references:
 - uid: BACnetConfiguration
   name: Configuration
   href: V1/Configuration/Configuration.html
+- uid: BACnetConfiguration1-1
+  name: Configuration
+  href: V1.1/Configuration/Configuration1-1.html
 - uid: BACnetCOVConfiguration
   name: COV (Change Of Value) configuration
   href: V1/Configuration/Data%20selection%20configuration/Change%20Of%20Value%20configuration.html
+- uid: BACnetCOVConfiguration1-1
+  name: COV (Change Of Value) configuration
+  href: V1.1/Configuration/Data%20selection%20configuration/Change%20Of%20Value%20configuration1-1.html
 - uid: BACnetPolledDataStreamConfiguration
   name: Polled data stream configuration
   href: V1/Configuration/Data%20selection%20configuration/Polled%20data%20stream%20configuration.html
+- uid: BACnetPolledDataStreamConfiguration1-1
+  name: Polled data stream configuration
+  href: V1.1/Configuration/Data%20selection%20configuration/Polled%20data%20stream%20configuration1-1.html
 - uid: BufferingConfiguration
   name: Buffering configuration
   href: V1/main/V1/Configuration/Buffering%20configuration.html
@@ -46,6 +58,9 @@ references:
 - uid: DeviceStatusForBACnet
   name: Device status
   href: V1/Health/Device%20status%20for%20BACnet.html
+- uid: DeviceStatusForBACnet1-1
+  name: Device status
+  href: V1.1/Health/Device%20status%20for%20BACnet1-1.html
 - uid: DiagnosticsConfiguration
   name: Diagnostics configuration
   href: V1/main/V1/ARCHIVE/Diagnostics%20configuration.html
@@ -70,6 +85,9 @@ references:
 - uid: HealthAndDiagnosticsForBACnet
   name: Health and diagnostics
   href: V1/Health/Health%20and%20diagnostics%20for%20BACnet.html
+- uid: HealthAndDiagnosticsForBACnet1-1
+  name: Health and diagnostics
+  href: V1.1/Health/Health%20and%20diagnostics%20for%20BACnet1-1.html
 - uid: HealthEndpointConfiguration
   name: Health endpoint configuration
   href: V1/main/V1/Configuration/Health%20endpoint%20configuration.html
@@ -79,6 +97,9 @@ references:
 - uid: InstallPIAdapterForBACnetUsingDocker
   name: Install PI Adapter for BACnet using Docker
   href: V1/Installation/Install%20PI%20Adapter%20for%20BACnet%20using%20Docker.html
+- uid: InstallPIAdapterForBACnetUsingDocker1-1
+  name: Install PI Adapter for BACnet using Docker
+  href: V1.1/Installation/Install%20PI%20Adapter%20for%20BACnet%20using%20Docker1-1.html
 - uid: InstallTheAdapter
   name: Install the adapter
   href: V1/main/V1/Installation/Install%20the%20adapter.html
@@ -94,24 +115,39 @@ references:
 - uid: NextHealthMessageExpectedForBACnet
   name: Next health message expected
   href: V1/Health/Next%20health%20message%20expected%20for%20BACnet.html
+- uid: NextHealthMessageExpectedForBACnet1-1
+  name: Next health message expected
+  href: V1.1/Health/Next%20health%20message%20expected%20for%20BACnet1-1.html
 - uid: PIAdapterforBACnetDataSelectionConfiguration
   name: PI Adapter for BACnet data selection configuration
   href: V1/Configuration/PI%20Adapter%20for%20BACnet%20data%20selection%20configuration.html
+- uid: PIAdapterforBACnetDataSelectionConfiguration1-1
+  name: PI Adapter for BACnet data selection configuration
+  href: V1.1/Configuration/PI%20Adapter%20for%20BACnet%20data%20selection%20configuration1-1.html
 - uid: PIAdapterforBACnetDataSourceConfiguration
   name: PI Adapter for BACnet data source configuration
   href: V1/Configuration/PI%20Adapter%20for%20BACnet%20data%20source%20configuration.html
+- uid: PIAdapterforBACnetDataSourceConfiguration1-1
+  name: PI Adapter for BACnet data source configuration
+  href: V1.1/Configuration/PI%20Adapter%20for%20BACnet%20data%20source%20configuration1-1.html
 - uid: PIAdapterforBACnetOverview
   name: PI Adapter for BACnet overview
-  href: V1/index.html
+  href: V1.1/PI-Adapter-for-BACnet-overview-1-1.html
 - uid: PIAdapterforBACnetPrinciplesOfOperation
   name: PI Adapter for BACnet principles of operation
   href: V1/PI%20Adapter%20for%20BACnet%20overview/PI%20Adapter%20for%20BACnet%20principles%20of%20operation.html
+- uid: PIAdapterforBACnetPrinciplesOfOperation1-1
+  name: PI Adapter for BACnet principles of operation
+  href: V1.1/PI%20Adapter%20for%20BACnet%20overview/PI%20Adapter%20for%20BACnet%20principles%20of%20operation1-1.html
 - uid: releaseNotes
   name: Release notes
   href: V1/main/Templates/Markdown%20Release%20Notes%20template-V1.html
 - uid: ReleaseNotes
   name: Release notes
   href: V1/Release%20Notes/Release%20Notes.html
+- uid: ReleaseNotes1-1
+  name: Release notes
+  href: V1.1/Release%20Notes/Release%20Notes1-1.html
 - uid: RetrieveProductVersionInformation
   name: Retrieve product version information
   href: V1/main/V1/Administration/Retrieve%20product%20version%20information.html
@@ -139,6 +175,9 @@ references:
 - uid: SystemRequirements
   name: System requirements
   href: V1/Installation/System%20requirements.html
+- uid: SystemRequirements1-1
+  name: System requirements
+  href: V1.1/Installation/System%20requirements1-1.html
 - uid: TechnicalSupportAndFeedback
   name: Technical support and feedback
   href: V1/main/V1/Technical%20support%20and%20feedback.html

@@ -26,6 +26,189 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "V1.1/Configuration/Configuration1-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1.1/Configuration/Configuration1-1.html",
+          "hash": "3x20rTiwcRCua0L0xACBMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1.1/Configuration/Data selection configuration/Change Of Value configuration1-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1.1/Configuration/Data selection configuration/Change Of Value configuration1-1.html",
+          "hash": "Q0uh8xV1hpYEUHk10wOCMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1.1/Configuration/Data selection configuration/Polled data stream configuration1-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1.1/Configuration/Data selection configuration/Polled data stream configuration1-1.html",
+          "hash": "AV3cpH3288P+Xy8ZVB53fA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1.1/Configuration/PI Adapter for BACnet data selection configuration1-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1.1/Configuration/PI Adapter for BACnet data selection configuration1-1.html",
+          "hash": "r5L4fsVxY3amOK4adKQPlg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1.1/Configuration/PI Adapter for BACnet data source configuration1-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1.1/Configuration/PI Adapter for BACnet data source configuration1-1.html",
+          "hash": "BOPq8Aq8i4A3fHVb6N89tw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1.1/Health/Adapter health for BACnet1-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1.1/Health/Adapter health for BACnet1-1.html",
+          "hash": "jecrzv6DA6EfzQn9KeNhHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1.1/Health/Device status for BACnet1-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1.1/Health/Device status for BACnet1-1.html",
+          "hash": "qe2PCQy3nfARU6M8bKtHJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1.1/Health/Health and diagnostics for BACnet1-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1.1/Health/Health and diagnostics for BACnet1-1.html",
+          "hash": "lnRKALwOmAn704rgYEzZOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1.1/Health/Next health message expected for BACnet1-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1.1/Health/Next health message expected for BACnet1-1.html",
+          "hash": "3Z7GEsK5EUDUpz5ZrD9EDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1.1/Installation/Install PI Adapter for BACnet using Docker1-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1.1/Installation/Install PI Adapter for BACnet using Docker1-1.html",
+          "hash": "y/wkZBkRGlFGcPz3kNtUpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1.1/Installation/System requirements1-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1.1/Installation/System requirements1-1.html",
+          "hash": "VdV6E/UeXZUlm2wytqrOoQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "V1.1/PI Adapter for BACnet overview/PI Adapter for BACnet principles of operation1-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1.1/PI Adapter for BACnet overview/PI Adapter for BACnet principles of operation1-1.html",
+          "hash": "bR+Z9tL7t8GcUQWwZPmwVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1.1/PI-Adapter-for-BACnet-overview-1-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1.1/PI-Adapter-for-BACnet-overview-1-1.html",
+          "hash": "P5FMY+tiRxftND751gBiZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "UidNotFound"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "V1.1/Release Notes/Release Notes1-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1.1/Release Notes/Release Notes1-1.html",
+          "hash": "6+F+ykf9kSGKvKRSVlankw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "V1/Configuration/Configuration.md",
       "output": {
         ".html": {
@@ -177,7 +360,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Release Notes/Release Notes.html",
-          "hash": "X9rxK4Yfq1DcxPBHWesYNw=="
+          "hash": "X4Sukng5xzLdB/qqKwa4NQ=="
         }
       },
       "is_incremental": false,
@@ -228,6 +411,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/index.md",
       "output": {
@@ -404,7 +590,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1/Configuration/Egress endpoints configuration.html",
-          "hash": "1LjDJp4eJ2ybs0lT/Totog=="
+          "hash": "lYNGhnqnY8E2YlsZdhYHmw=="
         }
       },
       "is_incremental": false,
@@ -863,7 +1049,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 53,
+          "total_file_count": 67,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
