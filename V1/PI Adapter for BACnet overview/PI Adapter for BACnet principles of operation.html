@@ -8,7 +8,7 @@
     <title>PI Adapter for BACnet principles of operation </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="PI Adapter for BACnet principles of operation ">
-    <meta name="generator" content="docfx 2.56.1.0">
+    <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -164,7 +164,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> If streams are deleted from an endpoint while the adapter is running, the adapter process must be restarted in order for the streams to be recreated.</p>
+<p><strong>Note:</strong> If streams are deleted from an endpoint while the adapter is running, the streams can be recreated by restarting the ingress component, as described in <a href="xref:Startandstopingresscomponent">Start and stop ingress component</a>. Alternatively, the streams can be recreated by restarting the adapter process.</p>
 <p>Certain metadata are sent with each stream created.
 The following metadata are common for every adapter type:</p>
 <ul>
