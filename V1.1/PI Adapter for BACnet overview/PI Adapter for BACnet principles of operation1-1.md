@@ -46,7 +46,7 @@ The BACnet adapter creates a stream with two properties for a selected BACnet it
 | `Timestamp`     | DateTime  | Timestamp of the given BACnet item value update. |
 | `Value`         | Specified on the type of incoming BACnet value | Value of the BACnet item update. |
 
-**Note:** If streams are deleted from an endpoint while the adapter is running, the streams must be recreated by either restarting the ingress component as described in [Start and stop ingress component](xref=StartAndStopIngressComponent), or by restarting the adapter process.
+**Note:** If streams are deleted from an endpoint while the adapter is running, the streams must be recreated by restarting the ingress component as described in [Start and stop ingress component](xref=StartAndStopIngressComponent).
 
 Certain metadata are sent with each stream created.
 The following metadata are common for every adapter type:
