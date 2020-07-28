@@ -1,16 +1,16 @@
 
 
-# Data Packet Tracing 
+# Data packet tracing 
 
 Data packet tracing is a configurable feature that logs all incoming and outgoing UDP packet data to the adapter component log.
 
 
-## Enable Packet Tracing
+## Enable packet tracing
 
 To enable tracing, set the adapter component log-level to Trace. See [Logging Configuration](xref:LoggingConfiguration)
 
 
-## Example Log
+## Example log
 
 ```
 2020-07-28 11:14:25.513 -07:00 [Verbose] Sent bytes: 
