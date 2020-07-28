@@ -6,3 +6,5 @@
   topicHref: ../main/V1/Diagnostics/Adapter diagnostics.md
 - name: Egress diagnostics
   href: ../main/V1/Diagnostics/Egress diagnostics.md
+  name: Data Packet Tracing 
+  href: Health/Data Packet Tracing.md
