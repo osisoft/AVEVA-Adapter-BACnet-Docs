@@ -7,7 +7,7 @@ Data packet tracing is a configurable feature that logs all incoming and outgoin
 
 ## Enable packet tracing
 
-To enable tracing, set the adapter component log-level to Trace. See [Logging Configuration](xref:LoggingConfiguration)
+To enable tracing, set the adapter component log-level to Trace. See [Logging Configuration](xref:LoggingConfiguration).
 
 
 ## Example log
