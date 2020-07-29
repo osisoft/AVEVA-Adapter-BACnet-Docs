@@ -95,8 +95,6 @@ The following parameters are available to configure BACnet data selection:
 | **PropertyIdentifier** | Optional | `string` | Specifies which property to collect from the BACnet object. If left empty, `PresentValue` is collected. |
 | **ScheduleId** | Optional | `string` | Specifies a schedule ID to which the data selection item is linked. This data item is collected on the scheduled interval if Selected is set to `true`.<br><br>For **DataCollectionMode**=`Poll`, this is the interval at which this property is requested from the device.<br><br>For **DataCollectionMode**=`SubscribeCov` or `SubscribeCovProperty`, this is the interval at which a re-subscription request is sent.<br><br>For more information on schedules, see [Schedules configuration](xref:SchedulesConfiguration).|
 
-**Note:** If you specify the same combination of **DeviceId**, **ObjectType**, **ObjectId**, and **PropertyIdentifier** for multiple data selection items, it can result in data not being written to one or more streams. It is recommended that the combination of those properties be unique for each data selection item.
-
 ## BACnet data selection example
 
 The following is an example of a valid BACnet data selection configuration with different data collection modes. Since the last item has **Selected** set to `false`, data will not be collected for it.
