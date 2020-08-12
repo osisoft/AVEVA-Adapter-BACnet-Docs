@@ -3,17 +3,14 @@ uid: ReleaseNotes1-1
 ---
 #Test area
 
-Tab group 1:
+> [!Note]
+> This is a note which needs your attention, but it's not super important.
 
-# [Tab Text 1](#tab/tabid-1)
+[!Tip]
+This is a tip which needs your attention, but it's not super important.
 
-Tab content-1-1.
-
-# [Tab Text 2](#tab/tabid-2)
-
-Tab content-2-1.
-
-***
+> [!Caution]
+> This is a caution containing some important message.
 
 # Release notes
 
