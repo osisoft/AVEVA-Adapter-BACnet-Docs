@@ -2,6 +2,21 @@
 uid: ReleaseNotes1-1
 ---
 
+# Test Area
+
+> [!NOTE]
+> <note content>
+> [!WARNING]
+> <warning content>
+  <div class="NOTE">
+  <h5>NOTE</h5>
+  <p>note content</p>
+</div>
+<div class="WARNING">
+  <h5>WARNING</h5>
+  <p>WARNING content</p>
+</div>
+
 # Release notes
 
 PI Adapter for BACnet 1.0
