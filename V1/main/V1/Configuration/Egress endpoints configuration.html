@@ -98,7 +98,7 @@
 <li>For a table of all available parameters, see <a href="#egress-endpoint-parameters">Egress endpoint parameters</a>.</li>
 </ul>
 </li>
-<li><p>Save the file. For example, <em>OmfEgress_DataEndpoints.json</em>.</p>
+<li><p>Save the file. For example, <code>ConfigureEgressEndpoints.json</code>.</p>
 </li>
 <li><p>Use any of the <a class="xref" href="Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests and run the appropriate command with the contents of the file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/</code></p>
 <p> <strong>Note:</strong> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
@@ -106,15 +106,15 @@
 <p> <strong>Note:</strong> Run the commands from the same directory where the file is located.</p>
 <ul>
 <li><p><em>Add endpoints</em></p>
-<p>  <strong>Note:</strong> Run either the <code>POST</code> or the <code>PUT</code> command. For more information, see <a href="#rest-urls">REST URLs</a>. </p>
-<pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST    &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
-</code></pre><pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT   &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}&quot;
+<p>  <strong>Note:</strong> Run either the <code>POST</code> or the <code>PUT</code> command. For more information, see <a href="#rest-urls">REST URLs</a>.</p>
+<pre><code class="lang-bash">curl -d &quot;@ConfigureEgressEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X POST    &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints&quot;
+</code></pre><pre><code class="lang-bash">curl -d &quot;@ConfigureEgressEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT   &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}&quot;
 </code></pre></li>
 <li><p><em>Delete an endpoint</em></p>
 <pre><code class="lang-bash">curl -X DELETE &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}&quot;
 </code></pre></li>
 <li><p><em>Update an endpoint</em></p>
-<pre><code class="lang-bash">curl -d &quot;@OmfEgress_DataEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X UPDATE     &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}&quot;
+<pre><code class="lang-bash">curl -d &quot;@ConfigureEgressEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X UPDATE     &quot;http://localhost:5590/api/v1/configuration/OmfEgress/dataendpoints/{Id}&quot;
 </code></pre></li>
 <li><p><em>View endpoints</em></p>
 <pre><code class="lang-bash">curl -X GET &quot;http://localhost:5590/api/v1/configuration/OmfEgress/DataEndpoints&quot;
