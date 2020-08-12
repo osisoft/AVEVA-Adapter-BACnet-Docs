@@ -4,18 +4,15 @@ uid: ReleaseNotes1-1
 
 # Test Area
 
-> [!NOTE]
-> <note content>
-> [!WARNING]
-> <warning content>
-  <div class="NOTE">
-  <h5>NOTE</h5>
-  <p>note content</p>
-</div>
-<div class="WARNING">
-  <h5>WARNING</h5>
-  <p>WARNING content</p>
-</div>
+> [!Note:]
+> This is a note which needs your attention, but it's not super important.
+
+> [!Tip:]
+> This is a tip which needs your attention, but it's not super important.
+
+> [!Caution:]
+> This is a caution containing some important message.
+
 
 # Release notes
 
