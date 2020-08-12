@@ -4,13 +4,13 @@ uid: ReleaseNotes1-1
 
 # Test Area
 
-> [!Note:]
+> [!Note]
 > This is a note which needs your attention, but it's not super important.
 
-> [!Tip:]
+> [!Tip]
 > This is a tip which needs your attention, but it's not super important.
 
-> [!Caution:]
+> [!Caution]
 > This is a caution containing some important message.
 
 
