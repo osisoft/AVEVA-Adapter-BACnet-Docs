@@ -1,17 +1,6 @@
 ---
 uid: ReleaseNotes1-1
 ---
-#Test area
-
-> [!Note]
-> This is a note which needs your attention, but it's not super important.
-
-[!Tip]
-This is a tip which needs your attention, but it's not super important.
-
-> [!Caution]
-> This is a caution containing some important message.
-
 # Release notes
 
 PI Adapter for BACnet 1.0
