@@ -5,19 +5,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Configuration </title>
+    <title>Error rate </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Configuration ">
+    <meta name="title" content="Error rate ">
     <meta name="generator" content="docfx 2.56.2.0">
     
-    <link rel="shortcut icon" href="../../favicon.ico">
-    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../styles/docfx.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <link rel="shortcut icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../Health/toc.html">
     
-    <meta property="docfx:rel" content="../../">
+    <meta property="docfx:rel" content="../../../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -33,8 +33,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../../V1/index.html" width="46">
-                <img id="logo" src="../../V1/main/V1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              <a class="navbar-brand" href="../../../../V1/index.html" width="46">
+                <img id="logo" src="../../../../V1/main/V1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -75,24 +75,31 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="BACnetConfiguration">
-<h1 id="configuration">Configuration</h1>
+            <article class="content wrap" id="_content" data-uid="ErrorRate1-3">
+<h1 id="error-rate">Error rate</h1>
 
-<p>PI Adapter for BACnet provides configuration of data source and data selection. The adapter also provides the ability to generate a data selection file instead of manual configuration.</p>
-<p>The examples in the configuration topics use <code>curl</code>, a commonly available tool on both Windows and Linux. The adapter can be configured with any programming language or tool that supports making REST calls, or with the EdgeCmd utility. For more information, see the <a href="https://osisoft.github.io/Edgecmd-Docs/V1.1/EdgeCmd_utility_1-1.html">EdgeCmd utility documentation (https://osisoft.github.io/Edgecmd-Docs/V1.1/EdgeCmd_utility_1-1.html)</a>. To validate successful configurations, you can perform data retrieval (GET commands) using a browser, if available on your device.</p>
-<p>For more information on PI Adapter configuration tools, see <a class="xref" href="../main/V1/Configuration/Configuration%20tools.html">Configuration tools</a>.</p>
-<h2 id="quick-start">Quick start</h2>
-<p>Complete the following steps to establish a data flow from a DNP3 data source device to a data endpoint.</p>
-<ol>
-<li><p>Configure one or several DNP3 system components.<br>See <a class="xref" href="../main/V1/Configuration/System%20components%20configuration.html#add-a-system-component">System components configuration</a>.</p>
-</li>
-<li><p>Configure a BACnet data source for each BACnet device.<br>See <a href="xref:PIAdapterForBACnetDataSourceConfiguration#configure-bacnet-ua-data-source">PI Adapter for BACnet data source configuration</a>.</p>
-</li>
-<li><p>Configure a BACnet data selection for each BACnet data source.<br>See <a href="xref:PIAdapterForBACnetDataSelectionConfiguration#configure-bacnet-ua-data-selection">PI Adapter for BACnet data selection configuration</a>.</p>
-</li>
-<li><p>Configure one or several egress endpoints.<br>See <a class="xref" href="../main/V1/Configuration/Egress%20endpoints%20configuration.html">Egress endpoints configuration</a>.</p>
-</li>
-</ol>
+<p>The <code>Diagnostics.Adapter.ErrorRate</code> dynamic type includes the following values, which are logged in a stream with the <code>Id</code> <code>{componentid}.ErrorRate</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>timestamp</strong></td>
+<td><code>string</code></td>
+<td>Timestamp of event</td>
+</tr>
+<tr>
+<td><strong>ErrorRate</strong></td>
+<td><code>double</code></td>
+<td>One-minute rolling average of error rate (streams/second)</td>
+</tr>
+</tbody>
+</table>
 </article>
           </div>
           
@@ -101,7 +108,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter-BACnet-Docs/blob/master/V1/Configuration/Configuration.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter/blob/master/V1.3/Diagnostics/Error-rate-1-3.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -127,8 +134,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
   </body>
 </html>
