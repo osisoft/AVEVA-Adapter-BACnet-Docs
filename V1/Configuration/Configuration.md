@@ -16,8 +16,8 @@ Complete the following steps to establish a data flow from a DNP3 data source de
 
 1. Configure one or several DNP3 system components.<br>See [System components configuration](xref:SystemComponentsConfiguration#add-a-system-component).
 
-2. Configure a BACnet data source for each BACnet device.<br>See [PI Adapter for BACnet data source configuration](xref:PIAdapterForBACnetDataSourceConfiguration#configure-bacnet-data-source).
+2. Configure a BACnet data source for each BACnet device.<br>See [PI Adapter for BACnet data source configuration](xref:PIAdapterforBACnetDataSourceConfiguration#configure-bacnet-data-source).
 
-3. Configure a BACnet data selection for each BACnet data source.<br>See [PI Adapter for BACnet data selection configuration](xref:PIAdapterForBACnetDataSelectionConfiguration#configure-bacnet-data-selection).
+3. Configure a BACnet data selection for each BACnet data source.<br>See [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration#configure-bacnet-data-selection).
 
 4. Configure one or several egress endpoints.<br>See [Egress endpoints configuration](xref:EgressEndpointsConfiguration).
