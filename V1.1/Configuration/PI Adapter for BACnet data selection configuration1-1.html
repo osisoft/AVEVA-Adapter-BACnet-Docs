@@ -126,8 +126,8 @@
 </ul>
 </li>
 <li>Save the file, for example as <code>DataSelection.json</code>.</li>
-<li><p>Use any of the <a class="xref" href="../../V1/main/V1/Configuration/Configuration%20tools.html">Configuration tools</a> capable of making HTTP requests to run a <code>POST</code> command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataSelection/</code>.</p>
-<p><strong>Note:</strong> The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../../V1/main/V1/Configuration/System%20components%20configuration.html">System components configuration</a>.</p>
+<li><p>Use any of the <a class="xref" href="../../V1/main/V1/Configuration/configuration-tools.html">Configuration tools</a> capable of making HTTP requests to run a <code>POST</code> command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DataSelection/</code>.</p>
+<p><strong>Note:</strong> The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see <a class="xref" href="../../V1/main/V1/Configuration/system-components-configuration.html">System components configuration</a>.</p>
 <p> <code>5590</code> is the default port number. If you selected a different port number, replace it with that value.</p>
 <p> Example using <code>curl</code>:</p>
 <p> <strong>Note:</strong> Run this command from the same directory where the file is located:</p>
@@ -220,7 +220,7 @@
 <td><strong>ScheduleId</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies a schedule ID to which the data selection item is linked. This data item is collected on the scheduled interval if Selected is set to <code>true</code>.<br><br>For <strong>DataCollectionMode</strong>=<code>Poll</code>, this is the interval at which this property is requested from the device.<br><br>For <strong>DataCollectionMode</strong>=<code>SubscribeCov</code> or <code>SubscribeCovProperty</code>, this is the interval at which a re-subscription request is sent.<br><br>For more information on schedules, see <a class="xref" href="../../V1/main/V1/Configuration/Schedules%20configuration.html">Schedules configuration</a>.</td>
+<td>Specifies a schedule ID to which the data selection item is linked. This data item is collected on the scheduled interval if Selected is set to <code>true</code>.<br><br>For <strong>DataCollectionMode</strong>=<code>Poll</code>, this is the interval at which this property is requested from the device.<br><br>For <strong>DataCollectionMode</strong>=<code>SubscribeCov</code> or <code>SubscribeCovProperty</code>, this is the interval at which a re-subscription request is sent.<br><br>For more information on schedules, see <a class="xref" href="../../V1/main/V1/Configuration/schedules-configuration.html">Schedules configuration</a>.</td>
 </tr>
 </tbody>
 </table>
