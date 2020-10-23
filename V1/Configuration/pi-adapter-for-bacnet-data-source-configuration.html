@@ -172,13 +172,13 @@
 <td><strong>StreamIdPrefix</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies what prefix is used for stream IDs. The naming convention is <code>StreamIdPrefix.StreamId</code>. An empty string means no prefix will be added to the stream IDs and names. A <code>null</code> value defaults to <em>ComponentID</em> followed by a period.<br><br>Example: <code>BACnet1.NamespaceIndex.Identifier.</code><br><br><strong>Note:</strong> If you change the <strong>StreamIdPrefix</strong> of a configured adapter (for example, when you delete and add a data source), you need to restart the adapter for the changes to apply. New streams are created on adapter restart and pre-existing streams no longer update.</td>
+<td>Specifies what prefix is used for stream IDs. The naming convention is <code>{StreamIdPrefix}{StreamId}</code>. An empty string means no prefix will be added to the stream IDs and names. A <code>null</code> value defaults to <strong>ComponentID</strong> followed by a period.<br><br>Example: <code>BACnet1.{DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}</code><br><br><strong>Note:</strong> If you change the <strong>StreamIdPrefix</strong> of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to apply. New streams are created on adapter restart and pre-existing streams are no longer updated.<br><br>Allowed value: any string<br>Default value: <code>null</code></td>
 </tr>
 <tr>
 <td><strong>DefaultStreamIdPattern</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>Specifies the default stream ID pattern to use. Possible parameters: {DeviceIPAddress}, {DeviceId}, {ObjectType}, {ObjectId}, and {PropertyIdentifier}. An empty or <code>null</code> value will result in {DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}.</td>
+<td>Specifies the default stream ID pattern to use. Possible parameters: <code>{DeviceIPAddress}</code>, <code>{DeviceId}</code>, <code>{ObjectType}</code>, <code>{ObjectId}</code>, and <code>{PropertyIdentifier}</code>.<br><br>Allowed value: any string<br>Default value: <code>{DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}</code></td>
 </tr>
 </tbody>
 </table>
