@@ -95,12 +95,12 @@ The following is an example of a valid BACnet routed device data source configur
 
 | Relative URL | HTTP verb | Action |
 | ------------ | --------- | ------ |
-| api/v1/configuration/_ComponentId_/DataSource | `GET` | Retrieves the BACnet data source configuration |
-| api/v1/configuration/_ComponentId_/DataSource  | `POST` | Creates the BACnet data source configuration |
-| api/v1/configuration/_ComponentId_/DataSource | `PUT` | Configures or updates the BACnet data source configuration |
-| api/v1/configuration/_ComponentId_/DataSource | `DELETE` | Deletes the BACnet data source configuration |
+| api/v1/configuration/\<ComponentId\>/DataSource | `GET` | Retrieves the BACnet data source configuration |
+| api/v1/configuration/\<ComponentId\>/DataSource  | `POST` | Creates the BACnet data source configuration |
+| api/v1/configuration/\<ComponentId\>/DataSource | `PUT` | Configures or updates the BACnet data source configuration |
+| api/v1/configuration/\<ComponentId\>/DataSource | `DELETE` | Deletes the BACnet data source configuration |
 
-**Note:** Replace _ComponentId_ with the Id of your BACnet component. For example, _BACnet1_.
+**Note:** Replace \<Component\> with the Id of your BACnet component. For example, BACnet1.
 
 ## Discovery
 
