@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/source/PI-Adapter-BACnet-Docs",
+  "source_base_path": "C:/Agent/_work/1/s",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -273,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/pi-adapter-for-bacnet-data-source-configuration.html",
-          "hash": "ZO/n7u5vzfg8iagZ8OD7mA=="
+          "hash": "yPkRHdLxGMD6E28X5VkN+w=="
         }
       },
       "is_incremental": false,

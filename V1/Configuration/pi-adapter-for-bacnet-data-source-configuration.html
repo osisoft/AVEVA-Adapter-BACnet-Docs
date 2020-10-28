@@ -216,28 +216,28 @@
 </thead>
 <tbody>
 <tr>
-<td>api/v1/configuration/<em>ComponentId</em>/DataSource</td>
+<td>api/v1/configuration/&lt;ComponentId>/DataSource</td>
 <td><code>GET</code></td>
 <td>Retrieves the BACnet data source configuration</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>ComponentId</em>/DataSource</td>
+<td>api/v1/configuration/&lt;ComponentId>/DataSource</td>
 <td><code>POST</code></td>
 <td>Creates the BACnet data source configuration</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>ComponentId</em>/DataSource</td>
+<td>api/v1/configuration/&lt;ComponentId>/DataSource</td>
 <td><code>PUT</code></td>
 <td>Configures or updates the BACnet data source configuration</td>
 </tr>
 <tr>
-<td>api/v1/configuration/<em>ComponentId</em>/DataSource</td>
+<td>api/v1/configuration/&lt;ComponentId>/DataSource</td>
 <td><code>DELETE</code></td>
 <td>Deletes the BACnet data source configuration</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> Replace <em>ComponentId</em> with the Id of your BACnet component. For example, <em>BACnet1</em>.</p>
+<p><strong>Note:</strong> Replace &lt;Component> with the Id of your BACnet component. For example, BACnet1.</p>
 <h2 id="discovery">Discovery</h2>
 <p>The BACnet adapter is able to discover available BACnet devices and objects defined by the data source configuration. For discovery of a BACnet router, the adapter sends a <em>Who-Is</em> request and waits 30 seconds to receive <em>I-Am</em> responses from available devices. Upon receiving an <em>I-Am</em> response, the adapter requests the <em>Protocol Services Supported</em>, <em>Maximum APDU Length</em>, <em>Segmentation</em> and <em>Object List</em> properties from the available devices. For discovery of a single device, the adapter does not send a <em>Who-Is</em> request but proceeds to request its properties.</p>
 <p>A successful discovery results in populating the <a class="xref" href="pi-adapter-for-bacnet-data-selection-configuration.html#bacnet-device-configuration">DeviceConfiguration</a> and optionally, <a class="xref" href="pi-adapter-for-bacnet-data-selection-configuration.html#configure-bacnet-data-selection">DataSelection Configuration</a>.</p>
