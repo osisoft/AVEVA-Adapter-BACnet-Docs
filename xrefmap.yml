@@ -274,6 +274,12 @@ references:
 - uid: TechnicalSupportAndFeedback1-3
   name: Technical support and feedback
   href: V1/main/V1.3/technical-support-and-feedback.html
+- uid: TroubleshootTheAdapter
+  name: Troubleshoot the adapter
+  href: V1/main/V1/Troubleshooting/troubleshoot-the-adapter.html
+- uid: TroubleshootTheAdapter1-3
+  name: Troubleshoot the adapter
+  href: V1/main/V1.3/Troubleshooting/troubleshoot-the-adapter.html
 - uid: UninstallTheAdapter
   name: Uninstall the adapter
   href: V1/main/V1/Installation/uninstall-the-adapter.html
