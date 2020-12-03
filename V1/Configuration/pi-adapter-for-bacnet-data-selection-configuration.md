@@ -54,7 +54,7 @@ Complete the following steps to configure the BACnet data selection:
     - For content structure, see [BACnet data selection example](#bacnet-data-selection-example).
     - For a table of all available parameters, see [BACnet data selection](#bacnet-data-selection-parameters).
 2. Save the file, for example as `DataSelection.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a `POST` command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSelection/`.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a `POST` command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSelection/<StreamId>`.
 
    **Note:** The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
 
@@ -65,7 +65,7 @@ Complete the following steps to configure the BACnet data selection:
     **Note:** Run this command from the same directory where the file is located:
 
     ```bash
-    curl -d "@DataSelection.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSelection"
+    curl -d "@DataSelection.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSelection/AnalogValue50.PresentValue"
     ```
 
 ## BACnet data selection schema
