@@ -15,7 +15,7 @@ Complete the following steps to configure the BACnet data source:
 1. Use a text editor to create a file that contains a BACnet data source in JSON format.
     - For content structure, see [BACnet router data source example](#bacnet-router-data-source-example).
     - For a table of all available parameters, see [BACnet data source parameters](#bacnet-data-source-parameters).
-2. Save the file, for example as `DataSource.json`.
+2. Save the file, for example as `ConfigureDataSource.json`.
 3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a `POST` command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSource/`.
 
 	**Note:** The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
@@ -27,7 +27,7 @@ Complete the following steps to configure the BACnet data source:
 	**Note:** Run this command from the same directory where the file is located:
 
 	```bash
-	curl -d "@DataSource.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSource"
+	curl -d "@ConfigureDataSource.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSource"
 	```
 
 After you complete data source configuration, the next step is to configure data selection. For more information, See [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration).
