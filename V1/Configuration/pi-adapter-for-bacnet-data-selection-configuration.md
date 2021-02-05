@@ -37,6 +37,8 @@ You can use the device configuration to choose an appropriate **DataCollectionMo
 ]
 ```
 
+**Note**: The device configuration is read-only.
+
 ### REST URLs (device configuration)
 
 | Relative URL | HTTP verb | Action |
