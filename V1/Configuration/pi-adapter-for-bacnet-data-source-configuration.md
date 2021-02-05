@@ -16,7 +16,7 @@ Complete the following steps to configure the BACnet data source:
     - For content structure, see [BACnet router data source example](#bacnet-router-data-source-example).
     - For a table of all available parameters, see [BACnet data source parameters](#bacnet-data-source-parameters).
 2. Save the file, for example as `ConfigureDataSource.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a `POST` command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSource/`.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a `PUT` command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSource/`.
 
 	**Note:** The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
 
@@ -24,13 +24,13 @@ Complete the following steps to configure the BACnet data source:
 
 	Example using `curl`:
 
-	**Note:** Run this command from the same directory where the file is located:
-
-	```bash
+	```bash 
 	curl -d "@ConfigureDataSource.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSource"
 	```
-
-After you complete data source configuration, the next step is to configure data selection. For more information, See [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration).
+	
+	**Note:** Run this command from the same directory where the file is located:
+	
+4. Configure data selection. For more information, See [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration).
 
 ## BACnet data source schema
 
@@ -104,14 +104,11 @@ The following is an example of a valid BACnet routed device data source configur
 
 ## Discovery
 
-The BACnet adapter is able to discover available BACnet devices and objects defined by the data source configuration. For discovery of a BACnet router, the adapter sends a *Who-Is* request and waits 30 seconds to receive *I-Am* responses from available devices. Upon receiving an *I-Am* response, the adapter requests the *Protocol Services Supported*, *Maximum APDU Length*, *Segmentation* and *Object List* properties from the available devices. For discovery of a single device, the adapter does not send a *Who-Is* request but proceeds to request its properties.
+The adapter is able to discover available BACnet devices and objects defined by the data source configuration. For discovery of a BACnet router, the adapter sends a *Who-Is* request and waits 30 seconds to receive *I-Am* responses from available devices. Upon receiving an *I-Am* response, the adapter requests the *Protocol Services Supported*, *Maximum APDU Length*, *Segmentation* and *Object List* properties from the available devices. For discovery of a single device, the adapter does not send a *Who-Is* request but proceeds to request its properties.
 
-A successful discovery results in populating the [DeviceConfiguration](xref:PIAdapterforBACnetDataSelectionConfiguration#bacnet-device-configuration) and optionally, [DataSelection Configuration](xref:PIAdapterforBACnetDataSelectionConfiguration#configure-bacnet-data-selection).
+When the adapter starts or a new data source is configured, the adapter checks if device configuration is populated. Discovery is performed only if device configuration is empty. The data selection configuration is updated by discovery only if it is empty.
 
-* DataSelection is populated with *Selected* attribute for all items set to `false`.
-* DeviceConfiguration is read-only and provides more information such as segmentation and services that are supported. This can help you make informed decisions in data selection.
-
-When the adapter starts or a new data source is configured, the adapter checks if DeviceConfiguration is populated. Discovery is performed only if DeviceConfiguration is empty. DataSelection is updated by discovery only if it is empty.
+A successful discovery populates the device configuration and provides information such as segmentation and services that are supported. Optionally, the data selection configuration is also populated with the **Selected** parameter for all items set to `false`. For information about device configuration and data selection configuration, see [BACnet device configuration](xref:PIAdapterforBACnetDataSelectionConfiguration#bacnet-device-configuration) and [Configure BACnet data selection](xref:PIAdapterforBACnetDataSelectionConfiguration#configure-bacnet-data-selection).
 
 The adapter [log](xref:Logging-configuration) indicates when discovery is complete.
 
