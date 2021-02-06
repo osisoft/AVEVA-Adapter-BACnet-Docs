@@ -18,7 +18,7 @@ Complete the following steps to configure the BACnet data source:
 2. Save the file, for example as `ConfigureDataSource.json`.
 3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a `PUT` command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSource/`.
 
-	**Note:** The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
+	**Note:** The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration1-4).
 
 	`5590` is the default port number. If you selected a different port number, replace it with that value.
 
@@ -110,7 +110,7 @@ When the adapter starts or a new data source is configured, the adapter checks i
 
 A successful discovery populates the device configuration and provides information such as segmentation and services that are supported. Optionally, the data selection configuration is also populated with the **Selected** parameter for all items set to `false`. For information about device configuration and data selection configuration, see [BACnet device configuration](xref:PIAdapterforBACnetDataSelectionConfiguration1-1#bacnet-device-configuration) and [Configure BACnet data selection](xref:PIAdapterforBACnetDataSelectionConfiguration1-1#configure-bacnet-data-selection).
 
-The adapter [log](xref:Logging-configuration) indicates when discovery is complete.
+The adapter [log](xref:Logging-configuration1-4) indicates when discovery is complete.
 
 
 ### Example log
