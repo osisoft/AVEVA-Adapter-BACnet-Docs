@@ -55,20 +55,32 @@ Complete the following steps to configure the BACnet data selection:
 1. Use a text editor to create a file that contains a BACnet data selection in JSON format.
     - For content structure, see [BACnet data selection example](#bacnet-data-selection-example).
     - For a table of all available parameters, see [BACnet data selection](#bacnet-data-selection-parameters).
-2. Save the file, for example as `DataSelection.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a `POST` command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSelection/<StreamId>`.
+2. Save the file, for example as `ConfigureDataSelection.json`.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run either a `POST` or `PUT` command to their appropriate endpoint:
 
-   **Note:** The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
+   **Note:** The following examples uses BACnet1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
 
     `5590` is the default port number. If you selected a different port number, replace it with that value.
-
-    Example using `curl`:
-
-    **Note:** Run this command from the same directory where the file is located:
-
+    
+    - `POST` endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSelection/`
+    
+       Example using `curl`:
+    
     ```bash
-    curl -d "@DataSelection.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSelection/AnalogValue50.PresentValue"
-    ```
+      curl -d "@ConfigureDataSelection.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/BACnet1/DataSelection"
+      ```
+      
+      **Note:** Run this command from the same directory where the file is located.
+      
+      - `PUT` endpoint: `http://localhost:5590/api/v1/configuration/<componentId>/DataSelection/<StreamId>`
+      
+         Example using `curl`:
+      
+      ```bash
+      curl -d "@ConfigureDataSelection.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSelection/AnalogValue50.PresentValue"
+      ```
+      
+      **Note:** Run this command from the same directory where the file is located.
 
 ## BACnet data selection schema
 
@@ -151,9 +163,11 @@ The following is an example of a valid BACnet data selection configuration with 
 
 | Relative URL | HTTP verb | Action |
 | ------------ | --------- | ------ |
-| api/v1/configuration/_ComponentId_/DataSelection  | `GET` | Retrieves the BACnet data selection configuration. |
-| api/v1/configuration/_ComponentId_/DataSelection  | `PUT` | Configures or updates the BACnet data selection configuration. |
-| api/v1/configuration/_ComponentId_/DataSelection | `DELETE` | Deletes the BACnet data selection configuration. |
-| api/v1/configuration/_ComponentId_/DataSelection | `PATCH` | Allows partial updating of configured data selection items. <br>**Note:** The request must be an array containing one or more data selection items. Each data selection item in the array must include its **StreamId**. |
-| api/v1/configuration/_ComponentId_/DataSelection/_StreamId_ | `PUT` | Updates or creates a new data selection with the specified **StreamId**. |
-| api/v1/configuration/_ComponentId_/DataSelection/_StreamId_ | `DELETE` | Deletes a specific data selection item of the BACnet data selection configuration. |
+| api/v1/configuration/\<ComponentId\>/DataSelection  | `GET` | Retrieves the BACnet data selection configuration. |
+| api/v1/configuration/\<ComponentId\>/DataSelection  | `PUT` | Configures or updates the BACnet data selection configuration. |
+| api/v1/configuration/\<ComponentId\>/DataSelection | `DELETE` | Deletes the BACnet data selection configuration. |
+| api/v1/configuration/\<ComponentId\>/DataSelection | `PATCH` | Allows partial updating of configured data selection items. <br>**Note:** The request must be an array containing one or more data selection items. Each data selection item in the array must include its **StreamId**. |
+| api/v1/configuration/\<ComponentId\>/DataSelection/\<StreamId> | `PUT` | Updates or creates a new data selection with the specified **StreamId**. |
+| api/v1/configuration/\<ComponentId\>/DataSelection/\<StreamId> | `DELETE` | Deletes a specific data selection item of the BACnet data selection configuration. |
+
+**Note:** Replace \<Component\> with the Id of your BACnet component. For example, BACnet1.

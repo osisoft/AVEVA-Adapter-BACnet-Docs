@@ -53,20 +53,30 @@ Complete the following steps to configure the BACnet data selection:
 1. Use a text editor to create a file that contains a BACnet data selection in JSON format.
     - For content structure, see [BACnet data selection example](#bacnet-data-selection-example).
     - For a table of all available parameters, see [BACnet data selection](#bacnet-data-selection-parameters).
-2. Save the file, for example as `DataSelection.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a `POST` command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSelection/`.
+2. Save the file, for example as `ConfigureDataSelection.json`.
+3. Use any of the [Configuration tools](xref:ConfigurationTools1-4) capable of making HTTP requests to run a `POST` or `PUT` command with the contents of that file to the following endpoint: 
 
-   **Note:** The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
+   **Note:** The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration1-4).
 
     `5590` is the default port number. If you selected a different port number, replace it with that value.
 
     Example using `curl`:
-
-    **Note:** Run this command from the same directory where the file is located:
-
+    
     ```bash
-    curl -d "@DataSelection.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSelection"
-    ```
+      curl -d "@ConfigureDataSelection.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/BACnet1/DataSelection"
+      ```
+      
+      **Note:** Run this command from the same directory where the file is located.
+      
+      - `PUT` endpoint: `http://localhost:5590/api/v1/configuration/<componentId>/DataSelection/<StreamId>`
+      
+         Example using `curl`:
+      
+      ```bash
+      curl -d "@ConfigureDataSelection.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSelection/AnalogValue50.PresentValue"
+      ```
+      
+      **Note:** Run this command from the same directory where the file is located.
 
 ## BACnet data selection schema
 
@@ -82,18 +92,24 @@ The following parameters are available to configure BACnet data selection:
 
 | Parameter     | Required | Type | Description |
 |---------------|----------|------|-------------|
-| **Selected** | Optional | `boolean` | Use this field to select or clear a measurement. To select an item, set to `true` and specify a **ScheduleId**. To remove an item, leave the field empty or set to `false`. If not configured, the default value is `false`. |
+| **Selected** | Optional<sup>1</sup> | `boolean` | Use this field to select or clear a measurement. To select an item, set to `true` and specify a **ScheduleId**. To remove an item, leave the field empty or set to `false`. If not configured, the default value is `false`. |
 | **Name**      | Optional | `string` | Name of the data item collected from the data source. The default value is `null` and results in the **StreamId** value being used also as a **Name**. |
 | **StreamId** | Optional | `string` | The custom stream ID to create the streams. If not specified, the BACnet adapter will generate a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters:<br>`/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `'` `(` `)` `\` `*` `+` `,` `;` `=` `%` `<` `>` `|`<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods. |
 | **DataFilterId** | Optional | `string` | The ID of the data filter. If not specified, no data filtering occurs. |
 | **DeviceIPAddress** | Required | `string` | Device IP address |
-| **DeviceId** | Required | `number` | BACnet device instance number |
-| **ObjectType** | Required | `string` | Any of the [supported object types](xref:PIAdapterforBACnetPrinciplesOfOperation1-1#object-types-and-data-types)  |
-| **ObjectId** | Required | `number` | BACnet object instance number |
+| **DeviceId** | Required<sup>3</sup> | `number` | BACnet device instance number |
+| **ObjectType** | Required<sup>3</sup> | `string` | Any of the [supported object types](xref:PIAdapterforBACnetPrinciplesOfOperation1-1#object-types-and-data-types)  |
+| **ObjectId** | Required<sup>3</sup> | `number` | BACnet object instance number |
 | **DataCollectionMode** | Optional | `string` | Specifies the mode of data collection for the item. Must be one of `Poll`, `SubscribeCov`, or `SubscribeCovProperty`. Default value is `Poll`.<br><br>For more information, see [COV (Change Of Value) configuration](xref:BACnetCOVConfiguration1-1) and [Polled data stream configuration](xref:BACnetPolledDataStreamConfiguration1-1).|
 | **CovIncrement** | Optional | `number` | For use only with `SubscribeCovProperty` in **DataCollectionMode**. Specifies the amount that the configured property must change in order for a new value to be sent by the device. If the value is empty, the COV increment to use is determined by the device. If set to `0`, any change in value will result in a new data value being sent.|
-| **PropertyIdentifier** | Optional | `string` | Specifies which property to collect from the BACnet object. If left empty, `PresentValue` is collected. |
-| **ScheduleId** | Optional | `string` | Specifies a schedule ID to which the data selection item is linked. This data item is collected on the scheduled interval if Selected is set to `true`.<br><br>For **DataCollectionMode**=`Poll`, this is the interval at which this property is requested from the device.<br><br>For **DataCollectionMode**=`SubscribeCov` or `SubscribeCovProperty`, this is the interval at which a re-subscription request is sent.<br><br>For more information on schedules, see [Schedules configuration](xref:SchedulesConfiguration).|
+| **PropertyIdentifier** | Optional<sup>3</sup> | `string` | Specifies which property to collect from the BACnet object. If left empty, `PresentValue` is collected. |
+| **ScheduleId** | Optional<sup>1, 2</sup> | `string` | Specifies a schedule ID to which the data selection item is linked. This data item is collected on the scheduled interval if Selected is set to `true`.<br><br>For **DataCollectionMode**=`Poll`, this is the interval at which this property is requested from the device.<br><br>For **DataCollectionMode**=`SubscribeCov` or `SubscribeCovProperty`, this is the interval at which a re-subscription request is sent.<br><br>For more information on schedules, see [Schedules configuration](xref:SchedulesConfiguration1-4).|
+
+<sup>1</sup> Required for data flow.
+
+<sup>2</sup> If the configured **ScheduleId** for an item is not valid, then no data will be collected for the item because it will never be scheduled.
+
+<sup>3</sup> If you specify the same combination of **DeviceId**, **ObjectType**, **ObjectId**, and **PropertyIdentifier** for multiple data selection items, it can result in data not being written to one or more streams. OSIsoft recommends that the combination of those properties be unique for each data selection item.
 
 ## BACnet data selection example
 
@@ -143,9 +159,11 @@ The following is an example of a valid BACnet data selection configuration with 
 
 | Relative URL | HTTP verb | Action |
 | ------------ | --------- | ------ |
-| api/v1/configuration/_ComponentId_/DataSelection  | `GET` | Retrieves the BACnet data selection configuration. |
-| api/v1/configuration/_ComponentId_/DataSelection  | `PUT` | Configures or updates the BACnet data selection configuration. |
-| api/v1/configuration/_ComponentId_/DataSelection | `DELETE` | Deletes the BACnet data selection configuration. |
-| api/v1/configuration/_ComponentId_/DataSelection | `PATCH` | Allows partial updating of configured data selection items. <br>**Note:** The request must be an array containing one or more data selection items. Each data selection item in the array must include its **StreamId**. |
-| api/v1/configuration/_ComponentId_/DataSelection/_StreamId_ | `PUT` | Updates or creates a new data selection with the specified **StreamId**. |
-| api/v1/configuration/_ComponentId_/DataSelection/_StreamId_ | `DELETE` | Deletes a specific data selection item of the BACnet data selection configuration. |
+| api/v1/configuration/\<ComponentId\>/DataSelection  | `GET` | Retrieves the BACnet data selection configuration. |
+| api/v1/configuration\<ComponentId\>/DataSelection  | `PUT` | Configures or updates the BACnet data selection configuration. |
+| api/v1/configuration/\<ComponentId\>/DataSelection | `DELETE` | Deletes the BACnet data selection configuration. |
+| api/v1/configuration/\<ComponentId\>/DataSelection | `PATCH` | Allows partial updating of configured data selection items. <br>**Note:** The request must be an array containing one or more data selection items. Each data selection item in the array must include its **StreamId**. |
+| api/v1/configuration/\<ComponentId\>/DataSelection/\<StreamId> | `PUT` | Updates or creates a new data selection with the specified **StreamId**. |
+| api/v1/configuration/\<ComponentId\>/DataSelection/\<StreamId> | `DELETE` | Deletes a specific data selection item of the BACnet data selection configuration. |
+
+**Note:** Replace \<Component\> with the Id of your BACnet component. For example, BACnet1.
