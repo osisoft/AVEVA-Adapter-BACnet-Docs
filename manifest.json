@@ -560,7 +560,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.3/Configuration/configuration-tools.html",
-          "hash": "TZdf0fPvblPz8aynOTPcYQ=="
+          "hash": "IYXKTHSIvWlSr0vf8EqFIQ=="
         }
       },
       "is_incremental": false,
@@ -568,7 +568,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -608,6 +607,7 @@
     },
     {
       "log_codes": [
+        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -1067,6 +1067,7 @@
     },
     {
       "log_codes": [
+        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -1074,7 +1075,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Configuration/configure-a-network-proxy.html",
-          "hash": "S1xS99DyhFSbfIhm+xl3ag=="
+          "hash": "ze8xlE10ZvqIFYUBbXB8cQ=="
         }
       },
       "is_incremental": false,
@@ -1098,7 +1099,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/main/V1.4/Configuration/discovery-configuration.html",
-          "hash": "DZFsUK1ZXlsD2DipjMSIcw=="
+          "hash": "/TNs4if226VDhqEwZYqBBQ=="
         }
       },
       "is_incremental": false,
@@ -1106,7 +1107,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
