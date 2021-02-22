@@ -15,22 +15,22 @@ Complete the following steps to configure the BACnet data source:
 1. Use a text editor to create a file that contains a BACnet data source in JSON format.
     - For content structure, see [BACnet router data source example](#bacnet-router-data-source-example).
     - For a table of all available parameters, see [BACnet data source parameters](#bacnet-data-source-parameters).
-2. Save the file, for example as `DataSource.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a `POST` command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSource/`.
+2. Save the file, for example as `ConfigureDataSource.json`.
+3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a `PUT` command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSource/`.
 
-	**Note:** The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
+	**Note:** The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration1-4).
 
 	`5590` is the default port number. If you selected a different port number, replace it with that value.
 
 	Example using `curl`:
 
-	**Note:** Run this command from the same directory where the file is located:
-
 	```bash
-	curl -d "@DataSource.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSource"
+	curl -d "@ConfigureDataSource.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSource"
 	```
 
-After you complete data source configuration, the next step is to configure data selection. For more information, See [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration1-1).
+	**Note:** Run this command from the same directory where the file is located:
+	
+4. Configure data selection. For more information, See [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration1-1).
 
 ## BACnet data source schema
 
@@ -55,8 +55,8 @@ The following parameters are available to configure a BACnet data source:
 | **DeviceId** | Optional | `number` | Device instance number. If specified, the **IPAddress** is interpreted as for a BACnet device (not a BACnet router). If empty, the **IPAddress** is interpreted as for a BACnet router (not an individual BACnet device).|
 | **NetworkNumber** | Optional | `number` | Device network number for routed BACnet devices. This setting can only be specified when a **DeviceId** is specified. If specified, the **MACAddress** must also be specified.|
 | **MacAddress** | Optional | `string` | Device MAC address for routed BACnet devices. This setting can only be specified when a **DeviceId** is specified. If specified, the **NetworkNumber** must also be specified. It must contain 1-6 byte strings in hexadecimal format, separated by a dash `-` or colon `:`<br><br>Example: `12:34:ef:cd` |
-| **StreamIdPrefix** | Optional | `string` | Specifies what prefix is used for stream IDs. The naming convention is `StreamIdPrefix.StreamId`. An empty string means no prefix will be added to the stream IDs and names. A `null` value defaults to _ComponentID_ followed by a period.<br><br>Example: `BACnet1.NamespaceIndex.Identifier.`<br><br>**Note:** If you change the **StreamIdPrefix** of a configured adapter (for example, when you delete and add a data source), you need to restart the adapter for the changes to apply. New streams are created on adapter restart and pre-existing streams no longer update. |
-| **DefaultStreamIdPattern** | Optional | `string` | Specifies the default stream ID pattern to use. Possible parameters: {DeviceIPAddress}, {DeviceId}, {ObjectType}, {ObjectId}, and {PropertyIdentifier}. An empty or `null` value will result in {DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}.|
+| **StreamIdPrefix** | Optional | `string` | Specifies what prefix is used for stream IDs. The naming convention is `{StreamIdPrefix}{StreamId}`. An empty string means no prefix will be added to the stream IDs and names. A `null` value defaults to **ComponentID** followed by a period.<br><br>Example: `BACnet1.{DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}`<br><br>**Note:** If you change the **StreamIdPrefix** of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated.<br><br>Allowed value: any string<br>Default value: `null`|
+| **DefaultStreamIdPattern** | Optional | `string` | Specifies the default stream ID pattern to use. Possible parameters: `{DeviceIPAddress}`, `{DeviceId}`, `{ObjectType}`, `{ObjectId}`, and `{PropertyIdentifier}`.<br><br>Allowed value: any string<br>Default value: `{DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}` |
 
 ## BACnet router data source example
 
@@ -95,25 +95,23 @@ The following is an example of a valid BACnet routed device data source configur
 
 | Relative URL | HTTP verb | Action |
 | ------------ | --------- | ------ |
-| api/v1/configuration/_ComponentId_/DataSource | `GET` | Retrieves the BACnet data source configuration |
-| api/v1/configuration/_ComponentId_/DataSource  | `POST` | Creates the BACnet data source configuration |
-| api/v1/configuration/_ComponentId_/DataSource | `PUT` | Configures or updates the BACnet data source configuration |
-| api/v1/configuration/_ComponentId_/DataSource | `DELETE` | Deletes the BACnet data source configuration |
+| api/v1/configuration/\<ComponentId\>/DataSource | `GET` | Retrieves the BACnet data source configuration |
+| api/v1/configuration/\<ComponentId\>/DataSource | `POST` | Creates the BACnet data source configuration |
+| api/v1/configuration/\<ComponentId\>/DataSource | `PUT` | Configures or updates the BACnet data source configuration |
+| api/v1/configuration/\<ComponentId\>/DataSource | `DELETE` | Deletes the BACnet data source configuration |
 
-**Note:** Replace _ComponentId_ with the Id of your BACnet component. For example, _BACnet1_.
+**Note:** Replace \<Component\> with the Id of your BACnet component. For example, BACnet1.
 
 ## Discovery
 
 The BACnet adapter is able to discover available BACnet devices and objects defined by the data source configuration. For discovery of a BACnet router, the adapter sends a *Who-Is* request and waits 30 seconds to receive *I-Am* responses from available devices. Upon receiving an *I-Am* response, the adapter requests the *Protocol Services Supported*, *Maximum APDU Length*, *Segmentation* and *Object List* properties from the available devices. For discovery of a single device, the adapter does not send a *Who-Is* request but proceeds to request its properties.
 
-A successful discovery results in populating the [DeviceConfiguration](xref:PIAdapterforBACnetDataSelectionConfiguration1-1#bacnet-device-configuration) and optionally, [DataSelection Configuration](xref:PIAdapterforBACnetDataSelectionConfiguration1-1#configure-bacnet-data-selection).
+When the adapter starts or a new data source is configured, the adapter checks if device configuration is populated. Discovery is performed only if device configuration is empty. The data selection configuration is updated by discovery only if it is empty.
 
-* DataSelection is populated with *Selected* attribute for all items set to `false`.
-* DeviceConfiguration is read-only and provides more information such as segmentation and services that are supported. This can help you make informed decisions in data selection.
+A successful discovery populates the device configuration and provides information such as segmentation and services that are supported. Optionally, the data selection configuration is also populated with the **Selected** parameter for all items set to `false`. For information about device configuration and data selection configuration, see [BACnet device configuration](xref:PIAdapterforBACnetDataSelectionConfiguration1-1#bacnet-device-configuration) and [Configure BACnet data selection](xref:PIAdapterforBACnetDataSelectionConfiguration1-1#configure-bacnet-data-selection).
 
-When the adapter starts or a new data source is configured, the adapter checks if DeviceConfiguration is populated. Discovery is performed only if DeviceConfiguration is empty. DataSelection is updated by discovery only if it is empty.
+The adapter [log](xref:Logging-configuration1-4) indicates when discovery is complete.
 
-The adapter [log](xref:Logging-configuration) indicates when discovery is complete.
 
 ### Example log
 

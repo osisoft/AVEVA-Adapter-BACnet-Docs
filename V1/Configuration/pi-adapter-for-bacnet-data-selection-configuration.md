@@ -37,6 +37,8 @@ You can use the device configuration to choose an appropriate **DataCollectionMo
 ]
 ```
 
+**Note**: The device configuration is read-only.
+
 ### REST URLs (device configuration)
 
 | Relative URL | HTTP verb | Action |
@@ -156,9 +158,11 @@ The following is an example of a valid BACnet data selection configuration with 
 
 | Relative URL | HTTP verb | Action |
 | ------------ | --------- | ------ |
-| api/v1/configuration/_ComponentId_/DataSelection  | `GET` | Retrieves the BACnet data selection configuration. |
-| api/v1/configuration/_ComponentId_/DataSelection  | `PUT` | Configures or updates the BACnet data selection configuration. |
-| api/v1/configuration/_ComponentId_/DataSelection | `DELETE` | Deletes the BACnet data selection configuration. |
-| api/v1/configuration/_ComponentId_/DataSelection | `PATCH` | Allows partial updating of configured data selection items. <br>**Note:** The request must be an array containing one or more data selection items. Each data selection item in the array must include its **StreamId**. |
-| api/v1/configuration/_ComponentId_/DataSelection/_StreamId_ | `PUT` | Updates or creates a new data selection with the specified **StreamId**. |
-| api/v1/configuration/_ComponentId_/DataSelection/_StreamId_ | `DELETE` | Deletes a specific data selection item of the BACnet data selection configuration. |
+| api/v1/configuration/\<ComponentId\>/DataSelection  | `GET` | Retrieves the BACnet data selection configuration. |
+| api/v1/configuration/\<ComponentId\>/DataSelection  | `PUT` | Configures or updates the BACnet data selection configuration. |
+| api/v1/configuration/\<ComponentId\>/DataSelection | `DELETE` | Deletes the BACnet data selection configuration. |
+| api/v1/configuration/\<ComponentId\>/DataSelection | `PATCH` | Allows partial updating of configured data selection items. <br>**Note:** The request must be an array containing one or more data selection items. Each data selection item in the array must include its **StreamId**. |
+| api/v1/configuration/\<ComponentId\>/DataSelection/\<StreamId> | `PUT` | Updates or creates a new data selection with the specified **StreamId**. |
+| api/v1/configuration/\<ComponentId\>/DataSelection/\<StreamId> | `DELETE` | Deletes a specific data selection item of the BACnet data selection configuration. |
+
+**Note:** Replace \<Component\> with the Id of your BACnet component. For example, BACnet1.
