@@ -46,27 +46,34 @@ You can use the device configuration to choose an appropriate **DataCollectionMo
 
 ## Configure BACnet data selection
 
-**Note:** You cannot modify BACnet data selection configurations manually. You must use the REST endpoints to add or edit the configuration.
+Complete the following steps to configure the BACnet data selection. Use the `api/v1/configuration/<ComponentId>/DataSelection` REST endpoint to add or edit the configuration.
 
-Complete the following steps to configure the BACnet data selection:
+**Note:** This procedure uses cURL commands for REST endpoint configuration, but other options are available. For more information, see [Configuration tools](xref:ConfigurationTools).
 
-1. Use a text editor to create a file that contains a BACnet data selection in JSON format.
-    - For content structure, see [BACnet data selection example](#bacnet-data-selection-example).
-    - For a table of all available parameters, see [BACnet data selection](#bacnet-data-selection-parameters).
-2. Save the file, for example as `DataSelection.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to run a `POST` command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSelection/<StreamId>`.
+1. Using a text editor, create an empty text file.
 
-   **Note:** The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration).
+1. Copy and paste an example configuration for BACnet data selection into the file.
 
-    `5590` is the default port number. If you selected a different port number, replace it with that value.
+    See [BACnet data selection example](#bacnet-data-selection-example) for sample JSON.
 
-    Example using `curl`:
+1. Update the example JSON parameters for your environment.
 
-    **Note:** Run this command from the same directory where the file is located:
+    For a table of all available parameters, see [BACnet data selection parameters](#bacnet-data-selection-parameters).
+
+1. Save the file as `DataSelection.json`.
+
+1. Open a terminal or command prompt session. Change directory to the location of `DataSelection.json`.
+
+1. Enter the following cURL command to configure data selection for your data source. Update the `<StreamId>` placeholders for your environment.
 
     ```bash
-    curl -d "@DataSelection.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSelection/AnalogValue50.PresentValue"
+    curl -d "@DataSelection.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSelection/<StreamId>"
     ```
+
+    **Notes:**
+    * If using a non-default port, update `5590` to the port number you are using.
+    * If using a component ID other than `BACnet1`, update the endpoint with your chosen component ID.
+    * See [REST URLs](#rest-urls) for a list of other REST operations you can perform.
 
 ## BACnet data selection schema
 
