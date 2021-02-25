@@ -6,17 +6,17 @@ uid: PIAdapterforBACnetDataSourceConfiguration
 
 To use the BACnet adapter, you must configure the data source to receive data.
 
+**Note:** This procedure uses cURL commands for REST endpoint configuration, but other options are available. For more information, see [Configuration tools](xref:ConfigurationTools).
+
 ## Configure BACnet data source
 
-Complete the following steps to configure the BACnet data source. Use the `api/v1/configuration/<ComponentId>/DataSource` REST endpoint to add or edit the configuration.
-
-**Note:** This procedure uses cURL commands for REST endpoint configuration, but other options are available. For more information, see [Configuration tools](xref:ConfigurationTools).
+Complete the following steps to configure the BACnet data source. Use the `POST` method in conjunction with the following endpoint to initialize the configuration: `api/v1/configuration/<ComponentId>/DataSource`.
 
 1. Using a text editor, create an empty text file.
 
 1. Copy and paste an example configuration for a BACnet router or routed device into the file.
 
-    See [BACnet data source examples](#bacnet-data-source-examples) for sample JSON.
+    For sample JSON, see [BACnet data source examples](#bacnet-data-source-examples).
 
 1. Update the example JSON parameters for your environment.
 
@@ -24,21 +24,23 @@ Complete the following steps to configure the BACnet data source. Use the `api/v
 
 1. Save the file as `ConfigureDataSource.json`.
 
-1. Open a terminal or cmd prompt session. Change directory to the location of `ConfigureDataSource.json`.
+1. Open a command line session. Change directory to the location of `ConfigureDataSource.json`.
 
-1. Enter the following cURL command to configure the BACnet data source.
+1. Enter the following cURL command (which uses the `POST` method) to initialize the BACnet data source configuration.
 
     ```bash
-    curl -d "@ConfigureDataSource.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSource"
+    curl -d "@ConfigureDataSource.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/BACnet1/DataSource"
     ```
 
     **Notes:**
   
-    * If using a non-default port, update `5590` to the port number you are using.
+    * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
     * If using a component ID other than `BACnet1`, update the endpoint with your chosen component ID.
-    * See [REST URLs](#rest-urls) for a list of other REST operations you can perform.
+    * For a list of other REST operations you can perform, like updating or deleting a data source, see [REST URLs](#rest-urls).
+    <br/>
+    <br/>
 
-1. Configure data selection. For more information, See [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration).
+1. Configure data selection. For more information, see [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration).
 
 ## BACnet data source schema
 
@@ -110,7 +112,7 @@ The following is an example of a valid BACnet routed device data source configur
 | api/v1/configuration/\<ComponentId\>/DataSource | `PUT` | Configures or updates the BACnet data source configuration |
 | api/v1/configuration/\<ComponentId\>/DataSource | `DELETE` | Deletes the BACnet data source configuration |
 
-**Note:** Replace \<Component\> with the Id of your BACnet component. For example, BACnet1.
+**Note:** Replace \<ComponentId\> with the ID of your BACnet component. For example, BACnet1.
 
 ## Discovery
 
