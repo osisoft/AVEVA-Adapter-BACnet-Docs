@@ -6,31 +6,41 @@ uid: PIAdapterforBACnetDataSourceConfiguration1-1
 
 To use the BACnet adapter, you must configure the data source to receive data.
 
+**Note:** This procedure uses cURL commands for REST endpoint configuration, but other options are available. For more information, see [Configuration tools](xref:ConfigurationTools).
+
 ## Configure BACnet data source
 
-**Note:** You cannot modify BACnet data source configurations manually. You must use the REST endpoints to add or edit the configuration.
+Complete the following steps to configure the BACnet data source. Use the `POST` method in conjunction with the following endpoint to initialize the configuration: `api/v1/configuration/<ComponentId>/DataSource`.
 
-Complete the following steps to configure the BACnet data source:
+1. Using a text editor, create an empty text file.
 
-1. Use a text editor to create a file that contains a BACnet data source in JSON format.
-    - For content structure, see [BACnet router data source example](#bacnet-router-data-source-example).
-    - For a table of all available parameters, see [BACnet data source parameters](#bacnet-data-source-parameters).
-2. Save the file, for example as `ConfigureDataSource.json`.
-3. Use any of the [Configuration tools](xref:ConfigurationTools) capable of making HTTP requests to execute a `PUT` command with the contents of the file to the following endpoint: `http://localhost:5590/api/v1/configuration/<ComponentId>/DataSource/`.
+1. Copy and paste an example configuration for a BACnet router or routed device into the file.
 
-	**Note:** The following example uses BACnet1 as the adapter component name. For more information on how to add a component, see [System components configuration](xref:SystemComponentsConfiguration1-4).
+    For sample JSON, see [BACnet data source examples](#bacnet-data-source-examples).
 
-	`5590` is the default port number. If you selected a different port number, replace it with that value.
+1. Update the example JSON parameters for your environment.
 
-	Example using `curl`:
+    For a table of all available parameters, see [BACnet data source parameters](#bacnet-data-source-parameters).
 
-	```bash
-	curl -d "@ConfigureDataSource.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSource"
-	```
+1. Save the file as `ConfigureDataSource.json`.
 
-	**Note:** Run this command from the same directory where the file is located:
-	
-4. Configure data selection. For more information, See [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration1-1).
+1. Open a command line session. Change directory to the location of `ConfigureDataSource.json`.
+
+1. Enter the following cURL command (which uses the `POST` method) to initialize the BACnet data source configuration.
+
+    ```bash
+    curl -d "@ConfigureDataSource.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/BACnet1/DataSource"
+    ```
+
+    **Notes:**
+  
+    * If you installed the adapter to listen on a non-default port, update `5590` to the port number in use.
+    * If using a component ID other than `BACnet1`, update the endpoint with your chosen component ID.
+    * For a list of other REST operations you can perform, like updating or deleting a data source, see [REST URLs](#rest-urls).
+    <br/>
+    <br/>
+
+1. Configure data selection. For more information, see [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration1-1).
 
 ## BACnet data source schema
 
@@ -58,36 +68,38 @@ The following parameters are available to configure a BACnet data source:
 | **StreamIdPrefix** | Optional | `string` | Specifies what prefix is used for stream IDs. The naming convention is `{StreamIdPrefix}{StreamId}`. An empty string means no prefix will be added to the stream IDs and names. A `null` value defaults to **ComponentID** followed by a period.<br><br>Example: `BACnet1.{DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}`<br><br>**Note:** If you change the **StreamIdPrefix** of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated.<br><br>Allowed value: any string<br>Default value: `null`|
 | **DefaultStreamIdPattern** | Optional | `string` | Specifies the default stream ID pattern to use. Possible parameters: `{DeviceIPAddress}`, `{DeviceId}`, `{ObjectType}`, `{ObjectId}`, and `{PropertyIdentifier}`.<br><br>Allowed value: any string<br>Default value: `{DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}` |
 
-## BACnet router data source example
+## BACnet data source examples
+
+### BACnet router data source example
 
 The following is an example of a valid BACnet data source configuration:
 
 ```json
 {
-	"IPAddress": "192.168.1.1",
-	"Port": 47808,
-	"MaxConcurrentNetworkRequests" : 0,
-	"RequestDelay": "00:00:00",
-	"AllowedConsecutiveFailedRequests": 3,
-	"ReconnectInterval": "02:00:00"
+    "IPAddress": "192.168.1.1",
+    "Port": 47808,
+    "MaxConcurrentNetworkRequests" : 0,
+    "RequestDelay": "00:00:00",
+    "AllowedConsecutiveFailedRequests": 3,
+    "ReconnectInterval": "02:00:00"
 }
 ```
 
-## BACnet routed device data source example
+### BACnet routed device data source example
 
 The following is an example of a valid BACnet routed device data source configuration:
 
 ```json
 {
     "IPAddress": "192.168.1.1",
-	"Port": 47808,
-	"MaxConcurrentNetworkRequests" : 1,
-	"RequestDelay": "00:00:00",
-	"AllowedConsecutiveFailedRequests": 3,
-	"ReconnectInterval": "02:00:00",
-	"DeviceID": 1,
-	"NetworkNumber": 100,
-	"MacAddress": "12"
+    "Port": 47808,
+    "MaxConcurrentNetworkRequests" : 1,
+    "RequestDelay": "00:00:00",
+    "AllowedConsecutiveFailedRequests": 3,
+    "ReconnectInterval": "02:00:00",
+    "DeviceID": 1,
+    "NetworkNumber": 100,
+    "MacAddress": "12"
 }
 ```
 
@@ -100,7 +112,7 @@ The following is an example of a valid BACnet routed device data source configur
 | api/v1/configuration/\<ComponentId\>/DataSource | `PUT` | Configures or updates the BACnet data source configuration |
 | api/v1/configuration/\<ComponentId\>/DataSource | `DELETE` | Deletes the BACnet data source configuration |
 
-**Note:** Replace \<Component\> with the Id of your BACnet component. For example, BACnet1.
+**Note:** Replace \<ComponentId\> with the Id of your BACnet component. For example, BACnet1.
 
 ## Discovery
 
