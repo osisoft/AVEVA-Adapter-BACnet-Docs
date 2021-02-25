@@ -61,7 +61,7 @@ Complete the following steps to configure the BACnet data selection. Use the `PO
 
     For a table of all available parameters, see [BACnet data selection parameters](#bacnet-data-selection-parameters).
 
-1. Save the file as `DataSelection.json`.
+1. Save the file. For example, as `DataSelection.json`.
 
 1. Open command line session. Change directory to the location of `DataSelection.json`.
 
