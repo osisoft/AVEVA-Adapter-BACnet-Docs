@@ -167,4 +167,4 @@ The following is an example of a valid BACnet data selection configuration with 
 | api/v1/configuration/\<ComponentId\>/DataSelection/\<StreamId> | `PUT` | Updates or creates a new data selection with the specified **StreamId**. |
 | api/v1/configuration/\<ComponentId\>/DataSelection/\<StreamId> | `DELETE` | Deletes a specific data selection item of the BACnet data selection configuration. |
 
-**Note:** Replace `<ComponentId>` with the ID of your BACnet component. For example, `BACnet1`.
+**Note:** Replace \<Component\> with the Id of your BACnet component. For example, BACnet1.
