@@ -112,7 +112,7 @@ The following is an example of a valid BACnet routed device data source configur
 | api/v1/configuration/\<ComponentId\>/DataSource | `PUT` | Configures or updates the BACnet data source configuration |
 | api/v1/configuration/\<ComponentId\>/DataSource | `DELETE` | Deletes the BACnet data source configuration |
 
-**Note:** Replace \<ComponentId\> with the ID of your BACnet component. For example, BACnet1.
+**Note:** Replace \<ComponentId\> with the Id of your BACnet component. For example, BACnet1.
 
 ## Discovery
 
