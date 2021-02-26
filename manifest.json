@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "V1.1/Configuration/PI Adapter for BACnet data selection configuration1-1.html",
-          "hash": "hVF9QEdjL216XJtrdsNIzQ=="
+          "hash": "WRD4k5rt2EYw3zdu0c/AJQ=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "V1.1/Configuration/PI Adapter for BACnet data source configuration1-1.html",
-          "hash": "FMm3fDh60s0a6HIU6FDy0Q=="
+          "hash": "nB/j/8DrQLQ2E+ppENWBMA=="
         }
       },
       "is_incremental": false,
@@ -258,7 +258,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/pi-adapter-for-bacnet-data-selection-configuration.html",
-          "hash": "hEYqe8xe49qyozkhTvV43g=="
+          "hash": "rVJSEMAU7l87+Ljyf27Q2w=="
         }
       },
       "is_incremental": false,
@@ -273,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/pi-adapter-for-bacnet-data-source-configuration.html",
-          "hash": "dNYOO+M6dP/z8ehsnRPjPA=="
+          "hash": "2+anvGBDcqYgWbHhTrAEkQ=="
         }
       },
       "is_incremental": false,
@@ -568,7 +568,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -608,6 +607,7 @@
     },
     {
       "log_codes": [
+        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -1067,6 +1067,7 @@
     },
     {
       "log_codes": [
+        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -1106,7 +1107,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
