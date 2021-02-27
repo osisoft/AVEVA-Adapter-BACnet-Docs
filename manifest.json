@@ -222,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/Configuration.html",
-          "hash": "rcsToQVPPFU3LLMu74wRNw=="
+          "hash": "tB6UFEDYf7MjOCwt9HsRfA=="
         }
       },
       "is_incremental": false,
@@ -568,6 +568,7 @@
     },
     {
       "log_codes": [
+        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -607,7 +608,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
