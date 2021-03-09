@@ -8,7 +8,7 @@
     <title>PI Adapter for BACnet data selection configuration </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="PI Adapter for BACnet data selection configuration ">
-    <meta name="generator" content="docfx 2.56.5.0">
+    <meta name="generator" content="docfx 2.56.7.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -73,7 +73,7 @@
 
 <p>In addition to the data source configuration, you need to provide a data selection configuration to specify the data you want the BACnet adapter to collect from the data sources.</p>
 <p>When you add a data source, the adapter discovers devices and objects specified in the configuration.</p>
-<p><strong>Note:</strong> This procedure uses cURL commands for REST endpoint configuration, but other options are available. For more information, see <a class="xref" href="../../V1/main/V1/Configuration/configuration-tools.html">Configuration tools</a>.</p>
+<p><strong>Note:</strong> This procedure uses cURL commands for REST endpoint configuration, but other options are available. For more information, see <a class="xref" href="../../v1/main/V1/Configuration/configuration-tools.html">Configuration tools</a>.</p>
 <h2 id="bacnet-device-configuration">BACnet device configuration</h2>
 <p>In data source discovery, device information for all discovered devices is retrieved by the BACnet adapter, which is subsequently available through the following REST endpoint using any configuration tool that can execute an HTTP <code>GET</code> command:</p>
 <p><code>http://localhost:5590/api/v1/configuration/&lt;ComponentId&gt;/DeviceConfiguration/</code></p>
@@ -231,7 +231,7 @@
 <td><strong>ScheduleId</strong></td>
 <td>Optional<sup>1, 2</sup></td>
 <td><code>string</code></td>
-<td>Specifies a schedule ID to which the data selection item is linked. This data item is collected on the scheduled interval if Selected is set to <code>true</code>.<br><br>For <strong>DataCollectionMode</strong>=<code>Poll</code>, this is the interval at which this property is requested from the device.<br><br>For <strong>DataCollectionMode</strong>=<code>SubscribeCov</code> or <code>SubscribeCovProperty</code>, this is the interval at which a re-subscription request is sent.<br><br>For more information on schedules, see <a class="xref" href="../../V1/main/V1.4/Configuration/schedules-configuration.html">Schedules configuration</a>.</td>
+<td>Specifies a schedule ID to which the data selection item is linked. This data item is collected on the scheduled interval if Selected is set to <code>true</code>.<br><br>For <strong>DataCollectionMode</strong>=<code>Poll</code>, this is the interval at which this property is requested from the device.<br><br>For <strong>DataCollectionMode</strong>=<code>SubscribeCov</code> or <code>SubscribeCovProperty</code>, this is the interval at which a re-subscription request is sent.<br><br>For more information on schedules, see <a class="xref" href="../../v1/main/V1.4/Configuration/schedules-configuration.html">Schedules configuration</a>.</td>
 </tr>
 </tbody>
 </table>
