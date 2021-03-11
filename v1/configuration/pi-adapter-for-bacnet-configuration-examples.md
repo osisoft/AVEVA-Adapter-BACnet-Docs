@@ -118,7 +118,7 @@ The following JSON samples provide examples for all configurations available for
 }
 ```
 
-## Data source configuration
+## BACnet data source configuration
 
 The following are representations of data source configurations for the BACnet adapter.
 
