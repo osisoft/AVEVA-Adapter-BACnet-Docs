@@ -25,7 +25,7 @@ The following JSON samples provide examples for all configurations available for
 ]
 ```
 
-## BACnet adapter configuration
+## Adapter configuration
 
 ```json
 {
@@ -118,7 +118,7 @@ The following JSON samples provide examples for all configurations available for
 }
 ```
 
-## BACnet data source configuration
+## Data source configuration
 
 The following are representations of data source configurations for the BACnet adapter.
 
@@ -155,7 +155,7 @@ The following is an example of a valid BACnet routed device data source configur
 }
 ```
 
-## BACnet data selection example
+## Data selection example
 
 The following is an example of a valid BACnet data selection configuration with different data collection modes. Because the last item has **Selected** set to `false`, data will not be collected for it.
 
