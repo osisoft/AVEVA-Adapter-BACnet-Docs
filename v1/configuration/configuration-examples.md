@@ -1,5 +1,5 @@
 ---
-uid: PIAdapterForBACnetConfigurationExamples
+uid: ConfigurationExamples
 ---
 
 # PI Adapter for BACnet configuration examples
