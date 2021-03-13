@@ -2,7 +2,7 @@
   href: Health/toc.yml
   topicHref: adapter-health-for-bacnet.md
 - name: Adapter diagnostics
-  href: ../main/V1/Diagnostics/toc.yml
-  topicHref: ../main/V1/Diagnostics/adapter-diagnostics.md
+  href: ../main/v1/diagnostics/toc.yml
+  topicHref: ../main/v1/diagnostics/adapter-diagnostics.md
 - name: Egress diagnostics
-  href: ../main/V1/Diagnostics/egress-diagnostics.md
+  href: ../main/v1/diagnostics/egress-diagnostics.md
