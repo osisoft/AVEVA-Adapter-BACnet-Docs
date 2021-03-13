@@ -88,6 +88,18 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "V1.1/Configuration/configuration-examples1-1.md",
+      "output": {
+        ".html": {
+          "relative_path": "V1.1/Configuration/configuration-examples1-1.html",
+          "hash": "vMAWp4bW4bH3zlF79zhvYw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "log_codes": [
         "InvalidFileLink"
       ],
@@ -223,6 +235,18 @@
         ".html": {
           "relative_path": "toc.html",
           "hash": "aLLxK67DQ5fwoxyQVBdTFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "v1/configuration/configuration-examples.md",
+      "output": {
+        ".html": {
+          "relative_path": "v1/configuration/configuration-examples.html",
+          "hash": "+k5apXjOIUyxsgboVV3v6Q=="
         }
       },
       "is_incremental": false,
@@ -2122,7 +2146,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 143,
+          "total_file_count": 145,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

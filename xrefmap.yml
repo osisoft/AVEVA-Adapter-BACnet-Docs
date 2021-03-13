@@ -73,6 +73,12 @@ references:
 - uid: BufferingConfiguration1-4
   name: Buffering configuration
   href: v1/main/V1.4/Configuration/buffering-configuration.html
+- uid: ConfigurationExamples
+  name: PI Adapter for BACnet configuration examples
+  href: v1/configuration/configuration-examples.html
+- uid: ConfigurationExamples1-1
+  name: PI Adapter for BACnet configuration examples
+  href: V1.1/Configuration/configuration-examples1-1.html
 - uid: ConfigurationTools
   name: Configuration tools
   href: v1/main/V1/Configuration/configuration-tools.html
