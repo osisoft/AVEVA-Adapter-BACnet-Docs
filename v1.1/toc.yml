@@ -1,19 +1,19 @@
 - name: PI Adapter for BACnet overview
-  href: PI-Adapter-for-BACnet-overview1-1.md
-  homepage: PI-Adapter-for-BACnet-overview1-1.md
+  href: pi-adapter-for-bacnet-overview1-1.md
+  homepage: pi-adapter-for-bacnet-overview1-1.md
 - name: Installation
-  href: Installation/toc.yml
-  topicHref: main/V1/Installation/Installation.md
+  href: installation/toc.yml
+  topicHref: main/v1/installation/installation.md
 - name: Configuration
-  href: Configuration/toc.yml
-  topicHref: Configuration/Configuration1-1.md
+  href: configuration/toc.yml
+  topicHref: configuration/configuration1-1.md
 - name: Administration
-  href: main/V1/Administration/toc.yml
-  topicHref: main/V1/Administration/Administration.md
+  href: main/v1/administration/toc.yml
+  topicHref: main/v1/administration/administration.md
 - name: Health and diagnostics
-  href: Health/toc.yml
-  topicHref: Health/Health and diagnostics for BACnet1-1.md
+  href: health/toc.yml
+  topicHref: health/health-and-diagnostics-for-bacnet1-1.md
 - name: Release notes
-  href: Release notes/Release notes1-1.md
+  href: release-notes/release-notes1-1.md
 - name: Technical support and feedback
-  href: main/V1/Technical support and feedback.md
+  href: main/v1/technical-support-and-feedback.md

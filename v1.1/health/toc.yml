@@ -1,10 +1,10 @@
 - name: Adapter health
-  href: Health/toc.yml
-  topicHref: Adapter health for BACnet1-1.md
+  href: health/toc.yml
+  topicHref: adapter-health-for-bacnet1-1.md
 - name: Adapter diagnostics
-  href: ../main/V1/Diagnostics/toc.yml
-  topicHref: ../main/V1/Diagnostics/Adapter diagnostics.md
+  href: ../main/v1/diagnostics/toc.yml
+  topicHref: ../main/v1/diagnostics/adapter-diagnostics.md
 - name: Egress diagnostics
-  href: ../main/V1/Diagnostics/Egress diagnostics.md
+  href: ../main/v1/diagnostics/egress-diagnostics.md
   name: Data packet tracing 
-  href: Health/Data Packet Tracing.md
+  href: health/data-packet-tracing.md
