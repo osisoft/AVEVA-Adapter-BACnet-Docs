@@ -27,7 +27,7 @@ references:
   href: v1/health/adapter-health-for-bacnet.html
 - uid: AdapterHealthForBACnet1-1
   name: Adapter health
-  href: V1.1/Health/Adapter%20health%20for%20BACnet1-1.html
+  href: v1.1/health/adapter-health-for-bacnet1-1.html
 - uid: AdapterMetadata
   name: Adapter metadata
   href: v1/main/V1/Metadata/adapter-metadata.html
@@ -51,19 +51,19 @@ references:
   href: v1/configuration/configuration.html
 - uid: BACnetConfiguration1-1
   name: Configuration
-  href: V1.1/Configuration/Configuration1-1.html
+  href: v1.1/configuration/configuration1-1.html
 - uid: BACnetCOVConfiguration
   name: COV (Change Of Value) configuration
   href: v1/configuration/data-selection-configuration/change-of-value-configuration.html
 - uid: BACnetCOVConfiguration1-1
   name: COV (Change Of Value) configuration
-  href: V1.1/Configuration/Data%20selection%20configuration/Change%20Of%20Value%20configuration1-1.html
+  href: v1.1/configuration/data-selection-configuration/change-of-value-configuration1-1.html
 - uid: BACnetPolledDataStreamConfiguration
   name: Polled data stream configuration
   href: v1/configuration/data-selection-configuration/polled-data-stream-configuration.html
 - uid: BACnetPolledDataStreamConfiguration1-1
   name: Polled data stream configuration
-  href: V1.1/Configuration/Data%20selection%20configuration/Polled%20data%20stream%20configuration1-1.html
+  href: v1.1/configuration/data-selection-configuration/polled-data-stream-configuration1-1.html
 - uid: BufferingConfiguration
   name: Buffering configuration
   href: v1/main/V1/Configuration/buffering-configuration.html
@@ -78,7 +78,7 @@ references:
   href: v1/configuration/configuration-examples.html
 - uid: ConfigurationExamples1-1
   name: PI Adapter for BACnet configuration examples
-  href: V1.1/Configuration/configuration-examples1-1.html
+  href: v1.1/configuration/configuration-examples1-1.html
 - uid: ConfigurationTools
   name: Configuration tools
   href: v1/main/V1/Configuration/configuration-tools.html
@@ -126,7 +126,7 @@ references:
   href: v1/health/device-status-for-bacnet.html
 - uid: DeviceStatusForBACnet1-1
   name: Device status
-  href: V1.1/Health/Device%20status%20for%20BACnet1-1.html
+  href: v1.1/health/device-status-for-bacnet1-1.html
 - uid: DiagnosticsConfiguration
   name: Diagnostics configuration
   href: v1/main/V1/ARCHIVE/Diagnostics%20configuration.html
@@ -189,7 +189,7 @@ references:
   href: v1/health/health-and-diagnostics-for-bacnet.html
 - uid: HealthAndDiagnosticsForBACnet1-1
   name: Health and diagnostics
-  href: V1.1/Health/Health%20and%20diagnostics%20for%20BACnet1-1.html
+  href: v1.1/health/health-and-diagnostics-for-bacnet1-1.html
 - uid: HealthEndpointConfiguration
   name: Health endpoint configuration
   href: v1/main/V1/Configuration/health-endpoint-configuration.html
@@ -213,7 +213,7 @@ references:
   href: v1/installation/install-pi-adapter-for-bacnet-using-docker.html
 - uid: InstallPIAdapterForBACnetUsingDocker1-1
   name: Install PI Adapter for BACnet using Docker
-  href: V1.1/Installation/Install%20PI%20Adapter%20for%20BACnet%20using%20Docker1-1.html
+  href: v1.1/installation/install-pi-adapter-for-bacnet-using-docker1-1.html
 - uid: InstallTheAdapter
   name: Install the adapter
   href: v1/main/V1/Installation/install-the-adapter.html
@@ -261,31 +261,31 @@ references:
   href: v1/health/next-health-message-expected-for-bacnet.html
 - uid: NextHealthMessageExpectedForBACnet1-1
   name: Next health message expected
-  href: V1.1/Health/Next%20health%20message%20expected%20for%20BACnet1-1.html
+  href: v1.1/health/next-health-message-expected-for-bacnet1-1.html
 - uid: PIAdapterforBACnetDataSelectionConfiguration
   name: PI Adapter for BACnet data selection configuration
   href: v1/configuration/pi-adapter-for-bacnet-data-selection-configuration.html
 - uid: PIAdapterforBACnetDataSelectionConfiguration1-1
   name: PI Adapter for BACnet data selection configuration
-  href: V1.1/Configuration/PI%20Adapter%20for%20BACnet%20data%20selection%20configuration1-1.html
+  href: v1.1/configuration/pi-adapter-for-bacnet-data-selection-configuration1-1.html
 - uid: PIAdapterforBACnetDataSourceConfiguration
   name: PI Adapter for BACnet data source configuration
   href: v1/configuration/pi-adapter-for-bacnet-data-source-configuration.html
 - uid: PIAdapterforBACnetDataSourceConfiguration1-1
   name: PI Adapter for BACnet data source configuration
-  href: V1.1/Configuration/PI%20Adapter%20for%20BACnet%20data%20source%20configuration1-1.html
+  href: v1.1/configuration/pi-adapter-for-bacnet-data-source-configuration1-1.html
 - uid: PIAdapterforBACnetOverview
   name: PI Adapter for BACnet overview
   href: v1/index.html
 - uid: PIAdapterforBACnetOverview1-1
   name: PI Adapter for BACnet overview
-  href: V1.1/PI-Adapter-for-BACnet-overview1-1.html
+  href: v1.1/pi-adapter-for-bacnet-overview1-1.html
 - uid: PIAdapterforBACnetPrinciplesOfOperation
   name: PI Adapter for BACnet principles of operation
   href: v1/pi-adapter-for-bacnet-overview/pi-adapter-for-bacnet-principles-of-operation.html
 - uid: PIAdapterforBACnetPrinciplesOfOperation1-1
   name: PI Adapter for BACnet principles of operation
-  href: V1.1/PI%20Adapter%20for%20BACnet%20overview/PI%20Adapter%20for%20BACnet%20principles%20of%20operation1-1.html
+  href: v1.1/pi-adapter-for-bacnet-overview/pi-adapter-for-bacnet-principles-of-operation1-1.html
 - uid: PIAdapterUsers
   name: PI Adapter users
   href: v1/main/V1/pi-adapter-users.html
@@ -306,7 +306,7 @@ references:
   href: v1/release-notes/release-notes.html
 - uid: ReleaseNotes1-1
   name: Release notes
-  href: V1.1/Release%20Notes/Release%20Notes1-1.html
+  href: v1.1/release-notes/release-notes1-1.html
 - uid: RetrieveProductVersionInformation
   name: Retrieve product version information
   href: v1/main/V1/Administration/retrieve-product-version-information.html
@@ -384,7 +384,7 @@ references:
   href: v1/installation/system-requirements.html
 - uid: SystemRequirements1-1
   name: System requirements
-  href: V1.1/Installation/System%20requirements1-1.html
+  href: v1.1/installation/system-requirements1-1.html
 - uid: TechnicalSupportAndFeedback
   name: Technical support and feedback
   href: v1/main/V1/technical-support-and-feedback.html

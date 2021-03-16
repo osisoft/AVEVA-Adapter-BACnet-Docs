@@ -5,19 +5,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Next health message expected </title>
+    <title>COV (Change Of Value) configuration </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Next health message expected ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="title" content="COV (Change Of Value) configuration ">
+    <meta name="generator" content="docfx 2.56.5.0">
     
-    <link rel="shortcut icon" href="../../favicon.ico">
-    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../styles/docfx.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="../../toc.html">
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
     
-    <meta property="docfx:rel" content="../../">
+    <meta property="docfx:rel" content="../../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -33,8 +33,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../../V1/index.html" width="46">
-                <img id="logo" src="../../v1/main/V1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              <a class="navbar-brand" href="../../../V1/index.html" width="46">
+                <img id="logo" src="../../../v1/main/V1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -68,31 +68,14 @@
       <div role="main" class="container body-content hide-when-search">
         <div class="article row grid">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="NextHealthMessageExpectedForBACnet1-1">
-<h1 id="next-health-message-expected">Next health message expected</h1>
+            <article class="content wrap" id="_content" data-uid="BACnetCOVConfiguration1-1">
+<h1 id="cov-change-of-value-configuration">COV (Change Of Value) configuration</h1>
 
-<p>This property is similar to a heartbeat. A new value for <code>NextHealthMessageExpected</code> is sent by an individual adapter data component on a periodic basis while it is functioning properly. This value is a timestamp that indicates when the next value should be received. When monitoring, if the next value is not received by the indicated time, this likely means that there is an issue. It could be an issue with the adapter, adapter component, network connection between the health endpoint and the adapter, and so on.</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Time</strong></td>
-<td><code>string</code></td>
-<td>Timestamp of the event</td>
-</tr>
-<tr>
-<td><strong>NextHealthMessageExpected</strong></td>
-<td><code>string</code></td>
-<td>Timestamp when next value is expected</td>
-</tr>
-</tbody>
-</table>
+<h2 id="usage">Usage</h2>
+<p>To enable COV for a specified data selection item, change the DataCollectionMode to <code>SubscribeCov</code> or <code>SubscribeCovProperty</code> in data selection configuration. The configured schedule will determine how often the adapter attempts to resubscribe the item for COV notifications. If you do not configure a schedule, the item will not be subscribed.</p>
+<p>In <code>SubscribeCov</code> mode, the adapter subscribes to a BACnet object on the device, and the device reports values on change for properties enabled for COV reporting based on object type, typically including <code>PresentValue</code> and <code>StatusFlags</code>. If the data selection item <strong>PropertyIdentifier</strong> is specified, it must match one of these properties, otherwise COV notifications for this item will not be written to the data stream. If <strong>PropertyIdentifier</strong> is omitted, <code>PresentValue</code> will be used for the stream.</p>
+<p>In <code>SubscribeCovProperty</code> mode, the adapter subscribes to a unique BACnet object and property combination on the device. An optional <code>CovIncrement</code> can also be specified on the data selection item to specify a minimum amount that the value must change in order to prompt the new value to be sent. </p>
+<p>While COV mode is enabled, it is advised that at least one data selection item is configured in polled data collection mode per device in order to maintain an accurate device status.</p>
 </article>
           </div>
           
@@ -101,7 +84,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter-BACnet-Docs/blob/master/V1.1/Health/Next health message expected for BACnet1-1.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-BACnet-Docs/blob/master/v1.1/configuration/data-selection-configuration/change-of-value-configuration1-1.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -127,8 +110,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>
 </html>

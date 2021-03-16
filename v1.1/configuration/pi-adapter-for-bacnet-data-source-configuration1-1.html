@@ -8,7 +8,7 @@
     <title>PI Adapter for BACnet data source configuration </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="PI Adapter for BACnet data source configuration ">
-    <meta name="generator" content="docfx 2.56.7.0">
+    <meta name="generator" content="docfx 2.56.5.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -99,7 +99,7 @@
 <br></li>
 </ul>
 </li>
-<li><p>Configure data selection. For more information, see <a class="xref" href="PI%20Adapter%20for%20BACnet%20data%20selection%20configuration1-1.html">PI Adapter for BACnet data selection configuration</a>.</p>
+<li><p>Configure data selection. For more information, see <a class="xref" href="pi-adapter-for-bacnet-data-selection-configuration1-1.html">PI Adapter for BACnet data selection configuration</a>.</p>
 </li>
 </ol>
 <h2 id="bacnet-data-source-schema">BACnet data source schema</h2>
@@ -246,7 +246,7 @@
 <h2 id="discovery">Discovery</h2>
 <p>The BACnet adapter is able to discover available BACnet devices and objects defined by the data source configuration. For discovery of a BACnet router, the adapter sends a <em>Who-Is</em> request and waits 30 seconds to receive <em>I-Am</em> responses from available devices. Upon receiving an <em>I-Am</em> response, the adapter requests the <em>Protocol Services Supported</em>, <em>Maximum APDU Length</em>, <em>Segmentation</em> and <em>Object List</em> properties from the available devices. For discovery of a single device, the adapter does not send a <em>Who-Is</em> request but proceeds to request its properties.</p>
 <p>When the adapter starts or a new data source is configured, the adapter checks if device configuration is populated. Discovery is performed only if device configuration is empty. The data selection configuration is updated by discovery only if it is empty.</p>
-<p>A successful discovery populates the device configuration and provides information such as segmentation and services that are supported. Optionally, the data selection configuration is also populated with the <strong>Selected</strong> parameter for all items set to <code>false</code>. For information about device configuration and data selection configuration, see <a class="xref" href="PI%20Adapter%20for%20BACnet%20data%20selection%20configuration1-1.html#bacnet-device-configuration">BACnet device configuration</a> and <a class="xref" href="PI%20Adapter%20for%20BACnet%20data%20selection%20configuration1-1.html#configure-bacnet-data-selection">Configure BACnet data selection</a>.</p>
+<p>A successful discovery populates the device configuration and provides information such as segmentation and services that are supported. Optionally, the data selection configuration is also populated with the <strong>Selected</strong> parameter for all items set to <code>false</code>. For information about device configuration and data selection configuration, see <a class="xref" href="pi-adapter-for-bacnet-data-selection-configuration1-1.html#bacnet-device-configuration">BACnet device configuration</a> and <a class="xref" href="pi-adapter-for-bacnet-data-selection-configuration1-1.html#configure-bacnet-data-selection">Configure BACnet data selection</a>.</p>
 <p>The adapter <a href="xref:Logging-configuration1-4">log</a> indicates when discovery is complete.</p>
 <h3 id="example-log">Example log</h3>
 <pre><code class="lang-log">[15:17:49 INF] [Bacnet] Discovering BACnet router.  
@@ -263,7 +263,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter-BACnet-Docs/blob/master/V1.1/Configuration/PI Adapter for BACnet data source configuration1-1.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-BACnet-Docs/blob/master/v1.1/configuration/pi-adapter-for-bacnet-data-source-configuration1-1.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
