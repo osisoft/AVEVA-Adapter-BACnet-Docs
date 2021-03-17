@@ -34,7 +34,7 @@
                 <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="../../V1/index.html" width="46">
-                <img id="logo" src="../../v1/main/V1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+                <img id="logo" src="../../v1/main/v1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -79,7 +79,7 @@
 <li>Data selection: Select BACnet items to which the adapter should request data or subscribe for data.</li>
 <li>Logging: Set up the logging attributes to manage the adapter logging behavior.</li>
 </ul>
-<p>For more information, see <a class="xref" href="../configuration/pi-adapter-for-bacnet-data-source-configuration1-1.html">PI Adapter for BACnet data source configuration</a>, <a class="xref" href="../configuration/pi-adapter-for-bacnet-data-selection-configuration1-1.html">PI Adapter for BACnet data selection configuration</a>, and <a class="xref" href="../../v1/main/V1/Configuration/logging-configuration.html">Logging configuration</a>.</p>
+<p>For more information, see <a class="xref" href="../configuration/pi-adapter-for-bacnet-data-source-configuration1-1.html">PI Adapter for BACnet data source configuration</a>, <a class="xref" href="../configuration/pi-adapter-for-bacnet-data-selection-configuration1-1.html">PI Adapter for BACnet data selection configuration</a>, and <a class="xref" href="../../v1/main/v1/configuration/logging-configuration.html">Logging configuration</a>.</p>
 <h2 id="data-collection">Data collection</h2>
 <p>The BACnet adapter collects time-series data from selected objects on BACnet devices. The adapter supports both polling and COV (Change of Value, unsolicited subscription) data collection modes, as defined by the BACnet specification.</p>
 <h3 id="object-types-and-data-types">Object types and data types</h3>
@@ -157,7 +157,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Note:</strong> If streams are deleted from an endpoint while the adapter is running, the ingress component must be restarted to recreate the streams. See <a class="xref" href="../../v1/main/V1/Administration/start-and-stop-ingress-component.html">Start and stop ingress component</a>.</p>
+<p><strong>Note:</strong> If streams are deleted from an endpoint while the adapter is running, the ingress component must be restarted to recreate the streams. See <a class="xref" href="../../v1/main/v1/administration/start-and-stop-ingress-component.html">Start and stop ingress component</a>.</p>
 <p>Certain metadata are sent with each stream created.
 The following metadata are common for every adapter type:</p>
 <ul>
@@ -170,7 +170,7 @@ The following metadata are common for every adapter type:</p>
 <li><strong>SourceId</strong>: SourceId is constructed using the following pattern: {DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}</li>
 <li><strong>LocalName</strong>: The BACnet ObjectName as provided by the BACnet object</li>
 </ul>
-<p>The metadata level is set in <a class="xref" href="../../v1/main/V1/Configuration/general-configuration.html">General configuration</a>. For the BAcnet adapter, the following metadata is sent for the individual level:</p>
+<p>The metadata level is set in <a class="xref" href="../../v1/main/v1/configuration/general-configuration.html">General configuration</a>. For the BAcnet adapter, the following metadata is sent for the individual level:</p>
 <ul>
 <li><code>None</code>: No metadata</li>
 <li><code>Low</code>: AdapterType (<em>ComponentType</em>) and DataSource (<em>ComponentId</em>)</li>
