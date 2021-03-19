@@ -1,4 +1,4 @@
 - name: Device status
-  href: ../device-status-for-bacnet1-1.md
+  href: ../device-status-for-bacnet.md
 - name: Next health message expected
-  href: ../next-health-message-expected-for-bacnet1-1.md
+  href: ../next-health-message-expected-for-bacnet.md

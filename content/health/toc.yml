@@ -1,6 +1,6 @@
 - name: Adapter health
   href: health/toc.yml
-  topicHref: adapter-health-for-bacnet1-1.md
+  topicHref: adapter-health-for-bacnet.md
 - name: Adapter diagnostics
   href: ../main/v1/diagnostics/toc.yml
   topicHref: ../main/v1/diagnostics/adapter-diagnostics.md

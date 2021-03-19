@@ -3,12 +3,12 @@
 - name: System components configuration
   href: ../main/v1/configuration/system-components-configuration.md
 - name: PI Adapter for BACnet data source configuration 
-  href: pi-adapter-for-bacnet-data-source-configuration1-1.md
+  href: pi-adapter-for-bacnet-data-source-configuration.md
 - name: Schedules configuration
   href: ../main/v1/configuration/schedules-configuration.md
 - name: PI Adapter for BACnet data selection configuration
   href: data-selection-configuration/toc.yml
-  topicHref: pi-adapter-for-bacnet-data-selection-configuration1-1.md
+  topicHref: pi-adapter-for-bacnet-data-selection-configuration.md
 - name: Data filters configuration
   href: ../main/v1/configuration/data-filters-configuration.md
 - name: Egress endpoints configuration
