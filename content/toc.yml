@@ -1,7 +1,6 @@
 - name: PI Adapter for BACnet overview
   href: pi-adapter-for-bacnet-overview/toc.yml
   topicHref: index.md
-  homepage: index.md
 - name: Installation
   href: installation/toc.yml
   topicHref: main/v1/installation/installation.md
