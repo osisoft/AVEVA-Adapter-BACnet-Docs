@@ -1,5 +1,5 @@
 ---
-uid: BACnetPolledDataStreamConfiguration1-1
+uid: BACnetPolledDataStreamConfiguration
 ---
 
 # Polled data stream configuration

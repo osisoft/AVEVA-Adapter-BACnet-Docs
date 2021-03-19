@@ -1,5 +1,5 @@
 ---
-uid: BACnetConfiguration1-1
+uid: BACnetConfiguration
 ---
 
 # Configuration

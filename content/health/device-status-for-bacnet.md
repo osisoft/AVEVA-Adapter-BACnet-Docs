@@ -1,5 +1,5 @@
 ---
-uid: DeviceStatusForBACnet1-1
+uid: DeviceStatusForBACnet
 ---
 
 # Device status

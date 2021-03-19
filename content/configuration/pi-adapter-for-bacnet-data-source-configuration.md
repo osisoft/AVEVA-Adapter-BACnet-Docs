@@ -1,5 +1,5 @@
 ---
-uid: PIAdapterforBACnetDataSourceConfiguration1-1
+uid: PIAdapterforBACnetDataSourceConfiguration
 ---
 
 # PI Adapter for BACnet data source configuration

@@ -1,5 +1,5 @@
 ---
-uid: HealthAndDiagnosticsForBACnet1-1
+uid: HealthAndDiagnosticsForBACnet
 ---
 
 # Health and diagnostics

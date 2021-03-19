@@ -1,5 +1,5 @@
 ---
-uid: PIAdapterforBACnetOverview1-1
+uid: PIAdapterforBACnetOverview
 ---
 
 # PI Adapter for BACnet overview

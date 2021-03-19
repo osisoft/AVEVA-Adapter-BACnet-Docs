@@ -1,5 +1,5 @@
 ---
-uid: AdapterHealthForBACnet1-1
+uid: AdapterHealthForBACnet
 ---
 
 # Adapter health

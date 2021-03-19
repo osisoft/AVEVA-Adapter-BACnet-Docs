@@ -1,5 +1,5 @@
 ---
-uid: PIAdapterforBACnetPrinciplesOfOperation1-1
+uid: PIAdapterforBACnetPrinciplesOfOperation
 ---
 
 # PI Adapter for BACnet principles of operation

@@ -1,5 +1,5 @@
 ---
-uid: InstallPIAdapterForBACnetUsingDocker1-1
+uid: InstallPIAdapterForBACnetUsingDocker
 ---
 
 # Install PI Adapter for BACnet using Docker
@@ -12,92 +12,92 @@ Docker is a set of tools that you can use on Linux to manage application deploym
 
 1. Use a text editor to create a script similar to one of the following examples:
 
-	**Note:** The script varies slightly by processor.
+    **Note:** The script varies slightly by processor.
 
-	**ARM32**
+    **ARM32**
 
-	```bash
-	#!/bin/sh
-	if [ -z $portnum ] ; then
-		exec /BACnet_linux-arm/OSIsoft.Data.System.Host
-	else
-		exec /BACnet_linux-arm/OSIsoft.Data.System.Host --port:$portnum
-	fi
-	```
+    ```bash
+    #!/bin/sh
+    if [ -z $portnum ] ; then
+        exec /BACnet_linux-arm/OSIsoft.Data.System.Host
+    else
+        exec /BACnet_linux-arm/OSIsoft.Data.System.Host --port:$portnum
+    fi
+    ```
 
-	**ARM64**
+    **ARM64**
 
-	```bash
-	#!/bin/sh
-	if [ -z $portnum ] ; then
-		exec /BACnet_linux-arm64/OSIsoft.Data.System.Host
-	else
-		exec /BACnet_linux-arm64/OSIsoft.Data.System.Host --port:$portnum
-	fi
-	```
+    ```bash
+    #!/bin/sh
+    if [ -z $portnum ] ; then
+        exec /BACnet_linux-arm64/OSIsoft.Data.System.Host
+    else
+        exec /BACnet_linux-arm64/OSIsoft.Data.System.Host --port:$portnum
+    fi
+    ```
 
-	**AMD64**
+    **AMD64**
 
-	```bash
-	#!/bin/sh
-	if [ -z $portnum ] ; then
-		exec /BACnet_linux-x64/OSIsoft.Data.System.Host
-	else
-		exec /BACnet_linux-x64/OSIsoft.Data.System.Host --port:$portnum
-	fi
-	```
-	
+    ```bash
+    #!/bin/sh
+    if [ -z $portnum ] ; then
+        exec /BACnet_linux-x64/OSIsoft.Data.System.Host
+    else
+        exec /BACnet_linux-x64/OSIsoft.Data.System.Host --port:$portnum
+    fi
+    ```
+    
 2. Name the script `bacnetdockerstart.sh` and save it to the directory where you plan to create the container.
 
 ## Create a Docker container containing the adapter
 
 1. Create the following `Dockerfile` in the directory where you want to create and run the container.
 
-	**Note:** `Dockerfile` is the required name of the file. Use the variation according to your operating system:
+    **Note:** `Dockerfile` is the required name of the file. Use the variation according to your operating system:
 
-	### ARM32
+    ### ARM32
 
-	```bash
-	FROM ubuntu
-	WORKDIR /
-	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
-	COPY bacnetdockerstart.sh /
-	RUN chmod +x /bacnetdockerstart.sh
-	ADD ./BACnet_linux-arm.tar.gz .
-	ENTRYPOINT ["/bacnetdockerstart.sh"]
-	```
+    ```bash
+    FROM ubuntu
+    WORKDIR /
+    RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
+    COPY bacnetdockerstart.sh /
+    RUN chmod +x /bacnetdockerstart.sh
+    ADD ./BACnet_linux-arm.tar.gz .
+    ENTRYPOINT ["/bacnetdockerstart.sh"]
+    ```
 
-	### ARM64
+    ### ARM64
 
-	```bash
-	FROM ubuntu
-	WORKDIR /
-	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
-	COPY bacnetdockerstart.sh /
-	RUN chmod +x /bacnetdockerstart.sh
-	ADD ./BACnet_linux-arm64.tar.gz .
-	ENTRYPOINT ["/bacnetdockerstart.sh"]
-	```
+    ```bash
+    FROM ubuntu
+    WORKDIR /
+    RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
+    COPY bacnetdockerstart.sh /
+    RUN chmod +x /bacnetdockerstart.sh
+    ADD ./BACnet_linux-arm64.tar.gz .
+    ENTRYPOINT ["/bacnetdockerstart.sh"]
+    ```
 
-	### AMD64 (x64)
+    ### AMD64 (x64)
 
-	```bash
-	FROM ubuntu
-	WORKDIR /
-	RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
-	COPY bacnetdockerstart.sh /
-	RUN chmod +x /bacnetdockerstart.sh
-	ADD ./BACnet_linux-x64.tar.gz .
-	ENTRYPOINT ["/bacnetdockerstart.sh"]
-	```
+    ```bash
+    FROM ubuntu
+    WORKDIR /
+    RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
+    COPY bacnetdockerstart.sh /
+    RUN chmod +x /bacnetdockerstart.sh
+    ADD ./BACnet_linux-x64.tar.gz .
+    ENTRYPOINT ["/bacnetdockerstart.sh"]
+    ```
 
 2. Copy the `BACnet_linux-\<platform>.tar.gz` file to the same directory as the `Dockerfile`.
 3. Copy the `bacnetdockerstart.sh` script to the same directory as the `Dockerfile`.
 4. Run the following command line in the same directory (you may need to use the `sudo` command):
 
-	```bash
-	docker build -t bacnetadapter .
-	```
+    ```bash
+    docker build -t bacnetadapter .
+    ```
 
 ## Run the adapter Docker container
 
@@ -108,9 +108,9 @@ Complete the following steps to run the container:
 1. Use the docker container `bacnetadapter` that you created previously.
 2. Type the following command line (you may need to use the `sudo` command):
 
-	```bash
-	docker run -d --network host bacnetadapter
-	```
+    ```bash
+    docker run -d --network host bacnetadapter
+    ```
 
 The default port `5590` is accessible from the host and you can make REST calls to BACnet adapter from applications on the local host computer. In this example, all data stored by the BACnet adapter is stored in the container itself. When the container is deleted, the data stored is also deleted.
 
@@ -121,9 +121,9 @@ Complete the following to run the container:
 1. Use the docker container image `bacnetadapter` created previously.
 2. Type the following command line (you may need to use the `sudo` command):
 
-	```bash
-	docker run -d --network host -v /bacnet:/usr/share/OSIsoft/ bacnetadapter
-	```
+    ```bash
+    docker run -d --network host -v /bacnet:/usr/share/OSIsoft/ bacnetadapter
+    ```
 
 The default port `5590` is accessible from the host and you can make REST calls to the BACnet adapter from applications on the local host computer. In this example, the data is written to a host directory on the local machine `/bacnet` rather than the container. You can specify any directory.
 

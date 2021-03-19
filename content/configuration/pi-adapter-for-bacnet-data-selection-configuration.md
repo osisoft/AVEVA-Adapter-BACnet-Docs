@@ -1,5 +1,5 @@
 ---
-uid: PIAdapterforBACnetDataSelectionConfiguration1-1
+uid: PIAdapterforBACnetDataSelectionConfiguration
 ---
 
 # PI Adapter for BACnet data selection configuration

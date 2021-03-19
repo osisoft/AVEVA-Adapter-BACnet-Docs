@@ -1,5 +1,5 @@
 ---
-uid: NextHealthMessageExpectedForBACnet1-1
+uid: NextHealthMessageExpectedForBACnet
 ---
 
 # Next health message expected

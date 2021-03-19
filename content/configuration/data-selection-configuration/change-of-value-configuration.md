@@ -1,5 +1,5 @@
 ---
-uid: BACnetCOVConfiguration1-1
+uid: BACnetCOVConfiguration
 ---
 
 # COV (Change Of Value) configuration
