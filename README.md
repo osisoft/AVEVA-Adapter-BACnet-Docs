@@ -1,11 +1,11 @@
 # PI-Adapter-BACnet-Docs
 PI Adapter for BACnet is a data-collection component that transfers time-series data from source devices to OMF (OSIsoft Message Format) endpoints in OSIsoft Cloud Services or PI Servers.
 
-This repository contains the documentation for PI Adapter for BACnet. You can access a readable version of this documentation [here.](https://osisoft.github.io/PI-Adapter-BACnet-Docs/v1/)
+This repository contains the documentation for PI Adapter for BACnet. You can access a readable version of this documentation [here.](https://osisoft.github.io/PI-Adapter-BACnet-Docs/content/)
 
 ## License
 
-<a href="https://www.osisoft.com/copyright/">© 2019 - 2021 OSIsoft, LLC. All rights reserved.</a>
+<a href="https://www.osisoft.com/copyright/">&copy; 2019 - 2021 OSIsoft, LLC. All rights reserved.</a>
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at:
 
