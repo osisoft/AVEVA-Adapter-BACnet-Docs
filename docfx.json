@@ -16,7 +16,7 @@
 			"files": ["content/**/toc.yml", "content/**/**.md", "content/toc.yml", "toc.yml", "**.md"]
 		}],
 		"resource": [{
-			"files": ["content/images/**", "content/main/v1/images/**"]
+			"files": ["content/images/**", "content/main/shared-content/images/**"]
 		}],
 		"overwrite": [{
 			"files": ["apidoc/**.md"],
