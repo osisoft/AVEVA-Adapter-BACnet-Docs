@@ -33,7 +33,7 @@ jobs:
 
           echo "Submodule checkout/pull - content\main"
           cd content\main
-          git checkout master
+          git checkout v1.0
           git pull
           git rev-parse HEAD
           dir
