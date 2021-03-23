@@ -31,9 +31,9 @@ jobs:
           git submodule init
           git submodule update
 
-          echo "Submodule checkout/pull - V1\main"
-          cd V1\main
-          git checkout master
+          echo "Submodule checkout/pull - content\main"
+          cd content\main
+          git checkout v1.0
           git pull
           git rev-parse HEAD
           dir
@@ -49,7 +49,7 @@ jobs:
           echo "Move output files"
           mv .\_site $(Build.ArtifactStagingDirectory)\_site
           git clean -fd
-          rmdir V1\main /s /q
+          rmdir content\main /s /q
 
           echo "Check out gh-pages branch"
           git checkout gh-pages        
