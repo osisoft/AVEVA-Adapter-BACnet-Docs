@@ -14,7 +14,7 @@ For the BACnet adapter to start data collection, you need to configure the adapt
 - Data selection: Select BACnet items to which the adapter should request data or subscribe for data.
 - Logging: Set up the logging attributes to manage the adapter logging behavior.
 
-For more information, see [PI Adapter for BACnet data source configuration](xref:PIAdapterforBACnetDataSourceConfiguration1-1), [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration1-1), and [Logging configuration](xref:LoggingConfiguration).
+For more information, see [PI Adapter for BACnet data source configuration](xref:PIAdapterforBACnetDataSourceConfiguration), [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration), and [Logging configuration](xref:LoggingConfiguration).
 
 ## Data collection
 
@@ -73,4 +73,4 @@ Each stream created for a given BACnet item has a unique identifier (stream ID).
 <Adapter Component ID>.<Device ID>.<Object Type><Object ID>.<Property Identifier>
 ```
 
-**Note:** The naming convention is affected by `StreamIdPrefix` and `DefaultStreamIdPattern` settings in data source configuration. For more information, see [PI Adapter for BACnet data source configuration](xref:PIAdapterforBACnetDataSourceConfiguration1-1).
+**Note:** The naming convention is affected by `StreamIdPrefix` and `DefaultStreamIdPattern` settings in data source configuration. For more information, see [PI Adapter for BACnet data source configuration](xref:PIAdapterforBACnetDataSourceConfiguration).

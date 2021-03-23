@@ -7,4 +7,4 @@
 - name: Egress diagnostics
   href: ../main/shared-content/diagnostics/egress-diagnostics.md
   name: Data packet tracing 
-  href: health/data-packet-tracing.md
+  href: data-packet-tracing.md

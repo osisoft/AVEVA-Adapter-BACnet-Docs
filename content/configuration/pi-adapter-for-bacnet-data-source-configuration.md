@@ -40,7 +40,7 @@ Complete the following steps to configure the BACnet data source. Use the `POST`
     <br/>
     <br/>
 
-1. Configure data selection. For more information, see [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration1-1).
+1. Configure data selection. For more information, see [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration).
 
 ## BACnet data source schema
 
@@ -120,7 +120,7 @@ The BACnet adapter is able to discover available BACnet devices and objects defi
 
 When the adapter starts or a new data source is configured, the adapter checks if device configuration is populated. Discovery is performed only if device configuration is empty. The data selection configuration is updated by discovery only if it is empty.
 
-A successful discovery populates the device configuration and provides information such as segmentation and services that are supported. Optionally, the data selection configuration is also populated with the **Selected** parameter for all items set to `false`. For information about device configuration and data selection configuration, see [BACnet device configuration](xref:PIAdapterforBACnetDataSelectionConfiguration1-1#bacnet-device-configuration) and [Configure BACnet data selection](xref:PIAdapterforBACnetDataSelectionConfiguration1-1#configure-bacnet-data-selection).
+A successful discovery populates the device configuration and provides information such as segmentation and services that are supported. Optionally, the data selection configuration is also populated with the **Selected** parameter for all items set to `false`. For information about device configuration and data selection configuration, see [BACnet device configuration](xref:PIAdapterforBACnetDataSelectionConfiguration#bacnet-device-configuration) and [Configure BACnet data selection](xref:PIAdapterforBACnetDataSelectionConfiguration#configure-bacnet-data-selection).
 
 The adapter [log](xref:Logging-configuration1-4) indicates when discovery is complete.
 
