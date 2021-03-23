@@ -67,6 +67,8 @@ The metadata level is set in [General configuration](xref:GeneralConfiguration).
 - `Medium`: AdapterType (_ComponentType_), DataSource (_ComponentId_), and Schedule (ScheduleId)
 - `High`: AdapterType (ComponentType), DataSource (ComponentId), Schedule (ScheduleId), Device, SourceId and LocalName
 
+**Note:** If a `ScheduleId` is not specified when configuring data selection items (see [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration)), metadata will not be sent for the associated streams until the `ScheduleId` is specified and the adapter process is restarted.
+
 Each stream created for a given BACnet item has a unique identifier (stream ID). If you specify a custom stream ID for the BACnet item in data selection configuration, the adapter uses that stream ID to create the stream. Otherwise, the adapter constructs the stream ID with the following format constructed from the BACnet item node ID:
 
 ```code

@@ -1,7 +1,8 @@
 - name: Configuration tools
   href: ../main/shared-content/configuration/configuration-tools.md
 - name: System components configuration
-  href: ../main/shared-content/configuration/system-components-configuration.md
+  href: ../main/shared-content/configuration/system-configuration/toc.yml
+  topicHref: ../main/shared-content/configuration/system-components-configuration.md
 - name: PI Adapter for BACnet data source configuration 
   href: pi-adapter-for-bacnet-data-source-configuration.md
 - name: Schedules configuration
@@ -12,7 +13,8 @@
 - name: Data filters configuration
   href: ../main/shared-content/configuration/data-filters-configuration.md
 - name: Egress endpoints configuration
-  href: ../main/shared-content/configuration/egress-endpoints-configuration.md
+  href: ../main/shared-content/configuration/egress-endpoint-configuration/toc.yml
+  topicHref: ../main/shared-content/configuration/egress-endpoints-configuration.md
 - name: Health endpoint configuration
   href: ../main/shared-content/configuration/health-endpoint-configuration.md
 - name: General configuration
