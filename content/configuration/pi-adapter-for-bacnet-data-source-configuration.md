@@ -10,7 +10,7 @@ To use the BACnet adapter, you must configure the data source to receive data.
 
 ## Configure BACnet data source
 
-Complete the following steps to configure the BACnet data source. Use the `POST` method in conjunction with the following endpoint to initialize the configuration: `api/v1/configuration/<ComponentId>/DataSource`.
+Complete the following steps to configure the BACnet data source. Use the `PUT` method in conjunction with the following endpoint to initialize the configuration: `api/v1/configuration/<ComponentId>/DataSource`.
 
 1. Using a text editor, create an empty text file.
 
@@ -26,10 +26,10 @@ Complete the following steps to configure the BACnet data source. Use the `POST`
 
 1. Open a command line session. Change directory to the location of `ConfigureDataSource.json`.
 
-1. Enter the following cURL command (which uses the `POST` method) to initialize the BACnet data source configuration.
+1. Enter the following cURL command (which uses the `PUT` method) to initialize the BACnet data source configuration.
 
     ```bash
-    curl -d "@ConfigureDataSource.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/BACnet1/DataSource"
+    curl -d "@ConfigureDataSource.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSource"
     ```
 
     **Notes:**
