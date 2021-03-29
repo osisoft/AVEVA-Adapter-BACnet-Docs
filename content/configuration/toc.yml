@@ -24,5 +24,7 @@
   href: ../main/shared-content/configuration/buffering-configuration.md
 - name: Logging configuration
   href: ../main/shared-content/configuration/logging-configuration.md
+- name: System and adapter configuration
+  href: ../main/shared-content/configuration/system-and-adapter-configuration.md
 - name: PI Adapter for BACnet configuration examples
   href: configuration-examples.md
