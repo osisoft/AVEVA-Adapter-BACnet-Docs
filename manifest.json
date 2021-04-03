@@ -855,6 +855,18 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "framework-version.md",
+      "output": {
+        ".html": {
+          "relative_path": "framework-version.html",
+          "hash": "TM+iK7OEJIBlg3ZPzZoM1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
@@ -881,7 +893,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 56,
+          "total_file_count": 57,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
