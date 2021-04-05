@@ -3,11 +3,11 @@
 - name: System components configuration
   href: ../main/shared-content/configuration/system-configuration/toc.yml
   topicHref: ../main/shared-content/configuration/system-components-configuration.md
-- name: PI Adapter for BACnet data source configuration 
+- name: Data source configuration 
   href: pi-adapter-for-bacnet-data-source-configuration.md
 - name: Schedules configuration
   href: ../main/shared-content/configuration/schedules-configuration.md
-- name: PI Adapter for BACnet data selection configuration
+- name: Data selection configuration
   href: data-selection-configuration/toc.yml
   topicHref: pi-adapter-for-bacnet-data-selection-configuration.md
 - name: Data filters configuration
@@ -24,7 +24,5 @@
   href: ../main/shared-content/configuration/buffering-configuration.md
 - name: Logging configuration
   href: ../main/shared-content/configuration/logging-configuration.md
-- name: System and adapter configuration
-  href: ../main/shared-content/configuration/system-and-adapter-configuration.md
-- name: PI Adapter for BACnet configuration examples
+- name: Configuration examples
   href: configuration-examples.md
