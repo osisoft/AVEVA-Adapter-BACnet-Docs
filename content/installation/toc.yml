@@ -4,5 +4,5 @@
   href: ../main/shared-content/installation/install-the-adapter.md
 - name: Installation using Docker
   href: install-pi-adapter-for-bacnet-using-docker.md
-- name: Uninstall the adapter
+- name: Uninstall
   href: ../main/shared-content/installation/uninstall-the-adapter.md
