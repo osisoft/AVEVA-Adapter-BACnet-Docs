@@ -1,8 +1,8 @@
 - name: System requirements
   href: system-requirements.md
-- name: Install the adapter
+- name: Installation
   href: ../main/shared-content/installation/install-the-adapter.md
-- name: Install PI Adapter for BACnet using Docker
+- name: Installation using Docker
   href: install-pi-adapter-for-bacnet-using-docker.md
-- name: Uninstall the adapter
+- name: Uninstall
   href: ../main/shared-content/installation/uninstall-the-adapter.md
