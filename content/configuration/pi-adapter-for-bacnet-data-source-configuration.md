@@ -107,10 +107,10 @@ The following is an example of a valid BACnet routed device data source configur
 
 | Relative URL | HTTP verb | Action |
 | ------------ | --------- | ------ |
-| api/v1/configuration/\<ComponentId\>/DataSource | `GET` | Retrieves the BACnet data source configuration |
-| api/v1/configuration/\<ComponentId\>/DataSource | `POST` | Creates the BACnet data source configuration |
-| api/v1/configuration/\<ComponentId\>/DataSource | `PUT` | Configures or updates the BACnet data source configuration |
-| api/v1/configuration/\<ComponentId\>/DataSource | `DELETE` | Deletes the BACnet data source configuration |
+| api/v1/configuration/\<ComponentId\>/DataSource | `GET` | Retrieves the data source configuration. |
+| api/v1/configuration/\<ComponentId\>/DataSource | `POST` | Creates the data source configuration. The adapter starts collecting data after the following conditions are met:<br/><br/>&bull; The data source configuration `POST` request is received.<br/>&bull; A data selection configuration is active. |
+| api/v1/configuration/\<ComponentId\>/DataSource | `PUT` | Configures or updates the data source configuration. Overwrites any active data source configuration. If no configuration is active, the adapter starts collecting data after the following conditions are met:<br/><br/>&bull; The data source configuration `PUT` request is received.<br/>&bull; A data selection configuration is active. |
+| api/v1/configuration/\<ComponentId\>/DataSource | `DELETE` | Deletes the data source configuration. After the request is received, the adapter stops collecting data. |
 
 **Note:** Replace \<ComponentId\> with the Id of your BACnet component. For example, BACnet1.
 
