@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Agent/_work/1/s",
+  "source_base_path": "C:/agent/_work/1/s",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -473,7 +473,7 @@
       "output": {
         ".html": {
           "relative_path": "content/main/shared-content/configuration/system-components-configuration.html",
-          "hash": "h0sJ1Y5ZMm6EJ+k+EH6NZw=="
+          "hash": "Sk/oAJpZRnVP+LU8K24gJw=="
         }
       },
       "is_incremental": false,
