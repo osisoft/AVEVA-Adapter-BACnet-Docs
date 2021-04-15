@@ -211,12 +211,12 @@
    <Row ss:Height="14.5">
     <Cell><Data ss:Type="String">MAP</Data></Cell>
     <Cell ss:Index="3" ss:StyleID="s27"><Data ss:Type="String">adapter</Data></Cell>
-    <Cell ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-BACnet</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-BACnet_1.0</Data></Cell>
    </Row>
    <Row ss:Height="14.5">
     <Cell><Data ss:Type="String">apply-ALL</Data></Cell>
     <Cell ss:Index="3" ss:StyleID="s27"><Data ss:Type="String">adapter</Data></Cell>
-    <Cell ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-BACnet</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">PI-Adapter-for-BACnet_1.0</Data></Cell>
    </Row>
    <Row>
     <Cell><Data ss:Type="String">default</Data></Cell>
