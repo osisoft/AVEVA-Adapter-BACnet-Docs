@@ -12,7 +12,13 @@
   topicHref: main/shared-content/administration/administration.md
 - name: Health and diagnostics
   href: health/toc.yml
+<<<<<<< HEAD
   topicHref: Health/health-and-diagnostics-for-bacnet.md
+=======
+  topicHref: health/health-and-diagnostics-for-bacnet.md
+- name: Troubleshooting
+  href: main/shared-content/troubleshooting/troubleshoot-the-adapter.md
+>>>>>>> cb5f985 (adding troubleshooting section)
 - name: Release notes
   href: release-notes/release-notes.md
 - name: Technical support and feedback
