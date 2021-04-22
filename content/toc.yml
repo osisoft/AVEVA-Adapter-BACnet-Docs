@@ -14,7 +14,8 @@
   href: health/toc.yml
   topicHref: health/health-and-diagnostics-for-bacnet.md
 - name: Troubleshooting
-  href: main/shared-content/troubleshooting/troubleshoot-the-adapter.md
+  href: troubleshooting/toc.yml
+  topicHref: main/shared-content/troubleshooting/troubleshoot-the-adapter.md
 - name: Release notes
   href: release-notes/release-notes.md
 - name: Technical support and feedback
