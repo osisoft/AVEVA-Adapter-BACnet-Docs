@@ -7,6 +7,8 @@
   href: pi-adapter-for-bacnet-data-source-configuration.md
 - name: Schedules configuration
   href: ../main/shared-content/configuration/schedules-configuration.md
+- name: Discovery configuration
+  href: ../main/shared-content/configuration/discovery-configuration.md
 - name: Data selection configuration
   href: data-selection-configuration/toc.yml
   topicHref: pi-adapter-for-bacnet-data-selection-configuration.md
