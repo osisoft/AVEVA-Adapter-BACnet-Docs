@@ -12,62 +12,7 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
 
 1. Navigate to [data source configuration](xref:PIAdapterforBACnetDataSourceConfiguration) and verify that the value entered for each parameter is correct.
 
-    <!-- Mark Bishop 4/22: Requesting SME assistance on:
-
-        1. Which parameters to check when troubleshooting. We should omit any parameters on this last won't "break" data collection. 
-        2. For parameters that will "break" data collection, list how the misconfigured value affects data collection. Examples from Modbus:
-
-            * DeviceId - The referenced device exists in the data source configuration.
-            
-                A non-existent or incorrect DeviceId causes the adapter to not find the data source device.
-
-            * UnitId - The correct UnitId number is referenced.
-
-                An incorrect UnitId number can cause the adapter to request data from a different or non-existent device.
-
-    -->
-
-    * **IPAddress:** PLACEHOLDER.
-    * **Port:** PLACEHOLDER.
-    * **MaxConcurrentNetworkRequests:** PLACEHOLDER.
-    * **RequestDelay:** PLACEHOLDER.
-    * **AllowedConsecutiveFailedRequests:** PLACEHOLDER.
-    * **ReconnectInterval:** PLACEHOLDER.
-    * **DeviceId:** PLACEHOLDER.
-    * **NetworkNumber:** PLACEHOLDER.
-    * **MacAddress:** PLACEHOLDER.
-    * **StreamIdPrefix:** PLACEHOLDER.
-    * **DefaultStreamIdPatten:** PLACEHOLDER.<br><br>
-
 1. Navigate to [data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration) and verify that the value entered for each parameter is correct.
-
-    <!-- Mark Bishop 4/22: Requesting SME assistance on:
-
-    1. Which parameters to check when troubleshooting. We should omit any parameters on this last won't "break" data collection. 
-    2. For parameters that will "break" data collection, list how the misconfigured value affects data collection. Examples from Modbus:
-
-        * DeviceId - The referenced device exists in the data source configuration.
-
-            A non-existent or incorrect DeviceId causes the adapter to not find the data source device.
-
-        * UnitId - The correct UnitId number is referenced.
-
-            An incorrect UnitId number can cause the adapter to request data from a different or non-existent device.
-
-    -->
-
-    * **Selected:** PLACEHOLDER.
-    * **Name:** PLACEHOLDER.
-    * **StreamId:** PLACEHOLDER.
-    * **DataFilterId:** PLACEHOLDER.
-    * **DeviceIPAddress:** PLACEHOLDER.
-    * **DeviceId:** PLACEHOLDER.
-    * **ObjectType:** PLACEHOLDER.
-    * **ObjectId:** PLACEHOLDER.
-    * **DataCollectionMode:** PLACEHOLDER.
-    * **CovIncrement:** PLACEHOLDER.
-    * **PropertyIdentifier:** PLACEHOLDER.
-    * **ScheduleId:** PLACEHOLDER.<br/><br/>
 
 1. Navigate to [egress endpoints configuration](xref:EgressEndpointsConfiguration) and verify each configured endpoint's **Endpoint** property and credentials are correct.
 
