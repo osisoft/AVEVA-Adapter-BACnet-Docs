@@ -49,7 +49,7 @@ You can use the device configuration to choose an appropriate **DataCollectionMo
 
 ## Configure BACnet data selection
 
-Complete the following steps to configure the BACnet data selection. Use the `POST` method in conjunction with the following REST endpoint to initialize the configuration: `api/v1/configuration/<ComponentId>/DataSelection`
+Complete the following steps to configure the BACnet data selection. Use the `PUT` method in conjunction with the following REST endpoint to initialize the configuration: `api/v1/configuration/<ComponentId>/DataSelection`
 
 1. Using a text editor, create an empty text file.
 
@@ -65,10 +65,10 @@ Complete the following steps to configure the BACnet data selection. Use the `PO
 
 1. Open command line session. Change directory to the location of `DataSelection.json`.
 
-1. Enter the following cURL command (which uses the `POST` method) to initialize data selection for your data source.
+1. Enter the following cURL command (which uses the `PUT` method) to initialize data selection for your data source.
 
     ```bash
-    curl -d "@DataSelection.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/BACnet1/DataSelection"
+    curl -d "@DataSelection.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSelection"
     ```
 
     **Notes:**
@@ -96,7 +96,7 @@ The following parameters are available to configure BACnet data selection:
 | **Selected** | Optional<sup>1</sup> | `boolean` | Use this field to select or clear a measurement. To select an item, set to `true` and specify a **ScheduleId**. To remove an item, leave the field empty or set to `false`. If not configured, the default value is `false`. |
 | **Name**      | Optional | `string` | Name of the data item collected from the data source. The default value is `null` and results in the **StreamId** value being used also as a **Name**. |
 | **StreamId** | Optional | `string` | The custom stream ID to create the streams. If not specified, the BACnet adapter will generate a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 100 characters.<br>Cannot use the following characters:<br>`/` `:` `?` `#` `[` `]` `@` `!` `$` `&` `'` `(` `)` `\` `*` `+` `,` `;` `=` `%` `<` `>` `|`<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods. |
-| **DataFilterId** | Optional | `string` | The ID of the data filter. If not specified, no data filtering occurs. |
+| **DataFilterId** | Optional | `string` | The ID of the data filter. <br>**Note:** If the specified **DataFilterId** does not exist, unfiltered data is sent until that **DataFilterId** is created. |
 | **DeviceIPAddress** | Required | `string` | Device IP address |
 | **DeviceId** | Required<sup>3</sup> | `number` | BACnet device instance number |
 | **ObjectType** | Required<sup>3</sup> | `string` | Any of the [supported object types](xref:PIAdapterforBACnetPrinciplesOfOperation#object-types-and-data-types)  |
