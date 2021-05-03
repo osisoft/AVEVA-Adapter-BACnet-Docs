@@ -16,16 +16,24 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
 
 1. Navigate to [egress endpoints configuration](xref:EgressEndpointsConfiguration) and verify each configured endpoint's **Endpoint** property and credentials are correct.
 
-    * For a PI server or EDS endpoint, verify **UserName** and **Password**.
-    * For an OCS endpoint, verify **ClientId** and **ClientSecret**.
+    * For a PI Server or EDS endpoint, verify **UserName** and **Password**.
+    * For an OSIsoft Cloud Service (OCS) endpoint, verify **ClientId** and **ClientSecret**.
 
 ## Check connectivity
 
 Perform the following steps to verify active connections to the data source and egress endpoints.
 
-1. Start PI Web API and verify that the PI point values are  updating or start OCS and verify that the stream values are updating.
+1. Based on your egress endpoints, verify that data values are updating.
 
-1. If configured, use a health endpoint to determine the status of the adapter.
+    * For PI Server, send a request to the PI Web API to verify that PI point values are updating. Use Postman or a Web browser to send the request.
+
+        Alternatively, use any PI Client software to read point values from the PI Data Archive directly.
+
+    * For OCS, view the OCS portal to verify that data streams are updating.
+
+        Alternatively, you can use Postman to send an API request to verify data streams.
+
+2. If configured, use a health endpoint to determine the status of the adapter.
 
     For more information, see [Health and diagnostics](xref:HealthAndDiagnostics).
 
@@ -44,5 +52,4 @@ Perform the following steps to view the adapter and endpoint logs to isolate iss
 
 ## Simulators
 
-Download an online BACnet simulator as a data source to troubleshoot the adapter. For example, [Yet Another Bacnet Explorer
-](https://sourceforge.net/projects/yetanotherbacnetexplorer/).
+You can download a BACnet simulator for use as a data source during troubleshooting. For a list of trusted simulators, see the "Open Source BACnet Projects" section at [BACnet Developer Help](http://www.bacnet.org/Developer/).
