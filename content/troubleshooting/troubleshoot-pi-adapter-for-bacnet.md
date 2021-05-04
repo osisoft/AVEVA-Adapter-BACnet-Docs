@@ -25,13 +25,13 @@ Perform the following steps to verify active connections to the data source and 
 
 1. Based on your egress endpoints, verify that data values are updating.
 
-    * For PI Server, send a request to the PI Web API to verify that PI point values are updating. Use Postman or a Web browser to send the request.
+    * For PI Server, send a request to the PI Web API to verify that PI point values are updating. Use Postman or a Web browser to send the request. For more information, see [PI Web API Reference](https://techsupport.osisoft.com/Documentation/PI-Web-API/help/controllers/point.html).
 
         Alternatively, use any PI Client software to read point values from the PI Data Archive directly.
 
-    * For OCS, view the OCS portal to verify that data streams are updating.
+    * For OCS, view the OCS portal to verify that data streams are updating. For more information, see [Getting started with trend data](https://ocs-docs.osisoft.com/Content_Portal/Quickstarts/Getting-Started-Trend.html).
 
-        Alternatively, you can use Postman to send an API request to verify data streams.
+        Alternatively, you can use Postman to send an API request to verify data streams. For more information, see [API calls for reading data](https://ocs-docs.osisoft.com/Content_Portal/Documentation/SequentialDataStore/Reading_Data_API.html).
 
 2. If configured, use a health endpoint to determine the status of the adapter.
 
