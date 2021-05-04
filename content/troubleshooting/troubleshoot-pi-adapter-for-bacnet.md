@@ -52,4 +52,4 @@ Perform the following steps to view the adapter and endpoint logs to isolate iss
 
 ## Simulators
 
-You can download a BACnet simulator for use as a data source during troubleshooting. For a list of trusted simulators, see the "Open Source BACnet Projects" section at [BACnet Developer Help](http://www.bacnet.org/Developer/).
+You can download a BACnet simulator for use as a data source during troubleshooting. For a list of simulators, see the "Open Source BACnet Projects" section at [BACnet Developer Help](http://www.bacnet.org/Developer/).
