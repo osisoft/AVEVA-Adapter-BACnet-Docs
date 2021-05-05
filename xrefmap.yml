@@ -157,6 +157,9 @@ references:
 - uid: Troubleshooting
   name: Troubleshooting
   href: content/main/shared-content/troubleshooting/troubleshoot-the-adapter.html
+- uid: TroubleshootPiAdapterForBACnet
+  name: Troubleshoot PI Adapter for BACnet
+  href: content/troubleshooting/troubleshoot-pi-adapter-for-bacnet.html
 - uid: UninstallTheAdapter
   name: Uninstall the adapter
   href: content/main/shared-content/installation/uninstall-the-adapter.html
