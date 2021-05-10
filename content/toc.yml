@@ -1,22 +1,58 @@
-- name: PI Adapter for BACnet overview
-  href: pi-adapter-for-bacnet-overview/toc.yml
-  topicHref: index.md
-- name: Installation
-  href: installation/toc.yml
-  topicHref: main/shared-content/installation/installation.md
-- name: Configuration
-  href: configuration/toc.yml
-  topicHref: configuration/configuration.md
-- name: Administration
-  href: main/shared-content/administration/toc.yml
-  topicHref: main/shared-content/administration/administration.md
-- name: Health and diagnostics
-  href: health/toc.yml
-  topicHref: health/health-and-diagnostics-for-bacnet.md
-- name: Troubleshooting
-  href: troubleshooting/toc.yml
-  topicHref: main/shared-content/troubleshooting/troubleshoot-the-adapter.md
-- name: Release notes
-  href: release-notes/release-notes.md
-- name: Technical support and feedback
-  href: main/shared-content/technical-support-and-feedback.md
+- topicUid: PIAdapterforBACnetOverview
+  items:
+  - topicUid: PIAdapterforBACnetPrinciplesOfOperation
+- topicUid: Installation
+  items:
+  - topicUid: SystemRequirements
+  - topicUid: InstallTheAdapter
+  - topicUid: InstallPIAdapterForBACnetUsingDocker
+  - topicUid: UninstallTheAdapter
+- topicUid: BACnetConfiguration
+  items:
+  - topicUid: ConfigurationTools
+  - topicUid: SystemComponentsConfiguration
+    items:
+    - topicUid: SystemAndAdapterConfiguration
+  - topicUid: PIAdapterforBACnetDataSourceConfiguration
+  - topicUid: SchedulesConfiguration
+  - topicUid: DiscoveryConfiguration
+  - topicUid: PIAdapterforBACnetDataSelectionConfiguration
+    items:
+    - topicUid: BACnetPolledDataStreamConfiguration
+    - topicUid: BACnetCOVConfiguration
+  - topicUid: DataFiltersConfiguration
+  - topicUid: EgressEndpointsConfiguration
+    items:
+    - topicUid: PrepareEgressDestinations
+    - topicUid: ConfigureANetworkProxy
+  - topicUid: HealthEndpointConfiguration
+  - topicUid: GeneralConfiguration
+    items:
+    - topicUid: AdapterMetadata
+  - topicUid: BufferingConfiguration
+  - topicUid: LoggingConfiguration
+  - topicUid: ConfigurationExamples
+- topicUid: Administration
+  items:
+  - topicUid: StartAndStopAnAdapter
+  - topicUid: StartAndStopIngressComponent
+  - topicUid: RetrieveProductVersionInformation
+  - topicUid: DeleteAnAdapterComponent
+- topicUid: HealthAndDiagnosticsForBACnet
+  items:
+  - topicUid: AdapterHealthForBACnet
+    items:
+    - topicUid: DeviceStatusForBACnet
+    - topicUid: NextHealthMessageExpectedForBACnet
+  - topicUid: AdapterDiagnostics
+    items:
+    - topicUid: System
+    - topicUid: StreamCount
+    - topicUid: IORate
+    - topicUid: ErrorRate
+  - topicUid: DataPacketTracing
+- topicUid: TroubleshootTheAdapter
+  items:
+  - topicUid: TroubleshootPiAdapterForBACnet
+- topicUid: ReleaseNotes
+- topicUid: TechnicalSupportAndFeedback
