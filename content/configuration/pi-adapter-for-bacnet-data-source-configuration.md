@@ -2,13 +2,13 @@
 uid: PIAdapterforBACnetDataSourceConfiguration
 ---
 
-# PI Adapter for BACnet data source configuration
+# Data source configuration
 
 To use the BACnet adapter, you must configure the data source to receive data.
 
 **Note:** This procedure uses cURL commands for REST endpoint configuration, but other options are available. For more information, see [Configuration tools](xref:ConfigurationTools).
 
-## Configure BACnet data source
+## To configure the data source
 
 Complete the following steps to configure the BACnet data source. Use the `PUT` method in conjunction with the following endpoint to initialize the configuration: `api/v1/configuration/<ComponentId>/DataSource`.
 
@@ -16,11 +16,11 @@ Complete the following steps to configure the BACnet data source. Use the `PUT` 
 
 1. Copy and paste an example configuration for a BACnet router or routed device into the file.
 
-    For sample JSON, see [BACnet data source examples](#bacnet-data-source-examples).
+[BACnet data source examples](#data-source-examples)
 
 1. Update the example JSON parameters for your environment.
 
-    For a table of all available parameters, see [BACnet data source parameters](#bacnet-data-source-parameters).
+[BACnet data source parameters](#data-source-parameters)
 
 1. Save the file as `ConfigureDataSource.json`.
 
@@ -42,15 +42,14 @@ Complete the following steps to configure the BACnet data source. Use the `PUT` 
 
 1. Configure data selection. For more information, see [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration).
 
-## BACnet data source schema
+## Data source schema
 
 The full schema definition for the BACnet data source configuration is in the `BACnet_DataSource_schema.json` file located in one of the following folders:
 
-Windows: `%Program Files%\OSIsoft\Adapters\BACnet\Schemas`
+* Windows: `%Program Files%\OSIsoft\Adapters\BACnet\Schemas`
+* Linux: `/opt/OSIsoft/Adapters/BACnet/Schemas`
 
-Linux: `/opt/OSIsoft/Adapters/BACnet/Schemas`
-
-## BACnet data source parameters
+## Data source parameters
 
 The following parameters are available to configure a BACnet data source:
 
@@ -68,7 +67,9 @@ The following parameters are available to configure a BACnet data source:
 | **StreamIdPrefix** | Optional | `string` | Specifies what prefix is used for stream IDs. The naming convention is `{StreamIdPrefix}{StreamId}`. An empty string means no prefix will be added to the stream IDs and names. A `null` value defaults to **ComponentID** followed by a period.<br><br>Example: `BACnet1.{DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}`<br><br>**Note:** If you change the **StreamIdPrefix** of a configured adapter, for example when you delete and add a data source, you need to restart the adapter for the changes to take place. New streams are created on adapter restart and pre-existing streams are no longer updated.<br><br>Allowed value: any string<br>Default value: `null`|
 | **DefaultStreamIdPattern** | Optional | `string` | Specifies the default stream ID pattern to use. Possible parameters: `{DeviceIPAddress}`, `{DeviceId}`, `{ObjectType}`, `{ObjectId}`, and `{PropertyIdentifier}`.<br><br>Allowed value: any string<br>Default value: `{DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}` |
 
-## BACnet data source examples
+## Data source examples
+
+Use one of the following examples as a template for your BACnet data source configuration.
 
 ### BACnet router data source example
 
