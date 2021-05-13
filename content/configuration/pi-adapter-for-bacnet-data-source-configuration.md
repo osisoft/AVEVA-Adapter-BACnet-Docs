@@ -16,11 +16,11 @@ Complete the following steps to configure the BACnet data source. Use the `PUT` 
 
 1. Copy and paste an example configuration for a BACnet router or routed device into the file.
 
-[BACnet data source examples](#data-source-examples)
+    [Data source examples](#data-source-examples)
 
 1. Update the example JSON parameters for your environment.
 
-[BACnet data source parameters](#data-source-parameters)
+    [Data source parameters](#data-source-parameters)
 
 1. Save the file as `ConfigureDataSource.json`.
 
