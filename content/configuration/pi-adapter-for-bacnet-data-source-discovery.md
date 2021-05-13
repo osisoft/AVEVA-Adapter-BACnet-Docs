@@ -6,52 +6,32 @@ uid: PIAdapterBACnetDataSourceDiscovery
 
 When running a discovery against the data source of a BACnet adapter, you can specify optional query parameters. The query discovers the contents of the data source and narrows the scope of the discovery. Following a completed discovery, you can add the discovered items to the data selection.
 
-## BACnet query string
+## BACnet query syntax
 
-The string of the **query** parameter must contain string items in follow form:
+When including a BACnet query within a discovery, you can query by DeviceId or MACAddress. Syntax for a BACnet query includes an identifier declaration followed by a comma-separated list of DeviceIds or MACAddresses for discovery. If you omit the identifier declaration, the query defaults to DeviceIds.
 
 ```text
-<BACNET_QUERY_EXAMPLE>
+<Identifier>=ID1,ID2,ID3 
 ```
+
+## Query methods
+
+When including a BACnet query within a discovery, you can query by DeviceId or MACAddress.
 
 String item | Required | Description
 --|--|--
-**<STRING_ITEM>** | Required/Optional | <DESCRIPTION_OF_STRING_ITEM>
-**<STRING_ITEM>** | Required/Optional | <DESCRIPTION_OF_STRING_ITEM>
-**<STRING_ITEM>** | Required/Optional | <DESCRIPTION_OF_STRING_ITEM>
+DeviceIds | Optional | The device identifier for a BACnet device, which is a network-wide unique number. This identifier is a non-volatile value that is chosen and configured by someone at the site where the BACnet product is installed.
+MACAddresses | Optional | The MACAddress for a BACnet device.
 
-### Query rules
+## Query examples
 
-The following rules apply for specifying the query string:
+The query parameter of the BACnet component must be specified in one of the following forms:
 
-* Multiple queries are separated by a semicolon (`;`).
-* Partial queries are terminated by a multi-level wildcard (`#`).
-* A query cannot be terminated by a trailing slash (`/`).
-* A query cannot start with a leading slash (`/`) or `$`.
-* Topics are case sensitive.
+* DeviceIds example: `DeviceIds=1,2,3,4,5`
 
-**Note:** The data source may contain thousands of metrics. Therefore, follow these recommendations to return useful query results:
+    You can also query by DeviceId by omitting the `DeviceIds=` declaration: `1,2,3,4,5`
 
-* Limit use of the `#` character.
-* Create specific query strings or break down the query into different discoveries.
-
-#### Wildcards
-
-Wildcards are allowed in the query with the following specifications:
-
-* A single-level wildcard replaces one topic level and is indicated by `+`.
-* A multi-level wildcard covers many topic levels and is indicated by `#`.
-* Wildcards can be combined.
-* `#` must not be used more than once and can only be used at the end of the topic.
-* No query, an empty string, or `null` as the query parameter is equivalent to `#`.
-
-## Discovery query example
-
-The query parameter of the BACnet component must be specified in the following form:
-
-```text
-<BACNET_QUERY_EXAMPLE>
-```
+* MACAddress example: `MACAddresses=01-80-C2-00-00-10,01-80-C2-00-00-11,01-80-C2-00-00-12`
 
 ### BACnet data source discovery initiation
 
