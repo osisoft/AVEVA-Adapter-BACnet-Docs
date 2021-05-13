@@ -9,6 +9,7 @@ In addition to the data source configuration, you need to provide a data selecti
 When you add a data source, the adapter discovers devices and objects specified in the configuration.
 
 **Note:** This procedure uses cURL commands for REST endpoint configuration, but other options are available. For more information, see [Configuration tools](xref:ConfigurationTools).
+
 ## Device configuration
 
 In data source discovery, device information for all discovered devices is retrieved by the BACnet adapter, which is subsequently available through the following REST endpoint using any configuration tool that can execute an HTTP `GET` command:
@@ -55,11 +56,11 @@ Complete the following steps to configure the BACnet data selection. Use the `PU
 
 1. Copy and paste an example configuration for BACnet data selection into the file.
 
-[BACnet data selection example](#data-selection-example)
+    For sample JSON, see [Data selection example](#data-selection-example).
 
 1. Update the example JSON parameters for your environment.
 
-[BACnet data selection parameters](#data-selection-parameters)
+    For a table of all available parameters, see [Data selection parameters](#data-selection-parameters).
 
 1. Save the file. For example, as `DataSelection.json`.
 
@@ -83,9 +84,8 @@ Complete the following steps to configure the BACnet data selection. Use the `PU
 
 The full schema definition for the BACnet data selection configuration is in the `BACnet_DataSelection_schema.json` file located in one of the following folders:
 
-Windows: `%Program Files%\OSIsoft\Adapters\BACnet\Schemas`
-
-Linux: `/opt/OSIsoft/Adapters/BACnet/Schemas`
+* Windows: `%Program Files%\OSIsoft\Adapters\BACnet\Schemas`
+* Linux: `/opt/OSIsoft/Adapters/BACnet/Schemas`
 
 ## Data selection parameters
 
