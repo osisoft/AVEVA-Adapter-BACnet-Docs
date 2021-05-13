@@ -16,6 +16,8 @@
   - topicUid: PIAdapterforBACnetDataSourceConfiguration
   - topicUid: SchedulesConfiguration
   - topicUid: DiscoveryConfiguration
+    items:
+    - topicUid: PIAdapterBACnetDataSourceDiscovery
   - topicUid: PIAdapterforBACnetDataSelectionConfiguration
     items:
     - topicUid: BACnetPolledDataStreamConfiguration
