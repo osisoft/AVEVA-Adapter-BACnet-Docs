@@ -2,7 +2,7 @@
 uid: PIAdapterforBACnetDataSourceConfiguration
 ---
 
-# Data source configuration
+# Data source
 
 To use the BACnet adapter, you must configure the data source to receive data.
 
