@@ -14,10 +14,18 @@ For more information on PI Adapter configuration tools, see [Configuration tools
 
 Complete the following steps to establish a data flow from a BACnet data source device to a data endpoint.
 
-1. Configure one or several BACnet system components.<br>See [System components configuration](xref:SystemComponentsConfiguration).
+1. Configure one or several BACnet system components.
 
-2. Configure a BACnet data source for each BACnet device.<br>See [PI Adapter for BACnet data source configuration](xref:PIAdapterforBACnetDataSourceConfiguration).
+    See <xref:SystemComponentsConfiguration>.
 
-3. Configure a BACnet data selection for each BACnet data source.<br>See [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration).
+1. Configure a BACnet data source for each BACnet device.
 
-4. Configure one or several egress endpoints.<br>See [Egress endpoints configuration](xref:EgressEndpointsConfiguration).
+    See <xref:PIAdapterforBACnetDataSourceConfiguration>.
+
+1. Configure a BACnet data selection for each BACnet data source.
+
+    See <xref:PIAdapterforBACnetDataSelectionConfiguration>.
+
+1. Configure one or several egress endpoints.
+
+    See <xref:EgressEndpointsConfiguration>.
