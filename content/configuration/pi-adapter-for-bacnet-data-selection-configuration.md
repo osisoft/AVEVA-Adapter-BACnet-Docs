@@ -48,7 +48,7 @@ You can use the device configuration to choose an appropriate **DataCollectionMo
 | api/v1/configuration/\<ComponentId\>/DeviceConfiguration  | `GET` | Retrieves the BACnet device configuration. |
 | api/v1/configuration/\<ComponentId\>/DeviceConfiguration | `DELETE` | Deletes the BACnet device configuration. |
 
-## To configure data selection
+## Configure data selection
 
 Complete the following steps to configure the BACnet data selection. Use the `PUT` method in conjunction with the following REST endpoint to initialize the configuration: `api/v1/configuration/<ComponentId>/DataSelection`
 

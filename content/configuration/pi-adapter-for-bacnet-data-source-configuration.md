@@ -8,7 +8,7 @@ To use the BACnet adapter, you must configure the data source to receive data.
 
 **Note:** This procedure uses cURL commands for REST endpoint configuration, but other options are available. For more information, see [Configuration tools](xref:ConfigurationTools).
 
-## To configure the data source
+## Configure the data source
 
 Complete the following steps to configure the BACnet data source. Use the `PUT` method in conjunction with the following endpoint to initialize the configuration: `api/v1/configuration/<ComponentId>/DataSource`.
 

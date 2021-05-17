@@ -6,7 +6,7 @@ uid: TroubleshootPiAdapterForBACnet
 
 If the adapter is not working as expected, you can troubleshoot by viewing message logs and verifying adapter configuration and connectivity. If you are unable to resolve issues with the adapter or need additional guidance, contact OSIsoft Technical Support through the [OSIsoft Customer Portal](https://my.osisoft.com/).
 
-## To check configurations
+## Check configurations
 
 Incorrect configurations can interrupt data flow and cause errors in values and ranges. Perform the following steps confirm correct configuration for your adapter.
 
@@ -19,7 +19,7 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
     * For a PI Server or EDS endpoint, verify **UserName** and **Password**.
     * For an OSIsoft Cloud Service (OCS) endpoint, verify **ClientId** and **ClientSecret**.
 
-## To check connectivity
+## Check connectivity
 
 Perform the following steps to verify active connections to the data source and egress endpoints.
 
@@ -37,7 +37,7 @@ Perform the following steps to verify active connections to the data source and 
 
     For more information, see [Health and diagnostics](xref:HealthAndDiagnostics).
 
-## To check logs
+## Check logs
 
 Perform the following steps to view the adapter and endpoint logs to isolate issues for resolution.
 
