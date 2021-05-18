@@ -12,7 +12,9 @@ For more information on PI Adapter configuration tools, see [Configuration tools
 
 ## Quick start
 
-Complete the following steps to establish a data flow from a BACnet data source device to a data endpoint.
+This Quick Start guides you through setup of each configuration file available for PI Adapter for BACnet. As you complete each step, perform each required configuration to establish a data flow from a data source to one or more endpoints. Some configurations are optional.
+
+**Important:** If you want to complete the optional configurations, complete those tasks before the required tasks.
 
 1. Configure one or several BACnet system components.
 
@@ -22,10 +24,27 @@ Complete the following steps to establish a data flow from a BACnet data source 
 
     See <xref:PIAdapterforBACnetDataSourceConfiguration>.
 
+1. **Optional**: Configure schedules.
+
+    See <xref:SchedulesConfiguration>.
+
 1. Configure a BACnet data selection for each BACnet data source.
 
     See <xref:PIAdapterforBACnetDataSelectionConfiguration>.
 
-1. Configure one or several egress endpoints.
+1. **Optional**: Configure data filters, diagnostics and metadata, buffering, and logging.
 
-    See <xref:EgressEndpointsConfiguration>.
+    See the following topics:
+
+    - <xref:DataFiltersConfiguration>
+    - <xref:GeneralConfiguration>
+    - <xref:BufferingConfiguration>
+    - <xref:LoggingConfiguration><br/><br/>
+
+1. Configure one or more egress and health endpoints. If there is a proxy between the adapter and your egress endpoints, define it.
+
+    See the following topics:
+
+    - <xref:EgressEndpointsConfiguration>
+    - <xref:ConfigureANetworkProxy>
+    - <xref:HealthEndpointConfiguration>
