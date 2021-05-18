@@ -2,7 +2,7 @@
 uid: PIAdapterforBACnetPrinciplesOfOperation
 ---
 
-# PI Adapter for BACnet principles of operation
+# Principles of operation
 
 The BACnet adapter's operations focus on data collection and streams creation.
 
