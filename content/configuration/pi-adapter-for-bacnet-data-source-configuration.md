@@ -2,13 +2,13 @@
 uid: PIAdapterforBACnetDataSourceConfiguration
 ---
 
-# PI Adapter for BACnet data source configuration
+# Data source
 
 To use the BACnet adapter, you must configure the data source to receive data.
 
 **Note:** This procedure uses cURL commands for REST endpoint configuration, but other options are available. For more information, see [Configuration tools](xref:ConfigurationTools).
 
-## Configure BACnet data source
+## Configure the data source
 
 Complete the following steps to configure the BACnet data source. Use the `PUT` method in conjunction with the following endpoint to initialize the configuration: `api/v1/configuration/<ComponentId>/DataSource`.
 
@@ -16,11 +16,11 @@ Complete the following steps to configure the BACnet data source. Use the `PUT` 
 
 1. Copy and paste an example configuration for a BACnet router or routed device into the file.
 
-    For sample JSON, see [BACnet data source examples](#bacnet-data-source-examples).
+    For sample JSON, see [Data source examples](#data-source-examples).
 
 1. Update the example JSON parameters for your environment.
 
-    For a table of all available parameters, see [BACnet data source parameters](#bacnet-data-source-parameters).
+    For a table of all available parameters, see [Data source parameters](#data-source-parameters).
 
 1. Save the file as `ConfigureDataSource.json`.
 
@@ -42,15 +42,14 @@ Complete the following steps to configure the BACnet data source. Use the `PUT` 
 
 1. Configure data selection. For more information, see [PI Adapter for BACnet data selection configuration](xref:PIAdapterforBACnetDataSelectionConfiguration).
 
-## BACnet data source schema
+## Data source schema
 
 The full schema definition for the BACnet data source configuration is in the `BACnet_DataSource_schema.json` file located in one of the following folders:
 
-Windows: `%Program Files%\OSIsoft\Adapters\BACnet\Schemas`
+* Windows: `%Program Files%\OSIsoft\Adapters\BACnet\Schemas`
+* Linux: `/opt/OSIsoft/Adapters/BACnet/Schemas`
 
-Linux: `/opt/OSIsoft/Adapters/BACnet/Schemas`
-
-## BACnet data source parameters
+## Data source parameters
 
 The following parameters are available to configure a BACnet data source:
 
@@ -72,9 +71,11 @@ The following parameters are available to configure a BACnet data source:
 <sup>1</sup>**Notes:**
 
 * For more information on supported container overrides, see [Container Messages](https://omf-docs.osisoft.com/documentation_v12/Containers/Container_Messages.html) within the OMF 1.2 documentation.
-* If you are using OCS as your egress endpoint, the overriding BACnet engineering units must match one of the [format supported by OCS](https://ocs-docs.osisoft.com/Content_Portal/Documentation/SequentialDataStore/Units_of_Measure.html#supported-system-defined-units-of-measure). In cases where a BACnet object's Units is not supported by OCS, no UOM will be specified on the data stream for the object.
+* If you are using OCS as your egress endpoint, the overriding BACnet engineering units must match one of the [formats supported by OCS](https://ocs-docs.osisoft.com/Content_Portal/Documentation/SequentialDataStore/Units_of_Measure.html#supported-system-defined-units-of-measure). In cases where a BACnet object's Units is not supported by OCS, no UOM will be specified on the data stream for the object.
 
-## BACnet data source examples
+## Data source examples
+
+Use one of the following examples as a template for your BACnet data source configuration.
 
 ### BACnet router data source example
 
@@ -126,7 +127,7 @@ The adapter is able to discover available BACnet devices and objects defined by 
 
 When the adapter starts or a new data source is configured, the adapter checks if device configuration is populated. Discovery is performed only if device configuration is empty. The data selection configuration is updated by discovery only if it is empty.
 
-A successful discovery populates the device configuration and provides information such as segmentation and services that are supported. Optionally, the data selection configuration is also populated with the **Selected** parameter for all items set to `false`. For information about device configuration and data selection configuration, see [BACnet device configuration](xref:PIAdapterforBACnetDataSelectionConfiguration#bacnet-device-configuration) and [Configure BACnet data selection](xref:PIAdapterforBACnetDataSelectionConfiguration#configure-bacnet-data-selection).
+A successful discovery populates the device configuration and provides information such as segmentation and services that are supported. Optionally, the data selection configuration is also populated with the **Selected** parameter for all items set to `false`. For information about device configuration and data selection configuration, see [BACnet device configuration](xref:PIAdapterforBACnetDataSelectionConfiguration#device-configuration) and [Configure BACnet data selection](xref:PIAdapterforBACnetDataSelectionConfiguration#configure-data-selection).
 
 The adapter [log](xref:LoggingConfiguration) indicates when discovery is complete.
 

@@ -2,14 +2,15 @@
 uid: PIAdapterforBACnetDataSelectionConfiguration
 ---
 
-# PI Adapter for BACnet data selection configuration
+# Data selection
 
 In addition to the data source configuration, you need to provide a data selection configuration to specify the data you want the BACnet adapter to collect from the data sources.
 
 When you add a data source, the adapter discovers devices and objects specified in the configuration.
 
 **Note:** This procedure uses cURL commands for REST endpoint configuration, but other options are available. For more information, see [Configuration tools](xref:ConfigurationTools).
-## BACnet device configuration
+
+## Device configuration
 
 In data source discovery, device information for all discovered devices is retrieved by the BACnet adapter, which is subsequently available through the following REST endpoint using any configuration tool that can execute an HTTP `GET` command:
 
@@ -47,7 +48,7 @@ You can use the device configuration to choose an appropriate **DataCollectionMo
 | api/v1/configuration/\<ComponentId\>/DeviceConfiguration  | `GET` | Retrieves the BACnet device configuration. |
 | api/v1/configuration/\<ComponentId\>/DeviceConfiguration | `DELETE` | Deletes the BACnet device configuration. |
 
-## Configure BACnet data selection
+## Configure data selection
 
 Complete the following steps to configure the BACnet data selection. Use the `PUT` method in conjunction with the following REST endpoint to initialize the configuration: `api/v1/configuration/<ComponentId>/DataSelection`
 
@@ -55,11 +56,11 @@ Complete the following steps to configure the BACnet data selection. Use the `PU
 
 1. Copy and paste an example configuration for BACnet data selection into the file.
 
-    For sample JSON, see [BACnet data selection example](#bacnet-data-selection-example).
+    For sample JSON, see [Data selection example](#data-selection-example).
 
 1. Update the example JSON parameters for your environment.
 
-    For a table of all available parameters, see [BACnet data selection parameters](#bacnet-data-selection-parameters).
+    For a table of all available parameters, see [Data selection parameters](#data-selection-parameters).
 
 1. Save the file. For example, as `DataSelection.json`.
 
@@ -79,15 +80,14 @@ Complete the following steps to configure the BACnet data selection. Use the `PU
     <br/>
     <br/>
 
-## BACnet data selection schema
+## Data selection schema
 
 The full schema definition for the BACnet data selection configuration is in the `BACnet_DataSelection_schema.json` file located in one of the following folders:
 
-Windows: `%Program Files%\OSIsoft\Adapters\BACnet\Schemas`
+* Windows: `%Program Files%\OSIsoft\Adapters\BACnet\Schemas`
+* Linux: `/opt/OSIsoft/Adapters/BACnet/Schemas`
 
-Linux: `/opt/OSIsoft/Adapters/BACnet/Schemas`
-
-## BACnet data selection parameters
+## Data selection parameters
 
 The following parameters are available to configure BACnet data selection:
 
@@ -112,7 +112,7 @@ The following parameters are available to configure BACnet data selection:
 
 <sup>3</sup> If you specify the same combination of **DeviceId**, **ObjectType**, **ObjectId**, and **PropertyIdentifier** for multiple data selection items, it can result in data not being written to one or more streams. OSIsoft recommends that the combination of those properties be unique for each data selection item.
 
-## BACnet data selection example
+## Data selection example
 
 The following is an example of a valid BACnet data selection configuration with different data collection modes. Since the last item has **Selected** set to `false`, data will not be collected for it.
 
