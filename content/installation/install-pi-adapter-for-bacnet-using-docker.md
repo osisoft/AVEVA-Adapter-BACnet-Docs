@@ -2,13 +2,15 @@
 uid: InstallPIAdapterForBACnetUsingDocker
 ---
 
-# Install PI Adapter for BACnet using Docker
+# Installation using Docker
 
 Docker is a set of tools that you can use on Linux to manage application deployments. This topic provides examples of how to create a Docker container with the BACnet adapter.
 
 **Note:** If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the BACnet adapter. Docker is not a requirement to use the adapter.
 
-## Create a startup script for the adapter
+## Create a startup script
+
+To create a startup script for the adapter, follow the instructions below.
 
 1. Use a text editor to create a script similar to one of the following examples:
 
@@ -46,16 +48,18 @@ Docker is a set of tools that you can use on Linux to manage application deploym
         exec /BACnet_linux-x64/OSIsoft.Data.System.Host --port:$portnum
     fi
     ```
-    
+ 
 2. Name the script `bacnetdockerstart.sh` and save it to the directory where you plan to create the container.
 
-## Create a Docker container containing the adapter
+## Create a Docker container
+
+To create a Docker container that runs the adapter, follow the instructions below.
 
 1. Create the following `Dockerfile` in the directory where you want to create and run the container.
 
     **Note:** `Dockerfile` is the required name of the file. Use the variation according to your operating system:
 
-    ### ARM32
+    **ARM32**
 
     ```bash
     FROM ubuntu
@@ -67,7 +71,7 @@ Docker is a set of tools that you can use on Linux to manage application deploym
     ENTRYPOINT ["/bacnetdockerstart.sh"]
     ```
 
-    ### ARM64
+    **ARM64**
 
     ```bash
     FROM ubuntu
@@ -79,7 +83,7 @@ Docker is a set of tools that you can use on Linux to manage application deploym
     ENTRYPOINT ["/bacnetdockerstart.sh"]
     ```
 
-    ### AMD64 (x64)
+    **AMD64 (x64)**
 
     ```bash
     FROM ubuntu
@@ -92,18 +96,22 @@ Docker is a set of tools that you can use on Linux to manage application deploym
     ```
 
 2. Copy the `BACnet_linux-\<platform>.tar.gz` file to the same directory as the `Dockerfile`.
+
 3. Copy the `bacnetdockerstart.sh` script to the same directory as the `Dockerfile`.
+
 4. Run the following command line in the same directory (you may need to use the `sudo` command):
 
     ```bash
     docker build -t bacnetadapter .
     ```
 
-## Run the adapter Docker container
+## Docker container startup
 
-### REST access from the local host to the Docker container
+The following procedures contain instructions on how to run the adapter inside a Docker container with different options enabled.
 
-Complete the following steps to run the container:
+### Run the Docker container with REST access enabled
+
+To run the adapter inside a Docker container with access to its REST API from the local host, complete the following steps:
 
 1. Use the docker container `bacnetadapter` that you created previously.
 2. Type the following command line (you may need to use the `sudo` command):
@@ -114,9 +122,9 @@ Complete the following steps to run the container:
 
 The default port `5590` is accessible from the host and you can make REST calls to BACnet adapter from applications on the local host computer. In this example, all data stored by the BACnet adapter is stored in the container itself. When the container is deleted, the data stored is also deleted.
 
-### Provide persistent storage for the Docker container
+### Run the Docker container with persistent storage
 
-Complete the following to run the container:
+To run the adapter inside a Docker container while using the host for persistent storage, complete the following steps. This procedure also enables access to the adapter REST API from the local host.
 
 1. Use the docker container image `bacnetadapter` created previously.
 2. Type the following command line (you may need to use the `sudo` command):
@@ -127,7 +135,7 @@ Complete the following to run the container:
 
 The default port `5590` is accessible from the host and you can make REST calls to the BACnet adapter from applications on the local host computer. In this example, the data is written to a host directory on the local machine `/bacnet` rather than the container. You can specify any directory.
 
-### Port number change
+### Change port number
 
 To use a different port other than the default `5590`, you can specify a `portnum` variable on the `docker run` command line. For example, to start the BACnet adapter using port `6000` instead of `5590`, use the following command line:
 
@@ -141,6 +149,6 @@ This command accesses the REST API with port `6000` instead of port `5590`. The 
 curl http://localhost:6000/api/v1/configuration
 ```
 
-### Remove REST access to the Docker container
+### Remove REST access
 
 If you remove the `--network host` option from the docker run command, REST access is not possible from outside the container. This can be valuable when you want to host an application in the same container as the BACnet adapter but do not want to have external REST access enabled.
