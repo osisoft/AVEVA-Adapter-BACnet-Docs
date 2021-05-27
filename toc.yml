@@ -1,6 +1,6 @@
 - name: PI Adapter for BACnet versions
   dropdown: true
   items:
-  - name: PI Adapter for BACnet 1.0
+  - name: PI Adapter for BACnet 1.1
     href: content/
     homepage: content/index.md
