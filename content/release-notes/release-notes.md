@@ -3,7 +3,7 @@ uid: ReleaseNotes
 ---
 # Release notes
 
-PI Adapter for BACnet 1.0
+PI Adapter for BACnet 1.1
 
 ## Overview
 
