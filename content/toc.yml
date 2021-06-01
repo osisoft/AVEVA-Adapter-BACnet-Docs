@@ -23,6 +23,8 @@
     - topicUid: BACnetPolledDataStreamConfiguration
     - topicUid: BACnetCOVConfiguration
   - topicUid: DataFiltersConfiguration
+    items:
+    - topicUid: DataQualityMappings
   - topicUid: GeneralConfiguration
     items:
     - topicUid: AdapterMetadata
