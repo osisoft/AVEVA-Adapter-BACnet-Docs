@@ -6,6 +6,7 @@
   - topicUid: SystemRequirements
   - topicUid: InstallTheAdapter
   - topicUid: InstallPIAdapterForBACnetUsingDocker
+  - topicUid: UpgradeTheAdapter
   - topicUid: UninstallTheAdapter
 - topicUid: BACnetConfiguration
   items:
