@@ -51,9 +51,9 @@ To create a startup script for the adapter, follow the instructions below.
  
 2. Name the script `bacnetdockerstart.sh` and save it to the directory where you plan to create the container.
 
-## Create a Docker container
+## Create a Dockerfile
 
-To create a Docker container that runs the adapter, follow the instructions below.
+To create a Docker file for the adapter, follow the instructions below.
 
 1. Create the following `Dockerfile` in the directory where you want to create and run the container.
 
@@ -105,7 +105,7 @@ To create a Docker container that runs the adapter, follow the instructions belo
     docker build -t bacnetadapter .
     ```
 
-## Docker container startup
+## Create a Docker container
 
 The following procedures contain instructions on how to run the adapter inside a Docker container with different options enabled.
 
