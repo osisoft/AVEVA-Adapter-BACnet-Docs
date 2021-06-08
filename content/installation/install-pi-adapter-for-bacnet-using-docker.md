@@ -152,7 +152,3 @@ curl http://localhost:6000/api/v1/configuration
 ### Remove REST access
 
 If you remove the `--network host` option from the docker run command, REST access is not possible from outside the container. This can be valuable when you want to host an application in the same container as the BACnet adapter but do not want to have external REST access enabled.
-
-## Upgrade note
-
-When a new version of the adapter is released, upgrades for containerized adapters are not supported. Instead, create a new dockerfile using the latest tar.gz, start a new container, and remount any storage volume previously used.
