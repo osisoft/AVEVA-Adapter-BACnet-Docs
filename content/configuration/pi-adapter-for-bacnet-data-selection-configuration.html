@@ -126,7 +126,7 @@
 </tbody>
 </table>
 <h2 id="configure-bacnet-data-selection">Configure BACnet data selection</h2>
-<p>Complete the following steps to configure the BACnet data selection. Use the <code>PUT</code> method in conjunction with the following REST endpoint to initialize the configuration: <code>api/v1/configuration/&lt;ComponentId&gt;/DataSelection</code></p>
+<p>Complete the following steps to configure the BACnet data selection. Use the <code>POST</code> method in conjunction with the following REST endpoint to initialize the configuration: <code>api/v1/configuration/&lt;ComponentId&gt;/DataSelection</code></p>
 <ol>
 <li><p>Using a text editor, create an empty text file.</p>
 </li>
@@ -140,8 +140,8 @@
 </li>
 <li><p>Open command line session. Change directory to the location of <code>DataSelection.json</code>.</p>
 </li>
-<li><p>Enter the following cURL command (which uses the <code>PUT</code> method) to initialize data selection for your data source.</p>
-<pre><code class="lang-bash">curl -d &quot;@DataSelection.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT &quot;http://localhost:5590/api/v1/configuration/BACnet1/DataSelection&quot;
+<li><p>Enter the following cURL command (which uses the <code>POST</code> method) to initialize data selection for your data source.</p>
+<pre><code class="lang-bash">curl -d &quot;@DataSelection.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/BACnet1/DataSelection&quot;
 </code></pre><p> <strong>Notes:</strong></p>
 <ul>
 <li>If you installed the adapter to listen on a non-default port, update <code>5590</code> to the port number in use.</li>
@@ -190,7 +190,7 @@
 <td><strong>DataFilterId</strong></td>
 <td>Optional</td>
 <td><code>string</code></td>
-<td>The ID of the data filter. <br><strong>Note:</strong> If the specified <strong>DataFilterId</strong> does not exist, unfiltered data is sent until that <strong>DataFilterId</strong> is created.</td>
+<td>The ID of the data filter. If not specified, no data filtering occurs.</td>
 </tr>
 <tr>
 <td><strong>DeviceIPAddress</strong></td>
@@ -238,7 +238,7 @@
 <td><strong>ScheduleId</strong></td>
 <td>Optional<sup>1, 2</sup></td>
 <td><code>string</code></td>
-<td>Specifies a schedule ID to which the data selection item is linked. This data item is collected on the scheduled interval if Selected is set to <code>true</code>.<br><br>For <strong>DataCollectionMode</strong>=<code>Poll</code>, this is the interval at which this property is requested from the device.<br><br>For <strong>DataCollectionMode</strong>=<code>SubscribeCov</code> or <code>SubscribeCovProperty</code>, this is the interval at which a re-subscription request is sent.<br><br>For more information on schedules, see <a class="xref" href="../main/shared-content/configuration/schedules-configuration.html">Schedules configuration</a>.</td>
+<td>Specifies a schedule ID to which the data selection item is linked. This data item is collected on the scheduled interval if Selected is set to <code>true</code>.<br><br>For <strong>DataCollectionMode</strong>=<code>Poll</code>, this is the interval at which this property is requested from the device.<br><br>For <strong>DataCollectionMode</strong>=<code>SubscribeCov</code> or <code>SubscribeCovProperty</code>, this is the interval at which a re-subscription request is sent.<br><br>For more information on schedules, see <a class="xref" href="../main/shared-content/configuration/schedules.html">Schedules configuration</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -335,7 +335,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/PI-Adapter-BACnet-Docs/blob/main/content/configuration/pi-adapter-for-bacnet-data-selection-configuration.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/PI-Adapter-BACnet-Docs/blob/master/content/configuration/pi-adapter-for-bacnet-data-selection-configuration.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
