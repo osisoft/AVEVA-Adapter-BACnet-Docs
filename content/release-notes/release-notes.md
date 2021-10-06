@@ -3,7 +3,8 @@ uid: ReleaseNotes
 ---
 # Release notes
 
-PI Adapter for BACnet 1.1
+PI Adapter for BACnet 1.1.x.x
+Adapter Framework 1.4
 
 ## Overview
 
@@ -19,9 +20,9 @@ There are no known issues at this time.
 
 Refer to [System Requirements](xref:SystemRequirements).
 
-## Installation
+## Installation and upgrade
 
-Refer to [Install the adapter](xref:InstallTheAdapter).
+Refer to [Install the adapter](xref:InstallTheAdapter) or <xref:UpgradeTheAdapter>.
 
 ## Uninstallation
 
