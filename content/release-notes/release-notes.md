@@ -3,7 +3,7 @@ uid: ReleaseNotes
 ---
 # Release notes
 
-PI Adapter for BACnet 1.1.x.x
+PI Adapter for BACnet 1.1<br/>
 Adapter Framework 1.4
 
 ## Overview
@@ -11,6 +11,17 @@ Adapter Framework 1.4
 This represents the initial release of PI Adapter for BACnet. This product collects time-series data from source devices to OMF endpoints in OSIsoft Cloud Services or PI Servers. PI Adapter for BACnet can also collect health and diagnostics information. It supports buffering, polled and unsolicited data collection, automatic discovery of available data items on a data source, and various Windows and Linux-based operating systems as well as containerization.
 
 For more information, see [PI Adapter for BACnet overview](xref:PIAdapterforBACnetOverview).
+
+## New features
+
+|Feature  |Description  |
+|---------|---------|
+|Discovery | PI Adapter for BACnet now includes _discovery_, which allows you to query for devices on your network and automatically create a data selection configuration. For more information, see <xref:DiscoveryConfiguration>. |
+|Productized data property types and handling | PI Adapter for BACnet can now send units of measure for simple types when you configure them for a stream at source. You can configure container-level overrides by setting the `IncludeProperties` parameter within your data source configuration to `true`. For more information, see [Data source parameters](xref:PIAdapterforBACnetDataSourceConfiguration#data-source-parameters). |
+
+## Resolved issues
+
+This release includes various resolved issues and security improvements.
 
 ## Known issues
 
