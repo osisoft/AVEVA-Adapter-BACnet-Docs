@@ -14,14 +14,19 @@ For more information, see [PI Adapter for BACnet overview](xref:PIAdapterforBACn
 
 ## New features
 
-|Feature  |Description  |
-|---------|---------|
-|Discovery | PI Adapter for BACnet now includes _discovery_, which allows you to query for devices on your network and automatically create a data selection configuration. For more information, see <xref:DiscoveryConfiguration>. |
-|Productized data property types and handling | PI Adapter for BACnet can now send units of measure for simple types when you configure them for a stream at source. You can configure container-level overrides by setting the `IncludeProperties` parameter within your data source configuration to `true`. For more information, see [Data source parameters](xref:PIAdapterforBACnetDataSourceConfiguration#data-source-parameters). |
+| Feature | Description |
+|--|--|
+| Discovery | PI Adapter for BACnet now includes _discovery_, which allows you to query for devices on your network and automatically create a data selection configuration. For more information, see <xref:DiscoveryConfiguration>. |
+| Productized data property types and handling | PI Adapter for BACnet can now send units of measure for simple types when you configure them for a stream at source. You can configure container-level overrides by setting the `IncludeProperties` parameter within your data source configuration to `true`. For more information, see [Data source parameters](xref:PIAdapterforBACnetDataSourceConfiguration#data-source-parameters). |
 
 ## Resolved issues
 
-This release includes various resolved issues and security improvements.
+This release includes the following resolved issues and security improvements.
+
+| Issue | Title | Description |
+|--|--|--|
+| 170383 | Unable to obtain InvokeId for highly parallelized requests | When running a discovery configured to find more than 256 objects, only 256 objects are returned and an error of `Unable to obtain InvokeId` prints to the log for remaining objects. This error is fixed—PI Adapter for BACnet now returns results for all objects. |
+| 187231 | ASP.NET Core vulnerability | An ASP.NET Core vulnerability has been resolved by upgrading to ASP.NET Core 3.1.12. |
 
 ## Known issues
 
