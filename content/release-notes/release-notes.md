@@ -21,12 +21,7 @@ For more information, see [PI Adapter for BACnet overview](xref:PIAdapterforBACn
 
 ## Resolved issues
 
-This release includes the following resolved issues and security improvements.
-
-| Issue | Title | Description |
-|--|--|--|
-| 170383 | Unable to obtain InvokeId for highly parallelized requests | When running a discovery configured to find more than 256 objects, only 256 objects are returned and an error of `Unable to obtain InvokeId` prints to the log for remaining objects. This error is fixed—PI Adapter for BACnet now returns results for all objects. |
-| 187231 | ASP.NET Core vulnerability | An ASP.NET Core vulnerability has been resolved by upgrading to ASP.NET Core 3.1.12. |
+This release includes various resolved issues and security improvements.
 
 ## Known issues
 
