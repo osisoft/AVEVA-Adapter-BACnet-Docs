@@ -33,7 +33,7 @@ Refer to [System Requirements](xref:SystemRequirements).
 
 ## Installation and upgrade
 
-Refer to [Install the adapter](xref:InstallTheAdapter) or <xref:UpgradeTheAdapter>.
+Refer to [Install the adapter](xref:BACnetInstallTheAdapter) or <xref:UpgradeTheAdapter>.
 
 ### Linux installation note
 
@@ -55,7 +55,7 @@ net.core.rmem_max=26214400
 net.core.rmem_default=26214400
 ```
 
-Save the file and reboot the machine, then proceed with [installation](xref:InstallTheAdapter#linux).
+Save the file and reboot the machine, then proceed with [installation](xref:BACnetInstallTheAdapter#linux).
 
 ## Uninstallation
 
