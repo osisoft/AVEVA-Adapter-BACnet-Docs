@@ -33,7 +33,29 @@ Refer to [System Requirements](xref:SystemRequirements).
 
 ## Installation and upgrade
 
-Refer to [Install the adapter](xref:InstallTheAdapter) or <xref:UpgradeTheAdapter>.
+Refer to [Install the adapter](xref:BACnetInstallTheAdapter) or <xref:UpgradeTheAdapter>.
+
+### Linux installation note
+
+BACnet protocol uses UDP/IP socket communication. Linux places restrictive limits (212992 bytes) on the size of receive buffers of sockets, and this restriction limits the performance of the PI Adapter for BACnet on Linux.
+
+Enter the following commands to check the current UDP/IP receive buffer settings:
+
+```bash
+$ sysctl net.core.rmem_max
+net.core.rmem_max = 212992
+$ sysctl net.core.rmem_default
+net.core.rmem_default = 212992
+```
+
+If the values are less than 26214400 bytes (25MB), add the following two lines to the `/etc/sysctl.conf` file:
+
+```text
+net.core.rmem_max=26214400
+net.core.rmem_default=26214400
+```
+
+Save the file and reboot the machine, then proceed with [installation](xref:BACnetInstallTheAdapter#linux).
 
 ## Uninstallation
 
