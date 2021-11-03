@@ -11,7 +11,7 @@
 - topicUid: BACnetConfiguration
   items:
   - topicUid: ConfigurationTools
-  - topicUid: SystemComponentsConfiguration
+  - topicUid: PIAdapterforBACnetSystemComponentsConfiguration
     items:
     - topicUid: SystemAndAdapterConfiguration
   - topicUid: PIAdapterforBACnetDataSourceConfiguration
