@@ -16,7 +16,7 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
 
 1. Navigate to [egress endpoints configuration](xref:EgressEndpointsConfiguration) and verify each configured endpoint's **Endpoint** property and credentials are correct.
 
-    * For a PI Server or EDS endpoint, verify **UserName** and **Password**.
+    * For a PI Server endpoint, verify **UserName** and **Password**.
     * For an OSIsoft Cloud Service (OCS) endpoint, verify **ClientId** and **ClientSecret**.
 
 ## Check connectivity
