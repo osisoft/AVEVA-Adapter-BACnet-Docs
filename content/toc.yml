@@ -24,6 +24,10 @@
     - topicUid: BACnetPolledDataStreamConfiguration
     - topicUid: BACnetCOVConfiguration
   - topicUid: DataFiltersConfiguration
+  - topicUid: EgressEndpointsConfiguration
+    items:
+    - topicUid: PrepareEgressDestinations
+  - topicUid: HealthEndpointConfiguration
   - topicUid: GeneralConfiguration
     items:
     - topicUid: AdapterMetadata

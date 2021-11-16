@@ -1299,7 +1299,10 @@
     <PageMargins x:Bottom="1.05277777777778" x:Left="0.78749999999999998"
      x:Right="0.78749999999999998" x:Top="1.05277777777778"/>
    </PageSetup>
+<<<<<<< HEAD
    <Unsynced/>
+=======
+>>>>>>> 42086c33f4dc7780111b75f55b52e95253f5a4f2
    <Print>
     <ValidPrinterInfo/>
     <PaperSizeIndex>9</PaperSizeIndex>
