@@ -3,13 +3,25 @@ uid: ReleaseNotes
 ---
 # Release notes
 
-PI Adapter for BACnet 1.1
+PI Adapter for BACnet 1.1.0.192<br/>
+Adapter Framework 1.4.0.134
 
 ## Overview
 
-This represents the initial release of PI Adapter for BACnet. This product collects time-series data from source devices to OMF endpoints in OSIsoft Cloud Services or PI Servers. PI Adapter for BACnet can also collect health and diagnostics information. It supports buffering, polled and unsolicited data collection, automatic discovery of available data items on a data source, and various Windows and Linux-based operating systems as well as containerization.
+PI Adapter for BACnet collects time-series data from source devices to OMF endpoints in OSIsoft Cloud Services or PI Servers. PI Adapter for BACnet can also collect health and diagnostics information. It supports buffering, polled and unsolicited data collection, automatic discovery of available data items on a data source, and various Windows and Linux-based operating systems as well as containerization.
 
 For more information, see [PI Adapter for BACnet overview](xref:PIAdapterforBACnetOverview).
+
+## New features
+
+| Feature | Description |
+|--|--|
+| Discovery | PI Adapter for BACnet now includes _discovery_, which allows you to query for devices on your network and automatically create a data selection configuration. For more information, see <xref:DiscoveryConfiguration>. |
+| Productized data property types and handling | PI Adapter for BACnet can now send units of measure for simple types when you configure them for a stream at source. You can configure container-level overrides by setting the `IncludeProperties` parameter within your data source configuration to `true`. For more information, see [Data source parameters](xref:PIAdapterforBACnetDataSourceConfiguration#data-source-parameters). |
+
+## Resolved issues
+
+This release includes various resolved issues and security improvements.
 
 ## Known issues
 
@@ -19,9 +31,31 @@ There are no known issues at this time.
 
 Refer to [System Requirements](xref:SystemRequirements).
 
-## Installation
+## Installation and upgrade
 
-Refer to [Install the adapter](xref:InstallTheAdapter).
+Refer to [Install the adapter](xref:BACnetInstallTheAdapter) or <xref:UpgradeTheAdapter>.
+
+### Linux installation note
+
+BACnet protocol uses UDP/IP socket communication. Linux places restrictive limits (212992 bytes) on the size of receive buffers of sockets, and this restriction limits the performance of the PI Adapter for BACnet on Linux.
+
+Enter the following commands to check the current UDP/IP receive buffer settings:
+
+```bash
+$ sysctl net.core.rmem_max
+net.core.rmem_max = 212992
+$ sysctl net.core.rmem_default
+net.core.rmem_default = 212992
+```
+
+If the values are less than 26214400 bytes (25MB), add the following two lines to the `/etc/sysctl.conf` file:
+
+```text
+net.core.rmem_max=26214400
+net.core.rmem_default=26214400
+```
+
+Save the file and reboot the machine, then proceed with [installation](xref:BACnetInstallTheAdapter#linux).
 
 ## Uninstallation
 

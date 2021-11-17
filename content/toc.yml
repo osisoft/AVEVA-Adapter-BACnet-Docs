@@ -4,14 +4,14 @@
 - topicUid: Installation
   items:
   - topicUid: SystemRequirements
-  - topicUid: InstallTheAdapter
+  - topicUid: BACnetInstallTheAdapter
   - topicUid: InstallPIAdapterForBACnetUsingDocker
   - topicUid: UpgradeTheAdapter
   - topicUid: UninstallTheAdapter
 - topicUid: BACnetConfiguration
   items:
   - topicUid: ConfigurationTools
-  - topicUid: SystemComponentsConfiguration
+  - topicUid: PIAdapterforBACnetSystemComponentsConfiguration
     items:
     - topicUid: SystemAndAdapterConfiguration
   - topicUid: PIAdapterforBACnetDataSourceConfiguration
@@ -24,6 +24,10 @@
     - topicUid: BACnetPolledDataStreamConfiguration
     - topicUid: BACnetCOVConfiguration
   - topicUid: DataFiltersConfiguration
+  - topicUid: EgressEndpointsConfiguration
+    items:
+    - topicUid: PrepareEgressDestinations
+  - topicUid: HealthEndpointConfiguration
   - topicUid: GeneralConfiguration
     items:
     - topicUid: AdapterMetadata
