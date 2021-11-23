@@ -95,7 +95,9 @@ To create a Docker file for the adapter, follow the instructions below.
     ENTRYPOINT ["/bacnetdockerstart.sh"]
     ```
 
-2. Copy the `PI-Adapter-for-BACnet-1.1.0.192-\<platform>.tar.gz` file to the same directory as the `Dockerfile`.
+2. Copy the `PI-Adapter-for-BACnet-1.1.0.192-<platform>.tar.gz` file to the same directory as the `Dockerfile`. 
+
+    Replace `<platform>` with the applicable system architecture: `arm`, `arm64`, or `x64`.
 
 3. Copy the `bacnetdockerstart.sh` script to the same directory as the `Dockerfile`.
 
