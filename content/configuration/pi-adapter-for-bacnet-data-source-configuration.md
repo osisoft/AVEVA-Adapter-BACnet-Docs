@@ -131,6 +131,12 @@ A successful discovery populates the device configuration and provides informati
 
 The adapter [log](xref:LoggingConfiguration) indicates when discovery is complete.
 
+Rather than using automatic device discovery, you can instead perform a manual discovery by sending a `POST` request to the `discoveries` endpoint with the following parameters configured: `id`,`autoSelect`, and `Query`. 
+
+* For more information about the URL for `POST` request to the `discoveries` endpoint url, see [REST URLs](xref:DiscoveryConfiguration#rest-urls) in [Discovery](xref:DiscoveryConfiguration).
+
+* For more information about the `id`, `autoSelect`, and `Query` parameters, see [Discovery parameters](xref:DiscoveryConfiguration#discovery-parameters) in [Discovery](xref:DiscoveryConfiguration). Syntax includes a query method and a comma-separated list of identifiers for objects to discover. 
+
 ### Example log
 
 ```log
