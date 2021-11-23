@@ -46,7 +46,7 @@ Complete the following steps to install a PI adapter on a Linux computer:
 
     **Examples**: 
     
-    To install the Linux package, run the command that applies the host architecture:
+    To install the Linux package, run the command that applies to the host architecture:
     
     ```bash
     # Intel/AMD x64
