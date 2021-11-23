@@ -42,9 +42,20 @@ Complete the following steps to install a PI adapter on a Linux computer:
 
 3. Run the `sudo apt update` command to update available packages information.
 
-4. Run the `sudo apt install` command.
+4. Run one of the `sudo apt install` command.
 
-    **Examples**: <br> To install the Linux ARM Debian package, run the command <br>`sudo apt install ./{AdapterName}_linux-arm.deb` <br> To install the Linux x64 package, run the command <br> `sudo apt install ./{AdapterName}_linux-x64.deb`
+    **Examples**: 
+    
+    To install the Linux package, run the command that applies the host architecture:
+    
+    ```bash
+    # Intel/AMD x64
+    sudo apt install ./PI-Adapter-for-BACnet-1.1.0.192-x64.deb
+    # Arm 64-bit
+    sudo apt install ./PI-Adapter-for-BACnet-1.1.0.192-arm64.deb
+    # Arm 32-bit
+    sudo apt install ./PI-Adapter-for-BACnet-1.1.0.192-arm.deb
+    ```
 
 5. Optional: To verify the installation, run the following `curl` command with the port number that you specified during installation:
 
