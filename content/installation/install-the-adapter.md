@@ -42,7 +42,7 @@ Complete the following steps to install a PI adapter on a Linux computer:
 
 3. Run the `sudo apt update` command to update available packages information.
 
-4. Run one of the `sudo apt install` command.
+4. Run one of the `sudo apt install` commands.
 
     **Examples**: 
     
