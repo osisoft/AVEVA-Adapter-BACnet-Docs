@@ -21,9 +21,9 @@ To create a startup script for the adapter, follow the instructions below.
     ```bash
     #!/bin/sh
     if [ -z $portnum ] ; then
-        exec /BACnet_linux-arm/OSIsoft.Data.System.Host
+        exec /PI-Adapter-for-BACnet-1.1.0.192-arm/OSIsoft.Data.System.Host
     else
-        exec /BACnet_linux-arm/OSIsoft.Data.System.Host --port:$portnum
+        exec /PI-Adapter-for-BACnet-1.1.0.192-arm/OSIsoft.Data.System.Host --port:$portnum
     fi
     ```
 
@@ -32,9 +32,9 @@ To create a startup script for the adapter, follow the instructions below.
     ```bash
     #!/bin/sh
     if [ -z $portnum ] ; then
-        exec /BACnet_linux-arm64/OSIsoft.Data.System.Host
+        exec /PI-Adapter-for-BACnet-1.1.0.192-arm64/OSIsoft.Data.System.Host
     else
-        exec /BACnet_linux-arm64/OSIsoft.Data.System.Host --port:$portnum
+        exec /PI-Adapter-for-BACnet-1.1.0.192-arm64/OSIsoft.Data.System.Host --port:$portnum
     fi
     ```
 
@@ -43,9 +43,9 @@ To create a startup script for the adapter, follow the instructions below.
     ```bash
     #!/bin/sh
     if [ -z $portnum ] ; then
-        exec /BACnet_linux-x64/OSIsoft.Data.System.Host
+        exec /PI-Adapter-for-BACnet-1.1.0.192-x64/OSIsoft.Data.System.Host
     else
-        exec /BACnet_linux-x64/OSIsoft.Data.System.Host --port:$portnum
+        exec /PI-Adapter-for-BACnet-1.1.0.192-x64/OSIsoft.Data.System.Host --port:$portnum
     fi
     ```
  
@@ -67,7 +67,7 @@ To create a Docker file for the adapter, follow the instructions below.
     RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu60 libssl1.1 curl
     COPY bacnetdockerstart.sh /
     RUN chmod +x /bacnetdockerstart.sh
-    ADD ./BACnet_linux-arm.tar.gz .
+    ADD ./PI-Adapter-for-BACnet-1.1.0.192-arm.tar.gz .
     ENTRYPOINT ["/bacnetdockerstart.sh"]
     ```
 
@@ -79,7 +79,7 @@ To create a Docker file for the adapter, follow the instructions below.
     RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
     COPY bacnetdockerstart.sh /
     RUN chmod +x /bacnetdockerstart.sh
-    ADD ./BACnet_linux-arm64.tar.gz .
+    ADD ./PI-Adapter-for-BACnet-1.1.0.192-arm64.tar.gz .
     ENTRYPOINT ["/bacnetdockerstart.sh"]
     ```
 
@@ -91,11 +91,11 @@ To create a Docker file for the adapter, follow the instructions below.
     RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
     COPY bacnetdockerstart.sh /
     RUN chmod +x /bacnetdockerstart.sh
-    ADD ./BACnet_linux-x64.tar.gz .
+    ADD ./PI-Adapter-for-BACnet-1.1.0.192-x64.tar.gz .
     ENTRYPOINT ["/bacnetdockerstart.sh"]
     ```
 
-2. Copy the `BACnet_linux-\<platform>.tar.gz` file to the same directory as the `Dockerfile`.
+2. Copy the `PI-Adapter-for-BACnet-1.1.0.192-<platform>.tar.gz` file to the same directory as the `Dockerfile`.
 
 3. Copy the `bacnetdockerstart.sh` script to the same directory as the `Dockerfile`.
 
