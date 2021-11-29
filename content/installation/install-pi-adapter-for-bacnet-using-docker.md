@@ -79,7 +79,7 @@ To create a Docker file for the adapter, follow the instructions below.
     RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y ca-certificates libicu66 libssl1.1 curl
     COPY bacnetdockerstart.sh /
     RUN chmod +x /bacnetdockerstart.sh
-    ADD ./PI-Adapter-for-BACnet-1.1.0.192-arm64.tar.gz .
+    ADD ./PI-Adapter-for-BACnet_1.1.0.192-arm64_.tar.gz .
     ENTRYPOINT ["/bacnetdockerstart.sh"]
     ```
 
