@@ -34,7 +34,7 @@ To create a startup script for the adapter, follow the instructions below.
     if [ -z $portnum ] ; then
         exec /PI-Adapter-for-BACnet_1.1.0.192-arm64_/OSIsoft.Data.System.Host
     else
-        exec /PI-Adapter-for-BACnet-1.1.0.192-arm64/OSIsoft.Data.System.Host --port:$portnum
+        exec /PI-Adapter-for-BACnet_1.1.0.192-arm64_/OSIsoft.Data.System.Host --port:$portnum
     fi
     ```
 
