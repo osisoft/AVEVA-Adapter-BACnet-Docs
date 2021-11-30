@@ -14,12 +14,14 @@
   - topicUid: PIAdapterforBACnetSystemComponentsConfiguration
     items:
     - topicUid: SystemAndAdapterConfiguration
-  - topicUid: PIAdapterforBACnetDataSourceConfiguration
+  - name: Data source
+    topicUid: PIAdapterforBACnetDataSourceConfiguration
   - topicUid: SchedulesConfiguration
   - topicUid: DiscoveryConfiguration
     items:
     - topicUid: PIAdapterBACnetDataSourceDiscovery
-  - topicUid: PIAdapterforBACnetDataSelectionConfiguration
+  - name: Data selection
+    topicUid: PIAdapterforBACnetDataSelectionConfiguration
     items:
     - topicUid: BACnetPolledDataStreamConfiguration
     - topicUid: BACnetCOVConfiguration
@@ -38,7 +40,8 @@
     - topicUid: PrepareEgressDestinations
     - topicUid: ConfigureANetworkProxy
   - topicUid: HealthEndpointConfiguration
-  - topicUid: ConfigurationExamples
+  - name: Configuration examples
+    topicUid: ConfigurationExamples
 - topicUid: Administration
   items:
   - topicUid: StartAndStopAnAdapter
