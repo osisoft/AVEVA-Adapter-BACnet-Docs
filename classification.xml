@@ -21,8 +21,8 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>17565</WindowHeight>
-  <WindowWidth>32767</WindowWidth>
+  <WindowHeight>11850</WindowHeight>
+  <WindowWidth>28770</WindowWidth>
   <WindowTopX>32767</WindowTopX>
   <WindowTopY>32767</WindowTopY>
   <TabRatio>500</TabRatio>
@@ -222,12 +222,12 @@
    <Row ss:AutoFitHeight="0" ss:Height="14.4375">
     <Cell><Data ss:Type="String">MAP</Data></Cell>
     <Cell ss:Index="3" ss:StyleID="s64"><Data ss:Type="String">adapter</Data></Cell>
-    <Cell ss:StyleID="s65"><Data ss:Type="String">PI-Adapter-for-BACnet_1.1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">PI-Adapter-for-BACnet_1.2</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0" ss:Height="14.4375">
     <Cell><Data ss:Type="String">apply-ALL</Data></Cell>
     <Cell ss:Index="3" ss:StyleID="s64"><Data ss:Type="String">adapter</Data></Cell>
-    <Cell ss:StyleID="s65"><Data ss:Type="String">PI-Adapter-for-BACnet_1.1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">PI-Adapter-for-BACnet_1.2</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">default</Data></Cell>
@@ -1299,10 +1299,7 @@
     <PageMargins x:Bottom="1.05277777777778" x:Left="0.78749999999999998"
      x:Right="0.78749999999999998" x:Top="1.05277777777778"/>
    </PageSetup>
-<<<<<<< HEAD
    <Unsynced/>
-=======
->>>>>>> 42086c33f4dc7780111b75f55b52e95253f5a4f2
    <Print>
     <ValidPrinterInfo/>
     <PaperSizeIndex>9</PaperSizeIndex>
