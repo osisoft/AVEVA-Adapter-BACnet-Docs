@@ -66,7 +66,7 @@ Complete the following steps to configure the BACnet data selection. Use the `PU
 
 1. Open command line session. Change directory to the location of `DataSelection.json`.
 
-1. Enter the following cURL command (which uses the `PUT` method) to initialize data selection for your data source.
+1. Enter the following curl command (which uses the `PUT` method) to initialize data selection for your data source.
 
     ```bash
     curl -d "@DataSelection.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/BACnet1/DataSelection"
