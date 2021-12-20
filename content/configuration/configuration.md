@@ -10,7 +10,7 @@ The examples in the configuration topics use `curl`, a commonly available tool o
 
 For more information on PI Adapter configuration tools, see [Configuration tools](xref:ConfigurationTools).
 
-## Quick start
+## Quick Start
 
 This Quick Start guides you through setup of each configuration file available for PI Adapter for BACnet. As you complete each step, perform each required configuration to establish a data flow from a data source to one or more endpoints. Some configurations are optional.
 
