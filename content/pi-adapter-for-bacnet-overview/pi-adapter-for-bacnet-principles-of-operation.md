@@ -18,7 +18,7 @@ For more information, see [PI Adapter for BACnet data source configuration](xref
 
 ## Data collection
 
-The BACnet adapter collects time-series data from selected objects on BACnet devices. The adapter supports both polling and COV (Change of Value, unsolicited subscription) data collection modes, as defined by the BACnet specification.
+The BACnet adapter collects time-series data from selected objects on BACnet devices. The adapter supports both polling and Change of Value (COV, unsolicited subscription) data collection modes, as defined by the BACnet specification.
 
 ### Object types and data types
 
@@ -60,7 +60,7 @@ Metadata specific to the BACnet adapter:
 - **SourceId**: SourceId is constructed using the following pattern: {DeviceId}.{ObjectType}{ObjectId}.{PropertyIdentifier}
 - **LocalName**: The BACnet ObjectName as provided by the BACnet object
 
-The metadata level is set in [General configuration](xref:GeneralConfiguration). For the BAcnet adapter, the following metadata is sent for the individual level:
+The metadata level is set in [General configuration](xref:GeneralConfiguration). For the BACnet adapter, the following metadata is sent for the individual level:
 
 - `None`: No metadata
 - `Low`: AdapterType (_ComponentType_) and DataSource (_ComponentId_)
