@@ -13,7 +13,7 @@ Dynamic data is sent every minute to configured health endpoints.
 The following health data are available:
 
 - [Device status](xref:DeviceStatusForBACnet)
-- [Next Health Message Expected](xref:NextHealthMessageExpectedForBACnet)
+- [Next health message expected](xref:NextHealthMessageExpectedForBACnet)
 
 ## AF structure
 
