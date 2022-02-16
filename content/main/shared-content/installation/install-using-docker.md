@@ -50,7 +50,7 @@ To create a Docker container that runs the adapter, follow the instructions belo
     
 	**AMD64 (x64)**
 
-    [!include[docker files: AMD64](../_includes/block/dockerfiles/amd64.md.md)]
+    [!include[docker files: AMD64](../_includes/block/dockerfiles/amd64.md)]
 
 2. Copy the [!include[installer](../_includes/inline/installer-name.md)]-<platform>_.tar.gz file to the same directory as the `Dockerfile`.
 

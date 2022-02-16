@@ -8,7 +8,7 @@ uid: SystemRequirements
 
 | Operating System | Platform | Installation Kit | Processor(s) |
 |-------------------|-------------|----------------------------------|-------------|
-| Windows 10 Enterprise <br>Windows 10 IoT Enterprise | x64 | [!include[installer](../_includes/inline/installer-name.md)]-x64_.msi     | Intel/AMD 64-bit processors |
+| Windows 10 Enterprise<br>Windows 10 IoT Enterprise | x64 | [!include[installer](../_includes/inline/installer-name.md)]-x64_.msi     | Intel/AMD 64-bit processors |
 | Debian 9, 10<br>Ubuntu 18.04, 20.04 | x64 | [!include[installer](../_includes/inline/installer-name.md)]-x64_.deb     | Intel/AMD 64-bit processors |
 | Debian 9, 10<br>Ubuntu 20.04 | ARM32 | [!include[installer](../_includes/inline/installer-name.md)]-arm_.deb  | ARM 32-bit processors |
 
