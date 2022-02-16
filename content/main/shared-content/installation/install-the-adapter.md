@@ -14,7 +14,7 @@ Complete the following steps to install a PI adapter on a Windows computer:
 
     **Note:** Customer login credentials are required to access the portal.
 
-2. Run <code>[!include[installer](../_includes/inline/installer-name.md)]-{ARC}_.msi</code>  file.
+2. Run <code>[!include[installer](../_includes/inline/installer-name.md)]-x64_.msi</code>  file.
 
 3. Follow the setup wizard.
 
@@ -34,7 +34,7 @@ Complete the following steps to install a PI adapter on a Linux computer:
 
 **Note:** Before you begin installation, confirm that Linux socket receive buffers are configured for optimum performance. For more information, see [Linux installation note](xref:ReleaseNotes#linux-installation-note).
 
-1. Download the appropriate Linux distribution file ([!include[installer](../_includes/inline/installer-name.md)]-<ARC>_.deb) from the [OSIsoft Customer portal (https://customers.osisoft.com/s/products)](https://customers.osisoft.com/s/products).
+1. Download the appropriate Linux distribution file (<code>[!include[installer](../_includes/inline/installer-name.md)]-{ARC}_.deb</code>) from the [OSIsoft Customer portal (https://customers.osisoft.com/s/products)](https://customers.osisoft.com/s/products).
 
     **Note:** Customer login credentials are required to access the portal.
 
@@ -42,7 +42,9 @@ Complete the following steps to install a PI adapter on a Linux computer:
 
 3. Run the `sudo apt update` command to update available packages information.
 
-4. Run the `sudo apt install` command against the Linux distribution file selected in step 1 of this procedure.
+4. Run the `sudo apt install` command against the Linux distribution file (<code>[!include[installer](../_includes/inline/installer-name.md)]-{ARC}_.deb</code>) selected in step 1 of this procedure.
+
+    For example: <code>sudo apt install [!include[installer](../_includes/inline/installer-name.md)]-x64_.deb</code>
 
 5. Optional: To verify the installation, run the following `curl` command with the port number that you specified during installation:
 
