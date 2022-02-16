@@ -43,8 +43,8 @@
   items:
   - topicUid: StartAndStopAnAdapter
   - topicUid: StartAndStopIngressComponent
-  - topicUid: RetrieveProductVersionInformation
   - topicUid: DeleteAnAdapterComponent
+  - topicUid: RetrieveProductVersionInformation
 - topicUid: HealthAndDiagnosticsForBACnet
   items:
   - topicUid: AdapterHealthForBACnet
