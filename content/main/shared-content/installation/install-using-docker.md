@@ -20,11 +20,11 @@ To create a startup script for the adapter, follow the instructions below.
 
     **ARM32**
 
-    [!include[startup script: ARM32](../_includes/block/startup-scripts/arm32.md)]
+[!include[startup script: ARM32](../_includes/block/startup-scripts/arm32.md)]
 
     **ARM64**
-
-    [!include[startup script: ARM32](../_includes/block/startup-scripts/arm32.md)]
+    
+[!include[startup script: ARM64](../_includes/block/startup-scripts/arm64.md)]
 
     **AMD64**
             
