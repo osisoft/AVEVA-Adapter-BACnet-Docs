@@ -34,7 +34,7 @@ Complete the following steps to install an adapter on a Linux computer:
 
 **Note:** Before you begin installation, confirm that Linux socket receive buffers are configured for optimum performance. For more information, see [Linux installation note](xref:ReleaseNotes#linux-installation-note).
 
-1. Download the appropriate Linux distribution file (<code>[!include[installer](../_includes/inline/installer-name.md)]-{PLATFORM}_.deb</code>) from the [OSIsoft Customer portal (https://customers.osisoft.com/s/products)](https://customers.osisoft.com/s/products).
+1. Download the appropriate Linux distribution file (<code>[!include[installer](../_includes/inline/installer-name.md)]-{PLATFORM}_.deb</code>) from the [OSIsoft Customer portal](https://customers.osisoft.com/s/products).
 
     **Note:** Customer login credentials are required to access the portal.
 
