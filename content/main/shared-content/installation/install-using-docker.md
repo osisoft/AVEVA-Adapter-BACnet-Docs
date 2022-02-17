@@ -4,11 +4,9 @@ uid: InstallUsingDocker
 
 # Installation using Docker
 
-Docker is a set of tools that you can use on Linux to manage application deployments.
+Docker is a set of tools that you can use on Linux to manage application deployments. This topic provides examples of how to create a Docker container with the adapter.
 
 **Note:** If you want to use Docker, you must be familiar with the underlying technology and have determined that it is appropriate for your planned use of the adapter. Docker is not required to use the adapter.
-
-This topic provides examples of how to create a Docker container with the adapter.
 
 ## Create a startup script
 
@@ -97,7 +95,7 @@ To create a Docker container that runs the adapter, follow the instructions belo
     ENTRYPOINT ["/bacnetdockerstart.sh"]
     ```
 
-2. Copy the [!include[installer](../_includes/inline/installer-name.md)]-<platform>_.tar.gz file to the same directory as the `Dockerfile`.
+2. Copy the <code>[!include[installer](../_includes/inline/installer-name.md)]-{PLATFORM}_.tar.gz</code> file to the same directory as the `Dockerfile`.
 
 3. Copy the <code>[!include[startup-script](../_includes/inline/startup-script.md)]</code> script to the same directory as the `Dockerfile`.
 
