@@ -30,7 +30,7 @@ Complete the following steps to install a PI adapter on a Windows computer:
 
 ## Linux
 
-Complete the following steps to install a PI adapter on a Linux computer:
+Complete the following steps to install an adapter on a Linux computer:
 
 **Note:** Before you begin installation, confirm that Linux socket receive buffers are configured for optimum performance. For more information, see [Linux installation note](xref:ReleaseNotes#linux-installation-note).
 
