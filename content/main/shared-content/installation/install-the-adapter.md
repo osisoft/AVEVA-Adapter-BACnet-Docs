@@ -14,7 +14,7 @@ Complete the following steps to install a PI adapter on a Windows computer:
 
     **Note:** Customer login credentials are required to access the portal.
 
-2. Run <code>[!include[installer](../_includes/inline/installer-name.md)]-x64_.msi</code> file.
+2. Run <code>[!include[installer](../_includes/inline/installer-name.md)]-x64_.msi</code>.
 
 3. Follow the setup wizard.
 
