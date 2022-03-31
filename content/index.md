@@ -4,7 +4,7 @@ uid: PIAdapterforBACnetOverview
 
 # Overview
 
-PI Adapter for Building Automation and Control Networks (BACnet) is a data-collection component that transfers time-series data from source devices to OMF endpoints in OSIsoft Cloud Services or PI Servers. BACnet is a communication protocol that is developed and maintained by ASHRAE. The adapter adheres to ANSI/ASHRAE Standard 135-2012 and communicates with any device using BACnet/IP and devices that conform to other BACnet protocols using a BACnet gateway or router.
+PI Adapter for BACnet is a data-collection component that transfers time-series data from source devices to OMF endpoints in OSIsoft Cloud Services or PI Servers. Building Automation and Control Networks (BACnet) is a communication protocol that is developed and maintained by ASHRAE. The adapter adheres to ANSI/ASHRAE Standard 135-2012 and communicates with any device using BACnet/IP and devices that conform to other BACnet protocols using a BACnet gateway or router.
 
 ![PI Adapter for BACnet architecture](images/pi-adapter-for-bacnet-architecture-diagram.png)
 
