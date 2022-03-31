@@ -3,8 +3,8 @@ uid: ReleaseNotes
 ---
 # Release notes
 
-PI Adapter for BACnet 1.1.0.192<br/>
-Adapter Framework 1.4.0.134
+[!include[product-name](../main/shared-content/_includes/inline/product-name.md)] [!include[product-version](../main/shared-content/_includes/inline/product-version.md)]<br/>
+Adapter Framework [!include[framework-version](../main/shared-content/_includes/inline/framework-version.md)]
 
 ## Overview
 
@@ -29,11 +29,11 @@ There are no known issues at this time.
 
 ## System requirements
 
-Refer to [System Requirements](xref:SystemRequirements).
+Refer to <xref:SystemRequirements>.
 
 ## Installation and upgrade
 
-Refer to [Install the adapter](xref:BACnetInstallTheAdapter) or <xref:UpgradeTheAdapter>.
+Refer to <xref:InstallTheAdapter> or <xref:UpgradeTheAdapter>.
 
 ### Linux installation note
 
@@ -55,7 +55,7 @@ net.core.rmem_max=26214400
 net.core.rmem_default=26214400
 ```
 
-Save the file and reboot the machine, then proceed with [installation](xref:BACnetInstallTheAdapter#linux).
+Save the file and reboot the machine, then proceed with [installation](xref:InstallTheAdapter#linux).
 
 ## Uninstallation
 

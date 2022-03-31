@@ -4,8 +4,8 @@
 - topicUid: Installation
   items:
   - topicUid: SystemRequirements
-  - topicUid: BACnetInstallTheAdapter
-  - topicUid: InstallPIAdapterForBACnetUsingDocker
+  - topicUid: InstallTheAdapter
+  - topicUid: InstallUsingDocker
   - topicUid: UpgradeTheAdapter
   - topicUid: UninstallTheAdapter
 - topicUid: BACnetConfiguration
@@ -29,16 +29,13 @@
   - topicUid: EgressEndpointsConfiguration
     items:
     - topicUid: PrepareEgressDestinations
+    - topicUid: ConfigureANetworkProxy
   - topicUid: HealthEndpointConfiguration
   - topicUid: GeneralConfiguration
     items:
     - topicUid: AdapterMetadata
   - topicUid: BufferingConfiguration
   - topicUid: LoggingConfiguration
-  - topicUid: EgressEndpointsConfiguration
-    items:
-    - topicUid: PrepareEgressDestinations
-    - topicUid: ConfigureANetworkProxy
   - topicUid: HealthEndpointConfiguration
   - name: Configuration examples
     topicUid: ConfigurationExamples
@@ -46,8 +43,8 @@
   items:
   - topicUid: StartAndStopAnAdapter
   - topicUid: StartAndStopIngressComponent
-  - topicUid: RetrieveProductVersionInformation
   - topicUid: DeleteAnAdapterComponent
+  - topicUid: RetrieveProductVersionInformation
 - topicUid: HealthAndDiagnosticsForBACnet
   items:
   - topicUid: AdapterHealthForBACnet
