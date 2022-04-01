@@ -2,7 +2,7 @@
 uid: AdapterHealthForBACnet
 ---
 
-# Adapter health
+# Health
 
 PI Adapters produce different kinds of health data that can be egressed to different health endpoints.
 
@@ -13,7 +13,7 @@ Dynamic data is sent every minute to configured health endpoints.
 The following health data are available:
 
 - [Device status](xref:DeviceStatusForBACnet)
-- [Next Health Message Expected](xref:NextHealthMessageExpectedForBACnet)
+- [Next health message expected](xref:NextHealthMessageExpectedForBACnet)
 
 ## AF structure
 

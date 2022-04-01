@@ -8,7 +8,7 @@ If the adapter is not working as expected, you can troubleshoot by viewing messa
 
 ## Check configurations
 
-Incorrect configurations can interrupt data flow and cause errors in values and ranges. Perform the following steps confirm correct configuration for your adapter.
+Incorrect configurations can interrupt data flow and cause errors in values and ranges. Perform the following steps to confirm the correct configuration for your adapter.
 
 1. Navigate to [data source configuration](xref:PIAdapterforBACnetDataSourceConfiguration) and verify that the value entered for each parameter is correct.
 
@@ -25,11 +25,11 @@ Perform the following steps to verify active connections to the data source and 
 
 1. Based on your egress endpoints, verify that data values are updating.
 
-    * For PI Server, send a request to the PI Web API to verify that PI point values are updating. Use Postman or a Web browser to send the request. For more information, see [PI Web API Reference](https://techsupport.osisoft.com/Documentation/PI-Web-API/help/controllers/point.html).
+    * For PI Server, send a request to the PI Web API to verify that PI point values are updating. Use Postman or a web browser to send the request. For more information, see [PI Web API Reference](https://techsupport.osisoft.com/Documentation/PI-Web-API/help/controllers/point.html).
 
         Alternatively, use any PI Client software to read point values from the PI Data Archive directly.
 
-    * For OCS, view the OCS portal to verify that data streams are updating. For more information, see [Getting started with trend data](https://ocs-docs.osisoft.com/Content_Portal/Quickstarts/Getting-Started-Trend.html).
+    * For OCS, view the OCS portal to verify that data streams are updating. For more information, see [OSIsoft Cloud Services](https://ocs-docs.osisoft.com/Content_Portal/Quickstarts/Getting-Started-Trend.html).
 
         Alternatively, you can use Postman to send an API request to verify data streams. For more information, see [API calls for reading data](https://ocs-docs.osisoft.com/Content_Portal/Documentation/SequentialDataStore/Reading_Data_API.html).
 
