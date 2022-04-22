@@ -10,6 +10,7 @@
   - topicUid: UninstallTheAdapter
 - topicUid: BACnetConfiguration
   items:
+  - topicUid: PIAdapterForBACnetSecurity
   - topicUid: ConfigurationTools
   - topicUid: PIAdapterforBACnetSystemComponentsConfiguration
     items:
