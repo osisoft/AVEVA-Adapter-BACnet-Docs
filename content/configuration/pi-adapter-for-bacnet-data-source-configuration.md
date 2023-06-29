@@ -71,7 +71,7 @@ The following parameters are available to configure a BACnet data source:
 <sup>1</sup>**Notes:**
 
 * For more information on supported container overrides, see [Container Messages](https://omf-docs.osisoft.com/documentation_v12/Containers/Container_Messages.html) within the OMF 1.2 documentation.
-* The overriding BACnet engineering units must match one of the [formats supported by OCS](https://ocs-docs.osisoft.com/Content_Portal/Documentation/SequentialDataStore/Units_of_Measure.html#supported-system-defined-units-of-measure). In cases where a BACnet object's Units is not supported by OCS, no UOM will be specified on the data stream for the object.
+* The overriding BACnet engineering units must match one of the [formats supported by ADH](https://ocs-docs.osisoft.com/Content_Portal/Documentation/SequentialDataStore/Units_of_Measure.html#supported-system-defined-units-of-measure). In cases where a BACnet object's Units is not supported by ADH, no UOM will be specified on the data stream for the object.
 
 ## Data source examples
 
