@@ -1,1 +1,1 @@
-PI-Adapter-for-BACnet-1.1.0.192
+AVEVA-Adapter-for-BACnet-1.1.0.192
