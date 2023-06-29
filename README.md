@@ -1,8 +1,8 @@
-# PI-Adapter-BACnet-Docs
+# AVEVA-Adapter-BACnet-Docs
 
-PI Adapter for BACnet is a data-collection component that transfers time-series data from source devices to OMF (OSIsoft Message Format) endpoints in AVEVA Data Hub or PI Servers.
+AVEVA Adapter for BACnet is a data-collection component that transfers time-series data from source devices to OMF (OSIsoft Message Format) endpoints in AVEVA Data Hub or AVEVA PI Servers.
 
-This repository contains the documentation for PI Adapter for BACnet. You can access a readable version of this documentation [here.](https://docs.osisoft.com/bundle/pi-adapter-bacnet/)
+This repository contains the documentation for AVEVA Adapter for BACnet. You can access a readable version of this documentation [here.](https://docs.osisoft.com/bundle/pi-adapter-bacnet/)
 
 ## Subtree
 
