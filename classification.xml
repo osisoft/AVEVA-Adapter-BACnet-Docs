@@ -8,7 +8,7 @@
  xmlns:html="http://www.w3.org/TR/REC-html40">
  <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
   <Author>Timothy Martin</Author>
-  <LastAuthor>Karl Nyce</LastAuthor>
+  <LastAuthor>Tina Ullmann</LastAuthor>
   <Revision>1</Revision>
   <Created>2021-03-29T20:56:44Z</Created>
   <LastSaved>2021-04-12T13:53:59Z</LastSaved>
@@ -21,10 +21,10 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>11850</WindowHeight>
-  <WindowWidth>28770</WindowWidth>
-  <WindowTopX>32767</WindowTopX>
-  <WindowTopY>32767</WindowTopY>
+  <WindowHeight>20130</WindowHeight>
+  <WindowWidth>13880</WindowWidth>
+  <WindowTopX>23990</WindowTopX>
+  <WindowTopY>120</WindowTopY>
   <TabRatio>500</TabRatio>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
@@ -38,7 +38,7 @@
    <NumberFormat/>
    <Protection/>
   </Style>
-  <Style ss:ID="s62" ss:Name="Normal 2">
+  <Style ss:ID="s16" ss:Name="Normal 2">
    <Alignment ss:Vertical="Bottom"/>
    <Borders/>
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
@@ -46,158 +46,147 @@
    <NumberFormat/>
    <Protection/>
   </Style>
-  <Style ss:ID="s64" ss:Parent="s62">
-   <Interior ss:Color="#EDEDED" ss:Pattern="Solid"/>
+  <Style ss:ID="s17">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
   </Style>
-  <Style ss:ID="s65">
+  <Style ss:ID="s18">
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s67" ss:Parent="s62">
-   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
-    ss:Italic="1"/>
-   <Interior/>
+  <Style ss:ID="s19">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
   </Style>
-  <Style ss:ID="s68" ss:Parent="s62">
-   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
-   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#C0C0C0"/>
-   <Interior/>
+  <Style ss:ID="s20">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s69" ss:Parent="s62">
+  <Style ss:ID="s21">
+   <Font ss:FontName="Arial" x:Family="Swiss" ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s22" ss:Parent="s16">
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
     ss:Bold="1"/>
-   <Interior/>
   </Style>
-  <Style ss:ID="s70" ss:Parent="s62">
+  <Style ss:ID="s23" ss:Parent="s16">
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
     ss:Bold="1"/>
    <Interior ss:Color="#EDEDED" ss:Pattern="Solid"/>
   </Style>
-  <Style ss:ID="s71" ss:Parent="s62">
+  <Style ss:ID="s24" ss:Parent="s16">
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
     ss:Bold="1" ss:Italic="1"/>
-   <Interior/>
   </Style>
-  <Style ss:ID="s72" ss:Parent="s62">
+  <Style ss:ID="s25" ss:Parent="s16">
    <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
-   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#C0C0C0"
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#D9D9D9"
     ss:Bold="1"/>
-   <Interior/>
   </Style>
-  <Style ss:ID="s73" ss:Parent="s62">
+  <Style ss:ID="s27" ss:Parent="s16">
+   <Interior ss:Color="#EDEDED" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s28" ss:Parent="s16">
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
    <Interior ss:Color="#E7E6E6" ss:Pattern="Solid"/>
   </Style>
-  <Style ss:ID="s74" ss:Parent="s62">
-   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
-   <Interior ss:Color="#EDEDED" ss:Pattern="Solid"/>
+  <Style ss:ID="s29" ss:Parent="s16">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Italic="1"/>
   </Style>
-  <Style ss:ID="s75" ss:Parent="s62">
-   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
-   <Interior/>
-  </Style>
-  <Style ss:ID="s76" ss:Parent="s62">
+  <Style ss:ID="s30" ss:Parent="s16">
    <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
-   <Interior/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#D9D9D9"/>
   </Style>
-  <Style ss:ID="s77" ss:Parent="s62">
+  <Style ss:ID="s31" ss:Parent="s16">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
+   <Interior ss:Color="#EDEDED" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s32" ss:Parent="s16">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
+  </Style>
+  <Style ss:ID="s33" ss:Parent="s16">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Bottom"/>
+  </Style>
+  <Style ss:ID="s34" ss:Parent="s16">
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
    <Interior ss:Color="#EDEDED" ss:Pattern="Solid"/>
   </Style>
-  <Style ss:ID="s78" ss:Parent="s62">
+  <Style ss:ID="s35" ss:Parent="s16">
    <Alignment ss:Vertical="Center"/>
-   <Interior/>
   </Style>
-  <Style ss:ID="s79" ss:Parent="s62">
+  <Style ss:ID="s36" ss:Parent="s16">
    <Alignment ss:Vertical="Center"/>
    <Interior ss:Color="#EDEDED" ss:Pattern="Solid"/>
   </Style>
-  <Style ss:ID="s80" ss:Parent="s62">
+  <Style ss:ID="s37" ss:Parent="s16">
    <Alignment ss:Vertical="Center"/>
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
     ss:Italic="1"/>
-   <Interior/>
   </Style>
-  <Style ss:ID="s81" ss:Parent="s62">
+  <Style ss:ID="s38" ss:Parent="s16">
    <Alignment ss:Vertical="Center" ss:WrapText="1"/>
-   <Interior/>
   </Style>
-  <Style ss:ID="s82" ss:Parent="s62">
+  <Style ss:ID="s39" ss:Parent="s16">
    <Alignment ss:Vertical="Center" ss:WrapText="1"/>
    <Interior ss:Color="#EDEDED" ss:Pattern="Solid"/>
   </Style>
-  <Style ss:ID="s83" ss:Parent="s62">
+  <Style ss:ID="s40" ss:Parent="s16">
    <Alignment ss:Vertical="Center" ss:WrapText="1"/>
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
     ss:Italic="1"/>
-   <Interior/>
   </Style>
-  <Style ss:ID="s84" ss:Parent="s62">
+  <Style ss:ID="s41" ss:Parent="s16">
    <Alignment ss:Vertical="Center" ss:WrapText="1"/>
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
    <Interior ss:Color="#EDEDED" ss:Pattern="Solid"/>
   </Style>
-  <Style ss:ID="s85" ss:Parent="s62">
-   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#666699"/>
+  <Style ss:ID="s42" ss:Parent="s16">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#7030A0"/>
    <Interior ss:Color="#EDEDED" ss:Pattern="Solid"/>
   </Style>
-  <Style ss:ID="s86">
-   <Font ss:FontName="Arial" x:Family="Swiss" ss:Bold="1"/>
-  </Style>
-  <Style ss:ID="s87">
-   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
-  </Style>
-  <Style ss:ID="s88">
+  <Style ss:ID="s43">
    <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="1"/>
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
   </Style>
-  <Style ss:ID="s89">
+  <Style ss:ID="s44">
    <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="1"/>
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s90">
-   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="1"
+  <Style ss:ID="s45">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:Indent="1"
     ss:WrapText="1"/>
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
   </Style>
-  <Style ss:ID="s91">
-   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+  <Style ss:ID="s46">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="1"/>
+  </Style>
+  <Style ss:ID="s47">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:Indent="1"
+    ss:WrapText="1"/>
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s92">
-   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#0066CC"/>
-  </Style>
-  <Style ss:ID="s93">
-   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="1"/>
-   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#0066CC"/>
-  </Style>
-  <Style ss:ID="s94">
+  <Style ss:ID="s48">
    <Alignment ss:Vertical="Center"/>
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s95">
+  <Style ss:ID="s49">
    <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:Indent="1"/>
    <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
   </Style>
-  <Style ss:ID="s96">
-   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
-   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+  <Style ss:ID="s50">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#4472C4"/>
   </Style>
-  <Style ss:ID="s97">
-   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:Indent="1"
-    ss:WrapText="1"/>
-   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
-  </Style>
-  <Style ss:ID="s98">
-   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
-   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s99">
-   <Alignment ss:Horizontal="Left" ss:Vertical="Center" ss:Indent="1"
-    ss:WrapText="1"/>
-   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
-  </Style>
-  <Style ss:ID="s100">
+  <Style ss:ID="s51">
    <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="1"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#4472C4"/>
+  </Style>
+  <Style ss:ID="s52">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11"/>
+  </Style>
+  <Style ss:ID="s53">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Bottom" ss:Indent="1"
+    ss:WrapText="1"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
   </Style>
  </Styles>
  <Names>
@@ -208,28 +197,28 @@
  </Names>
  <Worksheet ss:Name="classification">
   <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="4" x:FullColumns="1"
-   x:FullRows="1" ss:DefaultColumnWidth="63.75" ss:DefaultRowHeight="12.5625">
-   <Column ss:AutoFitWidth="0" ss:Width="215.25"/>
-   <Column ss:AutoFitWidth="0" ss:Width="132.75"/>
+   x:FullRows="1" ss:DefaultColumnWidth="63.5" ss:DefaultRowHeight="12.5">
+   <Column ss:AutoFitWidth="0" ss:Width="215.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="133"/>
    <Column ss:AutoFitWidth="0" ss:Width="79.5" ss:Span="4"/>
-   <Row ss:AutoFitHeight="0">
+   <Row>
     <Cell><Data ss:Type="String">Filename</Data></Cell>
     <Cell><Data ss:Type="String">Title</Data></Cell>
     <Cell><Data ss:Type="String">Product Family</Data></Cell>
     <Cell><Data ss:Type="String">Product Name</Data></Cell>
     <Cell><Data ss:Type="String">Keywords</Data></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+   <Row ss:Height="14.5">
     <Cell><Data ss:Type="String">MAP</Data></Cell>
-    <Cell ss:Index="3" ss:StyleID="s64"><Data ss:Type="String">adapter</Data></Cell>
-    <Cell ss:StyleID="s65"><Data ss:Type="String">AVEVA-Adapter-for-BACnet_1.1</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">adapter</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">AVEVA-Adapter-for-BACnet_1.1</Data></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0" ss:Height="14.4375">
+   <Row ss:Height="14.5">
     <Cell><Data ss:Type="String">apply-ALL</Data></Cell>
-    <Cell ss:Index="3" ss:StyleID="s64"><Data ss:Type="String">adapter</Data></Cell>
-    <Cell ss:StyleID="s65"><Data ss:Type="String">AVEVA-Adapter-for-BACnet_1.1</Data></Cell>
+    <Cell ss:Index="3"><Data ss:Type="String">adapter</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">AVEVA-Adapter-for-BACnet_1.1</Data></Cell>
    </Row>
-   <Row ss:AutoFitHeight="0">
+   <Row>
     <Cell><Data ss:Type="String">default</Data></Cell>
    </Row>
   </Table>
@@ -1326,6 +1315,4 @@
    <ProtectScenarios>False</ProtectScenarios>
   </WorksheetOptions>
  </Worksheet>
-</Workbook>
-
 </Workbook>
