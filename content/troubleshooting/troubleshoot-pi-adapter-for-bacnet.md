@@ -4,7 +4,7 @@ uid: TroubleshootPiAdapterForBACnet
 
 # Troubleshoot PI Adapter for BACnet
 
-If the adapter is not working as expected, you can troubleshoot by viewing message logs and verifying adapter configuration and connectivity. If you are unable to resolve issues with the adapter or need additional guidance, contact OSIsoft Technical Support through the [OSIsoft Customer Portal](https://my.osisoft.com/).
+If the adapter is not working as expected, you can troubleshoot by viewing message logs and verifying adapter configuration and connectivity. If you are unable to resolve issues with the adapter or need additional guidance, contact AVEVA PI Support through the [AVEVA Customer Portal](https://my.osisoft.com/).
 
 ## Check configurations
 
@@ -17,7 +17,7 @@ Incorrect configurations can interrupt data flow and cause errors in values and 
 1. Navigate to [egress endpoints configuration](xref:EgressEndpointsConfiguration) and verify each configured endpoint's **Endpoint** property and credentials are correct.
 
     * For a PI Server endpoint, verify **UserName** and **Password**.
-    * For an OSIsoft Cloud Service (OCS) endpoint, verify **ClientId** and **ClientSecret**.
+    * For an OSIsoft Cloud Service (ADH) endpoint, verify **ClientId** and **ClientSecret**.
 
 ## Check connectivity
 
@@ -29,7 +29,7 @@ Perform the following steps to verify active connections to the data source and 
 
         Alternatively, use any PI Client software to read point values from the PI Data Archive directly.
 
-    * For OCS, view the OCS portal to verify that data streams are updating. For more information, see [OSIsoft Cloud Services](https://ocs-docs.osisoft.com/Content_Portal/Quickstarts/Getting-Started-Trend.html).
+    * For ADH, view the ADH portal to verify that data streams are updating. For more information, see [AVEVA Data Hub](https://ocs-docs.osisoft.com/Content_Portal/Quickstarts/Getting-Started-Trend.html).
 
         Alternatively, you can use Postman to send an API request to verify data streams. For more information, see [API calls for reading data](https://ocs-docs.osisoft.com/Content_Portal/Documentation/SequentialDataStore/Reading_Data_API.html).
 
